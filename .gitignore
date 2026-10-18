@@ -1,0 +1,17 @@
+# secrets (none are needed, but never commit one)
+.env
+
+# local wallet databases (created by `uvicorn wallet.api:app` or the seed CLI)
+*.db
+*.db-wal
+*.db-shm
+*.db-journal
+
+# Python
+__pycache__/
+.pytest_cache/
+.venv/
+
+# evaluation output
+eval/results*
+results*.json

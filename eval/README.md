@@ -67,5 +67,5 @@ It reads replies loosely, as objects or dicts:
 
 ## Held-out set
 
-The held-out cases are not in this repository. They are scored with the same command and
+The held-out cases are not in this repository yet. They will be scored with the same command and
 `--cases`, once per release, and never used for tuning.

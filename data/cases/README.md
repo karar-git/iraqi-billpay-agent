@@ -1,7 +1,9 @@
 # Synthetic data and test cases
 
-Everything in `data/` is synthetic. The names, phone numbers, account numbers and balances are
-made up and belong to no one. Money is integer IQD.
+Everything in `data/` is synthetic. Every person's name, phone number, account number, balance and
+bill is made up. Phone numbers are random numbers in the Iraqi mobile format and are not taken
+from any real person. Zain, Asiacell and Korek are the real Iraqi networks, used only as top-up
+labels; no data comes from them. Money is integer IQD.
 
 | File | What it is |
 |---|---|
@@ -45,18 +47,18 @@ generator disagree.
 ### 2. The requests
 
 ```
-case-type schema  ->  a language model writes paraphrases  ->  an Iraqi speaker edits them
-                  ->  labels written from the frozen wallet snapshot  ->  automatic checks
+case-type schema  ->  a language model drafts paraphrases  ->  labels written from the frozen
+                     wallet snapshot  ->  automatic checks  ->  an Iraqi speaker reviews them (before release)
 ```
 
 1. **Case-type schema.** For each of the 19 types: what it tests, which wallet situation it
    needs, and the labelling rule (below).
-2. **Paraphrases.** A language model writes many candidate phrasings per type in Baghdadi
+2. **Paraphrases.** A language model drafts many candidate phrasings per type in Baghdadi
    Arabic: different verbs (دز، حول، ابعث، عبي، سدد، خلص), amount styles, word orders, typos,
    Arabizi and Eastern digits.
-3. **Human edit.** An Iraqi speaker rewrites or drops anything that is not how people talk:
-   Modern Standard Arabic, Gulf or Levantine forms, odd word order, and the Persian letter che (U+0686: we always write ج).
-   Nothing enters a case file without this read.
+3. **Human review.** An Iraqi speaker will review every case before release and rewrite or drop
+   anything that is not how people talk: Modern Standard Arabic, Gulf or Levantine forms, odd word
+   order, and the Persian letter che (U+0686: we always write ج).
 4. **Labels from the snapshot.** The expected outcome and fields come from the frozen
    `wallet_seed.json`, never from what an agent answered. A `two_same_name` case points at a user
    who really has two Ahmads; a `low_balance` case at a user whose balance is really too small.
@@ -72,11 +74,11 @@ the stated reason.
 ### 3. Dev and held-out
 
 - **dev** (`dev.jsonl`, public): for building and debugging. Expect to overfit to it.
-- **held-out** (not in this repository): split **by scenario**, not by paraphrase, so whole
-  situations in it never appear in dev. It is written by a different generator plus hand-written
-  and user-recorded phrasings, and it is frozen before any tuning starts. It is scored with the
-  same harness (`python -m eval.run_eval --cases path/to/heldout.jsonl`) and reported once per
-  release.
+- **held-out** (not in this repository, not built yet): it will be split **by scenario**, not by
+  paraphrase, so whole situations in it never appear in dev. It will be written by a different
+  generator plus hand-written and user-recorded phrasings, frozen before any tuning starts, scored
+  with the same harness (`python -m eval.run_eval --cases path/to/heldout.jsonl`) and reported
+  once per release.
 
 ## Case format
 
