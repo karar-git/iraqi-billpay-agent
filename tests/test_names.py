@@ -188,3 +188,16 @@ def test_needs_question_counts_only_confident():
     assert needs_question([b])
     assert needs_question([])
     assert needs_question([a, Candidate("z", "z", "", 0.7, "nickname")])
+
+
+def test_a_later_word_of_the_saved_name_only_asks():
+    """A mention of a later word ("علي" in "حسن علي", Hassan son of Ali) is asked about, never picked."""
+    contacts = [
+        {"contact_id": "h", "display_name": "حسن علي", "phone": "07700000201"},
+        {"contact_id": "m", "display_name": "مصطفى كريم", "phone": "07700000202"},
+    ]
+    for mention, cid in (("لعلي", "h"), ("كريم", "m")):
+        cands = resolve(mention, contacts)
+        assert pick(cands) is None
+        assert cands[0].contact_id == cid and cands[0].how == "name_part"
+        assert 0.3 <= cands[0].score < THRESHOLD

@@ -4,7 +4,7 @@ from pathlib import Path
 import pytest
 
 from payments import amounts
-from payments.amounts import Amount, find_amount, parse
+from payments.amounts import Amount, amount_phrases, find_amount, parse
 
 CSV_PATH = Path(__file__).resolve().parent.parent / "data" / "amounts.csv"
 
@@ -101,3 +101,9 @@ def test_trailing_connector_not_in_match():
 def test_never_raises(text):
     got = parse(text)
     assert isinstance(got, Amount)
+
+
+def test_amount_phrases_lists_every_phrase_with_its_value():
+    found = amount_phrases("دز لهادي مية وخمسين ولزينب عشرين الف")
+    assert [(a.value_iqd, text) for a, text in found] == [(150_000, "مية وخمسين"), (20_000, "عشرين الف")]
+    assert amount_phrases("ادفع المولدة") == []

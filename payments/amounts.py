@@ -3,6 +3,7 @@
 Iraqi conventions handled here:
 - a bare number under 1,000 means thousands of dinars (خمسين -> 50,000, ميتين -> 200,000);
 - scales ألف / تالاف / مليون, fractions ربع / نص (ربع مليون, مليون ونص, مليون الا ربع);
+- a fraction after a round hundred is a fraction of that hundred (مية ونص -> 150,000);
 - after مليون a bare tail is in thousands (مليون وميتين -> 1,200,000);
 - Western and Eastern digits with , or ٬ separators (50,000 / ٥٠٬٠٠٠ / 50 الف);
 - dollar words are never converted: they always lead to a question.
@@ -106,6 +107,7 @@ PLURAL_SCALES = _table({
 })
 DUAL_SCALES = _table({"الفين": THOUSAND, "الفان": THOUSAND, "مليونين": MILLION, "مليونان": MILLION})
 FRACTIONS = _table({"نص": Fraction(1, 2), "نصف": Fraction(1, 2), "ربع": Fraction(1, 4)})
+QUARTERS = set(_table({"ارباع": 1, "رباع": 1}))  # "ثلاث ارباع مليون" = three quarters of a million
 IQD_WORDS = set(_table({w: 1 for w in (
     "دينار", "دنانير", "دينارات", "عراقي", "iqd", "dinar", "dinars")}))
 USD_WORDS = set(_table({w: 1 for w in (
@@ -217,10 +219,17 @@ def _tokenize(text: str) -> list[_Token]:
     # context rules that need neighbours
     for i, tok in enumerate(tokens):
         nxt = tokens[i + 1] if i + 1 < len(tokens) else None
-        if tok.word == CARD_PREFIX and nxt and nxt.kind == "other" and nxt.word.startswith("ال"):
+        if nxt is None:
+            continue
+        if tok.word == CARD_PREFIX and nxt.kind == "other" and nxt.word.startswith("ال"):
             card = _classify_word(nxt.word[2:])  # "ابو العشرة" -> العشرة -> 10
             if card and card[0] in ("unit", "teen", "ten", "hundred"):
                 nxt.kind, nxt.value = card
+        elif tok.kind == "other" and tok.word in _HUNDRED_PREFIXES and nxt.kind == "hundred" and nxt.value == 100:
+            tok.kind, tok.value = "unit", _HUNDRED_PREFIXES[tok.word]  # "تلث مية" written apart -> 300
+        elif tok.kind == "unit" and nxt.word in QUARTERS:
+            tok.kind, tok.value = "frac", Fraction(tok.value, 4)  # "ثلاث ارباع" -> 3/4
+            nxt.kind = "iqd"  # a filler word inside the amount phrase
     for i, tok in enumerate(tokens):
         prev = tokens[i - 1] if i else None
         nxt = tokens[i + 1] if i + 1 < len(tokens) else None
@@ -303,6 +312,8 @@ class _Group:
     def add_fraction(self, v: Fraction) -> bool:
         if "frac" in self.parts:
             return False
+        if set(self.parts) == {"hundreds"}:
+            v = v * 100  # مية ونص = 150, ميتين الا ربع = 175 (a fraction of a hundred)
         self.parts["frac"] = v
         return True
 
@@ -389,6 +400,12 @@ def find_amount(text: str) -> tuple[Amount, str] | None:
     if start > 0 and tokens[start - 1].kind == "approx":
         return _ask(APPROXIMATE), matched
     return _evaluate(tokens[start:end]), matched
+
+
+def amount_phrases(text: str) -> list[tuple[Amount, str]]:
+    """Every amount phrase in a sentence with its value: [(Amount, matched substring of `text`), ...]."""
+    tokens = _tokenize(text or "")
+    return [(_evaluate(tokens[s:e]), text[tokens[s].start:tokens[e - 1].end]) for s, e in _runs(tokens)]
 
 
 def parse(text: str) -> Amount:

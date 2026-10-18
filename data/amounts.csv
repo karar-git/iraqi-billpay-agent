@@ -133,6 +133,15 @@ text,value_iqd,currency,needs_question
 عشرة ونص,10500,IQD,false
 خمسة ونص الف,5500,IQD,false
 خمسة الا ربع,4750,IQD,false
+مية ونص,150000,IQD,false
+مية ونص الف,150000,IQD,false
+ميتين ونص,250000,IQD,false
+مية وربع,125000,IQD,false
+خمسمية ونص,550000,IQD,false
+مية الا ربع,75000,IQD,false
+تلث مية,300000,IQD,false
+ثلث مية الف,300000,IQD,false
+ثلاث ارباع مليون,750000,IQD,false
 50000,50000,IQD,false
 "50,000",50000,IQD,false
 50.000,50000,IQD,false

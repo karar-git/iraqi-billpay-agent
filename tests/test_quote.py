@@ -115,7 +115,7 @@ def test_explicit_flags_override():
     card = render_card(TRANSFER, WalletView(200_000, 1_000_000, history=KNOWN),
                        flags=[rules.AMOUNT_JUMP])
     assert card.flag_codes == [rules.AMOUNT_JUMP]
-    assert "3 أضعاف" in card.flags[0]
+    assert "3 مرات" in card.flags[0]
 
 
 def test_card_from_dict_and_deterministic():
@@ -192,3 +192,17 @@ def test_format_period():
 def test_flag_line():
     line = messages.flag_line(rules.FIRST_TIME_PAYEE, "m", name="علي")
     assert line.startswith("تنبيه:") and "علي" in line and "دزّيت " in line
+
+
+def test_transfer_card_does_not_guess_the_payees_gender():
+    card = render_card(TRANSFER, WalletView(200_000, 1_000_000, history=KNOWN))
+    assert "الرقم ينتهي بـ 0101" in card.text and "رقمه" not in card.text
+
+
+def test_topup_flags_talk_about_the_line_not_a_person():
+    codes = [rules.FIRST_TIME_PAYEE, rules.DUPLICATE_RECENT, rules.AMOUNT_JUMP]
+    card = render_card(TOPUP, WalletView(100_000, 1_000_000, gender="f"), flags=codes)
+    assert card.flag_codes == codes
+    assert "تشحنين" in card.flags[0]
+    for line in card.flags:
+        assert "لهالرقم" in line and "لـ الرقم" not in line and "دزّيت" not in line

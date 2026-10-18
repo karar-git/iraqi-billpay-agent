@@ -26,6 +26,8 @@ DEFAULT_DB_PATH = os.environ.get("WALLET_DB_PATH") or str(ROOT / "data" / "walle
 DEFAULT_SEED_PATH = os.environ.get("WALLET_SEED_PATH") or str(ROOT / "data" / "wallet_seed.json")
 
 QUOTE_TTL = timedelta(minutes=5)
+PIN_MAX_FAILURES = 5  # wrong PINs in a row before the PIN locks
+PIN_LOCK = timedelta(minutes=15)
 FEES = {"transfer": 250, "bill": 0, "topup": 0}  # synthetic, IQD
 BILLER_KINDS = ("bill", "topup")
 EASTERN_DIGITS = str.maketrans("٠١٢٣٤٥٦٧٨٩۰۱۲۳۴۵۶۷۸۹", "01234567890123456789")
@@ -227,21 +229,32 @@ class Wallet:
         return view
 
     def execute(self, qid: str, pin: str | int, idempotency_key: str | None = None) -> dict:
-        """Run a quote at most once. Any later call returns the stored result, never a second debit."""
+        """Run a quote at most once. Any later call returns the stored result, never a second debit.
+
+        A wrong PIN changes nothing (403 wrong_pin) but is counted; after PIN_MAX_FAILURES in a row
+        the PIN locks for PIN_LOCK (423 pin_locked) and a right PIN resets the count. PINs typed
+        with Eastern Arabic digits are read as Western digits.
+        """
         if idempotency_key is not None and idempotency_key != qid:
             raise api_error(400, "idempotency_key_mismatch", quote_id=qid)
         if self.faults.fire("error_500"):
             raise SimulatedServerError(qid)
         with self.db.connect() as conn:
-            with immediate(conn):
-                quote = self._quote(conn, qid)
-                if quote["state"] != "QUOTED":
-                    return self._view(quote)  # replay: stored result
-                self._move(conn, qid, "QUOTED", "EXECUTING")
-                state, result = self._run(conn, quote, str(pin))
-                self._move(conn, qid, "EXECUTING", state, result)
-                if self.faults.fire("timeout_before_commit"):
-                    raise SimulatedTimeout("timeout_before_commit", committed=False)  # rolls back
+            try:
+                with immediate(conn):
+                    quote = self._quote(conn, qid)
+                    if quote["state"] != "QUOTED":
+                        return self._view(quote)  # replay: stored result
+                    self._move(conn, qid, "QUOTED", "EXECUTING")
+                    state, result = self._run(conn, quote, str(pin))
+                    self._move(conn, qid, "EXECUTING", state, result)
+                    if self.faults.fire("timeout_before_commit"):
+                        raise SimulatedTimeout("timeout_before_commit", committed=False)  # rolls back
+            except HTTPException as exc:
+                if isinstance(exc.detail, dict) and exc.detail.get("error") == "wrong_pin":
+                    if self._count_wrong_pin(conn, quote["user_id"]):  # after the rollback, on its own
+                        raise api_error(423, "pin_locked", state="QUOTED", money_moved=False) from exc
+                raise
             view = self._view(self._quote(conn, qid))
         if self.faults.fire("drop_after_commit"):
             raise SimulatedTimeout("drop_after_commit", committed=True)  # committed, answer lost
@@ -253,8 +266,12 @@ class Wallet:
             return "EXPIRED", failure("expired")
         qid, uid, kind = quote["id"], quote["user_id"], quote["kind"]
         user = self._user(conn, uid)
-        if not verify_pin(pin, user["pin_hash"]):
+        if user["pin_locked_until"] and self.clock() < from_iso(user["pin_locked_until"]):
+            raise api_error(423, "pin_locked", state="QUOTED", money_moved=False)  # rolls back
+        if not verify_pin(pin.translate(EASTERN_DIGITS).strip(), user["pin_hash"]):
             raise api_error(403, "wrong_pin", state="QUOTED", money_moved=False)  # rolls back
+        if user["pin_failures"] or user["pin_locked_until"]:
+            conn.execute("UPDATE users SET pin_failures = 0, pin_locked_until = NULL WHERE id = ?", (uid,))
 
         amount, fee = quote["amount"], quote["fee"]
         total = amount + fee
@@ -312,6 +329,18 @@ class Wallet:
             "balance_after": balance_after,
             "completed_at": now,
         }
+
+    def _count_wrong_pin(self, conn: sqlite3.Connection, uid: str) -> bool:
+        """Record one more wrong PIN in its own transaction. True when this one locks the PIN."""
+        locked_until = to_iso(self.clock() + PIN_LOCK)
+        with immediate(conn):
+            conn.execute(
+                "UPDATE users SET pin_failures = pin_failures + 1,"
+                " pin_locked_until = CASE WHEN pin_failures + 1 >= ? THEN ? END WHERE id = ?",
+                (PIN_MAX_FAILURES, locked_until, uid),
+            )
+            row = conn.execute("SELECT pin_locked_until FROM users WHERE id = ?", (uid,)).fetchone()
+        return row["pin_locked_until"] is not None
 
     # ------------------------------------------------------------ audit
 

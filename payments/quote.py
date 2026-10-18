@@ -11,7 +11,7 @@ from collections.abc import Mapping
 from dataclasses import dataclass, field, fields
 
 from payments import rules
-from payments.messages import flag_line, format_iqd, format_period
+from payments.messages import MESSAGES, flag_line, format_iqd, format_period
 
 MILLION = 1_000_000
 
@@ -168,6 +168,12 @@ def _payee_label(q: QuoteDetails) -> str:
     return q.payee_name
 
 
+def _flag_key(q: QuoteDetails, code: str) -> str:
+    """A top-up card warns about a phone line, so it has its own wording when one exists."""
+    topup = f"{code}_topup"
+    return topup if q.kind == "topup" and f"flag_{topup}" in MESSAGES else code
+
+
 def _flags(q: QuoteDetails, view, flags) -> list[str]:
     if flags is not None:
         return list(flags)
@@ -206,7 +212,7 @@ def render_card(quote, view, flags: list[str] | None = None) -> Card:
         lines.append(target)
     else:
         lines.append(f"راح {'تدزين' if f else 'تدز'} {_money(q.amount)} ({words})")
-        lines.append(f"المستلم: {q.payee_name}، رقمه ينتهي بـ {_last4(q.phone)}")
+        lines.append(f"المستلم: {q.payee_name}، الرقم ينتهي بـ {_last4(q.phone)}")
 
     if q.fee:
         lines.append(f"العمولة: {_money(q.fee)}، المجموع: {_money(q.amount + q.fee)}")
@@ -218,5 +224,5 @@ def render_card(quote, view, flags: list[str] | None = None) -> Card:
     lines.append(f"البطاقة صالحة {q.expires_in_min} دقايق. {'متأكدة؟' if f else 'متأكد؟'}")
 
     codes = _flags(q, view, flags)
-    flag_lines = [flag_line(code, g, name=_payee_label(q)) for code in codes]
+    flag_lines = [flag_line(_flag_key(q, code), g, name=_payee_label(q)) for code in codes]
     return Card(q.quote_id, lines, flag_lines, list(BUTTONS), codes)

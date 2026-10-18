@@ -20,7 +20,9 @@ CREATE TABLE IF NOT EXISTS users (
     balance     INTEGER NOT NULL CHECK (balance >= 0),
     daily_limit INTEGER,
     pin_hash    TEXT NOT NULL,
-    gender      TEXT
+    gender      TEXT,
+    pin_failures     INTEGER NOT NULL DEFAULT 0,  -- wrong PINs in a row
+    pin_locked_until TEXT                         -- no PIN is checked before this time
 );
 CREATE TABLE IF NOT EXISTS contacts (
     contact_id   TEXT PRIMARY KEY,
@@ -94,6 +96,13 @@ CREATE INDEX IF NOT EXISTS idx_ledger_account ON ledger(account);
 """
 
 MEMORY = ":memory:"
+# Columns added after the first release, so an older wallet file gets them on open.
+ADDED_COLUMNS = {
+    "users": {
+        "pin_failures": "INTEGER NOT NULL DEFAULT 0",
+        "pin_locked_until": "TEXT",
+    },
+}
 
 # ---------------------------------------------------------------- PINs
 
@@ -237,11 +246,21 @@ class Database:
                 conn = _open(self.path)
                 self._idle.append(conn)
             conn.executescript(SCHEMA)
+            _add_missing_columns(conn)
             if self.seed is not None:
                 from wallet.seed import seed_if_empty  # local import: seed.py imports this module
 
                 seed_if_empty(conn, self.seed)
             self._ready = True
+
+
+def _add_missing_columns(conn: sqlite3.Connection) -> None:
+    """Bring a wallet file made by an older version up to the current schema."""
+    for table, columns in ADDED_COLUMNS.items():
+        have = {row["name"] for row in conn.execute(f"PRAGMA table_info({table})")}
+        for name, kind in columns.items():
+            if name not in have:
+                conn.execute(f"ALTER TABLE {table} ADD COLUMN {name} {kind}")
 
 
 def open_db(path: str | Path = MEMORY, seed: dict | str | Path | None = None) -> Database:

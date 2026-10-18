@@ -1,5 +1,6 @@
 """Mock wallet: endpoints, quote life cycle, execution rules, seed loading, audit."""
 
+import sqlite3
 from datetime import datetime, timedelta, timezone
 
 import pytest
@@ -257,6 +258,53 @@ def test_wrong_pin_changes_nothing_and_quote_stays_open(client):
     assert balance(client) == 1_000_000
     assert client.get(f"/quotes/{qid}").json()["state"] == "QUOTED"
     assert execute(client, qid).json()["state"] == "SUCCEEDED"
+
+
+def test_five_wrong_pins_lock_the_pin_for_15_minutes(client, clock):
+    qid = quote(client, amount=10_000).json()["id"]
+    for _ in range(4):
+        assert execute(client, qid, pin="9999").json()["detail"]["error"] == "wrong_pin"
+    locked = execute(client, qid, pin="9999")  # the fifth wrong PIN in a row
+    assert locked.status_code == 423
+    assert locked.json()["detail"] == {"error": "pin_locked", "state": "QUOTED", "money_moved": False}
+    assert execute(client, qid).status_code == 423  # even the right PIN waits
+    assert client.get(f"/quotes/{qid}").json()["state"] == "QUOTED"
+    assert balance(client) == 1_000_000
+
+    clock.advance(minutes=15)
+    fresh = quote(client, amount=10_000).json()["id"]
+    assert execute(client, fresh).json()["state"] == "SUCCEEDED"
+    assert audit_ok(client)
+
+
+def test_right_pin_resets_the_wrong_pin_count(client):
+    first = quote(client, amount=1_000).json()["id"]
+    for _ in range(4):
+        execute(client, first, pin="9999")
+    assert execute(client, first).json()["state"] == "SUCCEEDED"
+    second = quote(client, amount=1_000).json()["id"]
+    for _ in range(4):
+        assert execute(client, second, pin="9999").status_code == 403  # counting from zero again
+    assert execute(client, second).json()["state"] == "SUCCEEDED"
+
+
+def test_pin_typed_in_eastern_digits_is_accepted(client):
+    qid = quote(client, amount=1_000).json()["id"]
+    assert execute(client, qid, pin="١٢٣٤").json()["state"] == "SUCCEEDED"
+
+
+def test_older_wallet_file_gets_the_pin_lock_columns(tmp_path):
+    path = tmp_path / "old.db"
+    old = sqlite3.connect(path)
+    old.execute("CREATE TABLE users (id TEXT PRIMARY KEY, name TEXT NOT NULL, phone TEXT,"
+                " balance INTEGER NOT NULL, daily_limit INTEGER, pin_hash TEXT NOT NULL, gender TEXT)")
+    old.commit()
+    old.close()
+    db = Database(path)
+    with db.connect() as conn:
+        columns = {row["name"] for row in conn.execute("PRAGMA table_info(users)")}
+    db.close()
+    assert {"pin_failures", "pin_locked_until"} <= columns
 
 
 def test_bill_payment_marks_bill_paid(client):

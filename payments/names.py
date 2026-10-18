@@ -2,6 +2,8 @@
 
 Scores are in [0, 1]. Anything at or above THRESHOLD counts as a real match; fuzzy
 matches are always below it, so a typo can only ever produce a "did you mean?" question.
+So is a match on a later word of the saved name only (in Iraqi names that is the father's
+name or the surname): "علي" never picks "حسن علي" without asking.
 Relation words (ابني, امي, ...) resolve only through a saved alias.
 """
 
@@ -19,7 +21,7 @@ SCORE_ALIAS = 1.0
 SCORE_EXACT = 1.0
 SCORE_PHONE = 0.95
 SCORE_FIRST_NAME = 0.9  # mention is the start of the saved name: "احمد" -> "احمد علي"
-SCORE_NAME_PART = 0.8  # mention appears in the saved name: "علي" -> "حسن علي"
+SCORE_NAME_PART = 0.5  # below THRESHOLD: "علي" -> "حسن علي" (Hassan son of Ali) needs a question
 SCORE_NICKNAME = 0.7  # one-to-many: "حمودي" -> محمد / احمد / محمود
 FUZZY_MAX = 0.55  # always below THRESHOLD
 FUZZY_MIN_SIMILARITY = 0.6
