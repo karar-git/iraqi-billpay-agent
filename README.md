@@ -6,6 +6,10 @@ turns it into **one confirmed, never-doubled payment** against a mock wallet.
 
 > **The conversational core understands and talks; deterministic code touches the money.**
 
+**Team:** Karar Haitham (solo).
+**Email:** me@kararspace.com. The email the hackathon messages me on is karar.haitham@baly.iq.
+**Try it on WhatsApp:** +964 771 489 9059 (a new number gets a demo account with pretend money).
+
 ## Status
 
 Here is where the project stands:
