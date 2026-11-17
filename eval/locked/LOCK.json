@@ -1,0 +1,7 @@
+{
+ "file": "locked_v1.jsonl",
+ "sha256": "187d08dbcd1672d9e28035238ce113fc60f5ac3cbb65ee0183c19fc7fd360370",
+ "cases": 60,
+ "frozen": "2026-11-13",
+ "note": "Frozen before the decision models, the model layer and the list messages were tuned. Never tune on this file. One blind run per core (python eval/run_locked.py --label NAME); later runs are regression checks. The sha256 is taken with CRLF read as LF. Re-frozen on 2026-11-13 before any run: one message (lk_over_limit_02) was reworded, same labels."
+}

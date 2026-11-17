@@ -1,0 +1,1868 @@
+{
+ "notes": "data\\voice\\notes.jsonl",
+ "models": {
+  "Cohere Transcribe Arabic": {
+   "agg": {
+    "checks": "24/26",
+    "notes_all_checks": "6/8",
+    "sim": 0.915,
+    "sim_nn": 0.93,
+    "wer_nn": 0.278,
+    "seconds_p50": 0.88,
+    "seconds_max": 1.74,
+    "cost_usd": 0.0,
+    "errors": 0
+   },
+   "rows": [
+    {
+     "note": "A1_midea_fridge",
+     "said": "هلا بيكم، عدكم ثلاجة ميديا بابين متقابلين؟ اريد وحدة كبيرة، شي أربعة وثلاثين قدم. شكد سعرها؟",
+     "heard": "هلا بيكم عندكم ثلاجة ميديا بابين متقابلين؟ أريد وحدة كبيرة شي 34 قدم، شقد سعرها؟",
+     "seconds": 1.74,
+     "cost": 0.0,
+     "error": null,
+     "sim": 0.89,
+     "sim_nn": 0.978,
+     "wer_nn": 0.154,
+     "checks": [
+      {
+       "what": "brand Midea",
+       "kind": "brand",
+       "ok": true
+      },
+      {
+       "what": "34 (قدم)",
+       "kind": "number",
+       "ok": true
+      },
+      {
+       "what": "بابين متقابلين",
+       "kind": "phrase",
+       "ok": true
+      }
+     ],
+     "checks_ok": 3,
+     "checks_total": 3
+    },
+    {
+     "note": "A2_video",
+     "said": "حلوة، تكدر تدزلي فيديو إلها حتى أشوفها من جوه؟",
+     "heard": "حلوة، تقدري تنزلي فيديو لها حتى أشوفها من جوا؟",
+     "seconds": 0.82,
+     "cost": 0.0,
+     "error": null,
+     "sim": 0.909,
+     "sim_nn": 0.909,
+     "wer_nn": 0.444,
+     "checks": [
+      {
+       "what": "فيديو",
+       "kind": "phrase",
+       "ok": true
+      }
+     ],
+     "checks_ok": 1,
+     "checks_total": 1
+    },
+    {
+     "note": "A3_basra_delivery",
+     "said": "زين، والتوصيل للبصرة شكد ياخذ وشكد أجوره؟ آني بالبصرة، العشار، قرب ساحة أم البروم، واسمي زينب كاظم.",
+     "heard": "زين والتوصيل للبصرة شكد ياخذ وشكد أجوره؟ أني بالبصرة العشار قرب ساحة أم البروم واسمي زينب كاظم",
+     "seconds": 0.94,
+     "cost": 0.0,
+     "error": null,
+     "sim": 1.0,
+     "sim_nn": 1.0,
+     "wer_nn": 0.0,
+     "checks": [
+      {
+       "what": "البصرة",
+       "kind": "place",
+       "ok": true
+      },
+      {
+       "what": "العشار",
+       "kind": "place",
+       "ok": true
+      },
+      {
+       "what": "ام البروم",
+       "kind": "place",
+       "ok": true
+      },
+      {
+       "what": "name زينب كاظم",
+       "kind": "name",
+       "ok": true
+      }
+     ],
+     "checks_ok": 4,
+     "checks_total": 4
+    },
+    {
+     "note": "A4_confirm_phone",
+     "said": "اي ثبتها عيني. ورقمي صفر سبعة سبعة صفر، واحد اثنين ثلاثة، أربعة خمسة ستة سبعة.",
+     "heard": "إييي ثبتها عيني ورقمي صفر سبعة سبعة صفر واحد اثنين ثلاثة أربعة خمسة ستة سبعة",
+     "seconds": 0.87,
+     "cost": 0.0,
+     "error": null,
+     "sim": 0.987,
+     "sim_nn": 0.95,
+     "wer_nn": 0.25,
+     "checks": [
+      {
+       "what": "confirmation (ثبتها)",
+       "kind": "phrase",
+       "ok": true
+      },
+      {
+       "what": "phone 07701234567",
+       "kind": "phone",
+       "ok": true
+      }
+     ],
+     "checks_ok": 2,
+     "checks_total": 2
+    },
+    {
+     "note": "B1_tcl_split",
+     "said": "السلام عليكم ورحمة الله. ابني اريد سبلت تي سي ال طن ونص، شكد سعره؟ وتنصبوه ببلاش لو لا؟ آني ساكن بالمنصور.",
+     "heard": "السلام عليكم ورحمة الله. إبني أريد سبلت TCL طن ونص، اشكد سعره؟ وتنصبوه ببلاش لو لا؟ أني ساكن بالمنصور.",
+     "seconds": 0.85,
+     "cost": 0.0,
+     "error": null,
+     "sim": 0.939,
+     "sim_nn": 0.939,
+     "wer_nn": 0.19,
+     "checks": [
+      {
+       "what": "brand TCL",
+       "kind": "brand",
+       "ok": true
+      },
+      {
+       "what": "طن ونص (1.5)",
+       "kind": "number",
+       "ok": true
+      },
+      {
+       "what": "ببلاش",
+       "kind": "phrase",
+       "ok": true
+      },
+      {
+       "what": "المنصور",
+       "kind": "place",
+       "ok": true
+      }
+     ],
+     "checks_ok": 4,
+     "checks_total": 4
+    },
+    {
+     "note": "C1_tcl_tv_noisy",
+     "said": "هلو اخي، عدكم شاشة تي سي ال خمسة وخمسين انج؟ شكد سعرها هسه؟ وشنو أرخص شاشة عدكم؟",
+     "heard": "هلا اخي عندكم شاشة TCL 55نج؟ ما سعرها هسه وشنو ارخص شاشة عندكم؟",
+     "seconds": 0.85,
+     "cost": 0.0,
+     "error": null,
+     "sim": 0.745,
+     "sim_nn": 0.816,
+     "wer_nn": 0.533,
+     "checks": [
+      {
+       "what": "brand TCL",
+       "kind": "brand",
+       "ok": true
+      },
+      {
+       "what": "55 (انج)",
+       "kind": "number",
+       "ok": true
+      },
+      {
+       "what": "انج",
+       "kind": "phrase",
+       "ok": false
+      },
+      {
+       "what": "ارخص شاشة",
+       "kind": "phrase",
+       "ok": true
+      }
+     ],
+     "checks_ok": 3,
+     "checks_total": 4
+    },
+    {
+     "note": "D1_midea_washer_fast",
+     "said": "هلا اغاتي، الغسالة الميديا العشرة كيلو البيضة بيش؟ وأكو منها رصاصية؟ ومتى توصل لو اطلبها اليوم؟",
+     "heard": "حلاقاتي الغسالة الميديا الـ 10 كيلو البيضة بإيش؟ وأكو منها رصاصية؟ وشو وقت أوصل لو أطلبها اليوم؟",
+     "seconds": 0.88,
+     "cost": 0.0,
+     "error": null,
+     "sim": 0.874,
+     "sim_nn": 0.889,
+     "wer_nn": 0.438,
+     "checks": [
+      {
+       "what": "brand Midea",
+       "kind": "brand",
+       "ok": true
+      },
+      {
+       "what": "10 (كيلو)",
+       "kind": "number",
+       "ok": true
+      },
+      {
+       "what": "البيضة",
+       "kind": "phrase",
+       "ok": true
+      },
+      {
+       "what": "رصاصية",
+       "kind": "phrase",
+       "ok": true
+      }
+     ],
+     "checks_ok": 4,
+     "checks_total": 4
+    },
+    {
+     "note": "E1_toshiba_fridge",
+     "said": "مرحبا، شفت عدكم ثلاجة توشيبا ستة وعشرين قدم، اكو منها لون أسود؟ وشكد سعرها؟ والتسعة وعشرين شكد؟",
+     "heard": "مرحبا شفت عندكم ثلاجة توشي بستة وعشرين قدم، أكو منها لون أسود، وشكد سعرها؟ والتسعة وعشرين شكد؟",
+     "seconds": 0.92,
+     "cost": 0.0,
+     "error": null,
+     "sim": 0.978,
+     "sim_nn": 0.959,
+     "wer_nn": 0.214,
+     "checks": [
+      {
+       "what": "brand Toshiba",
+       "kind": "brand",
+       "ok": false
+      },
+      {
+       "what": "26 (قدم)",
+       "kind": "number",
+       "ok": true
+      },
+      {
+       "what": "29",
+       "kind": "number",
+       "ok": true
+      },
+      {
+       "what": "اسود",
+       "kind": "phrase",
+       "ok": true
+      }
+     ],
+     "checks_ok": 3,
+     "checks_total": 4
+    }
+   ]
+  },
+  "Closed model A (the production ear now)": {
+   "agg": {
+    "checks": "26/26",
+    "notes_all_checks": "8/8",
+    "sim": 0.82,
+    "sim_nn": 0.931,
+    "wer_nn": 0.303,
+    "seconds_p50": 3.19,
+    "seconds_max": 3.64,
+    "cost_usd": 0.006256,
+    "errors": 0
+   },
+   "rows": [
+    {
+     "note": "A1_midea_fridge",
+     "said": "هلا بيكم، عدكم ثلاجة ميديا بابين متقابلين؟ اريد وحدة كبيرة، شي أربعة وثلاثين قدم. شكد سعرها؟",
+     "heard": "هلا بيكم، عندكم ثلاجة ميديا بابين متقابلين؟ اريد وحدة كبيرة، شي 34 قدم. شكد سعرها؟",
+     "seconds": 2.64,
+     "cost": 0.000826,
+     "error": null,
+     "sim": 0.902,
+     "sim_nn": 0.993,
+     "wer_nn": 0.077,
+     "checks": [
+      {
+       "what": "brand Midea",
+       "kind": "brand",
+       "ok": true
+      },
+      {
+       "what": "34 (قدم)",
+       "kind": "number",
+       "ok": true
+      },
+      {
+       "what": "بابين متقابلين",
+       "kind": "phrase",
+       "ok": true
+      }
+     ],
+     "checks_ok": 3,
+     "checks_total": 3
+    },
+    {
+     "note": "A2_video",
+     "said": "حلوة، تكدر تدزلي فيديو إلها حتى أشوفها من جوه؟",
+     "heard": "حلوة، تقدري تدز لي فيديو لها حتى أشوفها من جوه؟",
+     "seconds": 3.14,
+     "cost": 0.000426,
+     "error": null,
+     "sim": 0.944,
+     "sim_nn": 0.944,
+     "wer_nn": 0.444,
+     "checks": [
+      {
+       "what": "فيديو",
+       "kind": "phrase",
+       "ok": true
+      }
+     ],
+     "checks_ok": 1,
+     "checks_total": 1
+    },
+    {
+     "note": "A3_basra_delivery",
+     "said": "زين، والتوصيل للبصرة شكد ياخذ وشكد أجوره؟ آني بالبصرة، العشار، قرب ساحة أم البروم، واسمي زينب كاظم.",
+     "heard": "زين والتوصيل للبصرة شكد ياخذ وشكد اجوره؟ اني بالبصرة العشار قرب ساحة ام البروم واسمي زينب كاظم.",
+     "seconds": 2.8,
+     "cost": 0.000896,
+     "error": null,
+     "sim": 1.0,
+     "sim_nn": 1.0,
+     "wer_nn": 0.0,
+     "checks": [
+      {
+       "what": "البصرة",
+       "kind": "place",
+       "ok": true
+      },
+      {
+       "what": "العشار",
+       "kind": "place",
+       "ok": true
+      },
+      {
+       "what": "ام البروم",
+       "kind": "place",
+       "ok": true
+      },
+      {
+       "what": "name زينب كاظم",
+       "kind": "name",
+       "ok": true
+      }
+     ],
+     "checks_ok": 4,
+     "checks_total": 4
+    },
+    {
+     "note": "A4_confirm_phone",
+     "said": "اي ثبتها عيني. ورقمي صفر سبعة سبعة صفر، واحد اثنين ثلاثة، أربعة خمسة ستة سبعة.",
+     "heard": "ايه، ثبتها عيني. ورقمي 07701234567",
+     "seconds": 2.93,
+     "cost": 0.000726,
+     "error": null,
+     "sim": 0.377,
+     "sim_nn": 0.974,
+     "wer_nn": 0.25,
+     "checks": [
+      {
+       "what": "confirmation (ثبتها)",
+       "kind": "phrase",
+       "ok": true
+      },
+      {
+       "what": "phone 07701234567",
+       "kind": "phone",
+       "ok": true
+      }
+     ],
+     "checks_ok": 2,
+     "checks_total": 2
+    },
+    {
+     "note": "B1_tcl_split",
+     "said": "السلام عليكم ورحمة الله. ابني اريد سبلت تي سي ال طن ونص، شكد سعره؟ وتنصبوه ببلاش لو لا؟ آني ساكن بالمنصور.",
+     "heard": "سلام عليكم ورحمة الله. ابني، اريد سبلت TCL طن ونص، ايش قد سعره؟ وتنصبوه بلاش لو لا؟ اني ساكن بالمنصور.",
+     "seconds": 3.43,
+     "cost": 0.001112,
+     "error": null,
+     "sim": 0.904,
+     "sim_nn": 0.904,
+     "wer_nn": 0.333,
+     "checks": [
+      {
+       "what": "brand TCL",
+       "kind": "brand",
+       "ok": true
+      },
+      {
+       "what": "طن ونص (1.5)",
+       "kind": "number",
+       "ok": true
+      },
+      {
+       "what": "ببلاش",
+       "kind": "phrase",
+       "ok": true
+      },
+      {
+       "what": "المنصور",
+       "kind": "place",
+       "ok": true
+      }
+     ],
+     "checks_ok": 4,
+     "checks_total": 4
+    },
+    {
+     "note": "C1_tcl_tv_noisy",
+     "said": "هلو اخي، عدكم شاشة تي سي ال خمسة وخمسين انج؟ شكد سعرها هسه؟ وشنو أرخص شاشة عدكم؟",
+     "heard": "أهلاً أخي، عندكم شاشة TCL 55 إنش؟ كم سعرها هسا؟ وشنو أرخص شاشة عندكم؟",
+     "seconds": 3.64,
+     "cost": 0.000728,
+     "error": null,
+     "sim": 0.743,
+     "sim_nn": 0.816,
+     "wer_nn": 0.6,
+     "checks": [
+      {
+       "what": "brand TCL",
+       "kind": "brand",
+       "ok": true
+      },
+      {
+       "what": "55 (انج)",
+       "kind": "number",
+       "ok": true
+      },
+      {
+       "what": "انج",
+       "kind": "phrase",
+       "ok": true
+      },
+      {
+       "what": "ارخص شاشة",
+       "kind": "phrase",
+       "ok": true
+      }
+     ],
+     "checks_ok": 4,
+     "checks_total": 4
+    },
+    {
+     "note": "D1_midea_washer_fast",
+     "said": "هلا اغاتي، الغسالة الميديا العشرة كيلو البيضة بيش؟ وأكو منها رصاصية؟ ومتى توصل لو اطلبها اليوم؟",
+     "heard": "حلقاتي الغسالة الميديا ال 10 كيلو البيضاء بايش؟ واكو منها رصاصية؟ وش وقت توصل لو اطلبها اليوم؟",
+     "seconds": 3.24,
+     "cost": 0.000712,
+     "error": null,
+     "sim": 0.868,
+     "sim_nn": 0.883,
+     "wer_nn": 0.438,
+     "checks": [
+      {
+       "what": "brand Midea",
+       "kind": "brand",
+       "ok": true
+      },
+      {
+       "what": "10 (كيلو)",
+       "kind": "number",
+       "ok": true
+      },
+      {
+       "what": "البيضة",
+       "kind": "phrase",
+       "ok": true
+      },
+      {
+       "what": "رصاصية",
+       "kind": "phrase",
+       "ok": true
+      }
+     ],
+     "checks_ok": 4,
+     "checks_total": 4
+    },
+    {
+     "note": "E1_toshiba_fridge",
+     "said": "مرحبا، شفت عدكم ثلاجة توشيبا ستة وعشرين قدم، اكو منها لون أسود؟ وشكد سعرها؟ والتسعة وعشرين شكد؟",
+     "heard": "مرحبا، شفت عندكم ثلاجة توشيبا 26 قدم، اكو منها لون اسود؟ وشقد سعرها؟ وال 29 شقد؟",
+     "seconds": 3.26,
+     "cost": 0.00083,
+     "error": null,
+     "sim": 0.824,
+     "sim_nn": 0.936,
+     "wer_nn": 0.286,
+     "checks": [
+      {
+       "what": "brand Toshiba",
+       "kind": "brand",
+       "ok": true
+      },
+      {
+       "what": "26 (قدم)",
+       "kind": "number",
+       "ok": true
+      },
+      {
+       "what": "29",
+       "kind": "number",
+       "ok": true
+      },
+      {
+       "what": "اسود",
+       "kind": "phrase",
+       "ok": true
+      }
+     ],
+     "checks_ok": 4,
+     "checks_total": 4
+    }
+   ]
+  },
+  "Voxtral Mini Transcribe": {
+   "agg": {
+    "checks": "25/26",
+    "notes_all_checks": "7/8",
+    "sim": 0.823,
+    "sim_nn": 0.922,
+    "wer_nn": 0.359,
+    "seconds_p50": 1.06,
+    "seconds_max": 3.27,
+    "cost_usd": 0.0029,
+    "errors": 0
+   },
+   "rows": [
+    {
+     "note": "A1_midea_fridge",
+     "said": "هلا بيكم، عدكم ثلاجة ميديا بابين متقابلين؟ اريد وحدة كبيرة، شي أربعة وثلاثين قدم. شكد سعرها؟",
+     "heard": "هلا بكم. عدكم ثلاجة ميديا بابين متقابلين؟ أريد وحدة كبيرة. شي 34 قدم. شقد سعرها؟",
+     "seconds": 1.08,
+     "cost": 0.0004,
+     "error": null,
+     "sim": 0.889,
+     "sim_nn": 0.978,
+     "wer_nn": 0.154,
+     "checks": [
+      {
+       "what": "brand Midea",
+       "kind": "brand",
+       "ok": true
+      },
+      {
+       "what": "34 (قدم)",
+       "kind": "number",
+       "ok": true
+      },
+      {
+       "what": "بابين متقابلين",
+       "kind": "phrase",
+       "ok": true
+      }
+     ],
+     "checks_ok": 3,
+     "checks_total": 3
+    },
+    {
+     "note": "A2_video",
+     "said": "حلوة، تكدر تدزلي فيديو إلها حتى أشوفها من جوه؟",
+     "heard": "هلوة؟ تقدر تدزلي فيديو إلها حتى أشوفها من جوة؟",
+     "seconds": 0.88,
+     "cost": 0.00015,
+     "error": null,
+     "sim": 0.955,
+     "sim_nn": 0.955,
+     "wer_nn": 0.222,
+     "checks": [
+      {
+       "what": "فيديو",
+       "kind": "phrase",
+       "ok": true
+      }
+     ],
+     "checks_ok": 1,
+     "checks_total": 1
+    },
+    {
+     "note": "A3_basra_delivery",
+     "said": "زين، والتوصيل للبصرة شكد ياخذ وشكد أجوره؟ آني بالبصرة، العشار، قرب ساحة أم البروم، واسمي زينب كاظم.",
+     "heard": "زين والتوصيل للبصرة شقد ياخذ وشقد اجورة انا بالبصرة العشار قرب ساحةهم والبروم واسمي زينب كاظم",
+     "seconds": 3.27,
+     "cost": 0.0004,
+     "error": null,
+     "sim": 0.946,
+     "sim_nn": 0.946,
+     "wer_nn": 0.353,
+     "checks": [
+      {
+       "what": "البصرة",
+       "kind": "place",
+       "ok": true
+      },
+      {
+       "what": "العشار",
+       "kind": "place",
+       "ok": true
+      },
+      {
+       "what": "ام البروم",
+       "kind": "place",
+       "ok": true
+      },
+      {
+       "what": "name زينب كاظم",
+       "kind": "name",
+       "ok": true
+      }
+     ],
+     "checks_ok": 4,
+     "checks_total": 4
+    },
+    {
+     "note": "A4_confirm_phone",
+     "said": "اي ثبتها عيني. ورقمي صفر سبعة سبعة صفر، واحد اثنين ثلاثة، أربعة خمسة ستة سبعة.",
+     "heard": "أيه ثبتها عيني ورقمي 0770 1234567",
+     "seconds": 1.06,
+     "cost": 0.0004,
+     "error": null,
+     "sim": 0.393,
+     "sim_nn": 0.974,
+     "wer_nn": 0.25,
+     "checks": [
+      {
+       "what": "confirmation (ثبتها)",
+       "kind": "phrase",
+       "ok": true
+      },
+      {
+       "what": "phone 07701234567",
+       "kind": "phone",
+       "ok": true
+      }
+     ],
+     "checks_ok": 2,
+     "checks_total": 2
+    },
+    {
+     "note": "B1_tcl_split",
+     "said": "السلام عليكم ورحمة الله. ابني اريد سبلت تي سي ال طن ونص، شكد سعره؟ وتنصبوه ببلاش لو لا؟ آني ساكن بالمنصور.",
+     "heard": "سلام عليكم ورحمة الله ابني ريد سبلت تي سي أل طن ونص اشقت سعره وتنصبوا بلاش لو لا انا ساكن بالمنصور",
+     "seconds": 1.05,
+     "cost": 0.0006,
+     "error": null,
+     "sim": 0.935,
+     "sim_nn": 0.935,
+     "wer_nn": 0.286,
+     "checks": [
+      {
+       "what": "brand TCL",
+       "kind": "brand",
+       "ok": true
+      },
+      {
+       "what": "طن ونص (1.5)",
+       "kind": "number",
+       "ok": true
+      },
+      {
+       "what": "ببلاش",
+       "kind": "phrase",
+       "ok": true
+      },
+      {
+       "what": "المنصور",
+       "kind": "place",
+       "ok": true
+      }
+     ],
+     "checks_ok": 4,
+     "checks_total": 4
+    },
+    {
+     "note": "C1_tcl_tv_noisy",
+     "said": "هلو اخي، عدكم شاشة تي سي ال خمسة وخمسين انج؟ شكد سعرها هسه؟ وشنو أرخص شاشة عدكم؟",
+     "heard": "أهلاً أخي، أتكم شاشة TCL 55 إنش؟ إيش كتسعرها هسه؟ وشنو أرخص شاشة عندكم؟",
+     "seconds": 1.21,
+     "cost": 0.0003,
+     "error": null,
+     "sim": 0.718,
+     "sim_nn": 0.787,
+     "wer_nn": 0.6,
+     "checks": [
+      {
+       "what": "brand TCL",
+       "kind": "brand",
+       "ok": true
+      },
+      {
+       "what": "55 (انج)",
+       "kind": "number",
+       "ok": true
+      },
+      {
+       "what": "انج",
+       "kind": "phrase",
+       "ok": true
+      },
+      {
+       "what": "ارخص شاشة",
+       "kind": "phrase",
+       "ok": true
+      }
+     ],
+     "checks_ok": 4,
+     "checks_total": 4
+    },
+    {
+     "note": "D1_midea_washer_fast",
+     "said": "هلا اغاتي، الغسالة الميديا العشرة كيلو البيضة بيش؟ وأكو منها رصاصية؟ ومتى توصل لو اطلبها اليوم؟",
+     "heard": "هل غاتي الغسالة الميديا العشرة كيلو البيضاء بيش وأكو منها رصاسية؟ وش وقت توصلوا أطلبها اليوم؟",
+     "seconds": 0.84,
+     "cost": 0.0003,
+     "error": null,
+     "sim": 0.912,
+     "sim_nn": 0.912,
+     "wer_nn": 0.438,
+     "checks": [
+      {
+       "what": "brand Midea",
+       "kind": "brand",
+       "ok": true
+      },
+      {
+       "what": "10 (كيلو)",
+       "kind": "number",
+       "ok": true
+      },
+      {
+       "what": "البيضة",
+       "kind": "phrase",
+       "ok": true
+      },
+      {
+       "what": "رصاصية",
+       "kind": "phrase",
+       "ok": true
+      }
+     ],
+     "checks_ok": 4,
+     "checks_total": 4
+    },
+    {
+     "note": "E1_toshiba_fridge",
+     "said": "مرحبا، شفت عدكم ثلاجة توشيبا ستة وعشرين قدم، اكو منها لون أسود؟ وشكد سعرها؟ والتسعة وعشرين شكد؟",
+     "heard": "مرحبا، اشفت عندكم ثلاجة توشي بس 26 قدم؟ أكو منها لونة سوداء؟ وجقد سعرها؟ والتسعة وعشرين جقد؟",
+     "seconds": 0.93,
+     "cost": 0.00035,
+     "error": null,
+     "sim": 0.836,
+     "sim_nn": 0.886,
+     "wer_nn": 0.571,
+     "checks": [
+      {
+       "what": "brand Toshiba",
+       "kind": "brand",
+       "ok": false
+      },
+      {
+       "what": "26 (قدم)",
+       "kind": "number",
+       "ok": true
+      },
+      {
+       "what": "29",
+       "kind": "number",
+       "ok": true
+      },
+      {
+       "what": "اسود",
+       "kind": "phrase",
+       "ok": true
+      }
+     ],
+     "checks_ok": 3,
+     "checks_total": 4
+    }
+   ]
+  },
+  "Whisper large-v3-turbo": {
+   "agg": {
+    "checks": "25/26",
+    "notes_all_checks": "7/8",
+    "sim": 0.803,
+    "sim_nn": 0.898,
+    "wer_nn": 0.413,
+    "seconds_p50": 1.47,
+    "seconds_max": 1.65,
+    "cost_usd": 0.000243,
+    "errors": 0
+   },
+   "rows": [
+    {
+     "note": "A1_midea_fridge",
+     "said": "هلا بيكم، عدكم ثلاجة ميديا بابين متقابلين؟ اريد وحدة كبيرة، شي أربعة وثلاثين قدم. شكد سعرها؟",
+     "heard": "هلا بكم عدكم ثلاجة ميديا بابين متقابلين؟  أريد واحدة شبيرة، شي 34 قدم  شكت سعرها؟",
+     "seconds": 1.65,
+     "cost": 2.9304e-05,
+     "error": null,
+     "sim": 0.871,
+     "sim_nn": 0.922,
+     "wer_nn": 0.308,
+     "checks": [
+      {
+       "what": "brand Midea",
+       "kind": "brand",
+       "ok": true
+      },
+      {
+       "what": "34 (قدم)",
+       "kind": "number",
+       "ok": true
+      },
+      {
+       "what": "بابين متقابلين",
+       "kind": "phrase",
+       "ok": true
+      }
+     ],
+     "checks_ok": 3,
+     "checks_total": 3
+    },
+    {
+     "note": "A2_video",
+     "said": "حلوة، تكدر تدزلي فيديو إلها حتى أشوفها من جوه؟",
+     "heard": "هلوة، تقدر ادزلي فيديو إلها حتى أشوفها من جوة؟",
+     "seconds": 1.02,
+     "cost": 4.333333333329e-05,
+     "error": null,
+     "sim": 0.932,
+     "sim_nn": 0.932,
+     "wer_nn": 0.333,
+     "checks": [
+      {
+       "what": "فيديو",
+       "kind": "phrase",
+       "ok": true
+      }
+     ],
+     "checks_ok": 1,
+     "checks_total": 1
+    },
+    {
+     "note": "A3_basra_delivery",
+     "said": "زين، والتوصيل للبصرة شكد ياخذ وشكد أجوره؟ آني بالبصرة، العشار، قرب ساحة أم البروم، واسمي زينب كاظم.",
+     "heard": "زين والتوصيل للبصرة جد ياخذ و جد عجورة  أنا بالبصرة العشار قرب ساحتهم البروم واسمي زينب كاظم",
+     "seconds": 1.15,
+     "cost": 2.988675e-05,
+     "error": null,
+     "sim": 0.924,
+     "sim_nn": 0.924,
+     "wer_nn": 0.412,
+     "checks": [
+      {
+       "what": "البصرة",
+       "kind": "place",
+       "ok": true
+      },
+      {
+       "what": "العشار",
+       "kind": "place",
+       "ok": true
+      },
+      {
+       "what": "ام البروم",
+       "kind": "place",
+       "ok": true
+      },
+      {
+       "what": "name زينب كاظم",
+       "kind": "name",
+       "ok": true
+      }
+     ],
+     "checks_ok": 4,
+     "checks_total": 4
+    },
+    {
+     "note": "A4_confirm_phone",
+     "said": "اي ثبتها عيني. ورقمي صفر سبعة سبعة صفر، واحد اثنين ثلاثة، أربعة خمسة ستة سبعة.",
+     "heard": "أي ثبتها عيني ورقمي 0770123  4567",
+     "seconds": 1.29,
+     "cost": 2.97369e-05,
+     "error": null,
+     "sim": 0.396,
+     "sim_nn": 1.0,
+     "wer_nn": 0.0,
+     "checks": [
+      {
+       "what": "confirmation (ثبتها)",
+       "kind": "phrase",
+       "ok": true
+      },
+      {
+       "what": "phone 07701234567",
+       "kind": "phone",
+       "ok": true
+      }
+     ],
+     "checks_ok": 2,
+     "checks_total": 2
+    },
+    {
+     "note": "B1_tcl_split",
+     "said": "السلام عليكم ورحمة الله. ابني اريد سبلت تي سي ال طن ونص، شكد سعره؟ وتنصبوه ببلاش لو لا؟ آني ساكن بالمنصور.",
+     "heard": "سلام عليكم ورحمة الله.  ابني ريت سبلت تي سي أل طن ونص.  إشكت سعره  وتنصبو بلاش لولا  أنا ساكن بالمنصور",
+     "seconds": 1.52,
+     "cost": 4.274055e-05,
+     "error": null,
+     "sim": 0.934,
+     "sim_nn": 0.934,
+     "wer_nn": 0.381,
+     "checks": [
+      {
+       "what": "brand TCL",
+       "kind": "brand",
+       "ok": true
+      },
+      {
+       "what": "طن ونص (1.5)",
+       "kind": "number",
+       "ok": true
+      },
+      {
+       "what": "ببلاش",
+       "kind": "phrase",
+       "ok": true
+      },
+      {
+       "what": "المنصور",
+       "kind": "place",
+       "ok": true
+      }
+     ],
+     "checks_ok": 4,
+     "checks_total": 4
+    },
+    {
+     "note": "C1_tcl_tv_noisy",
+     "said": "هلو اخي، عدكم شاشة تي سي ال خمسة وخمسين انج؟ شكد سعرها هسه؟ وشنو أرخص شاشة عدكم؟",
+     "heard": "أهلا أخي، هل تكون شاشة TCL 55 إنش؟  ما هي تسعرها الآن؟ وما أرخص شاشة لكم؟",
+     "seconds": 1.59,
+     "cost": 2.186145e-05,
+     "error": null,
+     "sim": 0.569,
+     "sim_nn": 0.62,
+     "wer_nn": 0.8,
+     "checks": [
+      {
+       "what": "brand TCL",
+       "kind": "brand",
+       "ok": true
+      },
+      {
+       "what": "55 (انج)",
+       "kind": "number",
+       "ok": true
+      },
+      {
+       "what": "انج",
+       "kind": "phrase",
+       "ok": true
+      },
+      {
+       "what": "ارخص شاشة",
+       "kind": "phrase",
+       "ok": true
+      }
+     ],
+     "checks_ok": 4,
+     "checks_total": 4
+    },
+    {
+     "note": "D1_midea_washer_fast",
+     "said": "هلا اغاتي، الغسالة الميديا العشرة كيلو البيضة بيش؟ وأكو منها رصاصية؟ ومتى توصل لو اطلبها اليوم؟",
+     "heard": "هلا غاتي الغسالة الميديا العشرة كيلو البيضة ببيش و أكون منها رصاصية؟  وش وقت تصل لأطلبها اليوم؟",
+     "seconds": 1.62,
+     "cost": 2.007657e-05,
+     "error": null,
+     "sim": 0.929,
+     "sim_nn": 0.929,
+     "wer_nn": 0.5,
+     "checks": [
+      {
+       "what": "brand Midea",
+       "kind": "brand",
+       "ok": true
+      },
+      {
+       "what": "10 (كيلو)",
+       "kind": "number",
+       "ok": true
+      },
+      {
+       "what": "البيضة",
+       "kind": "phrase",
+       "ok": true
+      },
+      {
+       "what": "رصاصية",
+       "kind": "phrase",
+       "ok": true
+      }
+     ],
+     "checks_ok": 4,
+     "checks_total": 4
+    },
+    {
+     "note": "E1_toshiba_fridge",
+     "said": "مرحبا، شفت عدكم ثلاجة توشيبا ستة وعشرين قدم، اكو منها لون أسود؟ وشكد سعرها؟ والتسعة وعشرين شكد؟",
+     "heard": "مرحبا، اشفت عدكم ثلاجة توشي بس 26 قدم؟ أكون منها لونة سود وشقد سعرها؟ والتسعة وعشرين شقد؟",
+     "seconds": 1.42,
+     "cost": 2.55744e-05,
+     "error": null,
+     "sim": 0.869,
+     "sim_nn": 0.925,
+     "wer_nn": 0.571,
+     "checks": [
+      {
+       "what": "brand Toshiba",
+       "kind": "brand",
+       "ok": false
+      },
+      {
+       "what": "26 (قدم)",
+       "kind": "number",
+       "ok": true
+      },
+      {
+       "what": "29",
+       "kind": "number",
+       "ok": true
+      },
+      {
+       "what": "اسود",
+       "kind": "phrase",
+       "ok": true
+      }
+     ],
+     "checks_ok": 3,
+     "checks_total": 4
+    }
+   ]
+  },
+  "Whisper large-v3": {
+   "agg": {
+    "checks": "24/26",
+    "notes_all_checks": "6/8",
+    "sim": 0.812,
+    "sim_nn": 0.901,
+    "wer_nn": 0.409,
+    "seconds_p50": 1.72,
+    "seconds_max": 3.11,
+    "cost_usd": 0.000478,
+    "errors": 0
+   },
+   "rows": [
+    {
+     "note": "A1_midea_fridge",
+     "said": "هلا بيكم، عدكم ثلاجة ميديا بابين متقابلين؟ اريد وحدة كبيرة، شي أربعة وثلاثين قدم. شكد سعرها؟",
+     "heard": "هلا بكم، أعدكم ثلاجة ميديا بابين متقابلين؟  أريد وحدة كبيرة، شيء 34 قدم  شكت سعرها؟",
+     "seconds": 1.48,
+     "cost": 6.6e-05,
+     "error": null,
+     "sim": 0.878,
+     "sim_nn": 0.964,
+     "wer_nn": 0.308,
+     "checks": [
+      {
+       "what": "brand Midea",
+       "kind": "brand",
+       "ok": true
+      },
+      {
+       "what": "34 (قدم)",
+       "kind": "number",
+       "ok": true
+      },
+      {
+       "what": "بابين متقابلين",
+       "kind": "phrase",
+       "ok": true
+      }
+     ],
+     "checks_ok": 3,
+     "checks_total": 3
+    },
+    {
+     "note": "A2_video",
+     "said": "حلوة، تكدر تدزلي فيديو إلها حتى أشوفها من جوه؟",
+     "heard": "هلو؟  تقدر تدزلي فيديو إلها حتى أشوفها من جوه؟",
+     "seconds": 1.12,
+     "cost": 2.925e-05,
+     "error": null,
+     "sim": 0.943,
+     "sim_nn": 0.943,
+     "wer_nn": 0.222,
+     "checks": [
+      {
+       "what": "فيديو",
+       "kind": "phrase",
+       "ok": true
+      }
+     ],
+     "checks_ok": 1,
+     "checks_total": 1
+    },
+    {
+     "note": "A3_basra_delivery",
+     "said": "زين، والتوصيل للبصرة شكد ياخذ وشكد أجوره؟ آني بالبصرة، العشار، قرب ساحة أم البروم، واسمي زينب كاظم.",
+     "heard": "زين والتوصيل للبصرة شقد ياخذ وشقد عجوره  أنا بالبصرة العشار قرب ساحة أم البروم وأسمي زينب كاظم",
+     "seconds": 3.11,
+     "cost": 6.73125e-05,
+     "error": null,
+     "sim": 0.957,
+     "sim_nn": 0.957,
+     "wer_nn": 0.235,
+     "checks": [
+      {
+       "what": "البصرة",
+       "kind": "place",
+       "ok": true
+      },
+      {
+       "what": "العشار",
+       "kind": "place",
+       "ok": true
+      },
+      {
+       "what": "ام البروم",
+       "kind": "place",
+       "ok": true
+      },
+      {
+       "what": "name زينب كاظم",
+       "kind": "name",
+       "ok": true
+      }
+     ],
+     "checks_ok": 4,
+     "checks_total": 4
+    },
+    {
+     "note": "A4_confirm_phone",
+     "said": "اي ثبتها عيني. ورقمي صفر سبعة سبعة صفر، واحد اثنين ثلاثة، أربعة خمسة ستة سبعة.",
+     "heard": "ايه ثبتها عيني ورقمي 0 7 7 0 1 2 3 4  4 5 6 7",
+     "seconds": 2.05,
+     "cost": 6.6975e-05,
+     "error": null,
+     "sim": 0.508,
+     "sim_nn": 0.974,
+     "wer_nn": 0.25,
+     "checks": [
+      {
+       "what": "confirmation (ثبتها)",
+       "kind": "phrase",
+       "ok": true
+      },
+      {
+       "what": "phone 07701234567",
+       "kind": "phone",
+       "ok": false
+      }
+     ],
+     "checks_ok": 1,
+     "checks_total": 2
+    },
+    {
+     "note": "B1_tcl_split",
+     "said": "السلام عليكم ورحمة الله. ابني اريد سبلت تي سي ال طن ونص، شكد سعره؟ وتنصبوه ببلاش لو لا؟ آني ساكن بالمنصور.",
+     "heard": "السلام عليكم ورحمة الله  ابني ريت سبلت تي سي أل طن ونص  ايش قد سعره؟  وتنصبوه بلاش لو لا  أنا ساكن بالمنصور",
+     "seconds": 1.7,
+     "cost": 9.62625e-05,
+     "error": null,
+     "sim": 0.946,
+     "sim_nn": 0.946,
+     "wer_nn": 0.238,
+     "checks": [
+      {
+       "what": "brand TCL",
+       "kind": "brand",
+       "ok": true
+      },
+      {
+       "what": "طن ونص (1.5)",
+       "kind": "number",
+       "ok": true
+      },
+      {
+       "what": "ببلاش",
+       "kind": "phrase",
+       "ok": true
+      },
+      {
+       "what": "المنصور",
+       "kind": "place",
+       "ok": true
+      }
+     ],
+     "checks_ok": 4,
+     "checks_total": 4
+    },
+    {
+     "note": "C1_tcl_tv_noisy",
+     "said": "هلو اخي، عدكم شاشة تي سي ال خمسة وخمسين انج؟ شكد سعرها هسه؟ وشنو أرخص شاشة عدكم؟",
+     "heard": "أهلا وأخي، هل لديكم شاشة TCL 55 إنش؟ ما هي السعر الآن؟ وما هو أرخص شاشة لديكم؟",
+     "seconds": 3.04,
+     "cost": 4.92375e-05,
+     "error": null,
+     "sim": 0.56,
+     "sim_nn": 0.622,
+     "wer_nn": 0.867,
+     "checks": [
+      {
+       "what": "brand TCL",
+       "kind": "brand",
+       "ok": true
+      },
+      {
+       "what": "55 (انج)",
+       "kind": "number",
+       "ok": true
+      },
+      {
+       "what": "انج",
+       "kind": "phrase",
+       "ok": true
+      },
+      {
+       "what": "ارخص شاشة",
+       "kind": "phrase",
+       "ok": true
+      }
+     ],
+     "checks_ok": 4,
+     "checks_total": 4
+    },
+    {
+     "note": "D1_midea_washer_fast",
+     "said": "هلا اغاتي، الغسالة الميديا العشرة كيلو البيضة بيش؟ وأكو منها رصاصية؟ ومتى توصل لو اطلبها اليوم؟",
+     "heard": "هلأ غاتي، الغسالة الميديا العشرة كيلو البيضة بيش، وأكو منها رصاصية؟  وش وقت تصل الى اطلب هاليوم؟",
+     "seconds": 1.1,
+     "cost": 4.52175e-05,
+     "error": null,
+     "sim": 0.923,
+     "sim_nn": 0.923,
+     "wer_nn": 0.438,
+     "checks": [
+      {
+       "what": "brand Midea",
+       "kind": "brand",
+       "ok": true
+      },
+      {
+       "what": "10 (كيلو)",
+       "kind": "number",
+       "ok": true
+      },
+      {
+       "what": "البيضة",
+       "kind": "phrase",
+       "ok": true
+      },
+      {
+       "what": "رصاصية",
+       "kind": "phrase",
+       "ok": true
+      }
+     ],
+     "checks_ok": 4,
+     "checks_total": 4
+    },
+    {
+     "note": "E1_toshiba_fridge",
+     "said": "مرحبا، شفت عدكم ثلاجة توشيبا ستة وعشرين قدم، اكو منها لون أسود؟ وشكد سعرها؟ والتسعة وعشرين شكد؟",
+     "heard": "مرحبا، شفت عندكم ثلاجة توشي بس 26 قدم، أكو منها لونها سود، وش قد سعرها؟ والـ 29 ش قد؟",
+     "seconds": 1.74,
+     "cost": 5.76e-05,
+     "error": null,
+     "sim": 0.781,
+     "sim_nn": 0.883,
+     "wer_nn": 0.714,
+     "checks": [
+      {
+       "what": "brand Toshiba",
+       "kind": "brand",
+       "ok": false
+      },
+      {
+       "what": "26 (قدم)",
+       "kind": "number",
+       "ok": true
+      },
+      {
+       "what": "29",
+       "kind": "number",
+       "ok": true
+      },
+      {
+       "what": "اسود",
+       "kind": "phrase",
+       "ok": true
+      }
+     ],
+     "checks_ok": 3,
+     "checks_total": 4
+    }
+   ]
+  },
+  "Closed model B": {
+   "agg": {
+    "checks": "23/26",
+    "notes_all_checks": "5/8",
+    "sim": 0.891,
+    "sim_nn": 0.896,
+    "wer_nn": 0.388,
+    "seconds_p50": 1.4,
+    "seconds_max": 2.13,
+    "cost_usd": 0.002162,
+    "errors": 0
+   },
+   "rows": [
+    {
+     "note": "A1_midea_fridge",
+     "said": "هلا بيكم، عدكم ثلاجة ميديا بابين متقابلين؟ اريد وحدة كبيرة، شي أربعة وثلاثين قدم. شكد سعرها؟",
+     "heard": "هلا بيكم، عندكم ثلاجة ميديا؟ بابين متقابلين؟ أريد وحدة كبيرة، شي 34 قدم. شكد سعرها؟",
+     "seconds": 1.27,
+     "cost": 0.000295,
+     "error": null,
+     "sim": 0.902,
+     "sim_nn": 0.993,
+     "wer_nn": 0.077,
+     "checks": [
+      {
+       "what": "brand Midea",
+       "kind": "brand",
+       "ok": true
+      },
+      {
+       "what": "34 (قدم)",
+       "kind": "number",
+       "ok": true
+      },
+      {
+       "what": "بابين متقابلين",
+       "kind": "phrase",
+       "ok": true
+      }
+     ],
+     "checks_ok": 3,
+     "checks_total": 3
+    },
+    {
+     "note": "A2_video",
+     "said": "حلوة، تكدر تدزلي فيديو إلها حتى أشوفها من جوه؟",
+     "heard": "حلوة! تقدري تدزلي فيديو إلها حتى أشوفها من جوا؟",
+     "seconds": 1.24,
+     "cost": 0.00015875,
+     "error": null,
+     "sim": 0.944,
+     "sim_nn": 0.944,
+     "wer_nn": 0.222,
+     "checks": [
+      {
+       "what": "فيديو",
+       "kind": "phrase",
+       "ok": true
+      }
+     ],
+     "checks_ok": 1,
+     "checks_total": 1
+    },
+    {
+     "note": "A3_basra_delivery",
+     "said": "زين، والتوصيل للبصرة شكد ياخذ وشكد أجوره؟ آني بالبصرة، العشار، قرب ساحة أم البروم، واسمي زينب كاظم.",
+     "heard": "زين والتوصيل للبصرة شقد يأخذ وشقد أجوره؟ أنا بالبصرة، بالعشار، قرب ساعة أم البرووم، واسمي زينب كاظم.",
+     "seconds": 1.67,
+     "cost": 0.00032125,
+     "error": null,
+     "sim": 0.947,
+     "sim_nn": 0.947,
+     "wer_nn": 0.353,
+     "checks": [
+      {
+       "what": "البصرة",
+       "kind": "place",
+       "ok": true
+      },
+      {
+       "what": "العشار",
+       "kind": "place",
+       "ok": true
+      },
+      {
+       "what": "ام البروم",
+       "kind": "place",
+       "ok": false
+      },
+      {
+       "what": "name زينب كاظم",
+       "kind": "name",
+       "ok": true
+      }
+     ],
+     "checks_ok": 3,
+     "checks_total": 4
+    },
+    {
+     "note": "A4_confirm_phone",
+     "said": "اي ثبتها عيني. ورقمي صفر سبعة سبعة صفر، واحد اثنين ثلاثة، أربعة خمسة ستة سبعة.",
+     "heard": "هاي تب بتاعي ورقمي صفر سبعة سبعة صفر واحد اثنين ثلاثة اربعة خمسة ستة سبعة",
+     "seconds": 1.26,
+     "cost": 0.00024625,
+     "error": null,
+     "sim": 0.939,
+     "sim_nn": 0.757,
+     "wer_nn": 0.75,
+     "checks": [
+      {
+       "what": "confirmation (ثبتها)",
+       "kind": "phrase",
+       "ok": false
+      },
+      {
+       "what": "phone 07701234567",
+       "kind": "phone",
+       "ok": true
+      }
+     ],
+     "checks_ok": 1,
+     "checks_total": 2
+    },
+    {
+     "note": "B1_tcl_split",
+     "said": "السلام عليكم ورحمة الله. ابني اريد سبلت تي سي ال طن ونص، شكد سعره؟ وتنصبوه ببلاش لو لا؟ آني ساكن بالمنصور.",
+     "heard": "السلام عليكم ورحمة الله ابني أريد تابلت TCL طَنّوس، شقد سعره؟ وتنصبوه ببلاش لو لأ؟ أنا ساكن بالمنصور.",
+     "seconds": 2.13,
+     "cost": 0.00036,
+     "error": null,
+     "sim": 0.888,
+     "sim_nn": 0.888,
+     "wer_nn": 0.381,
+     "checks": [
+      {
+       "what": "brand TCL",
+       "kind": "brand",
+       "ok": true
+      },
+      {
+       "what": "طن ونص (1.5)",
+       "kind": "number",
+       "ok": false
+      },
+      {
+       "what": "ببلاش",
+       "kind": "phrase",
+       "ok": true
+      },
+      {
+       "what": "المنصور",
+       "kind": "place",
+       "ok": true
+      }
+     ],
+     "checks_ok": 3,
+     "checks_total": 4
+    },
+    {
+     "note": "C1_tcl_tv_noisy",
+     "said": "هلو اخي، عدكم شاشة تي سي ال خمسة وخمسين انج؟ شكد سعرها هسه؟ وشنو أرخص شاشة عدكم؟",
+     "heard": "هلا واكيل، عندكم شاشة TCL 55 إنش؟ شكد سعرها هسا؟ وشنو أرخص شاشة عندكم؟",
+     "seconds": 1.57,
+     "cost": 0.00024125,
+     "error": null,
+     "sim": 0.746,
+     "sim_nn": 0.819,
+     "wer_nn": 0.6,
+     "checks": [
+      {
+       "what": "brand TCL",
+       "kind": "brand",
+       "ok": true
+      },
+      {
+       "what": "55 (انج)",
+       "kind": "number",
+       "ok": true
+      },
+      {
+       "what": "انج",
+       "kind": "phrase",
+       "ok": true
+      },
+      {
+       "what": "ارخص شاشة",
+       "kind": "phrase",
+       "ok": true
+      }
+     ],
+     "checks_ok": 4,
+     "checks_total": 4
+    },
+    {
+     "note": "D1_midea_washer_fast",
+     "said": "هلا اغاتي، الغسالة الميديا العشرة كيلو البيضة بيش؟ وأكو منها رصاصية؟ ومتى توصل لو اطلبها اليوم؟",
+     "heard": "هلا غاتي، الغسالة الميديا العشرة كيلو البيضاء بيش؟ ومعكم منها رصاصية؟ وشو وقت توصل الطلبة اليوم؟",
+     "seconds": 1.22,
+     "cost": 0.000255,
+     "error": null,
+     "sim": 0.885,
+     "sim_nn": 0.885,
+     "wer_nn": 0.438,
+     "checks": [
+      {
+       "what": "brand Midea",
+       "kind": "brand",
+       "ok": true
+      },
+      {
+       "what": "10 (كيلو)",
+       "kind": "number",
+       "ok": true
+      },
+      {
+       "what": "البيضة",
+       "kind": "phrase",
+       "ok": true
+      },
+      {
+       "what": "رصاصية",
+       "kind": "phrase",
+       "ok": true
+      }
+     ],
+     "checks_ok": 4,
+     "checks_total": 4
+    },
+    {
+     "note": "E1_toshiba_fridge",
+     "said": "مرحبا، شفت عدكم ثلاجة توشيبا ستة وعشرين قدم، اكو منها لون أسود؟ وشكد سعرها؟ والتسعة وعشرين شكد؟",
+     "heard": "مرحبا، الشفت عكم ثلاجة توشيبا 26 قدم، أكو منها لون أسود وجقد سعرها؟ والتسعة وعشرين شقد؟",
+     "seconds": 1.53,
+     "cost": 0.000285,
+     "error": null,
+     "sim": 0.879,
+     "sim_nn": 0.938,
+     "wer_nn": 0.286,
+     "checks": [
+      {
+       "what": "brand Toshiba",
+       "kind": "brand",
+       "ok": true
+      },
+      {
+       "what": "26 (قدم)",
+       "kind": "number",
+       "ok": true
+      },
+      {
+       "what": "29",
+       "kind": "number",
+       "ok": true
+      },
+      {
+       "what": "اسود",
+       "kind": "phrase",
+       "ok": true
+      }
+     ],
+     "checks_ok": 4,
+     "checks_total": 4
+    }
+   ]
+  },
+  "Whisper large-v3-turbo, laptop CPU (int8)": {
+   "rows": [
+    {
+     "note": "A1_midea_fridge",
+     "said": "هلا بيكم، عدكم ثلاجة ميديا بابين متقابلين؟ اريد وحدة كبيرة، شي أربعة وثلاثين قدم. شكد سعرها؟",
+     "heard": "هلا بيكم عدكم ثلاجة ميديا بابين متقابلين اريد واحدة شبيرة شي 34 قدم شكت سعرها؟",
+     "seconds": 24.81,
+     "cost": 0.0,
+     "error": null,
+     "sim": 0.878,
+     "sim_nn": 0.93,
+     "wer_nn": 0.231,
+     "checks": [
+      {
+       "what": "brand Midea",
+       "kind": "brand",
+       "ok": true
+      },
+      {
+       "what": "34 (قدم)",
+       "kind": "number",
+       "ok": true
+      },
+      {
+       "what": "بابين متقابلين",
+       "kind": "phrase",
+       "ok": true
+      }
+     ],
+     "checks_ok": 3,
+     "checks_total": 3
+    },
+    {
+     "note": "A2_video",
+     "said": "حلوة، تكدر تدزلي فيديو إلها حتى أشوفها من جوه؟",
+     "heard": "هلوة؟ تقدر ادزلي فيديو إلها حتى أشوفها من جوا؟",
+     "seconds": 25.49,
+     "cost": 0.0,
+     "error": null,
+     "sim": 0.909,
+     "sim_nn": 0.909,
+     "wer_nn": 0.444,
+     "checks": [
+      {
+       "what": "فيديو",
+       "kind": "phrase",
+       "ok": true
+      }
+     ],
+     "checks_ok": 1,
+     "checks_total": 1
+    },
+    {
+     "note": "A3_basra_delivery",
+     "said": "زين، والتوصيل للبصرة شكد ياخذ وشكد أجوره؟ آني بالبصرة، العشار، قرب ساحة أم البروم، واسمي زينب كاظم.",
+     "heard": "زين والتوصيل للبصرة شقد ياخذ وشقد أجوره أنا بالبصرة العشار قرب ساحتهم البروم واسمي زينب كاغم",
+     "seconds": 25.26,
+     "cost": 0.0,
+     "error": null,
+     "sim": 0.941,
+     "sim_nn": 0.941,
+     "wer_nn": 0.353,
+     "checks": [
+      {
+       "what": "البصرة",
+       "kind": "place",
+       "ok": true
+      },
+      {
+       "what": "العشار",
+       "kind": "place",
+       "ok": true
+      },
+      {
+       "what": "ام البروم",
+       "kind": "place",
+       "ok": true
+      },
+      {
+       "what": "name زينب كاظم",
+       "kind": "name",
+       "ok": false
+      }
+     ],
+     "checks_ok": 3,
+     "checks_total": 4
+    },
+    {
+     "note": "A4_confirm_phone",
+     "said": "اي ثبتها عيني. ورقمي صفر سبعة سبعة صفر، واحد اثنين ثلاثة، أربعة خمسة ستة سبعة.",
+     "heard": "ايه ثبتها عيني ورقمي 07701234567",
+     "seconds": 23.02,
+     "cost": 0.0,
+     "error": null,
+     "sim": 0.377,
+     "sim_nn": 0.974,
+     "wer_nn": 0.25,
+     "checks": [
+      {
+       "what": "confirmation (ثبتها)",
+       "kind": "phrase",
+       "ok": true
+      },
+      {
+       "what": "phone 07701234567",
+       "kind": "phone",
+       "ok": true
+      }
+     ],
+     "checks_ok": 2,
+     "checks_total": 2
+    },
+    {
+     "note": "B1_tcl_split",
+     "said": "السلام عليكم ورحمة الله. ابني اريد سبلت تي سي ال طن ونص، شكد سعره؟ وتنصبوه ببلاش لو لا؟ آني ساكن بالمنصور.",
+     "heard": "سلام عليكم ورحمة الله ابني اريد سبلت تي سي أل طن ونص اش قد سعره وتنصبوه بلاش لو لا اني ساكن بالمنصور",
+     "seconds": 34.88,
+     "cost": 0.0,
+     "error": null,
+     "sim": 0.965,
+     "sim_nn": 0.965,
+     "wer_nn": 0.19,
+     "checks": [
+      {
+       "what": "brand TCL",
+       "kind": "brand",
+       "ok": true
+      },
+      {
+       "what": "طن ونص (1.5)",
+       "kind": "number",
+       "ok": true
+      },
+      {
+       "what": "ببلاش",
+       "kind": "phrase",
+       "ok": true
+      },
+      {
+       "what": "المنصور",
+       "kind": "place",
+       "ok": true
+      }
+     ],
+     "checks_ok": 4,
+     "checks_total": 4
+    },
+    {
+     "note": "C1_tcl_tv_noisy",
+     "said": "هلو اخي، عدكم شاشة تي سي ال خمسة وخمسين انج؟ شكد سعرها هسه؟ وشنو أرخص شاشة عدكم؟",
+     "heard": "أهلا وأخي، هل تكون شاشة TCL 55 إنش؟ ماذا تسعرها الآن؟ وماذا أرخص شاشاتكم؟",
+     "seconds": 216.27,
+     "cost": 0.0,
+     "error": null,
+     "sim": 0.538,
+     "sim_nn": 0.585,
+     "wer_nn": 0.933,
+     "checks": [
+      {
+       "what": "brand TCL",
+       "kind": "brand",
+       "ok": true
+      },
+      {
+       "what": "55 (انج)",
+       "kind": "number",
+       "ok": true
+      },
+      {
+       "what": "انج",
+       "kind": "phrase",
+       "ok": true
+      },
+      {
+       "what": "ارخص شاشة",
+       "kind": "phrase",
+       "ok": true
+      }
+     ],
+     "checks_ok": 4,
+     "checks_total": 4
+    },
+    {
+     "note": "D1_midea_washer_fast",
+     "said": "هلا اغاتي، الغسالة الميديا العشرة كيلو البيضة بيش؟ وأكو منها رصاصية؟ ومتى توصل لو اطلبها اليوم؟",
+     "heard": "هلا غاتي، الغسالة الميديا 10 كيلو البيضة ببيش وأكون منها رصاصية؟ وماذا تصل لو أطلبها اليوم؟",
+     "seconds": 287.23,
+     "cost": 0.0,
+     "error": null,
+     "sim": 0.905,
+     "sim_nn": 0.909,
+     "wer_nn": 0.375,
+     "checks": [
+      {
+       "what": "brand Midea",
+       "kind": "brand",
+       "ok": true
+      },
+      {
+       "what": "10 (كيلو)",
+       "kind": "number",
+       "ok": true
+      },
+      {
+       "what": "البيضة",
+       "kind": "phrase",
+       "ok": true
+      },
+      {
+       "what": "رصاصية",
+       "kind": "phrase",
+       "ok": true
+      }
+     ],
+     "checks_ok": 4,
+     "checks_total": 4
+    },
+    {
+     "note": "E1_toshiba_fridge",
+     "said": "مرحبا، شفت عدكم ثلاجة توشيبا ستة وعشرين قدم، اكو منها لون أسود؟ وشكد سعرها؟ والتسعة وعشرين شكد؟",
+     "heard": "مرحبا، إشفت عدكم ثلاجة توشي بس 26 قدم أكون منها لونة سود وشقد سعرها والتسعة وعشرين شقد",
+     "seconds": 121.54,
+     "cost": 0.0,
+     "error": null,
+     "sim": 0.869,
+     "sim_nn": 0.925,
+     "wer_nn": 0.571,
+     "checks": [
+      {
+       "what": "brand Toshiba",
+       "kind": "brand",
+       "ok": false
+      },
+      {
+       "what": "26 (قدم)",
+       "kind": "number",
+       "ok": true
+      },
+      {
+       "what": "29",
+       "kind": "number",
+       "ok": true
+      },
+      {
+       "what": "اسود",
+       "kind": "phrase",
+       "ok": true
+      }
+     ],
+     "checks_ok": 3,
+     "checks_total": 4
+    }
+   ],
+   "agg": {
+    "checks": "24/26",
+    "notes_all_checks": "6/8",
+    "sim": 0.798,
+    "sim_nn": 0.892,
+    "wer_nn": 0.418,
+    "seconds_p50": 30.19,
+    "seconds_max": 287.23,
+    "cost_usd": 0.0,
+    "errors": 0
+   }
+  }
+ },
+ "dropped": {
+  "Qwen3 ASR Flash": "404 on every call: no longer served by the host used"
+ },
+ "notes_on_timing": {
+  "Whisper large-v3-turbo, laptop CPU (int8)": "Intel i5-13420H, 8 threads, no GPU; notes 6-8 ran while five video renders shared the CPU (121-287 s); idle it took 23-35 s per note"
+ },
+ "how": "python -m eval.compare_stt --rescore <this file> --notes <its notes.jsonl> gives the same table",
+ "rescored_against": "the checks in the notes file at rescore time"
+}

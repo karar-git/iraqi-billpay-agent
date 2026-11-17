@@ -59,6 +59,22 @@ RELATION_WORDS = _norm_set((
 TITLES = _norm_set((
     "حجي", "الحجي", "حاج", "الحاج", "حجية", "الحجية", "ست", "الست", "استاذ", "الاستاذ",
     "استاذة", "الاستاذة", "دكتور", "الدكتور", "دكتورة", "الدكتورة", "اخ", "الاخ", "اخت", "الاخت",
+    "سيد", "السيد", "سيدة", "السيدة",
+))
+# «ام سجاد», «ابو علي»: alone these two words say nothing about who, they are never a first name.
+KUNYA_HEADS = _norm_set(("ام", "ابو"))
+# A saved name that starts with one of these is matched as a whole in a voice note, never on its first word.
+KIN_HEADS = KUNYA_HEADS | _norm_set(("اخو", "اخت", "ابن", "بنت", "مرت", "زوج"))
+# Somebody's relative, in any person: «ابوك», «اخوج». No alias makes these a contact, only a question does.
+RELATIVES = RELATION_WORDS | _norm_set((
+    "ابوك", "ابوج", "امك", "امج", "اخوك", "اخوج", "اختك", "اختج", "ابنك", "ابنج", "بنتك", "بنتج", "زوجك", "زوجج",
+    "مرتك", "خالك", "خالج", "عمك", "عمج", "جدك", "جدج", "ابوه", "ابوها", "امه", "امها", "اخوه", "اخوها", "اخته", "اختها",
+))
+# Names that end in the sound of ا and are written both ways: «هدى» / «هدا», «سلمى» / «سلما». Short on purpose: a final
+# ى is also a common spelling of a final ي, so «على», «رانى», «رامى» are not read as «علا», «رانا», «راما».
+ALIF_NAMES = frozenset((
+    "هدى", "سلمى", "ليلى", "ندى", "منى", "لمى", "سهى", "نهى", "رؤى", "ضحى", "لبنى", "سلوى", "نجوى", "بشرى", "فدوى",
+    "موسى", "عيسى", "مصطفى", "مرتضى", "مجتبى", "رضى",
 ))
 NICKNAMES = {normalize(k): _norm_set(v) for k, v in {
     "حمودي": ("محمد", "أحمد", "محمود"),
@@ -83,6 +99,24 @@ NICKNAMES = {normalize(k): _norm_set(v) for k, v in {
     "زوزو": ("زينب", "زهراء"),
     "مريومة": ("مريم",),
 }.items()}
+
+
+# A pay verb, with or without a pronoun on it («دزلها», «حوله», «ابعثلي»). It is never somebody's name.
+_VERB_STEMS = _norm_set(("دز", "ادز", "تدز", "ندز", "دزي", "دزو", "دزيت", "حول", "احول", "تحول", "نحول", "حولي", "حولو", "حولت",
+                         "ابعث", "بعث", "ابعت", "تبعث", "نبعث", "ارسل", "ترسل", "نرسل", "ارسلت", "انطي", "نطي", "ادفع", "تدفع"))
+_VERB_ENDS = ("", "ل", "لي", "له", "لها", "لك", "لج", "لهم", "لنا", "ه", "ها", "هم", "يله", "يلها", "يلي", "يلهم")
+VERB_FORMS = frozenset({stem + end for stem in _VERB_STEMS for end in _VERB_ENDS} | {"send", "transfer", "pay", "wire"})
+
+
+def is_verb_form(word: str) -> bool:
+    """One normalized word that is a pay verb form, also with a leading و or ف: «دزلها», «فدزلها»."""
+    word = (word or "").lower()
+    return word in VERB_FORMS or (word[:1] in ("و", "ف") and word[1:] in VERB_FORMS)
+
+
+def holds_verb_form(mention: str) -> bool:
+    """A payee mention with a pay verb in it: the core pointed at the verb, not at a person."""
+    return any(is_verb_form(w) for w in normalize(mention).split())
 
 
 def _get(obj, name: str, default=None):
@@ -112,6 +146,17 @@ def similarity(a: str, b: str) -> float:
     return 1 - _levenshtein(a, b) / max(len(a), len(b))
 
 
+def _alif_reading(s: str) -> str:
+    """The same words with the final ى of a name in ALIF_NAMES written ا: "هدى" -> "هدا" (one name, two spellings).
+
+    Kept apart from normalize(), which reads ى as ي: a final ا and a final ي are different people (علا, علي)."""
+    def reading(word: str) -> str:
+        known = word in ALIF_NAMES or (word.startswith("ل") and word[1:] in ALIF_NAMES)
+        return word[:-1] + "ا" if known else word
+
+    return " ".join(reading(word) for word in s.split())
+
+
 def _strip_dative(word: str) -> str:
     """'لأحمد' -> 'احمد', 'للحجي' -> 'الحجي'."""
     if word.startswith("لل"):
@@ -123,12 +168,13 @@ def _strip_dative(word: str) -> str:
 
 def _mention_variants(mention: str, strip_dative: bool) -> list[tuple[str, ...]]:
     """The mention as typed (and optionally without a leading ل), minus titles and relation words."""
-    words = normalize(mention).split()
-    if not words:
-        return []
-    raw = [words]
-    if strip_dative:
-        raw.append([_strip_dative(words[0])] + words[1:])
+    raw = []
+    for reading in dict.fromkeys((mention, _alif_reading(mention))):
+        words = normalize(reading).split()
+        if words:
+            raw.append(words)
+            if strip_dative:
+                raw.append([_strip_dative(words[0])] + words[1:])
     variants = []
     for ws in raw:
         no_titles = [w for w in ws if w not in TITLES] or ws
@@ -155,6 +201,8 @@ def _score(words: tuple[str, ...], name_words: list[str], phone: str) -> tuple[f
     if list(words) == name_words:
         return SCORE_EXACT, "exact"
     if list(words) == name_words[:len(words)]:
+        if len(words) == 1 and words[0] in KIN_HEADS:
+            return SCORE_NAME_PART, "name_part"  # «دز لام خمسين»: whose mother? ask
         return SCORE_FIRST_NAME, "first_name"
     if all(w in name_words for w in words):
         return SCORE_NAME_PART, "name_part"
@@ -166,21 +214,31 @@ def _score(words: tuple[str, ...], name_words: list[str], phone: str) -> tuple[f
     return 0.0, ""
 
 
+def _saved_readings(name: str) -> list[list[str]]:
+    """A saved name as matching sees it, without titles: as normalized, and with a final ى read as ا."""
+    readings = []
+    for reading in dict.fromkeys((name, _alif_reading(name))):
+        words = normalize(reading).split()
+        readings.append([w for w in words if w not in TITLES] or words)
+    return readings
+
+
 def _rank(contacts: list, variants: list[tuple[str, ...]], alias_map: dict[str, set[str]]) -> list[Candidate]:
     found = []
     for c in contacts:
         cid = _get(c, "contact_id")
         name = _get(c, "display_name", "") or ""
         phone = _get(c, "phone", "") or ""
-        name_words = [w for w in normalize(name).split() if w not in TITLES] or normalize(name).split()
+        readings = _saved_readings(name)
         best, how = 0.0, ""
         for words in variants:
             if cid in alias_map.get(" ".join(words), ()):
                 best, how = SCORE_ALIAS, "alias"
                 break
-            score, kind = _score(words, name_words, phone)
-            if score > best:
-                best, how = score, kind
+            for name_words in readings:
+                score, kind = _score(words, name_words, phone)
+                if score > best:
+                    best, how = score, kind
         if best > 0:
             found.append(Candidate(cid, name, phone, best, how))
     return sorted(found, key=lambda c: (-c.score, c.display_name, c.contact_id))
@@ -207,6 +265,44 @@ def resolve(mention: str, contacts: Iterable, aliases: Mapping[str, str] | None 
         return as_typed
     # "لأحمد" (to Ahmed): try again without the leading ل.
     return _rank(contacts, _mention_variants(mention, strip_dative=True), alias_map)
+
+
+def spelled_by(word_readings: list[list[str]], contacts: Iterable) -> list[Candidate]:
+    """The saved names a Latin mention can spell, each of its words with its possible readings, word by word. A saved
+    name may go on after the mention, as a first name may. Every one comes back below THRESHOLD: this only says who a
+    question has to name, it never makes anybody a match."""
+    if not word_readings:
+        return []
+    options = [{normalize(r) for r in readings} for readings in word_readings]
+    options[0] |= {_strip_dative(r) for r in options[0]}  # «lzaid» is to Zaid
+
+    def spelled(name_words: list[str]) -> bool:
+        return len(name_words) >= len(options) and all(w in readings for w, readings in zip(name_words, options))
+
+    def spells(name: str) -> bool:  # with a saved title too: «sayed ali» spells سيد علي
+        return any(spelled(words) for words in (*_saved_readings(name), normalize(name).split()))
+
+    return [Candidate(_get(c, "contact_id"), _get(c, "display_name", ""), _get(c, "phone", "") or "", FUZZY_MAX, "fuzzy")
+            for c in contacts if spells(_get(c, "display_name", "") or "")]
+
+
+def is_title(word: str) -> bool:
+    """A title, on its own or after a leading ل: «سيد», «لسيد»."""
+    word = normalize(word)
+    return word in TITLES or _strip_dative(word) in TITLES
+
+
+def title_not_saved(reading: str, saved: str) -> bool:
+    """A reading with a word resolve() drops as a title that the saved name does not have in that place, before or after
+    the same name words. In Arabic script the user wrote the title; from Latin letters it is only how a name read: «ali
+    sayed» is not «علي حسن», nor «السيد علي حسن», whose title stands elsewhere, and «ukht ali» is not «علي»."""
+    def places(words: list[str]) -> set[tuple[str, int]]:
+        return {(w.removeprefix("ال"), sum(x not in TITLES for x in words[:i])) for i, w in enumerate(words) if w in TITLES}
+
+    said = normalize(reading).split()
+    if said and is_title(said[0]):  # «lsayed ali»
+        said[0] = said[0] if said[0] in TITLES else _strip_dative(said[0])
+    return not places(said) <= places(normalize(saved).split())
 
 
 def is_relation_word(mention: str) -> bool:

@@ -21,6 +21,15 @@ _FOLD = str.maketrans({
 })
 
 
+# No word in any of our languages has the same letter three times in a row: «دزززز», «خمسيييين» are emphasis.
+_RUN = re.compile(r"([^\W\d_])\1{2,}")
+
+
+def collapse_runs(text: str) -> str:
+    """Runs of 3 or more of one letter become that letter («خمسيييين» -> «خمسين»). Digits are never touched."""
+    return _RUN.sub(r"\1", text)
+
+
 def fold(text: str) -> str:
-    """Strip diacritics/tatweel, unify letter variants and digits, lowercase Latin."""
-    return _STRIP.sub("", text).translate(_FOLD).lower()
+    """Strip diacritics/tatweel, unify letter variants and digits, lowercase Latin, collapse letter runs."""
+    return collapse_runs(_STRIP.sub("", text).translate(_FOLD).lower())

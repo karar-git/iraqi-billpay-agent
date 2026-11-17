@@ -1,0 +1,70 @@
+{
+ "raw_lines": 2498,
+ "dropped": {
+  "exact_duplicate": 77,
+  "near_duplicate": 13
+ },
+ "kept": 2408,
+ "parts": {
+  "train": {
+   "lines": 1697,
+   "labels": {
+    "add_contact": 105,
+    "balance": 122,
+    "cancel": 113,
+    "chat": 184,
+    "history": 164,
+    "pay_bill": 307,
+    "topup": 174,
+    "transfer": 373,
+    "unsupported": 155
+   },
+   "sources": {
+    "w1": 429,
+    "w2": 441,
+    "w3": 412,
+    "w4": 415
+   }
+  },
+  "tune": {
+   "lines": 351,
+   "labels": {
+    "add_contact": 21,
+    "balance": 24,
+    "cancel": 21,
+    "chat": 38,
+    "history": 24,
+    "pay_bill": 61,
+    "topup": 32,
+    "transfer": 93,
+    "unsupported": 37
+   },
+   "sources": {
+    "w1": 91,
+    "w2": 80,
+    "w3": 92,
+    "w4": 88
+   }
+  },
+  "locked": {
+   "lines": 360,
+   "labels": {
+    "add_contact": 25,
+    "balance": 29,
+    "cancel": 29,
+    "chat": 40,
+    "history": 24,
+    "pay_bill": 69,
+    "topup": 29,
+    "transfer": 88,
+    "unsupported": 27
+   },
+   "sources": {
+    "w1": 94,
+    "w2": 77,
+    "w3": 86,
+    "w4": 103
+   }
+  }
+ }
+}

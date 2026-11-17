@@ -17,8 +17,9 @@ from pathlib import Path
 from wallet.db import Database, from_iso, hash_pin, immediate, new_id, to_iso, utc_now
 
 COLUMNS = {
-    "users": ("id", "name", "phone", "balance", "daily_limit", "pin_hash", "gender"),
-    "contacts": ("contact_id", "user_id", "display_name", "phone", "alias"),
+    "users": ("id", "name", "phone", "balance", "daily_limit", "pin_hash", "gender", "phone_e164", "status",
+              "pin_state", "language", "source"),
+    "contacts": ("contact_id", "user_id", "display_name", "phone", "alias", "phone_e164"),
     "billers": ("id", "kind", "name_ar", "name_en"),
     "bill_accounts": ("id", "user_id", "biller_id", "account_no", "holder_name", "label_ar"),
     "bills": ("id", "account_id", "period", "amount_due", "status"),
@@ -92,6 +93,10 @@ def _clean(table: str, raw: dict) -> dict:
     row = dict(raw)
     if table == "users" and "pin_hash" not in row:
         row["pin_hash"] = hash_pin(str(row["pin"]))
+    if table in ("users", "contacts") and "phone_e164" not in row:
+        phone = str(row.get("phone") or "")
+        if len(phone) == 11 and phone.startswith("07") and phone.isdigit():
+            row["phone_e164"] = "964" + phone[1:]  # the canonical WhatsApp form, so a number finds its account
     if table == "bills":
         row.setdefault("status", "unpaid")
     if table == "transactions":

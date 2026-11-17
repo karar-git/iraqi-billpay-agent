@@ -7,8 +7,12 @@ point at the user's words (payee, biller, amount); the orchestrator checks and r
 Rules, in order: cancel words -> cancel; out-of-scope services -> unsupported; top-up cues
 (اشحن, عبي, كارت, رصيد + network) -> topup; bill verbs/words (ادفع, سدد, جدد, فاتورة, المولدة ...)
 -> pay_bill; transfer verbs (دز, حول, ارسل, ابعث) -> transfer; "شكد عندي / رصيدي" -> balance;
-anything else -> chat. Two requests joined by و ("ادفع المولدة ودز لأحمد خمسين") are split.
-Arabizi is read through payments.arabizi first.
+past tense alone ("دزيتها لأحمد", "دفعت الكهرباء") and anything else -> chat. Two requests joined by و
+("ادفع المولدة ودز لأحمد خمسين") are split.
+Arabizi is read through payments.arabizi first, and so are a few dozen English words ("send", "pay",
+"bill", "top up", "fifty thousand"), so a simple English request works offline too. MSA verbs and
+fillers («أريد أن أحوّل إلى أحمد») are known as well. It never returns a language hint: the
+orchestrator's own detector (payments.language) decides.
 """
 
 from __future__ import annotations
@@ -17,11 +21,14 @@ import re
 from dataclasses import dataclass
 from typing import Any
 
+from accounts.phones import TOKEN_RE
 from core.interface import Intent
 from payments import arabizi
-from payments.amounts import find_amount
+from payments.amounts import APPROX_WORDS as AMOUNT_HEDGES
+from payments.amounts import MULTIPLE, amount_phrases, find_amount
 from payments.messages import render
-from payments.text import fold
+from payments.periods import months_named
+from payments.text import collapse_runs, fold
 
 
 def _key(word: str) -> str:
@@ -34,7 +41,7 @@ def _keys(*words: str) -> set[str]:
 
 
 TRANSFER_PREFIXES = tuple(_keys("دز", "حول", "ارسل", "ابعث", "بعث", "انطي",
-                                "ادز", "تدز", "ندز", "احول", "تحول", "نحول", "ترسل", "تبعث"))
+                                "ادز", "تدز", "ندز", "احول", "تحول", "نحول", "ترسل", "تبعث", "تحويل", "ارسال"))
 BILL_PREFIXES = tuple(_keys("ادفع", "دفع", "سدد", "اسدد", "جدد", "اجدد", "تدفع", "ندفع", "تسدد", "نسدد"))
 BILL_VERBS = _keys("خلصلي", "خلصيلي", "خلصها")
 BILL_NOUNS = _keys("فاتورة", "فاتورتي", "فواتير", "اشتراك")
@@ -43,7 +50,7 @@ TOPUP_WORDS = _keys("عبي", "عبيلي", "عبيله", "عبيلها", "عب�
 RASEED = _key("رصيد")
 BALANCE_WORDS = _keys("رصيدي", "رصيدج", "رصيدك", "محفظتي", "محفظتج", "محفظتك")
 QUESTION_WORDS = _keys("شكد", "شقد", "كم", "اشكد")
-NEGATIONS = _keys("مو", "مش", "موش", "لا", "ما", "بدون")
+NEGATIONS = _keys("مو", "مش", "موش", "لا", "ما", "بدون", "بلا")
 BILLER_WORDS = _keys(
     "كهرباء", "كهربا", "كهرباء", "وطنية", "مولدة", "مولده", "مولد", "امبير", "امبيرات",
     "نت", "انترنت", "انترنيت", "ماي", "ماء", "مياه", "اسالة",
@@ -51,26 +58,50 @@ BILLER_WORDS = _keys(
 OPERATORS = {_key("زين"): "zain", _key("آسيا"): "asiacell", _key("آسياسيل"): "asiacell",
              _key("اسيسيل"): "asiacell", _key("كورك"): "korek"}
 CANCEL_WORDS = _keys("بطلت", "بطلنا", "الغي", "الغيها", "الغيه", "لغيها", "كنسل", "كانسل", "خليها",
-                     "بعدين", "cancel")
-CANCEL_PHRASES = ("لا تدفع", "لا تدز", "لا تحول", "ما اريد", "ما ابي", "لا تسوي")
+                     "بعدين", "cancel", "الغاء", "الغ", "الغها")
+CANCEL_PHRASES = ("لا تدفع", "لا تدز", "لا تحول", "ما اريد", "ما ابي", "لا تسوي", "لا اريد", "لا أريد")
 UNSUPPORTED_STEMS = tuple(_keys(
     "قرض", "سلفة", "تذكرة", "طيارة", "طيران", "حجز", "احجز", "توفير", "مصرف", "اسحب", "سحب",
     "ببجي", "شدات", "ماستر", "فيزا", "استثمار", "اسهم", "بتكوين", "كريبتو", "تداول", "فندق",
 ))
 STOP = _keys(
     "بسرعة", "هسه", "هسة", "هسا", "هسع", "ضروري", "عاجل", "يلا", "رجاء", "رجاءا", "الله", "يخليك",
-    "يخليج", "يمعود", "عيني", "حبيبي", "حبيبتي", "اليوم", "باجر", "قبل", "بعد", "من", "على",
+    "يخليج", "يمعود", "عيني", "حبيبي", "حبيبتي", "اليوم", "باجر", "قبل", "بعد", "من",
     "اللي", "الي", "مال", "هالشهر", "الشهر", "شهر", "فات", "الماضي", "السابق", "هذا", "هاي",
     "اريد", "ابي", "بليز", "كل", "عندي", "بس", "ياريت", "مبلغ", "دينار", "فلوس", "رصيد", "مو",
     "مش", "لا", "ما", "و", "او", "لو", "يا", "خطي", "خط", "رقم", "رقمه", "لان", "حتى", "اصبر",
-    "شوية", "ممكن", "تكدر", "تكدرين", "هم", "مرة", "ثانية",
+    "شوية", "ممكن", "تكدر", "تكدرين", "هم", "مرة", "ثانية", "فد",
+    # MSA fillers: «أريد أن أحوّل إلى أحمد»
+    "الى", "إلى", "ان", "أن", "اود", "أود", "ارغب", "أرغب", "في", "فضلك", "سمحت", "قيمة", "بقيمة", "هل",
+    "يمكنك", "يمكن", "لو", "رجاء", "الآن", "حساب",
 )
-APPROX_WORDS = _keys("حوالي", "تقريبا", "بحدود", "يمكن")
+# English fillers the stand-in skips ("pay the electricity bill for me please").
+ENGLISH_STOP = frozenset((
+    "i", "i'm", "im", "me", "my", "please", "pls", "the", "a", "an", "for", "of", "want", "would", "like",
+    "need", "can", "could", "you", "your", "now", "quick", "quickly", "today", "this", "that", "it", "is",
+    "and", "with", "from", "month", "last", "phone", "number", "money", "dinars", "dinar", "iqd", "wanna",
+))
+# Compared before folding: fold() turns the preposition «على» into the name «علي».
+RAW_STOP = frozenset(("على",))
+APPROX_WORDS = AMOUNT_HEDGES - _keys("شي")  # a hedge is no name word: «دز لهادي اكثر من خمسين»
 DATIVE_PRONOUNS = _keys("لي", "له", "لها", "لك", "لج", "لكم", "لهم", "لنا", "لان", "لكن", "لحد",
                         "لازم", "لسه", "لهسه", "لو", "للبيت")
 CURRENT_MONTH = _keys("هالشهر", "الحالي")
 PREVIOUS_MONTH = _keys("فات", "الفات", "الماضي", "السابق", "القبل")
 MONTH = _keys("الشهر", "شهر")
+HISTORY_WORDS = _keys("كشف", "سجلي", "سجل", "العمليات", "عملياتي", "تحويلاتي", "history", "transactions",
+                      "statement", "المعاملات", "معاملاتي")
+SAVE_VERBS = _keys("ضيف", "احفظ", "سجل", "اضف", "أضف", "save", "add")
+# Past tense tells what happened, it asks for nothing: «دزيتها لأحمد», «دزتلي امي», «دفعت الكهرباء».
+PAST_VERBS = tuple(_keys("دزيت", "دزت", "حولت", "ارسلت", "بعثت", "ابعثت", "انطيت", "دفعت", "سددت", "جددت",
+                         "شحنت", "عبيت"))
+PAST_ENGLISH = frozenset(("sent", "paid", "transferred"))
+# Biller words of one kind name one bill; two kinds in one request are two bills.
+BILLER_GROUPS = (_keys("كهرباء", "كهربا", "وطنية"), _keys("مولدة", "مولده", "مولد", "امبير", "امبيرات"),
+                 _keys("نت", "انترنت", "انترنيت"), _keys("ماي", "ماء", "مياه", "اسالة"))
+# A number typed as digits, alone or with a scale letter: «50k», «50,000». «7awil» is a word.
+LATIN_AMOUNT = re.compile(r"[0-9٠-٩]+(?:[.,٫٬][0-9٠-٩]+)*(?:k|alf|thousand|million|milyon|malyon|malyoon)?[.,!?؟،]*",
+                          re.I)
 
 
 @dataclass
@@ -107,6 +138,10 @@ def _is_verb(k: str) -> bool:
     return _is_transfer_verb(k) or _is_bill_verb(k) or _is_topup_verb(k)
 
 
+def _is_past(word: _Word) -> bool:
+    return word.key.startswith(PAST_VERBS) or word.orig.lower().strip(".,!?") in PAST_ENGLISH
+
+
 def _is_biller(word: _Word) -> bool:
     return word.key in BILLER_WORDS or word.bare in BILLER_WORDS
 
@@ -129,11 +164,15 @@ class StubCore:
 
     def understand(self, text: str, context: dict[str, Any] | None = None) -> Intent:
         context = context or {}
-        pairs = arabizi.to_arabic_words(text)
+        # A Latin amount («50k», «50,000») keeps its own spelling, not its Arabic reading («50 الف»).
+        pairs = [(orig, orig) if LATIN_AMOUNT.fullmatch(orig) else (orig, ar)
+                 for orig, ar in arabizi.to_arabic_words(collapse_runs(text or ""))]
         words, _ = _words(pairs)
         if self._is_cancel(words):
             return Intent("cancel")
         segments = self._split(pairs)
+        if not segments:  # an empty message, or only punctuation
+            return Intent("chat")
         intents, previous = [], None
         for segment in segments:
             intent = self._read(segment, context, previous)
@@ -141,12 +180,21 @@ class StubCore:
             previous = intent.action
         first = intents[0]
         first.extra = [i for i in intents[1:] if i.action != "chat"]
+        tokens = TOKEN_RE.findall(text or "")
+        keys = [w.key for w in words]
+        if first.action in ("chat", "balance") and any(k in HISTORY_WORDS for k in keys)                 and not any(_is_verb(k) for k in keys):
+            return Intent("history")
+        if tokens and keys and keys[0] in SAVE_VERBS:
+            return Intent("add_contact", payee_mention=tokens[0])
+        if tokens and first.action in ("transfer", "topup", "chat"):
+            first.payee_mention = tokens[0]  # a phone number (masked by the orchestrator) is the payee
         return first
 
     def phrase(self, question_key: str, slots: dict[str, Any]) -> str:
         slots = dict(slots)
         gender = slots.pop("gender", "f")
-        return render(question_key, gender, **slots)
+        lang = slots.pop("lang", None)
+        return render(question_key, gender, lang, **slots)
 
     # ---------------------------------------------------------------- pieces
 
@@ -188,6 +236,8 @@ class StubCore:
         bares = [w.bare for w in words]
         if any(stem in k for k in keys for stem in UNSUPPORTED_STEMS):
             return Intent("unsupported")
+        if any(_is_past(w) for w in words) and not any(_is_verb(w.key) and not _is_past(w) for w in words):
+            return Intent("chat")
 
         found = find_amount(ar_text)
         amount_idx: set[int] = set()
@@ -197,6 +247,10 @@ class StubCore:
             currency = amount.currency
             start = ar_text.find(amount_text)
             amount_idx = {i for i, w in enumerate(words) if w.start < start + len(amount_text) and w.end > start}
+            if amount.reason == MULTIPLE:  # point at all of it, so the orchestrator asks: never keep one of them
+                spans = self._phrase_spans(ar_text)
+                amount_text = ar_text[spans[0][0]:spans[-1][1]]
+                amount_idx = {i for i, w in enumerate(words) if any(w.start < e and w.end > s for s, e in spans)}
             first = min(amount_idx, default=None)
             if first and words[first - 1].key in APPROX_WORDS:  # "حوالي خمسين": the qualifier is part of it
                 amount_idx.add(first - 1)
@@ -205,7 +259,10 @@ class StubCore:
         question = any(k in QUESTION_WORDS for k in keys)
         raseed_at = [i for i, b in enumerate(bares) if b == RASEED]
         raseed = any(not (i > 0 and keys[i - 1] in NEGATIONS) for i in raseed_at)
-        topup_cue = any(_is_topup_verb(k) for k in keys) or (raseed and not question)
+        # «حول ... بدون كارت» says what the user does not want: no top-up in it. With no transfer verb, a top-up word stays one.
+        sending = any(_is_transfer_verb(k) for k in keys)
+        topup_cue = any(_is_topup_verb(k) and not (sending and i > 0 and keys[i - 1] in NEGATIONS) for i, k in enumerate(keys)) \
+            or (raseed and not question)
         bill_cue = any(_is_bill_verb(k) for k in keys) or any(b in BILL_NOUNS or k in BILL_NOUNS
                                                                 for k, b in zip(keys, bares))
         transfer_cue = any(_is_transfer_verb(k) for k in keys)
@@ -218,7 +275,9 @@ class StubCore:
 
         skip = set(amount_idx) | set(operator_idx) | set(biller_idx)
         skip |= {i for i, k in enumerate(keys) if _is_verb(k) or k in STOP or bares[i] in STOP
-                 or k in APPROX_WORDS or k in BILL_NOUNS or bares[i] in BILL_NOUNS or bares[i] == RASEED}
+                 or k in APPROX_WORDS or k in BILL_NOUNS or bares[i] in BILL_NOUNS or bares[i] == RASEED
+                 or _clean(words[i].ar) in RAW_STOP
+                 or words[i].orig.lower().strip(".,!?") in ENGLISH_STOP}
 
         if topup_cue:
             action = "topup"
@@ -249,8 +308,18 @@ class StubCore:
             amount_text=amount_text,
             currency=currency,
             operator=operator,
-            period=self._period(keys) if action in ("pay_bill", "chat") else None,
+            period=self._period(keys, ar_text, [w.orig for w in words]) if action in ("pay_bill", "chat") else None,
         )
+
+    @staticmethod
+    def _phrase_spans(ar_text: str) -> list[tuple[int, int]]:
+        """(start, end) in the text of every amount phrase, in order."""
+        spans, pos = [], 0
+        for _, phrase in amount_phrases(ar_text):
+            start = ar_text.find(phrase, pos)
+            spans.append((start, start + len(phrase)))
+            pos = start + len(phrase)
+        return spans
 
     @staticmethod
     def _payee(words: list[_Word], skip: set[int], after: int | None) -> str | None:
@@ -276,6 +345,10 @@ class StubCore:
         """The biller word plus a qualifier next to it ("سما نت", "مولدة المحل")."""
         if not biller_idx:
             return None
+        groups = {n for i in biller_idx for n, group in enumerate(BILLER_GROUPS)
+                  if words[i].key in group or words[i].bare in group}
+        if len(groups) > 1:  # «الكهرباء او النت»: both, so the orchestrator asks which
+            return " ".join(_clean(words[i].ar) for i in biller_idx)
         i = biller_idx[0]
         start, end = i, i + 1
         if i > 0 and (i - 1) not in skip and words[i - 1].key:
@@ -285,7 +358,18 @@ class StubCore:
         return " ".join(_clean(w.ar) for w in words[start:end]).strip() or None
 
     @staticmethod
-    def _period(keys: list[str]) -> str | None:
+    def _period(keys: list[str], ar_text: str = "", origs: list[str] | None = None) -> str | None:
+        english = re.sub(r"[^a-z\s]", " ", " ".join(origs or []).lower()).split()
+        if "month" in english:  # «last month», «the previous month», «this month»
+            if {"last", "previous", "past"} & set(english):
+                return "previous"
+            if {"this", "current"} & set(english):
+                return "current"
+        named = months_named(ar_text)
+        if len(named) == 1:  # «مال شهر ستة», «فاتورة حزيران»: that month, any year ('MM')
+            return f"{named.pop():02d}"
+        if named:
+            return None  # «تشرين» alone is two months: the orchestrator asks
         if any(k in CURRENT_MONTH for k in keys):
             return "current"
         if any(k in MONTH for k in keys) and any(k in PREVIOUS_MONTH for k in keys):

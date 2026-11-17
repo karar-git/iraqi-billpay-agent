@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import hashlib
 import hmac
+import os
 import secrets
 import sqlite3
 import threading
@@ -77,7 +78,8 @@ CREATE TABLE IF NOT EXISTS transactions (
     created_at  TEXT NOT NULL
 );
 -- Double-entry record of every money movement; the audit checks balances against it.
--- Accounts: 'user:<id>', 'biller:<id>', 'external:<phone>', 'fees', 'opening_funds'.
+-- Accounts: 'user:<id>', 'biller:<id>', 'external:<phone>' (seed history), 'hold:<id>', 'fees', 'cash'
+-- (admin credits / debits), 'opening_funds' (seed).
 CREATE TABLE IF NOT EXISTS ledger (
     id         INTEGER PRIMARY KEY AUTOINCREMENT,
     quote_id   TEXT,
@@ -106,23 +108,57 @@ ADDED_COLUMNS = {
 
 # ---------------------------------------------------------------- PINs
 
-PIN_ITERATIONS = 20_000  # synthetic data; enough to show the pattern without slowing tests
+PIN_ITERATIONS = 20_000  # synthetic seed data; enough to show the pattern without slowing tests
+# Real accounts: PBKDF2-SHA256 over HMAC(pepper, PIN). The pepper lives only in the environment
+# (ACCOUNTS_PIN_PEPPER), so a copy of the database alone cannot be brute-forced over the small PIN space.
+PEPPERED = "pbkdf2_sha256p"
+DEFAULT_ACCOUNT_ITERATIONS = 310_000
+
+
+def pin_pepper() -> bytes:
+    return (os.environ.get("ACCOUNTS_PIN_PEPPER") or "").encode()
+
+
+def account_iterations() -> int:
+    try:
+        return max(1_000, int(os.environ.get("PIN_HASH_ITERATIONS") or DEFAULT_ACCOUNT_ITERATIONS))
+    except ValueError:
+        return DEFAULT_ACCOUNT_ITERATIONS
+
+
+def _fold_pin(pin: str | int) -> str:
+    return str(pin).translate(str.maketrans("٠١٢٣٤٥٦٧٨٩۰۱۲۳۴۵۶۷۸۹", "01234567890123456789")).strip()
 
 
 def hash_pin(pin: str | int, *, salt: bytes | None = None, iterations: int = PIN_ITERATIONS) -> str:
-    """Return 'pbkdf2_sha256$<iterations>$<salt hex>$<digest hex>' for a PIN."""
+    """Return 'pbkdf2_sha256$<iterations>$<salt hex>$<digest hex>' for a PIN (synthetic seed users)."""
     salt = salt or secrets.token_bytes(16)
     digest = hashlib.pbkdf2_hmac("sha256", str(pin).encode(), salt, iterations)
     return f"pbkdf2_sha256${iterations}${salt.hex()}${digest.hex()}"
 
 
-def verify_pin(pin: str | int, pin_hash: str | None) -> bool:
-    """Constant-time check of a PIN against a stored hash."""
+def hash_account_pin(pin: str | int, *, salt: bytes | None = None, iterations: int | None = None,
+                     pepper: bytes | None = None) -> str:
+    """'pbkdf2_sha256p$<iterations>$<salt hex>$<digest hex>' over HMAC-SHA256(pepper, PIN): a real account's PIN."""
+    salt = salt or secrets.token_bytes(16)
+    iterations = iterations or account_iterations()
+    keyed = hmac.new(pin_pepper() if pepper is None else pepper, _fold_pin(pin).encode(), hashlib.sha256).digest()
+    digest = hashlib.pbkdf2_hmac("sha256", keyed, salt, iterations)
+    return f"{PEPPERED}${iterations}${salt.hex()}${digest.hex()}"
+
+
+def verify_pin(pin: str | int, pin_hash: str | None, *, pepper: bytes | None = None) -> bool:
+    """Constant-time check of a PIN against a stored hash (either format). An empty hash never matches."""
     try:
         algorithm, iterations, salt_hex, digest_hex = (pin_hash or "").split("$")
-        if algorithm != "pbkdf2_sha256":
+        if algorithm == PEPPERED:
+            keyed = hmac.new(pin_pepper() if pepper is None else pepper, _fold_pin(pin).encode(),
+                             hashlib.sha256).digest()
+            candidate = hashlib.pbkdf2_hmac("sha256", keyed, bytes.fromhex(salt_hex), int(iterations))
+        elif algorithm == "pbkdf2_sha256":
+            candidate = hashlib.pbkdf2_hmac("sha256", str(pin).encode(), bytes.fromhex(salt_hex), int(iterations))
+        else:
             return False
-        candidate = hashlib.pbkdf2_hmac("sha256", str(pin).encode(), bytes.fromhex(salt_hex), int(iterations))
     except ValueError:
         return False
     return hmac.compare_digest(candidate.hex(), digest_hex)
@@ -247,6 +283,9 @@ class Database:
                 self._idle.append(conn)
             conn.executescript(SCHEMA)
             _add_missing_columns(conn)
+            from wallet.migrations import migrate  # local import: migrations is a plain module of steps
+
+            migrate(conn, None if self.in_memory else self.path)
             if self.seed is not None:
                 from wallet.seed import seed_if_empty  # local import: seed.py imports this module
 

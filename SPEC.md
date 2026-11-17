@@ -20,7 +20,8 @@ Guiding rule: **the conversational core understands and talks; deterministic cod
 Hard rules for every file in this repo:
 - The closed core's internals are not part of this repo; only its interface is.
 - No API keys. `.env` is git-ignored. Synthetic data only (fictional names and numbers).
-- Iraqi Arabic for everything a user sees. Write **ج, never چ** (محفظتج, إلج, بيج).
+- Everything a user sees exists in Iraqi Arabic (the reference), Modern Standard Arabic and English; the
+  reply follows the language of each message (`payments/language.py`). Write **ج, never چ** (محفظتج, إلج, بيج).
 - Python 3.12+, standard library + FastAPI/uvicorn/pydantic/httpx/pytest only. Integers for money (IQD).
 
 ## Data model (SQLite, `wallet/db.py`)
@@ -36,6 +37,20 @@ Hard rules for every file in this repo:
    states: QUOTED → EXECUTING → SUCCEEDED | FAILED | UNKNOWN, plus EXPIRED, CANCELLED.
    Transitions only by compare-and-set (`UPDATE ... WHERE id=? AND state=?`).
 - `transactions(id PK, quote_id UNIQUE, user_id, kind, target_json, amount, fee, status, created_at)`
+
+### Real accounts (schema v2 to v4, `wallet/migrations.py`)
+
+`PRAGMA user_version` tracks the schema; each migration runs in one transaction after a snapshot of a file
+database that already holds users. v2 adds to `users` the canonical WhatsApp number `phone_e164` (unique),
+`status` (invited / active / frozen / closed), `pin_state` (unset / set / blocked), `language`, `source`
+and times; to contacts, bill accounts and bills a phone, a source and a soft delete; to transactions the
+receiving user, the counterparty number, a hold id and a reason. v3 adds `holds` (money waiting for a
+number with no account), `admin_ops` (idempotent admin money by op id), `outbox` (notices) and `audit_log`.
+v4 sets the mock biller ranges. Ledger accounts gain `hold:<id>` and `cash` (admin credits and debits).
+A transfer to an account credits it in the same transaction; to a number with no account it credits a
+hold, claimed at sign-up or refunded (fee included) after `HOLD_DAYS`. The audit also checks that each
+open hold holds its amount, each settled one nothing, and each admin op has its transaction. The synthetic
+seed (web chat, evaluation) loads unchanged: seed users keep the old behaviour (no holds, no notices).
 
 ## Wallet API (`wallet/api.py`, FastAPI app `app`)
 
@@ -65,7 +80,12 @@ Hard rules for every file in this repo:
   مليون; ربع مليون → 250,000; نص مليون → 500,000; مليون ونص → 1,500,000; Western and Eastern digits
   (٥٠٬٠٠٠, 50,000, 50000, 50 الف); teens like خمسطعش (15 → 15,000), تلطعش. Dollar words (ورقة, ورقتين,
   دفتر, دولار, $) → currency USD, value None, needs_question True ("شكد بالدينار؟") — never convert.
-  Anything unparsable → needs_question True.
+  Anything unparsable → needs_question True. Also a question: a hedge before or after the number
+  (حوالي خمسين, ميتين بحدود), and a tail under 100 after ألف (خمسين الف وعشرين: 50,020 or 70,000?).
+  `amounts.alternatives(text)` finds two amounts offered as a choice (خمسين او ستين); the orchestrator
+  asks which one.
+- `periods.months_named(text) -> set[int]`: months the user names (حزيران, تشرين الأول, شهر ستة, شهر 6).
+  تشرين or كانون alone gives two months, and the orchestrator asks.
 - `names.normalize(s)`: أ/إ/آ→ا, ة→ه, ى→ي, گ/ك→ك, ق may be written ك/گ (match both), چ→ج, collapse
   "عبد ال" spacing, strip tatweel/diacritics. `names.resolve(mention, contacts, aliases) -> list[Candidate]`
   with scores. Nicknames are one-to-many (حمودي → محمد/أحمد/محمود; علاوي → علي; حسوني → حسين;
@@ -82,16 +102,28 @@ Hard rules for every file in this repo:
 
 ## Core interface (`core/interface.py`)
 
-`understand(text, context) -> Intent(action 'pay_bill'|'transfer'|'topup'|'balance'|'cancel'|'unsupported'|'chat',
+`understand(text, context) -> Intent(action 'pay_bill'|'transfer'|'topup'|'balance'|'cancel'|'unsupported'|'chat'|
+'history'|'add_contact',
 payee_mention, biller_mention, amount_text, currency, operator,
-period ('current'|'previous'|'YYYY-MM'|None), extra: list[Intent])` and
-`phrase(question_key, slots) -> str`. The orchestrator must verify that `amount_text` and `payee_mention`
+period ('current'|'previous'|'YYYY-MM'|'MM'|None), extra: list[Intent])` and
+`phrase(question_key, slots) -> str` (slots carry `gender` and `lang`). Optional: `transcribe(audio, mime,
+context) -> str` for voice notes (`VoiceCore`) and `speak(text, language, context) -> (audio, mime) | None`
+for voice replies (`SpeechCore`, used by the channels under `VOICE_REPLY_MODE`), and `hear(audio, mime,
+context) -> (transcript, Intent)` (`HearingCore`), preferred for voice notes. `context` carries the open
+question, the language, the phone placeholders (the core never sees a phone number: «هاتف_ا» is the payee
+mention), the user's vocabulary (saved names and aliases, bill labels, billers; no numbers), the last few
+turns (never a PIN) and `source` ('voice' for a transcript). `Intent.language` is a
+language hint the core sets only when it is sure. The core is chosen at run time by `core.loader.load_core()`:
+`BILLPAY_CORE="module:Class"` (plus `BILLPAY_CORE_PATH`), else `core.stub.StubCore`. The orchestrator must verify that `amount_text` and `payee_mention`
 appear in the user's own words (after normalisation); otherwise it asks. The closed core implements this
 interface; `core/stub.py` is a keyword-based stand-in good enough for tests and the offline demo.
 
 ## Orchestrator (`agent/`)
 
-`Session.handle_text(user_id, text) -> Reply` and `Session.handle_button(user_id, quote_id, button, pin=None) -> Reply`.
+`Session.handle_text(user_id, text) -> Reply`, `Session.handle_button(user_id, quote_id, button, pin=None) -> Reply`,
+`Session.handle_voice(user_id, audio, mime="audio/ogg") -> Reply` (the transcript is in `Reply.heard`) and
+`Session.reconcile(user_id) -> Reply`. A bill is paid in full: when the user states another amount or a part, the agent asks for a yes to the full amount before any card; a month
+the user names picks that month's bill (or a question when it fits two).
 One open card per user; any new text voids it. Two-in-one → first card, then offer the second.
 Typed "إي" never executes — only the button event with the quote id. Timeout/5xx on execute → UNKNOWN,
 retry with the SAME key, then poll `GET /quotes/{qid}`; never report "failed" until the API says so.

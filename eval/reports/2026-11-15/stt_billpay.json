@@ -1,0 +1,2443 @@
+{
+ "notes": "data\\voice\\billpay\\notes.jsonl",
+ "models": {
+  "Cohere Transcribe Arabic": {
+   "agg": {
+    "checks": "30/30",
+    "notes_all_checks": "16/16",
+    "sim": 0.797,
+    "sim_nn": 0.94,
+    "wer_nn": 0.266,
+    "seconds_p50": 0.74,
+    "seconds_max": 1.07,
+    "cost_usd": 0.0,
+    "errors": 0
+   },
+   "rows": [
+    {
+     "note": "bp01_send_name_amount",
+     "said": "دزلي لحمودي خمسة وعشرين ألف",
+     "heard": "دزلي الحمودي 25 ألف",
+     "seconds": 1.07,
+     "cost": 0.0,
+     "error": null,
+     "sim": 0.696,
+     "sim_nn": 0.957,
+     "wer_nn": 0.5,
+     "checks": [
+      {
+       "what": "name حمودي",
+       "kind": "name",
+       "ok": true
+      },
+      {
+       "what": "25 الف",
+       "kind": "amount",
+       "ok": true
+      }
+     ],
+     "checks_ok": 2,
+     "checks_total": 2
+    },
+    {
+     "note": "bp02_generator_bill",
+     "said": "خلي ادفع حق المولدة هالشهر، مية وخمسين ألف",
+     "heard": "خلي أدفع حق المولدة هالشهر 150 ألف.",
+     "seconds": 0.91,
+     "cost": 0.0,
+     "error": null,
+     "sim": 0.827,
+     "sim_nn": 1.0,
+     "wer_nn": 0.0,
+     "checks": [
+      {
+       "what": "biller مولدة",
+       "kind": "biller",
+       "ok": true
+      },
+      {
+       "what": "150 الف",
+       "kind": "amount",
+       "ok": true
+      }
+     ],
+     "checks_ok": 2,
+     "checks_total": 2
+    },
+    {
+     "note": "bp03_internet_account",
+     "said": "ادفع الانترنت، رقم الحساب صفر سبعة ثمانية صفر، اربعة اربعة، واحد تسعة، ستة ستة صفر",
+     "heard": "ادفع الانترنت رقم الحساب صفر سبعة ثمانية صفر أربعة أربعة واحد تسعة ستة ستة صفر",
+     "seconds": 0.8,
+     "cost": 0.0,
+     "error": null,
+     "sim": 1.0,
+     "sim_nn": 1.0,
+     "wer_nn": 0.0,
+     "checks": [
+      {
+       "what": "biller انترنت",
+       "kind": "biller",
+       "ok": true
+      },
+      {
+       "what": "account 07804419660",
+       "kind": "digits",
+       "ok": true
+      }
+     ],
+     "checks_ok": 2,
+     "checks_total": 2
+    },
+    {
+     "note": "bp04_balance",
+     "said": "شكد باقي برصيدي؟",
+     "heard": "شكد باقي برصيدي؟",
+     "seconds": 0.73,
+     "cost": 0.0,
+     "error": null,
+     "sim": 1.0,
+     "sim_nn": 1.0,
+     "wer_nn": 0.0,
+     "checks": [
+      {
+       "what": "رصيد",
+       "kind": "word",
+       "ok": true
+      },
+      {
+       "what": "شكد (any spelling)",
+       "kind": "word",
+       "ok": true
+      }
+     ],
+     "checks_ok": 2,
+     "checks_total": 2
+    },
+    {
+     "note": "bp05_confirm",
+     "said": "اي ثبت، دزها",
+     "heard": "إي ثبت دزها",
+     "seconds": 0.75,
+     "cost": 0.0,
+     "error": null,
+     "sim": 1.0,
+     "sim_nn": 1.0,
+     "wer_nn": 0.0,
+     "checks": [
+      {
+       "what": "ثبت",
+       "kind": "word",
+       "ok": true
+      }
+     ],
+     "checks_ok": 1,
+     "checks_total": 1
+    },
+    {
+     "note": "bp06_cancel",
+     "said": "لا لا بطلت، الغيها هسه",
+     "heard": "لا لا بطلت، إلغيها هسة",
+     "seconds": 0.34,
+     "cost": 0.0,
+     "error": null,
+     "sim": 1.0,
+     "sim_nn": 1.0,
+     "wer_nn": 0.0,
+     "checks": [
+      {
+       "what": "الغي",
+       "kind": "word",
+       "ok": true
+      }
+     ],
+     "checks_ok": 1,
+     "checks_total": 1
+    },
+    {
+     "note": "bp07_transfer_phone",
+     "said": "حول نص مليون لهالرقم، صفر سبعة سبعة صفر، تسعة ثمانية ستة، خمسة اربعة ثلاثة اثنين",
+     "heard": "حول نص مليون لهالرقم: 0770 986 5432",
+     "seconds": 0.7,
+     "cost": 0.0,
+     "error": null,
+     "sim": 0.414,
+     "sim_nn": 1.0,
+     "wer_nn": 0.0,
+     "checks": [
+      {
+       "what": "نص مليون",
+       "kind": "amount",
+       "ok": true
+      },
+      {
+       "what": "phone 07709865432",
+       "kind": "digits",
+       "ok": true
+      }
+     ],
+     "checks_ok": 2,
+     "checks_total": 2
+    },
+    {
+     "note": "bp08_umm_ali",
+     "said": "دزي لأم علي عشرة آلاف، هي بالكرادة",
+     "heard": "ديزي الأم علية عشرة آلاف هي بالكرادة",
+     "seconds": 0.66,
+     "cost": 0.0,
+     "error": null,
+     "sim": 0.957,
+     "sim_nn": 0.939,
+     "wer_nn": 0.6,
+     "checks": [
+      {
+       "what": "name ام علي",
+       "kind": "name",
+       "ok": true
+      },
+      {
+       "what": "10 الاف",
+       "kind": "amount",
+       "ok": true
+      }
+     ],
+     "checks_ok": 2,
+     "checks_total": 2
+    },
+    {
+     "note": "bp09_water",
+     "said": "فاتورة الماي شكد طالعة هالشهر؟",
+     "heard": "فاتورة المي شكد طالعة هالشهر؟",
+     "seconds": 0.6,
+     "cost": 0.0,
+     "error": null,
+     "sim": 0.982,
+     "sim_nn": 0.982,
+     "wer_nn": 0.2,
+     "checks": [
+      {
+       "what": "biller ماي",
+       "kind": "biller",
+       "ok": true
+      },
+      {
+       "what": "فاتورة",
+       "kind": "word",
+       "ok": true
+      }
+     ],
+     "checks_ok": 2,
+     "checks_total": 2
+    },
+    {
+     "note": "bp10_electric_account",
+     "said": "سدد الكهرباء، رقم المشترك ثلاثة سبعة واحد، خمسة تسعة، اثنين صفر اربعة",
+     "heard": "سدد الكهرباء رقم المشترك 371 59 204",
+     "seconds": 0.76,
+     "cost": 0.0,
+     "error": null,
+     "sim": 0.535,
+     "sim_nn": 1.0,
+     "wer_nn": 0.0,
+     "checks": [
+      {
+       "what": "biller كهرباء",
+       "kind": "biller",
+       "ok": true
+      },
+      {
+       "what": "subscriber 37159204",
+       "kind": "digits",
+       "ok": true
+      }
+     ],
+     "checks_ok": 2,
+     "checks_total": 2
+    },
+    {
+     "note": "bp11_mustafa",
+     "said": "حوّل ثلاثمية ألف لمصطفى",
+     "heard": "حول 300 ألف للمصطفى",
+     "seconds": 0.76,
+     "cost": 0.0,
+     "error": null,
+     "sim": 0.732,
+     "sim_nn": 0.952,
+     "wer_nn": 0.5,
+     "checks": [
+      {
+       "what": "name مصطفى",
+       "kind": "name",
+       "ok": true
+      },
+      {
+       "what": "300 الف",
+       "kind": "amount",
+       "ok": true
+      }
+     ],
+     "checks_ok": 2,
+     "checks_total": 2
+    },
+    {
+     "note": "bp12_noisy_market",
+     "said": "عيني دزلي لزينب كاظم عشرين ألف هسه",
+     "heard": "عيني دزلي لزينب كاظم 20 الف هسه",
+     "seconds": 0.78,
+     "cost": 0.0,
+     "error": null,
+     "sim": 0.892,
+     "sim_nn": 1.0,
+     "wer_nn": 0.0,
+     "checks": [
+      {
+       "what": "name زينب كاظم",
+       "kind": "name",
+       "ok": true
+      },
+      {
+       "what": "20 الف",
+       "kind": "amount",
+       "ok": true
+      }
+     ],
+     "checks_ok": 2,
+     "checks_total": 2
+    },
+    {
+     "note": "bp13_fast",
+     "said": "هلو عيني دزلي لزهراء خمسطعش ألف بسرعة",
+     "heard": "هالو عيني دزلي الزهراء 15 الف بسرعة",
+     "seconds": 0.65,
+     "cost": 0.0,
+     "error": null,
+     "sim": 0.861,
+     "sim_nn": 0.963,
+     "wer_nn": 0.4,
+     "checks": [
+      {
+       "what": "name زهراء",
+       "kind": "name",
+       "ok": true
+      },
+      {
+       "what": "15 الف",
+       "kind": "amount",
+       "ok": true
+      }
+     ],
+     "checks_ok": 2,
+     "checks_total": 2
+    },
+    {
+     "note": "bp14_topup_asia",
+     "said": "اشحنلي آسيا بخمسة آلاف دينار",
+     "heard": "اشحن لي آسيا بـ 5000 دينار",
+     "seconds": 0.61,
+     "cost": 0.0,
+     "error": null,
+     "sim": 0.755,
+     "sim_nn": 0.884,
+     "wer_nn": 0.75,
+     "checks": [
+      {
+       "what": "asia",
+       "kind": "biller",
+       "ok": true
+      },
+      {
+       "what": "5 الاف",
+       "kind": "amount",
+       "ok": true
+      }
+     ],
+     "checks_ok": 2,
+     "checks_total": 2
+    },
+    {
+     "note": "bp15_correction",
+     "said": "دز لعلي عشرين... لا لا، ثلاثين ألف",
+     "heard": "دز لي العلي ٢٠٠٠ لا لا ٣٠ ألف",
+     "seconds": 0.74,
+     "cost": 0.0,
+     "error": null,
+     "sim": 0.644,
+     "sim_nn": 0.867,
+     "wer_nn": 0.5,
+     "checks": [
+      {
+       "what": "name علي",
+       "kind": "name",
+       "ok": true
+      },
+      {
+       "what": "30 الف",
+       "kind": "amount",
+       "ok": true
+      }
+     ],
+     "checks_ok": 2,
+     "checks_total": 2
+    },
+    {
+     "note": "bp16_mixed_english",
+     "said": "send لأحمد fifty thousand please",
+     "heard": "ساندل أحمد 50,000 Please",
+     "seconds": 0.9,
+     "cost": 0.0,
+     "error": null,
+     "sim": 0.464,
+     "sim_nn": 0.49,
+     "wer_nn": 0.8,
+     "checks": [
+      {
+       "what": "name احمد",
+       "kind": "name",
+       "ok": true
+      },
+      {
+       "what": "50 الف",
+       "kind": "amount",
+       "ok": true
+      }
+     ],
+     "checks_ok": 2,
+     "checks_total": 2
+    }
+   ]
+  },
+  "Closed model A (the production ear now)": {
+   "agg": {
+    "checks": "30/30",
+    "notes_all_checks": "16/16",
+    "sim": 0.672,
+    "sim_nn": 0.91,
+    "wer_nn": 0.42,
+    "seconds_p50": 3.04,
+    "seconds_max": 4.06,
+    "cost_usd": 0.006044,
+    "errors": 0
+   },
+   "rows": [
+    {
+     "note": "bp01_send_name_amount",
+     "said": "دزلي لحمودي خمسة وعشرين ألف",
+     "heard": "نزل لي الحمودي 25,0",
+     "seconds": 4.06,
+     "cost": 0.000276,
+     "error": null,
+     "sim": 0.478,
+     "sim_nn": 0.8,
+     "wer_nn": 1.5,
+     "checks": [
+      {
+       "what": "name حمودي",
+       "kind": "name",
+       "ok": true
+      },
+      {
+       "what": "25 الف",
+       "kind": "amount",
+       "ok": true
+      }
+     ],
+     "checks_ok": 2,
+     "checks_total": 2
+    },
+    {
+     "note": "bp02_generator_bill",
+     "said": "خلي ادفع حق المولدة هالشهر، مية وخمسين ألف",
+     "heard": "خلي ادفع حق المولدة هال شهر 150,000.",
+     "seconds": 3.05,
+     "cost": 0.000418,
+     "error": null,
+     "sim": 0.711,
+     "sim_nn": 0.981,
+     "wer_nn": 0.4,
+     "checks": [
+      {
+       "what": "biller مولدة",
+       "kind": "biller",
+       "ok": true
+      },
+      {
+       "what": "150 الف",
+       "kind": "amount",
+       "ok": true
+      }
+     ],
+     "checks_ok": 2,
+     "checks_total": 2
+    },
+    {
+     "note": "bp03_internet_account",
+     "said": "ادفع الانترنت، رقم الحساب صفر سبعة ثمانية صفر، اربعة اربعة، واحد تسعة، ستة ستة صفر",
+     "heard": "ادفع الانترنت، رقم الحساب 07804419660",
+     "seconds": 3.52,
+     "cost": 0.000738,
+     "error": null,
+     "sim": 0.439,
+     "sim_nn": 1.0,
+     "wer_nn": 0.0,
+     "checks": [
+      {
+       "what": "biller انترنت",
+       "kind": "biller",
+       "ok": true
+      },
+      {
+       "what": "account 07804419660",
+       "kind": "digits",
+       "ok": true
+      }
+     ],
+     "checks_ok": 2,
+     "checks_total": 2
+    },
+    {
+     "note": "bp04_balance",
+     "said": "شكد باقي برصيدي؟",
+     "heard": "شو قد باقي برصيدي?",
+     "seconds": 3.03,
+     "cost": 0.00017,
+     "error": null,
+     "sim": 0.875,
+     "sim_nn": 0.875,
+     "wer_nn": 0.667,
+     "checks": [
+      {
+       "what": "رصيد",
+       "kind": "word",
+       "ok": true
+      },
+      {
+       "what": "شكد (any spelling)",
+       "kind": "word",
+       "ok": true
+      }
+     ],
+     "checks_ok": 2,
+     "checks_total": 2
+    },
+    {
+     "note": "bp05_confirm",
+     "said": "اي ثبت، دزها",
+     "heard": "اي، ثبت، دزها.",
+     "seconds": 2.94,
+     "cost": 0.000206,
+     "error": null,
+     "sim": 1.0,
+     "sim_nn": 1.0,
+     "wer_nn": 0.0,
+     "checks": [
+      {
+       "what": "ثبت",
+       "kind": "word",
+       "ok": true
+      }
+     ],
+     "checks_ok": 1,
+     "checks_total": 1
+    },
+    {
+     "note": "bp06_cancel",
+     "said": "لا لا بطلت، الغيها هسه",
+     "heard": "لا لا بطلت، الغيها هسا.",
+     "seconds": 2.3,
+     "cost": 0.00027599999999999993,
+     "error": null,
+     "sim": 0.952,
+     "sim_nn": 0.952,
+     "wer_nn": 0.2,
+     "checks": [
+      {
+       "what": "الغي",
+       "kind": "word",
+       "ok": true
+      }
+     ],
+     "checks_ok": 1,
+     "checks_total": 1
+    },
+    {
+     "note": "bp07_transfer_phone",
+     "said": "حول نص مليون لهالرقم، صفر سبعة سبعة صفر، تسعة ثمانية ستة، خمسة اربعة ثلاثة اثنين",
+     "heard": "حول نص مليون لهالرقم 07709865432",
+     "seconds": 2.59,
+     "cost": 0.000768,
+     "error": null,
+     "sim": 0.385,
+     "sim_nn": 1.0,
+     "wer_nn": 0.0,
+     "checks": [
+      {
+       "what": "نص مليون",
+       "kind": "amount",
+       "ok": true
+      },
+      {
+       "what": "phone 07709865432",
+       "kind": "digits",
+       "ok": true
+      }
+     ],
+     "checks_ok": 2,
+     "checks_total": 2
+    },
+    {
+     "note": "bp08_umm_ali",
+     "said": "دزي لأم علي عشرة آلاف، هي بالكرادة",
+     "heard": "ديزل ام علي 10000 هي بالكراده.",
+     "seconds": 2.59,
+     "cost": 0.000354,
+     "error": null,
+     "sim": 0.71,
+     "sim_nn": 0.913,
+     "wer_nn": 0.4,
+     "checks": [
+      {
+       "what": "name ام علي",
+       "kind": "name",
+       "ok": true
+      },
+      {
+       "what": "10 الاف",
+       "kind": "amount",
+       "ok": true
+      }
+     ],
+     "checks_ok": 2,
+     "checks_total": 2
+    },
+    {
+     "note": "bp09_water",
+     "said": "فاتورة الماي شكد طالعة هالشهر؟",
+     "heard": "فاتورة الماي شقد طالعة هالشهر?",
+     "seconds": 2.95,
+     "cost": 0.000282,
+     "error": null,
+     "sim": 0.966,
+     "sim_nn": 0.966,
+     "wer_nn": 0.2,
+     "checks": [
+      {
+       "what": "biller ماي",
+       "kind": "biller",
+       "ok": true
+      },
+      {
+       "what": "فاتورة",
+       "kind": "word",
+       "ok": true
+      }
+     ],
+     "checks_ok": 2,
+     "checks_total": 2
+    },
+    {
+     "note": "bp10_electric_account",
+     "said": "سدد الكهرباء، رقم المشترك ثلاثة سبعة واحد، خمسة تسعة، اثنين صفر اربعة",
+     "heard": "سداد الكهرباء، رقم المشترك 37159204",
+     "seconds": 3.13,
+     "cost": 0.000514,
+     "error": null,
+     "sim": 0.5,
+     "sim_nn": 0.98,
+     "wer_nn": 0.25,
+     "checks": [
+      {
+       "what": "biller كهرباء",
+       "kind": "biller",
+       "ok": true
+      },
+      {
+       "what": "subscriber 37159204",
+       "kind": "digits",
+       "ok": true
+      }
+     ],
+     "checks_ok": 2,
+     "checks_total": 2
+    },
+    {
+     "note": "bp11_mustafa",
+     "said": "حوّل ثلاثمية ألف لمصطفى",
+     "heard": "حول 300,000 لمصطفى.",
+     "seconds": 2.26,
+     "cost": 0.000286,
+     "error": null,
+     "sim": 0.55,
+     "sim_nn": 1.0,
+     "wer_nn": 0.0,
+     "checks": [
+      {
+       "what": "name مصطفى",
+       "kind": "name",
+       "ok": true
+      },
+      {
+       "what": "300 الف",
+       "kind": "amount",
+       "ok": true
+      }
+     ],
+     "checks_ok": 2,
+     "checks_total": 2
+    },
+    {
+     "note": "bp12_noisy_market",
+     "said": "عيني دزلي لزينب كاظم عشرين ألف هسه",
+     "heard": "عيني، دز لي لزينب كاظم 20,000 هسه.",
+     "seconds": 3.1,
+     "cost": 0.000428,
+     "error": null,
+     "sim": 0.758,
+     "sim_nn": 0.98,
+     "wer_nn": 0.4,
+     "checks": [
+      {
+       "what": "name زينب كاظم",
+       "kind": "name",
+       "ok": true
+      },
+      {
+       "what": "20 الف",
+       "kind": "amount",
+       "ok": true
+      }
+     ],
+     "checks_ok": 2,
+     "checks_total": 2
+    },
+    {
+     "note": "bp13_fast",
+     "said": "هلو عيني دزلي لزهراء خمسطعش ألف بسرعة",
+     "heard": "هلو عيني، ديزني لاند زهراء 15000 بسرعة.",
+     "seconds": 3.15,
+     "cost": 0.000386,
+     "error": null,
+     "sim": 0.703,
+     "sim_nn": 0.877,
+     "wer_nn": 0.6,
+     "checks": [
+      {
+       "what": "name زهراء",
+       "kind": "name",
+       "ok": true
+      },
+      {
+       "what": "15 الف",
+       "kind": "amount",
+       "ok": true
+      }
+     ],
+     "checks_ok": 2,
+     "checks_total": 2
+    },
+    {
+     "note": "bp14_topup_asia",
+     "said": "اشحنلي آسيا بخمسة آلاف دينار",
+     "heard": "اشحن لي آسيا ب 5000 دينار.",
+     "seconds": 2.7,
+     "cost": 0.000286,
+     "error": null,
+     "sim": 0.755,
+     "sim_nn": 0.884,
+     "wer_nn": 0.75,
+     "checks": [
+      {
+       "what": "asia",
+       "kind": "biller",
+       "ok": true
+      },
+      {
+       "what": "5 الاف",
+       "kind": "amount",
+       "ok": true
+      }
+     ],
+     "checks_ok": 2,
+     "checks_total": 2
+    },
+    {
+     "note": "bp15_correction",
+     "said": "دز لعلي عشرين... لا لا، ثلاثين ألف",
+     "heard": "نزل لي العلي 20 لا لا 30,0",
+     "seconds": 3.14,
+     "cost": 0.000372,
+     "error": null,
+     "sim": 0.5,
+     "sim_nn": 0.774,
+     "wer_nn": 0.75,
+     "checks": [
+      {
+       "what": "name علي",
+       "kind": "name",
+       "ok": true
+      },
+      {
+       "what": "30 الف",
+       "kind": "amount",
+       "ok": true
+      }
+     ],
+     "checks_ok": 2,
+     "checks_total": 2
+    },
+    {
+     "note": "bp16_mixed_english",
+     "said": "send لأحمد fifty thousand please",
+     "heard": "Send to Ahmed 50,000 please.",
+     "seconds": 3.94,
+     "cost": 0.000284,
+     "error": null,
+     "sim": 0.475,
+     "sim_nn": 0.577,
+     "wer_nn": 0.6,
+     "checks": [
+      {
+       "what": "name احمد",
+       "kind": "name",
+       "ok": true
+      },
+      {
+       "what": "50 الف",
+       "kind": "amount",
+       "ok": true
+      }
+     ],
+     "checks_ok": 2,
+     "checks_total": 2
+    }
+   ]
+  },
+  "Voxtral Mini Transcribe": {
+   "agg": {
+    "checks": "29/30",
+    "notes_all_checks": "15/16",
+    "sim": 0.732,
+    "sim_nn": 0.91,
+    "wer_nn": 0.406,
+    "seconds_p50": 0.75,
+    "seconds_max": 1.49,
+    "cost_usd": 0.0028,
+    "errors": 0
+   },
+   "rows": [
+    {
+     "note": "bp01_send_name_amount",
+     "said": "دزلي لحمودي خمسة وعشرين ألف",
+     "heard": "دزلي الحمودي 25 ألف",
+     "seconds": 0.86,
+     "cost": 0.0001,
+     "error": null,
+     "sim": 0.696,
+     "sim_nn": 0.957,
+     "wer_nn": 0.5,
+     "checks": [
+      {
+       "what": "name حمودي",
+       "kind": "name",
+       "ok": true
+      },
+      {
+       "what": "25 الف",
+       "kind": "amount",
+       "ok": true
+      }
+     ],
+     "checks_ok": 2,
+     "checks_total": 2
+    },
+    {
+     "note": "bp02_generator_bill",
+     "said": "خلي ادفع حق المولدة هالشهر، مية وخمسين ألف",
+     "heard": "خلي أدفع حق المولدة هالشهر 150 ألف",
+     "seconds": 0.8,
+     "cost": 0.0002,
+     "error": null,
+     "sim": 0.827,
+     "sim_nn": 1.0,
+     "wer_nn": 0.0,
+     "checks": [
+      {
+       "what": "biller مولدة",
+       "kind": "biller",
+       "ok": true
+      },
+      {
+       "what": "150 الف",
+       "kind": "amount",
+       "ok": true
+      }
+     ],
+     "checks_ok": 2,
+     "checks_total": 2
+    },
+    {
+     "note": "bp03_internet_account",
+     "said": "ادفع الانترنت، رقم الحساب صفر سبعة ثمانية صفر، اربعة اربعة، واحد تسعة، ستة ستة صفر",
+     "heard": "ادفع الانترنت رقم الحساب 07804419660",
+     "seconds": 0.73,
+     "cost": 0.0005,
+     "error": null,
+     "sim": 0.439,
+     "sim_nn": 1.0,
+     "wer_nn": 0.0,
+     "checks": [
+      {
+       "what": "biller انترنت",
+       "kind": "biller",
+       "ok": true
+      },
+      {
+       "what": "account 07804419660",
+       "kind": "digits",
+       "ok": true
+      }
+     ],
+     "checks_ok": 2,
+     "checks_total": 2
+    },
+    {
+     "note": "bp04_balance",
+     "said": "شكد باقي برصيدي؟",
+     "heard": "شكت بقى برصيدي؟",
+     "seconds": 0.68,
+     "cost": 5e-05,
+     "error": null,
+     "sim": 0.897,
+     "sim_nn": 0.897,
+     "wer_nn": 0.667,
+     "checks": [
+      {
+       "what": "رصيد",
+       "kind": "word",
+       "ok": true
+      },
+      {
+       "what": "شكد (any spelling)",
+       "kind": "word",
+       "ok": true
+      }
+     ],
+     "checks_ok": 2,
+     "checks_total": 2
+    },
+    {
+     "note": "bp05_confirm",
+     "said": "اي ثبت، دزها",
+     "heard": "أيه؟ ثبت دزها",
+     "seconds": 0.74,
+     "cost": 0.0001,
+     "error": null,
+     "sim": 0.957,
+     "sim_nn": 0.957,
+     "wer_nn": 0.333,
+     "checks": [
+      {
+       "what": "ثبت",
+       "kind": "word",
+       "ok": true
+      }
+     ],
+     "checks_ok": 1,
+     "checks_total": 1
+    },
+    {
+     "note": "bp06_cancel",
+     "said": "لا لا بطلت، الغيها هسه",
+     "heard": "لا لا بطلت. ألغيها هسه.",
+     "seconds": 0.68,
+     "cost": 0.00010000000000000002,
+     "error": null,
+     "sim": 1.0,
+     "sim_nn": 1.0,
+     "wer_nn": 0.0,
+     "checks": [
+      {
+       "what": "الغي",
+       "kind": "word",
+       "ok": true
+      }
+     ],
+     "checks_ok": 1,
+     "checks_total": 1
+    },
+    {
+     "note": "bp07_transfer_phone",
+     "said": "حول نص مليون لهالرقم، صفر سبعة سبعة صفر، تسعة ثمانية ستة، خمسة اربعة ثلاثة اثنين",
+     "heard": "حول نص مليون لهالرقم 0770 986 5432",
+     "seconds": 1.04,
+     "cost": 0.0005,
+     "error": null,
+     "sim": 0.414,
+     "sim_nn": 1.0,
+     "wer_nn": 0.0,
+     "checks": [
+      {
+       "what": "نص مليون",
+       "kind": "amount",
+       "ok": true
+      },
+      {
+       "what": "phone 07709865432",
+       "kind": "digits",
+       "ok": true
+      }
+     ],
+     "checks_ok": 2,
+     "checks_total": 2
+    },
+    {
+     "note": "bp08_umm_ali",
+     "said": "دزي لأم علي عشرة آلاف، هي بالكرادة",
+     "heard": "ديزي الأم علي 10,000. هي بالكرادة.",
+     "seconds": 0.8,
+     "cost": 0.00015,
+     "error": null,
+     "sim": 0.738,
+     "sim_nn": 0.958,
+     "wer_nn": 0.4,
+     "checks": [
+      {
+       "what": "name ام علي",
+       "kind": "name",
+       "ok": true
+      },
+      {
+       "what": "10 الاف",
+       "kind": "amount",
+       "ok": true
+      }
+     ],
+     "checks_ok": 2,
+     "checks_total": 2
+    },
+    {
+     "note": "bp09_water",
+     "said": "فاتورة الماي شكد طالعة هالشهر؟",
+     "heard": "فاتورة الميش قد طالعها الشهر",
+     "seconds": 0.67,
+     "cost": 0.0001,
+     "error": null,
+     "sim": 0.877,
+     "sim_nn": 0.877,
+     "wer_nn": 0.8,
+     "checks": [
+      {
+       "what": "biller ماي",
+       "kind": "biller",
+       "ok": false
+      },
+      {
+       "what": "فاتورة",
+       "kind": "word",
+       "ok": true
+      }
+     ],
+     "checks_ok": 1,
+     "checks_total": 2
+    },
+    {
+     "note": "bp10_electric_account",
+     "said": "سدد الكهرباء، رقم المشترك ثلاثة سبعة واحد، خمسة تسعة، اثنين صفر اربعة",
+     "heard": "سدد الكهرباء رقم المشترك 371-59-204",
+     "seconds": 0.8,
+     "cost": 0.0003,
+     "error": null,
+     "sim": 0.535,
+     "sim_nn": 1.0,
+     "wer_nn": 0.0,
+     "checks": [
+      {
+       "what": "biller كهرباء",
+       "kind": "biller",
+       "ok": true
+      },
+      {
+       "what": "subscriber 37159204",
+       "kind": "digits",
+       "ok": true
+      }
+     ],
+     "checks_ok": 2,
+     "checks_total": 2
+    },
+    {
+     "note": "bp11_mustafa",
+     "said": "حوّل ثلاثمية ألف لمصطفى",
+     "heard": "حول 300 ألف في المصطفى",
+     "seconds": 1.49,
+     "cost": 0.0001,
+     "error": null,
+     "sim": 0.682,
+     "sim_nn": 0.833,
+     "wer_nn": 1.0,
+     "checks": [
+      {
+       "what": "name مصطفى",
+       "kind": "name",
+       "ok": true
+      },
+      {
+       "what": "300 الف",
+       "kind": "amount",
+       "ok": true
+      }
+     ],
+     "checks_ok": 2,
+     "checks_total": 2
+    },
+    {
+     "note": "bp12_noisy_market",
+     "said": "عيني دزلي لزينب كاظم عشرين ألف هسه",
+     "heard": "عني دزلي الزينب كاظم 20 ألف هسة",
+     "seconds": 0.76,
+     "cost": 0.00015,
+     "error": null,
+     "sim": 0.862,
+     "sim_nn": 0.958,
+     "wer_nn": 0.4,
+     "checks": [
+      {
+       "what": "name زينب كاظم",
+       "kind": "name",
+       "ok": true
+      },
+      {
+       "what": "20 الف",
+       "kind": "amount",
+       "ok": true
+      }
+     ],
+     "checks_ok": 2,
+     "checks_total": 2
+    },
+    {
+     "note": "bp13_fast",
+     "said": "هلو عيني دزلي لزهراء خمسطعش ألف بسرعة",
+     "heard": "هلا عيني دزلي الزهراء 15 ألف بسرعة",
+     "seconds": 0.65,
+     "cost": 0.0001,
+     "error": null,
+     "sim": 0.845,
+     "sim_nn": 0.943,
+     "wer_nn": 0.4,
+     "checks": [
+      {
+       "what": "name زهراء",
+       "kind": "name",
+       "ok": true
+      },
+      {
+       "what": "15 الف",
+       "kind": "amount",
+       "ok": true
+      }
+     ],
+     "checks_ok": 2,
+     "checks_total": 2
+    },
+    {
+     "note": "bp14_topup_asia",
+     "said": "اشحنلي آسيا بخمسة آلاف دينار",
+     "heard": "اشحل لآسيا بخمسة ألاف دينار",
+     "seconds": 0.52,
+     "cost": 9.999999999999999e-05,
+     "error": null,
+     "sim": 0.945,
+     "sim_nn": 0.933,
+     "wer_nn": 0.5,
+     "checks": [
+      {
+       "what": "asia",
+       "kind": "biller",
+       "ok": true
+      },
+      {
+       "what": "5 الاف",
+       "kind": "amount",
+       "ok": true
+      }
+     ],
+     "checks_ok": 2,
+     "checks_total": 2
+    },
+    {
+     "note": "bp15_correction",
+     "said": "دز لعلي عشرين... لا لا، ثلاثين ألف",
+     "heard": "دزل علي 20 لا لا 30 ألف",
+     "seconds": 0.69,
+     "cost": 0.00015,
+     "error": null,
+     "sim": 0.679,
+     "sim_nn": 0.923,
+     "wer_nn": 0.5,
+     "checks": [
+      {
+       "what": "name علي",
+       "kind": "name",
+       "ok": true
+      },
+      {
+       "what": "30 الف",
+       "kind": "amount",
+       "ok": true
+      }
+     ],
+     "checks_ok": 2,
+     "checks_total": 2
+    },
+    {
+     "note": "bp16_mixed_english",
+     "said": "send لأحمد fifty thousand please",
+     "heard": "سند أحمد 50,000، por favor.",
+     "seconds": 0.77,
+     "cost": 0.0001,
+     "error": null,
+     "sim": 0.316,
+     "sim_nn": 0.32,
+     "wer_nn": 1.0,
+     "checks": [
+      {
+       "what": "name احمد",
+       "kind": "name",
+       "ok": true
+      },
+      {
+       "what": "50 الف",
+       "kind": "amount",
+       "ok": true
+      }
+     ],
+     "checks_ok": 2,
+     "checks_total": 2
+    }
+   ]
+  },
+  "Whisper large-v3-turbo": {
+   "agg": {
+    "checks": "28/30",
+    "notes_all_checks": "14/16",
+    "sim": 0.727,
+    "sim_nn": 0.915,
+    "wer_nn": 0.379,
+    "seconds_p50": 1.08,
+    "seconds_max": 2.4,
+    "cost_usd": 0.000603,
+    "errors": 0
+   },
+   "rows": [
+    {
+     "note": "bp01_send_name_amount",
+     "said": "دزلي لحمودي خمسة وعشرين ألف",
+     "heard": "دزلي الحمودي 25 ألف",
+     "seconds": 0.74,
+     "cost": 7.8588e-06,
+     "error": null,
+     "sim": 0.696,
+     "sim_nn": 0.957,
+     "wer_nn": 0.5,
+     "checks": [
+      {
+       "what": "name حمودي",
+       "kind": "name",
+       "ok": true
+      },
+      {
+       "what": "25 الف",
+       "kind": "amount",
+       "ok": true
+      }
+     ],
+     "checks_ok": 2,
+     "checks_total": 2
+    },
+    {
+     "note": "bp02_generator_bill",
+     "said": "خلي ادفع حق المولدة هالشهر، مية وخمسين ألف",
+     "heard": "خلي أدفع حق المولدة هالشهر 150 ألف",
+     "seconds": 0.65,
+     "cost": 0.000111111111111,
+     "error": null,
+     "sim": 0.827,
+     "sim_nn": 1.0,
+     "wer_nn": 0.0,
+     "checks": [
+      {
+       "what": "biller مولدة",
+       "kind": "biller",
+       "ok": true
+      },
+      {
+       "what": "150 الف",
+       "kind": "amount",
+       "ok": true
+      }
+     ],
+     "checks_ok": 2,
+     "checks_total": 2
+    },
+    {
+     "note": "bp03_internet_account",
+     "said": "ادفع الانترنت، رقم الحساب صفر سبعة ثمانية صفر، اربعة اربعة، واحد تسعة، ستة ستة صفر",
+     "heard": "ادفع الانترنت رقم الحساب 07804419660",
+     "seconds": 0.77,
+     "cost": 0.000112888888888776,
+     "error": null,
+     "sim": 0.439,
+     "sim_nn": 1.0,
+     "wer_nn": 0.0,
+     "checks": [
+      {
+       "what": "biller انترنت",
+       "kind": "biller",
+       "ok": true
+      },
+      {
+       "what": "account 07804419660",
+       "kind": "digits",
+       "ok": true
+      }
+     ],
+     "checks_ok": 2,
+     "checks_total": 2
+    },
+    {
+     "note": "bp04_balance",
+     "said": "شكد باقي برصيدي؟",
+     "heard": "شكتباقي برصيدي؟",
+     "seconds": 1.24,
+     "cost": 5.5944e-06,
+     "error": null,
+     "sim": 0.897,
+     "sim_nn": 0.897,
+     "wer_nn": 0.667,
+     "checks": [
+      {
+       "what": "رصيد",
+       "kind": "word",
+       "ok": true
+      },
+      {
+       "what": "شكد (any spelling)",
+       "kind": "word",
+       "ok": true
+      }
+     ],
+     "checks_ok": 2,
+     "checks_total": 2
+    },
+    {
+     "note": "bp05_confirm",
+     "said": "اي ثبت، دزها",
+     "heard": "أي!  ثبت دزها",
+     "seconds": 2.4,
+     "cost": 7.1928e-06,
+     "error": null,
+     "sim": 1.0,
+     "sim_nn": 1.0,
+     "wer_nn": 0.0,
+     "checks": [
+      {
+       "what": "ثبت",
+       "kind": "word",
+       "ok": true
+      }
+     ],
+     "checks_ok": 1,
+     "checks_total": 1
+    },
+    {
+     "note": "bp06_cancel",
+     "said": "لا لا بطلت، الغيها هسه",
+     "heard": "لا لا بطلت  الغيهاسة",
+     "seconds": 1.23,
+     "cost": 9.457200000000002e-06,
+     "error": null,
+     "sim": 0.95,
+     "sim_nn": 0.95,
+     "wer_nn": 0.4,
+     "checks": [
+      {
+       "what": "الغي",
+       "kind": "word",
+       "ok": true
+      }
+     ],
+     "checks_ok": 1,
+     "checks_total": 1
+    },
+    {
+     "note": "bp07_transfer_phone",
+     "said": "حول نص مليون لهالرقم، صفر سبعة سبعة صفر، تسعة ثمانية ستة، خمسة اربعة ثلاثة اثنين",
+     "heard": "حول نص مليون لهالرقم  0770  986  خمسة أربعة  3-2",
+     "seconds": 1.1,
+     "cost": 3.58308e-05,
+     "error": null,
+     "sim": 0.579,
+     "sim_nn": 1.0,
+     "wer_nn": 0.0,
+     "checks": [
+      {
+       "what": "نص مليون",
+       "kind": "amount",
+       "ok": true
+      },
+      {
+       "what": "phone 07709865432",
+       "kind": "digits",
+       "ok": true
+      }
+     ],
+     "checks_ok": 2,
+     "checks_total": 2
+    },
+    {
+     "note": "bp08_umm_ali",
+     "said": "دزي لأم علي عشرة آلاف، هي بالكرادة",
+     "heard": "ديزي الأمعالية 10,000 هي بالكرادة.",
+     "seconds": 0.85,
+     "cost": 1.14552e-05,
+     "error": null,
+     "sim": 0.576,
+     "sim_nn": 0.898,
+     "wer_nn": 0.6,
+     "checks": [
+      {
+       "what": "name ام علي",
+       "kind": "name",
+       "ok": false
+      },
+      {
+       "what": "10 الاف",
+       "kind": "amount",
+       "ok": true
+      }
+     ],
+     "checks_ok": 1,
+     "checks_total": 2
+    },
+    {
+     "note": "bp09_water",
+     "said": "فاتورة الماي شكد طالعة هالشهر؟",
+     "heard": "فاتور تلميش قد طالعها الشهر؟",
+     "seconds": 0.71,
+     "cost": 0.000111111111111,
+     "error": null,
+     "sim": 0.821,
+     "sim_nn": 0.821,
+     "wer_nn": 1.0,
+     "checks": [
+      {
+       "what": "biller ماي",
+       "kind": "biller",
+       "ok": false
+      },
+      {
+       "what": "فاتورة",
+       "kind": "word",
+       "ok": true
+      }
+     ],
+     "checks_ok": 1,
+     "checks_total": 2
+    },
+    {
+     "note": "bp10_electric_account",
+     "said": "سدد الكهرباء، رقم المشترك ثلاثة سبعة واحد، خمسة تسعة، اثنين صفر اربعة",
+     "heard": "سدد الكهرباء رقم المشترك 37159204",
+     "seconds": 0.62,
+     "cost": 0.000111111111111,
+     "error": null,
+     "sim": 0.505,
+     "sim_nn": 1.0,
+     "wer_nn": 0.0,
+     "checks": [
+      {
+       "what": "biller كهرباء",
+       "kind": "biller",
+       "ok": true
+      },
+      {
+       "what": "subscriber 37159204",
+       "kind": "digits",
+       "ok": true
+      }
+     ],
+     "checks_ok": 2,
+     "checks_total": 2
+    },
+    {
+     "note": "bp11_mustafa",
+     "said": "حوّل ثلاثمية ألف لمصطفى",
+     "heard": "حول 300 ألف المصطفى",
+     "seconds": 2.08,
+     "cost": 7.7256e-06,
+     "error": null,
+     "sim": 0.732,
+     "sim_nn": 0.952,
+     "wer_nn": 0.5,
+     "checks": [
+      {
+       "what": "name مصطفى",
+       "kind": "name",
+       "ok": true
+      },
+      {
+       "what": "300 الف",
+       "kind": "amount",
+       "ok": true
+      }
+     ],
+     "checks_ok": 2,
+     "checks_total": 2
+    },
+    {
+     "note": "bp12_noisy_market",
+     "said": "عيني دزلي لزينب كاظم عشرين ألف هسه",
+     "heard": "عيني ديزليل زينب كاظم 20 ألف هسة",
+     "seconds": 2.29,
+     "cost": 1.2321e-05,
+     "error": null,
+     "sim": 0.848,
+     "sim_nn": 0.939,
+     "wer_nn": 0.4,
+     "checks": [
+      {
+       "what": "name زينب كاظم",
+       "kind": "name",
+       "ok": true
+      },
+      {
+       "what": "20 الف",
+       "kind": "amount",
+       "ok": true
+      }
+     ],
+     "checks_ok": 2,
+     "checks_total": 2
+    },
+    {
+     "note": "bp13_fast",
+     "said": "هلو عيني دزلي لزهراء خمسطعش ألف بسرعة",
+     "heard": "هلو عيني دزلي الزهراء 15 ألف بسرعة",
+     "seconds": 1.6,
+     "cost": 3.174652777774603e-05,
+     "error": null,
+     "sim": 0.873,
+     "sim_nn": 0.981,
+     "wer_nn": 0.2,
+     "checks": [
+      {
+       "what": "name زهراء",
+       "kind": "name",
+       "ok": true
+      },
+      {
+       "what": "15 الف",
+       "kind": "amount",
+       "ok": true
+      }
+     ],
+     "checks_ok": 2,
+     "checks_total": 2
+    },
+    {
+     "note": "bp14_topup_asia",
+     "said": "اشحنلي آسيا بخمسة آلاف دينار",
+     "heard": "إشحل آسيا بـ 5000 دينار؟",
+     "seconds": 1.05,
+     "cost": 7.725599999999986e-06,
+     "error": null,
+     "sim": 0.72,
+     "sim_nn": 0.85,
+     "wer_nn": 0.5,
+     "checks": [
+      {
+       "what": "asia",
+       "kind": "biller",
+       "ok": true
+      },
+      {
+       "what": "5 الاف",
+       "kind": "amount",
+       "ok": true
+      }
+     ],
+     "checks_ok": 2,
+     "checks_total": 2
+    },
+    {
+     "note": "bp15_correction",
+     "said": "دز لعلي عشرين... لا لا، ثلاثين ألف",
+     "heard": "ديزلي العلي 20 لا لا  30 ألف",
+     "seconds": 0.87,
+     "cost": 1.10556e-05,
+     "error": null,
+     "sim": 0.667,
+     "sim_nn": 0.867,
+     "wer_nn": 0.5,
+     "checks": [
+      {
+       "what": "name علي",
+       "kind": "name",
+       "ok": true
+      },
+      {
+       "what": "30 الف",
+       "kind": "amount",
+       "ok": true
+      }
+     ],
+     "checks_ok": 2,
+     "checks_total": 2
+    },
+    {
+     "note": "bp16_mixed_english",
+     "said": "send لأحمد fifty thousand please",
+     "heard": "سند الأحمد 50,000, please.",
+     "seconds": 1.13,
+     "cost": 9.1908e-06,
+     "error": null,
+     "sim": 0.5,
+     "sim_nn": 0.531,
+     "wer_nn": 0.8,
+     "checks": [
+      {
+       "what": "name احمد",
+       "kind": "name",
+       "ok": true
+      },
+      {
+       "what": "50 الف",
+       "kind": "amount",
+       "ok": true
+      }
+     ],
+     "checks_ok": 2,
+     "checks_total": 2
+    }
+   ]
+  },
+  "Whisper large-v3": {
+   "agg": {
+    "checks": "26/30",
+    "notes_all_checks": "12/16",
+    "sim": 0.715,
+    "sim_nn": 0.846,
+    "wer_nn": 0.614,
+    "seconds_p50": 1.25,
+    "seconds_max": 1.84,
+    "cost_usd": 0.000766,
+    "errors": 0
+   },
+   "rows": [
+    {
+     "note": "bp01_send_name_amount",
+     "said": "دزلي لحمودي خمسة وعشرين ألف",
+     "heard": "دزل الحمودي 25 ألف",
+     "seconds": 1.84,
+     "cost": 1.77e-05,
+     "error": null,
+     "sim": 0.667,
+     "sim_nn": 0.909,
+     "wer_nn": 1.0,
+     "checks": [
+      {
+       "what": "name حمودي",
+       "kind": "name",
+       "ok": true
+      },
+      {
+       "what": "25 الف",
+       "kind": "amount",
+       "ok": true
+      }
+     ],
+     "checks_ok": 2,
+     "checks_total": 2
+    },
+    {
+     "note": "bp02_generator_bill",
+     "said": "خلي ادفع حق المولدة هالشهر، مية وخمسين ألف",
+     "heard": "خلي أدفع حاج المولدة هالشهر  150 ألف",
+     "seconds": 1.45,
+     "cost": 3.18e-05,
+     "error": null,
+     "sim": 0.789,
+     "sim_nn": 0.943,
+     "wer_nn": 0.2,
+     "checks": [
+      {
+       "what": "biller مولدة",
+       "kind": "biller",
+       "ok": true
+      },
+      {
+       "what": "150 الف",
+       "kind": "amount",
+       "ok": true
+      }
+     ],
+     "checks_ok": 2,
+     "checks_total": 2
+    },
+    {
+     "note": "bp03_internet_account",
+     "said": "ادفع الانترنت، رقم الحساب صفر سبعة ثمانية صفر، اربعة اربعة، واحد تسعة، ستة ستة صفر",
+     "heard": "ادفع الانترنت رقم الحساب 0780  4 4  1-9  660",
+     "seconds": 0.92,
+     "cost": 7.62e-05,
+     "error": null,
+     "sim": 0.504,
+     "sim_nn": 1.0,
+     "wer_nn": 0.0,
+     "checks": [
+      {
+       "what": "biller انترنت",
+       "kind": "biller",
+       "ok": true
+      },
+      {
+       "what": "account 07804419660",
+       "kind": "digits",
+       "ok": true
+      }
+     ],
+     "checks_ok": 2,
+     "checks_total": 2
+    },
+    {
+     "note": "bp04_balance",
+     "said": "شكد باقي برصيدي؟",
+     "heard": "ما الذي يبقى برصيده؟",
+     "seconds": 1.44,
+     "cost": 1.26e-05,
+     "error": null,
+     "sim": 0.588,
+     "sim_nn": 0.588,
+     "wer_nn": 1.333,
+     "checks": [
+      {
+       "what": "رصيد",
+       "kind": "word",
+       "ok": true
+      },
+      {
+       "what": "شكد (any spelling)",
+       "kind": "word",
+       "ok": false
+      }
+     ],
+     "checks_ok": 1,
+     "checks_total": 2
+    },
+    {
+     "note": "bp05_confirm",
+     "said": "اي ثبت، دزها",
+     "heard": "أي  ثبت ديزهة",
+     "seconds": 1.33,
+     "cost": 1.62e-05,
+     "error": null,
+     "sim": 0.87,
+     "sim_nn": 0.87,
+     "wer_nn": 0.333,
+     "checks": [
+      {
+       "what": "ثبت",
+       "kind": "word",
+       "ok": true
+      }
+     ],
+     "checks_ok": 1,
+     "checks_total": 1
+    },
+    {
+     "note": "bp06_cancel",
+     "said": "لا لا بطلت، الغيها هسه",
+     "heard": "لا لا بطلت  الغيهة هسه",
+     "seconds": 1.27,
+     "cost": 2.1300000000000003e-05,
+     "error": null,
+     "sim": 0.952,
+     "sim_nn": 0.952,
+     "wer_nn": 0.2,
+     "checks": [
+      {
+       "what": "الغي",
+       "kind": "word",
+       "ok": true
+      }
+     ],
+     "checks_ok": 1,
+     "checks_total": 1
+    },
+    {
+     "note": "bp07_transfer_phone",
+     "said": "حول نص مليون لهالرقم، صفر سبعة سبعة صفر، تسعة ثمانية ستة، خمسة اربعة ثلاثة اثنين",
+     "heard": "حوالي نصف مليون لهذا الرقم.  0770  تسعة ثمانية ستة  خمسة أربعة  3-2",
+     "seconds": 0.96,
+     "cost": 8.07e-05,
+     "error": null,
+     "sim": 0.719,
+     "sim_nn": 0.815,
+     "wer_nn": 1.5,
+     "checks": [
+      {
+       "what": "نص مليون",
+       "kind": "amount",
+       "ok": true
+      },
+      {
+       "what": "phone 07709865432",
+       "kind": "digits",
+       "ok": true
+      }
+     ],
+     "checks_ok": 2,
+     "checks_total": 2
+    },
+    {
+     "note": "bp08_umm_ali",
+     "said": "دزي لأم علي عشرة آلاف، هي بالكرادة",
+     "heard": "ديزي الأم علي أشرتلاف هي بالكرادة",
+     "seconds": 0.99,
+     "cost": 2.58e-05,
+     "error": null,
+     "sim": 0.879,
+     "sim_nn": 0.821,
+     "wer_nn": 0.6,
+     "checks": [
+      {
+       "what": "name ام علي",
+       "kind": "name",
+       "ok": true
+      },
+      {
+       "what": "10 الاف",
+       "kind": "amount",
+       "ok": false
+      }
+     ],
+     "checks_ok": 1,
+     "checks_total": 2
+    },
+    {
+     "note": "bp09_water",
+     "said": "فاتورة الماي شكد طالعة هالشهر؟",
+     "heard": "فاتورة الميش قد طلعها الشهر",
+     "seconds": 0.91,
+     "cost": 0.000308333333333,
+     "error": null,
+     "sim": 0.857,
+     "sim_nn": 0.857,
+     "wer_nn": 0.8,
+     "checks": [
+      {
+       "what": "biller ماي",
+       "kind": "biller",
+       "ok": false
+      },
+      {
+       "what": "فاتورة",
+       "kind": "word",
+       "ok": true
+      }
+     ],
+     "checks_ok": 1,
+     "checks_total": 2
+    },
+    {
+     "note": "bp10_electric_account",
+     "said": "سدد الكهرباء، رقم المشترك ثلاثة سبعة واحد، خمسة تسعة، اثنين صفر اربعة",
+     "heard": "سدد الكهرباء رقم المشترك 371-625-7000  5 9 2 0 4",
+     "seconds": 1.7,
+     "cost": 4.62e-05,
+     "error": null,
+     "sim": 0.566,
+     "sim_nn": 1.0,
+     "wer_nn": 0.0,
+     "checks": [
+      {
+       "what": "biller كهرباء",
+       "kind": "biller",
+       "ok": true
+      },
+      {
+       "what": "subscriber 37159204",
+       "kind": "digits",
+       "ok": false
+      }
+     ],
+     "checks_ok": 1,
+     "checks_total": 2
+    },
+    {
+     "note": "bp11_mustafa",
+     "said": "حوّل ثلاثمية ألف لمصطفى",
+     "heard": "حول 300 ألف في المصطفى",
+     "seconds": 1.24,
+     "cost": 1.74e-05,
+     "error": null,
+     "sim": 0.682,
+     "sim_nn": 0.833,
+     "wer_nn": 1.0,
+     "checks": [
+      {
+       "what": "name مصطفى",
+       "kind": "name",
+       "ok": true
+      },
+      {
+       "what": "300 الف",
+       "kind": "amount",
+       "ok": true
+      }
+     ],
+     "checks_ok": 2,
+     "checks_total": 2
+    },
+    {
+     "note": "bp12_noisy_market",
+     "said": "عيني دزلي لزينب كاظم عشرين ألف هسه",
+     "heard": "عيني ديزليل زينب كاظم 20 ألف هسة",
+     "seconds": 0.87,
+     "cost": 2.775e-05,
+     "error": null,
+     "sim": 0.848,
+     "sim_nn": 0.939,
+     "wer_nn": 0.4,
+     "checks": [
+      {
+       "what": "name زينب كاظم",
+       "kind": "name",
+       "ok": true
+      },
+      {
+       "what": "20 الف",
+       "kind": "amount",
+       "ok": true
+      }
+     ],
+     "checks_ok": 2,
+     "checks_total": 2
+    },
+    {
+     "note": "bp13_fast",
+     "said": "هلو عيني دزلي لزهراء خمسطعش ألف بسرعة",
+     "heard": "هلو عيني دزلي الزهراء 15 ألف بسرعة",
+     "seconds": 1.57,
+     "cost": 2.14275e-05,
+     "error": null,
+     "sim": 0.873,
+     "sim_nn": 0.981,
+     "wer_nn": 0.2,
+     "checks": [
+      {
+       "what": "name زهراء",
+       "kind": "name",
+       "ok": true
+      },
+      {
+       "what": "15 الف",
+       "kind": "amount",
+       "ok": true
+      }
+     ],
+     "checks_ok": 2,
+     "checks_total": 2
+    },
+    {
+     "note": "bp14_topup_asia",
+     "said": "اشحنلي آسيا بخمسة آلاف دينار",
+     "heard": "اشحل لآسيا بـ 5000 دينار",
+     "seconds": 0.96,
+     "cost": 1.7400000000000003e-05,
+     "error": null,
+     "sim": 0.706,
+     "sim_nn": 0.829,
+     "wer_nn": 0.75,
+     "checks": [
+      {
+       "what": "asia",
+       "kind": "biller",
+       "ok": true
+      },
+      {
+       "what": "5 الاف",
+       "kind": "amount",
+       "ok": true
+      }
+     ],
+     "checks_ok": 2,
+     "checks_total": 2
+    },
+    {
+     "note": "bp15_correction",
+     "said": "دز لعلي عشرين... لا لا، ثلاثين ألف",
+     "heard": "دزل العلي 20 لا لا  30 ألف",
+     "seconds": 0.95,
+     "cost": 2.49e-05,
+     "error": null,
+     "sim": 0.691,
+     "sim_nn": 0.929,
+     "wer_nn": 0.5,
+     "checks": [
+      {
+       "what": "name علي",
+       "kind": "name",
+       "ok": true
+      },
+      {
+       "what": "30 الف",
+       "kind": "amount",
+       "ok": true
+      }
+     ],
+     "checks_ok": 2,
+     "checks_total": 2
+    },
+    {
+     "note": "bp16_mixed_english",
+     "said": "send لأحمد fifty thousand please",
+     "heard": "أرسل 50 ألفاً لأحمد، أرجوك.",
+     "seconds": 1.71,
+     "cost": 2.07e-05,
+     "error": null,
+     "sim": 0.25,
+     "sim_nn": 0.264,
+     "wer_nn": 1.0,
+     "checks": [
+      {
+       "what": "name احمد",
+       "kind": "name",
+       "ok": true
+      },
+      {
+       "what": "50 الف",
+       "kind": "amount",
+       "ok": true
+      }
+     ],
+     "checks_ok": 2,
+     "checks_total": 2
+    }
+   ]
+  },
+  "Closed model B": {
+   "agg": {
+    "checks": "26/30",
+    "notes_all_checks": "13/16",
+    "sim": 0.807,
+    "sim_nn": 0.844,
+    "wer_nn": 0.468,
+    "seconds_p50": 1.3,
+    "seconds_max": 1.73,
+    "cost_usd": 0.00193,
+    "errors": 0
+   },
+   "rows": [
+    {
+     "note": "bp01_send_name_amount",
+     "said": "دزلي لحمودي خمسة وعشرين ألف",
+     "heard": "نزل الحمودي خمسة وعشرين ألف",
+     "seconds": 1.41,
+     "cost": 7.875e-05,
+     "error": null,
+     "sim": 0.926,
+     "sim_nn": 0.818,
+     "wer_nn": 1.0,
+     "checks": [
+      {
+       "what": "name حمودي",
+       "kind": "name",
+       "ok": true
+      },
+      {
+       "what": "25 الف",
+       "kind": "amount",
+       "ok": true
+      }
+     ],
+     "checks_ok": 2,
+     "checks_total": 2
+    },
+    {
+     "note": "bp02_generator_bill",
+     "said": "خلي ادفع حق المولدة هالشهر، مية وخمسين ألف",
+     "heard": "خلي أدفع حق المولدة هالشهر، مية وخمسين ألف.",
+     "seconds": 1.56,
+     "cost": 0.0001575,
+     "error": null,
+     "sim": 1.0,
+     "sim_nn": 1.0,
+     "wer_nn": 0.0,
+     "checks": [
+      {
+       "what": "biller مولدة",
+       "kind": "biller",
+       "ok": true
+      },
+      {
+       "what": "150 الف",
+       "kind": "amount",
+       "ok": true
+      }
+     ],
+     "checks_ok": 2,
+     "checks_total": 2
+    },
+    {
+     "note": "bp03_internet_account",
+     "said": "ادفع الانترنت، رقم الحساب صفر سبعة ثمانية صفر، اربعة اربعة، واحد تسعة، ستة ستة صفر",
+     "heard": "ادفع الإنترنت رقم الحساب صفر سبعة ثمانية صفر أربعة أربعة واحد تسعة ستة ستة صفر",
+     "seconds": 1.6,
+     "cost": 0.00024125,
+     "error": null,
+     "sim": 1.0,
+     "sim_nn": 1.0,
+     "wer_nn": 0.0,
+     "checks": [
+      {
+       "what": "biller انترنت",
+       "kind": "biller",
+       "ok": true
+      },
+      {
+       "what": "account 07804419660",
+       "kind": "digits",
+       "ok": true
+      }
+     ],
+     "checks_ok": 2,
+     "checks_total": 2
+    },
+    {
+     "note": "bp04_balance",
+     "said": "شكد باقي برصيدي؟",
+     "heard": "Shket baqi",
+     "seconds": 1.44,
+     "cost": 5e-05,
+     "error": null,
+     "sim": 0.08,
+     "sim_nn": 0.08,
+     "wer_nn": 1.0,
+     "checks": [
+      {
+       "what": "رصيد",
+       "kind": "word",
+       "ok": false
+      },
+      {
+       "what": "شكد (any spelling)",
+       "kind": "word",
+       "ok": false
+      }
+     ],
+     "checks_ok": 0,
+     "checks_total": 2
+    },
+    {
+     "note": "bp05_confirm",
+     "said": "اي ثبت، دزها",
+     "heard": "أي، ثبت، دسها.",
+     "seconds": 1.45,
+     "cost": 7.125e-05,
+     "error": null,
+     "sim": 0.909,
+     "sim_nn": 0.909,
+     "wer_nn": 0.333,
+     "checks": [
+      {
+       "what": "ثبت",
+       "kind": "word",
+       "ok": true
+      }
+     ],
+     "checks_ok": 1,
+     "checks_total": 1
+    },
+    {
+     "note": "bp06_cancel",
+     "said": "لا لا بطلت، الغيها هسه",
+     "heard": "لا لا بطلت، الغيها هسة.",
+     "seconds": 0.87,
+     "cost": 0.00010000000000000002,
+     "error": null,
+     "sim": 1.0,
+     "sim_nn": 1.0,
+     "wer_nn": 0.0,
+     "checks": [
+      {
+       "what": "الغي",
+       "kind": "word",
+       "ok": true
+      }
+     ],
+     "checks_ok": 1,
+     "checks_total": 1
+    },
+    {
+     "note": "bp07_transfer_phone",
+     "said": "حول نص مليون لهالرقم، صفر سبعة سبعة صفر، تسعة ثمانية ستة، خمسة اربعة ثلاثة اثنين",
+     "heard": "حوّل نصف مليون لهذا الرقم: 0770 986 5432",
+     "seconds": 1.23,
+     "cost": 0.00021875,
+     "error": null,
+     "sim": 0.4,
+     "sim_nn": 0.88,
+     "wer_nn": 1.0,
+     "checks": [
+      {
+       "what": "نص مليون",
+       "kind": "amount",
+       "ok": true
+      },
+      {
+       "what": "phone 07709865432",
+       "kind": "digits",
+       "ok": true
+      }
+     ],
+     "checks_ok": 2,
+     "checks_total": 2
+    },
+    {
+     "note": "bp08_umm_ali",
+     "said": "دزي لأم علي عشرة آلاف، هي بالكرادة",
+     "heard": "ديزل أم علي عشر آلاف هي بالكرادة.",
+     "seconds": 1.33,
+     "cost": 0.0001075,
+     "error": null,
+     "sim": 0.923,
+     "sim_nn": 0.913,
+     "wer_nn": 0.4,
+     "checks": [
+      {
+       "what": "name ام علي",
+       "kind": "name",
+       "ok": true
+      },
+      {
+       "what": "10 الاف",
+       "kind": "amount",
+       "ok": true
+      }
+     ],
+     "checks_ok": 2,
+     "checks_total": 2
+    },
+    {
+     "note": "bp09_water",
+     "said": "فاتورة الماي شكد طالعة هالشهر؟",
+     "heard": "فاتورة المي شقد طالعة هالشهر؟",
+     "seconds": 1.15,
+     "cost": 0.000105,
+     "error": null,
+     "sim": 0.947,
+     "sim_nn": 0.947,
+     "wer_nn": 0.4,
+     "checks": [
+      {
+       "what": "biller ماي",
+       "kind": "biller",
+       "ok": true
+      },
+      {
+       "what": "فاتورة",
+       "kind": "word",
+       "ok": true
+      }
+     ],
+     "checks_ok": 2,
+     "checks_total": 2
+    },
+    {
+     "note": "bp10_electric_account",
+     "said": "سدد الكهرباء، رقم المشترك ثلاثة سبعة واحد، خمسة تسعة، اثنين صفر اربعة",
+     "heard": "سدد الكهرباء رقم المشترك: 37159204",
+     "seconds": 1.38,
+     "cost": 0.00014125,
+     "error": null,
+     "sim": 0.505,
+     "sim_nn": 1.0,
+     "wer_nn": 0.0,
+     "checks": [
+      {
+       "what": "biller كهرباء",
+       "kind": "biller",
+       "ok": true
+      },
+      {
+       "what": "subscriber 37159204",
+       "kind": "digits",
+       "ok": true
+      }
+     ],
+     "checks_ok": 2,
+     "checks_total": 2
+    },
+    {
+     "note": "bp11_mustafa",
+     "said": "حوّل ثلاثمية ألف لمصطفى",
+     "heard": "حول ثلاثمائة ألف للمصطفى.",
+     "seconds": 1.2,
+     "cost": 8.875e-05,
+     "error": null,
+     "sim": 0.957,
+     "sim_nn": 0.667,
+     "wer_nn": 1.0,
+     "checks": [
+      {
+       "what": "name مصطفى",
+       "kind": "name",
+       "ok": true
+      },
+      {
+       "what": "300 الف",
+       "kind": "amount",
+       "ok": true
+      }
+     ],
+     "checks_ok": 2,
+     "checks_total": 2
+    },
+    {
+     "note": "bp12_noisy_market",
+     "said": "عيني دزلي لزينب كاظم عشرين ألف هسه",
+     "heard": "أيه، ديزلين زيناب كاتم عشرين ألف هسة.",
+     "seconds": 1.27,
+     "cost": 0.00014625,
+     "error": null,
+     "sim": 0.841,
+     "sim_nn": 0.776,
+     "wer_nn": 0.8,
+     "checks": [
+      {
+       "what": "name زينب كاظم",
+       "kind": "name",
+       "ok": false
+      },
+      {
+       "what": "20 الف",
+       "kind": "amount",
+       "ok": true
+      }
+     ],
+     "checks_ok": 1,
+     "checks_total": 2
+    },
+    {
+     "note": "bp13_fast",
+     "said": "هلو عيني دزلي لزهراء خمسطعش ألف بسرعة",
+     "heard": "هلا عيني، دزلي الزهراء 15000 بسرعة.",
+     "seconds": 1.08,
+     "cost": 0.000125,
+     "error": null,
+     "sim": 0.743,
+     "sim_nn": 0.943,
+     "wer_nn": 0.4,
+     "checks": [
+      {
+       "what": "name زهراء",
+       "kind": "name",
+       "ok": true
+      },
+      {
+       "what": "15 الف",
+       "kind": "amount",
+       "ok": true
+      }
+     ],
+     "checks_ok": 2,
+     "checks_total": 2
+    },
+    {
+     "note": "bp14_topup_asia",
+     "said": "اشحنلي آسيا بخمسة آلاف دينار",
+     "heard": "اشحللي آسيا بخمسة آلاف دينار.",
+     "seconds": 1.01,
+     "cost": 9.374999999999997e-05,
+     "error": null,
+     "sim": 0.964,
+     "sim_nn": 0.957,
+     "wer_nn": 0.25,
+     "checks": [
+      {
+       "what": "asia",
+       "kind": "biller",
+       "ok": true
+      },
+      {
+       "what": "5 الاف",
+       "kind": "amount",
+       "ok": true
+      }
+     ],
+     "checks_ok": 2,
+     "checks_total": 2
+    },
+    {
+     "note": "bp15_correction",
+     "said": "دز لعلي عشرين... لا لا، ثلاثين ألف",
+     "heard": "نزل عليه عشرين، لا لا، ثلاثين ألف",
+     "seconds": 1.14,
+     "cost": 0.00011125,
+     "error": null,
+     "sim": 0.918,
+     "sim_nn": 0.815,
+     "wer_nn": 0.5,
+     "checks": [
+      {
+       "what": "name علي",
+       "kind": "name",
+       "ok": false
+      },
+      {
+       "what": "30 الف",
+       "kind": "amount",
+       "ok": true
+      }
+     ],
+     "checks_ok": 1,
+     "checks_total": 2
+    },
+    {
+     "note": "bp16_mixed_english",
+     "said": "send لأحمد fifty thousand please",
+     "heard": "Send il-Ahmad fifty thousand, please.",
+     "seconds": 1.73,
+     "cost": 9.375e-05,
+     "error": null,
+     "sim": 0.806,
+     "sim_nn": 0.806,
+     "wer_nn": 0.4,
+     "checks": [
+      {
+       "what": "name احمد",
+       "kind": "name",
+       "ok": true
+      },
+      {
+       "what": "50 الف",
+       "kind": "amount",
+       "ok": true
+      }
+     ],
+     "checks_ok": 2,
+     "checks_total": 2
+    }
+   ]
+  }
+ },
+ "dropped": {
+  "Qwen3 ASR Flash": "404 on every call: no longer served by the host used"
+ },
+ "how": "python -m eval.compare_stt --rescore <this file> --notes <its notes.jsonl> gives the same table",
+ "rescored_against": "the checks in the notes file at rescore time",
+ "reworded": {
+  "bp02_generator_bill, bp06_cancel, bp14_topup_asia": "reworded and spoken again on 15 Nov, then heard again by every model, because their first wording shared four-word runs with held-out test cases that must stay unseen"
+ }
+}

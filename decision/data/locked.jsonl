@@ -1,0 +1,360 @@
+{"text": "اكدر اتعبك؟ دز لخالي ابو ياسر ٩٠ الف", "label": "transfer", "style": "question_request", "source": "w4"}
+{"text": "دز لأحمد ورقتين", "label": "transfer", "style": "slang", "source": "w2"}
+{"text": "الله يخليك اخويي", "label": "chat", "style": "mosul", "source": "w2"}
+{"text": "طرش لفاطمة مية دولار", "label": "transfer", "style": "slang", "source": "w2"}
+{"text": "ضروري ضروري دز لرعد مليون هسه بالمستشفى", "label": "transfer", "style": "urgency", "source": "w4"}
+{"text": "close my friend Ali's account", "label": "unsupported", "style": "en_names", "source": "w3"}
+{"text": "order me a pizza 🍕", "label": "unsupported", "style": "en", "source": "w3"}
+{"text": "أريد تجديد اشتراك الإنترنت المنزلي", "label": "pay_bill", "style": "msa", "source": "w3"}
+{"text": "لاتدز بطلت", "label": "cancel", "style": "baghdadi_typo", "source": "w1"}
+{"text": "خلي بنين بالاسماء المحفوظة", "label": "add_contact", "style": "plain", "source": "w4"}
+{"text": "7awel l abu 3ali 180 alf 7ag el ejar w 5ala9", "label": "transfer", "style": "arabizi_long", "source": "w2"}
+{"text": "هي الفلوس وصلت لهاني ولا لسه؟", "label": "history", "style": "egyptian", "source": "w3"}
+{"text": "أرجو تجديد اشتراك الإنترنت اليوم", "label": "pay_bill", "style": "polite", "source": "w4"}
+{"text": "اه اسمع اريد احول لخالي فاضل نص مليون يعني خمسمية الف دينار مو دولار", "label": "transfer", "style": "baghdadi_voice", "source": "w1"}
+{"text": "ما ابي خلاص", "label": "cancel", "style": "gulf", "source": "w3"}
+{"text": "طرش ١٠٠ الف للرقم 07700001234", "label": "transfer", "style": "south", "source": "w2"}
+{"text": "ادفع فاتورة شهر أيلول للماء", "label": "pay_bill", "style": "period", "source": "w4"}
+{"text": "اسحب لي فلوس كاش هسع", "label": "unsupported", "style": "anbar", "source": "w2"}
+{"text": "حول حق سلطان ١٠٠ الف الحين", "label": "transfer", "style": "gulf", "source": "w3"}
+{"text": "شكد فلوسي هسه", "label": "balance", "style": "plain", "source": "w4"}
+{"text": "احفض رقم فاطمه", "label": "add_contact", "style": "typo", "source": "w4"}
+{"text": "edfa3 el amberat mal hal shahar", "label": "pay_bill", "style": "arabizi", "source": "w2"}
+{"text": "احجزلي تذكرة طيارة لاربيل", "label": "unsupported", "style": "baghdadi_casual", "source": "w1"}
+{"text": "شلونك عساك طيب", "label": "chat", "style": "anbar", "source": "w2"}
+{"text": "اضافة مستفيد جديد اسمه يوسف", "label": "add_contact", "style": "msa_messy", "source": "w3"}
+{"text": "عملياتي اليوم", "label": "history", "style": "short", "source": "w2"}
+{"text": "منو اخر واحد حولتله", "label": "history", "style": "baghdadi_casual", "source": "w1"}
+{"text": "عيوني حول لتبارك ٤٠ الف", "label": "transfer", "style": "south", "source": "w2"}
+{"text": "سدد اشتراك المولدة ٨ امبير", "label": "pay_bill", "style": "amounts", "source": "w2"}
+{"text": "عايزة كارت شحن كورك بخمسة وعشرين", "label": "topup", "style": "egyptian", "source": "w3"}
+{"text": "قبل لا ادز خليني اضيف رقم جديد", "label": "add_contact", "style": "two_requests", "source": "w4"}
+{"text": "سدد المولدةة", "label": "pay_bill", "style": "baghdadi_typo", "source": "w1"}
+{"text": "ادفع النت 🙏🙏", "label": "pay_bill", "style": "emoji", "source": "w4"}
+{"text": "ادفع الماي قبل لا يگطعوه 😅", "label": "pay_bill", "style": "amounts", "source": "w2"}
+{"text": "are you a bot or a real person?", "label": "chat", "style": "service_question", "source": "w4"}
+{"text": "transfer 30000 to Zainab, also what's my balance after", "label": "transfer", "style": "two_requests", "source": "w4"}
+{"text": "3oofha hawwanet", "label": "cancel", "style": "arabizi_short", "source": "w2"}
+{"text": "يمعود ودي لحسن العشرين اللي يطلبني بيها", "label": "transfer", "style": "south", "source": "w2"}
+{"text": "اه اريد ادفع اريد ادفع فاتورة الكهرباء اي الوطنية", "label": "pay_bill", "style": "voice_like", "source": "w4"}
+{"text": "ادفع كهرباء شهر تسعة", "label": "pay_bill", "style": "period", "source": "w4"}
+{"text": "ياخوي عندي دين لنايف من الشهر اللي فات سبعين الف، ارسلها له هسع وخلصني منها", "label": "transfer", "style": "long", "source": "w2"}
+{"text": "هلو شلونك اه اريد اسوي تحويل لفاطمة يعني مية الف لا خليها مية وعشرين", "label": "transfer", "style": "baghdadi_voice", "source": "w1"}
+{"text": "شگد رصيدي هسه", "label": "balance", "style": "baghdadi_casual", "source": "w1"}
+{"text": "لا مو بخمسة، عبيها بعشرة كورك", "label": "topup", "style": "correction", "source": "w4"}
+{"text": "hello, I'd like to pay the national electricity bill", "label": "pay_bill", "style": "greeting_then_request", "source": "w4"}
+{"text": "دز لعباس وعلي كل واحد خمسين", "label": "transfer", "style": "two_requests", "source": "w4"}
+{"text": "احفظ الرقم 07500002222 باسم ابو المولدة", "label": "add_contact", "style": "baghdadi_digits", "source": "w1"}
+{"text": "مساء الخير حبي", "label": "chat", "style": "baghdadi_friendly", "source": "w1"}
+{"text": "ضيف سلطان عندي بالاسماء", "label": "add_contact", "style": "gulf", "source": "w3"}
+{"text": "يصير تجددلي اشتراك النت هسه؟", "label": "pay_bill", "style": "question_request", "source": "w4"}
+{"text": "صرفلي دولارت", "label": "unsupported", "style": "baghdadi_typo", "source": "w1"}
+{"text": "دز لبلال دفتر", "label": "transfer", "style": "amount_style", "source": "w4"}
+{"text": "I want to add a new person to my list", "label": "add_contact", "style": "en", "source": "w3"}
+{"text": "شقد ارسلت لنايف هالاسبوع", "label": "history", "style": "anbar", "source": "w2"}
+{"text": "هلو اه كلي رصيدي يعني مو رصيد الخط رصيد المحفظة الفلوس", "label": "balance", "style": "baghdadi_voice", "source": "w1"}
+{"text": "هسع شقد رصيدي", "label": "balance", "style": "anbar", "source": "w2"}
+{"text": "renew the net pls 🙏", "label": "pay_bill", "style": "en_broken", "source": "w3"}
+{"text": "فلوس لأمي", "label": "transfer", "style": "short", "source": "w2"}
+{"text": "حولي لمصطفي عشرين الفف", "label": "transfer", "style": "typo", "source": "w4"}
+{"text": "ما اسمك؟", "label": "chat", "style": "msa_messy", "source": "w3"}
+{"text": "wait no, I changed my mind, don't pay", "label": "cancel", "style": "takeback", "source": "w4"}
+{"text": "edfa3 el mwalda w el net", "label": "pay_bill", "style": "arabizi", "source": "w2"}
+{"text": "ضيف 07722221111 حيدر المصلح", "label": "add_contact", "style": "baghdadi_digits", "source": "w1"}
+{"text": "شقد عندي بالمحفضه", "label": "balance", "style": "typo", "source": "w4"}
+{"text": "ياخوي ادفع المولدة هسع", "label": "pay_bill", "style": "anbar", "source": "w2"}
+{"text": "شسمه المولدة لا لا مو المولدة الماي فاتورة الماي ادفعها", "label": "pay_bill", "style": "baghdadi_voice", "source": "w1"}
+{"text": "هل يمكنك شحن رصيد زين لي بألفي دينار؟", "label": "topup", "style": "msa", "source": "w3"}
+{"text": "هسه اني بالسيارة ما اگدر اكتب دز لمصطفى خمسين الف يعني خمسين مو اكثر", "label": "transfer", "style": "baghdadi_voice", "source": "w1"}
+{"text": "pay elec + generator", "label": "pay_bill", "style": "en_broken", "source": "w3"}
+{"text": "ادفع الماي مال آب، بعدها ما مدفوعة", "label": "pay_bill", "style": "period", "source": "w4"}
+{"text": "could you transfer 100,000 to my brother Ali please", "label": "transfer", "style": "question_request", "source": "w4"}
+{"text": "جدد اشتراك النتت", "label": "pay_bill", "style": "baghdadi_typo", "source": "w1"}
+{"text": "اه اريد اضيف واحد للقائمة شسمه اسمه مهند رقمه راح ادزه هسه", "label": "add_contact", "style": "baghdadi_voice", "source": "w1"}
+{"text": "عبيلي رصيد", "label": "topup", "style": "baghdadi_short", "source": "w1"}
+{"text": "تنطون قروض انتو", "label": "chat", "style": "baghdadi_casual", "source": "w1"}
+{"text": "سحبت كلامي، لا تحول", "label": "cancel", "style": "takeback", "source": "w4"}
+{"text": "حول لشريف ٢٠ الف يا باشا", "label": "transfer", "style": "egyptian", "source": "w3"}
+{"text": "كم عندي", "label": "balance", "style": "short", "source": "w2"}
+{"text": "balance pls", "label": "balance", "style": "typo", "source": "w4"}
+{"text": "ادفغ الماي", "label": "pay_bill", "style": "baghdadi_typo", "source": "w1"}
+{"text": "جم العمولة عالتحويل؟", "label": "chat", "style": "south", "source": "w2"}
+{"text": "هلو اه دز لام حسين الخياطة يعني اجرة الخياطة خمسطعش الف", "label": "transfer", "style": "baghdadi_voice", "source": "w1"}
+{"text": "اشحنلي الخط مالي هسع، زين", "label": "topup", "style": "mosul", "source": "w2"}
+{"text": "توقف، لا ترسل المبلغ", "label": "cancel", "style": "takeback", "source": "w4"}
+{"text": "تحويلاتي", "label": "history", "style": "short", "source": "w2"}
+{"text": "دفعت النت؟", "label": "history", "style": "short", "source": "w2"}
+{"text": "دفعت المولدة وابو المولدة يكول لا، اريد اثبات الدفع", "label": "history", "style": "complaint", "source": "w4"}
+{"text": "5oya dez l baker 20", "label": "transfer", "style": "arabizi", "source": "w2"}
+{"text": "اريد ارسال مصروف الشهر لابني في الجامعة امير", "label": "transfer", "style": "msa_messy", "source": "w3"}
+{"text": "خلص فاتورة الكهرباء يا خوي", "label": "pay_bill", "style": "anbar", "source": "w2"}
+{"text": "وصلتلو الفلوس لخالد؟", "label": "history", "style": "mosul", "source": "w2"}
+{"text": "اذا رصيدي يكفي دز لكرار ميتين", "label": "transfer", "style": "conditional_request", "source": "w4"}
+{"text": "who made you?", "label": "chat", "style": "en", "source": "w3"}
+{"text": "pay internet 35,000", "label": "pay_bill", "style": "en", "source": "w3"}
+{"text": "حول رصيد خطي الى فلوس بالمحفظة", "label": "unsupported", "style": "out_of_scope", "source": "w4"}
+{"text": "صباح الفل", "label": "chat", "style": "egyptian", "source": "w3"}
+{"text": "حول لخالد 15 الف", "label": "transfer", "style": "msa_messy", "source": "w3"}
+{"text": "ادفع المولدة الثانية مال بيت اهلي", "label": "pay_bill", "style": "baghdadi_casual", "source": "w1"}
+{"text": "جدد نور نت شهر كامل", "label": "pay_bill", "style": "named", "source": "w4"}
+{"text": "هل تستطيع تحويل خمسة آلاف دينار إلى زهراء؟", "label": "transfer", "style": "msa", "source": "w3"}
+{"text": "استعلام عن رصيد المحفظة 💰", "label": "balance", "style": "msa_messy", "source": "w3"}
+{"text": "تكدر تكلي شكد عندي؟", "label": "balance", "style": "question_request", "source": "w4"}
+{"text": "pay the bill for June internet", "label": "pay_bill", "style": "en", "source": "w3"}
+{"text": "هل بإمكانك أن ترسل لدعاء مئة وخمسين ألفاً؟", "label": "transfer", "style": "msa", "source": "w3"}
+{"text": "wallet balance 💰", "label": "balance", "style": "en", "source": "w3"}
+{"text": "اشتريلي بتكوين بمية الف", "label": "unsupported", "style": "baghdadi_casual", "source": "w1"}
+{"text": "ابني بالجامعة ورصيده خلص وما يكدر يخابر، عبيله اسيا بعشرة هسه", "label": "topup", "style": "long", "source": "w4"}
+{"text": "طلبت ذلك مرتين، حوّل إلى هالة خمسة عشر ألف دينار من فضلك", "label": "transfer", "style": "complaint", "source": "w4"}
+{"text": "عيوني ادفع اشتراك المولدة مال هالشهر", "label": "pay_bill", "style": "baghdadi_friendly", "source": "w1"}
+{"text": "ودي اسدد فاتورة النت الحين", "label": "pay_bill", "style": "gulf", "source": "w3"}
+{"text": "معايا كام في المحفظة؟", "label": "balance", "style": "egyptian", "source": "w3"}
+{"text": "لا تدفع شي، بس راويني شنو دفعت قبل", "label": "history", "style": "negation", "source": "w4"}
+{"text": "هل الخدمة آمنة؟", "label": "chat", "style": "msa_messy", "source": "w3"}
+{"text": "not Sara, I meant Sama, send her 40 thousand", "label": "transfer", "style": "correction", "source": "w4"}
+{"text": "is there a fee for transfers?", "label": "chat", "style": "en", "source": "w3"}
+{"text": "شو رصيدي هلأ", "label": "balance", "style": "levantine", "source": "w3"}
+{"text": "خزنلي رقم مريم", "label": "add_contact", "style": "baghdadi_casual", "source": "w1"}
+{"text": "طرشله لأبو حسين مية الف هسه", "label": "transfer", "style": "south", "source": "w2"}
+{"text": "غيرت رايي لا تحول", "label": "cancel", "style": "baghdadi_casual", "source": "w1"}
+{"text": "ابو الشباب ادفعلي المولدة الله يحفظك", "label": "pay_bill", "style": "baghdadi_friendly", "source": "w1"}
+{"text": "اشحنلي ٢٥٠٠٠ اسياسيل", "label": "topup", "style": "baghdadi_digits", "source": "w1"}
+{"text": "adfa3 fatoorat el may", "label": "pay_bill", "style": "arabizi_short", "source": "w2"}
+{"text": "ابي قرض ٣ مليون", "label": "unsupported", "style": "gulf", "source": "w3"}
+{"text": "خزن رقم الصباغ ابو مصطفى 07500001122", "label": "add_contact", "style": "plain", "source": "w4"}
+{"text": "يعني شسمه كارت كارت كورك ابو العشرة عبيه على خطي", "label": "topup", "style": "baghdadi_voice", "source": "w1"}
+{"text": "أريد تحويل مئتين وخمسين ألف دينار إلى حساب أختي حوراء", "label": "transfer", "style": "msa", "source": "w3"}
+{"text": "hold on, I think I typed the wrong amount, please don't send anything and cancel it", "label": "cancel", "style": "en", "source": "w3"}
+{"text": "اشحن خط بنتي آسيا ٥ الاف 🙏", "label": "topup", "style": "slang", "source": "w2"}
+{"text": "ليس الماء، أقصد فاتورة الكهرباء، سدّدها", "label": "pay_bill", "style": "correction", "source": "w4"}
+{"text": "snd 10k to yousif pls", "label": "transfer", "style": "typo", "source": "w4"}
+{"text": "انت انسان ولا بوت؟", "label": "chat", "style": "gulf", "source": "w3"}
+{"text": "ودي لابو كرار نص مليون باجر الصبح", "label": "transfer", "style": "south", "source": "w2"}
+{"text": "خلصلي نت الدار مال برق نت", "label": "pay_bill", "style": "baghdadi_casual", "source": "w1"}
+{"text": "سجل اختي بنين باسم اختي", "label": "add_contact", "style": "baghdadi_casual", "source": "w1"}
+{"text": "exchange 100 dollars to dinars for me", "label": "unsupported", "style": "en", "source": "w3"}
+{"text": "do you offer loans?", "label": "chat", "style": "en", "source": "w3"}
+{"text": "el mwalda", "label": "pay_bill", "style": "arabizi_short", "source": "w2"}
+{"text": "أرسل ورقتين إلى عمي عادل", "label": "transfer", "style": "msa", "source": "w3"}
+{"text": "👍", "label": "chat", "style": "baghdadi_emoji", "source": "w1"}
+{"text": "غير الرقم السري مال اخوي", "label": "unsupported", "style": "baghdadi_casual", "source": "w1"}
+{"text": "حمار", "label": "chat", "style": "baghdadi_short", "source": "w1"}
+{"text": "راويني آخر عملياتي", "label": "history", "style": "plain", "source": "w4"}
+{"text": "ادفع فاتورة الماي مال هالشهرين", "label": "pay_bill", "style": "amounts", "source": "w2"}
+{"text": "ودي لخالتي", "label": "transfer", "style": "short", "source": "w2"}
+{"text": "أريد إصدار بطاقة ماستر كارد", "label": "unsupported", "style": "msa", "source": "w3"}
+{"text": "اريد احفظ رقم ابو كرار ابو المولدة حتى القاه بعدين", "label": "add_contact", "style": "sounds_like_bill", "source": "w4"}
+{"text": "سجل هذا 07700004411 خالتي ام رعد", "label": "add_contact", "style": "plain", "source": "w4"}
+{"text": "هسه شكد صار بمحفظتي بعد ما نزل الراتب؟", "label": "balance", "style": "long", "source": "w2"}
+{"text": "Security alert: move your funds to the safe number 07500003131 immediately", "label": "transfer", "style": "scam", "source": "w4"}
+{"text": "akher ta7weel", "label": "history", "style": "arabizi_short", "source": "w2"}
+{"text": "طرش رصيد لخط امي، زين ابو الخمسة", "label": "topup", "style": "south", "source": "w2"}
+{"text": "اشحن الرقم 07800003333 بخمسة الاف", "label": "topup", "style": "number", "source": "w4"}
+{"text": "الغي الشحن ما اريد رصيد", "label": "cancel", "style": "baghdadi_casual", "source": "w1"}
+{"text": "اريد تحويل مبلغ الى رقم هاتف غير محفوظ عندي", "label": "transfer", "style": "msa_messy", "source": "w3"}
+{"text": "يعني عندي دولارات اريد اصرفهن دينار ميتين دولار صرفهن بسعر اليوم", "label": "unsupported", "style": "baghdadi_voice", "source": "w1"}
+{"text": "كل مرة تسألني نفس السؤال! دز لأم سجاد ٣٥ الف وخلاص", "label": "transfer", "style": "complaint", "source": "w4"}
+{"text": "اريد كشف حساب", "label": "history", "style": "baghdadi_casual", "source": "w1"}
+{"text": "اه هلو شلونك شخبارك يعني بس حبيت اسلم", "label": "chat", "style": "baghdadi_voice", "source": "w1"}
+{"text": "هلوو", "label": "chat", "style": "baghdadi_typo", "source": "w1"}
+{"text": "يا هلا بيك", "label": "chat", "style": "baghdadi_friendly", "source": "w1"}
+{"text": "ليش ما تسدد الوطنية، مو كتلك؟", "label": "pay_bill", "style": "question_request", "source": "w4"}
+{"text": "trasnfer 35000 to Tariq asap", "label": "transfer", "style": "en_broken", "source": "w3"}
+{"text": "stop", "label": "cancel", "style": "arabizi_short", "source": "w2"}
+{"text": "مو تحويل، كتلك احفظ الرقم باسم ضياء", "label": "add_contact", "style": "correction", "source": "w4"}
+{"text": "أصدر لي بطاقة ائتمانية", "label": "unsupported", "style": "out_of_scope", "source": "w4"}
+{"text": "عايز اطلع فيزا", "label": "unsupported", "style": "egyptian", "source": "w3"}
+{"text": "بسرعة حول لضياء ٢٠٠ الف الله يخليك", "label": "transfer", "style": "urgency", "source": "w4"}
+{"text": "حبوبي اشحن خط كرار كورك ثلاث تالاف", "label": "topup", "style": "south", "source": "w2"}
+{"text": "اشحن خط زوجتي بعشرة آلاف ثم ادفع فاتورة الماء", "label": "topup", "style": "two_requests", "source": "w4"}
+{"text": "thanks a lot!", "label": "chat", "style": "en", "source": "w3"}
+{"text": "الله يوفقك", "label": "chat", "style": "baghdadi_friendly", "source": "w1"}
+{"text": "أريد كشفاً بعملياتي الأخيرة", "label": "history", "style": "plain", "source": "w4"}
+{"text": "ادفع مولدة الزقاق مال شهر تسعة", "label": "pay_bill", "style": "baghdadi_casual", "source": "w1"}
+{"text": "jadedli el net 5ala9 el eshtirak", "label": "pay_bill", "style": "arabizi", "source": "w2"}
+{"text": "تكدرون تدزون فلوس لخارج العراق؟", "label": "chat", "style": "service_question", "source": "w4"}
+{"text": "الجو حار اليوم اليس كذلك", "label": "chat", "style": "msa_messy", "source": "w3"}
+{"text": "تكدر تحول لخارج العراق", "label": "chat", "style": "baghdadi_casual", "source": "w1"}
+{"text": "اريد دفع اجور المولدة الاهلية", "label": "pay_bill", "style": "msa_messy", "source": "w3"}
+{"text": "اريد دفع قسط الانترنت لهذا الشهر", "label": "pay_bill", "style": "msa_messy", "source": "w3"}
+{"text": "شكد عليه المولدة ادفعها", "label": "pay_bill", "style": "baghdadi_casual", "source": "w1"}
+{"text": "pls send 75,000 dinars to 07700001234", "label": "transfer", "style": "en", "source": "w3"}
+{"text": "وين راحت بيزاتي؟ طلعلي العمليات", "label": "history", "style": "south", "source": "w2"}
+{"text": "جا دز لكرار عشرين وخلصني", "label": "transfer", "style": "south", "source": "w2"}
+{"text": "اه عيني شسمه رقية بنت خالتي اريد ادزلها عيدية يعني خمسة وعشرين الف", "label": "transfer", "style": "baghdadi_voice", "source": "w1"}
+{"text": "كم رصيدي الآن؟", "label": "balance", "style": "plain", "source": "w4"}
+{"text": "فدوة دز لزهراء خمسين الف دينار", "label": "transfer", "style": "baghdadi_friendly", "source": "w1"}
+{"text": "el mwalda mal shahar 10 madfoo3a lo ba3ad? shoofli", "label": "history", "style": "arabizi_long", "source": "w2"}
+{"text": "is my water bill ready? if so pay it", "label": "pay_bill", "style": "conditional_request", "source": "w4"}
+{"text": "دز لهادى خمسيين", "label": "transfer", "style": "typo", "source": "w4"}
+{"text": "فلوسي ناقصة، شوفلي وين راحت، طلعلي الكشف", "label": "history", "style": "complaint", "source": "w4"}
+{"text": "renew my internet subscription", "label": "pay_bill", "style": "en", "source": "w3"}
+{"text": "ادفعع المولده", "label": "pay_bill", "style": "typo", "source": "w4"}
+{"text": "لا تسوي شي", "label": "cancel", "style": "baghdadi_casual", "source": "w1"}
+{"text": "كارت زين 15 الف", "label": "topup", "style": "baghdadi_digits", "source": "w1"}
+{"text": "اريد ادز هدية عرس لصديقي مهند، مية وخمسين الف", "label": "transfer", "style": "long", "source": "w4"}
+{"text": "عبي اسيا 10000", "label": "topup", "style": "baghdadi_digits", "source": "w1"}
+{"text": "اه حبي اشحن خط بنتي يعني زين ابو الخمسة لان تريد تخابر صديقاتها", "label": "topup", "style": "baghdadi_voice", "source": "w1"}
+{"text": "خدمة سيئة جدا 😡", "label": "chat", "style": "msa_messy", "source": "w3"}
+{"text": "la la wagef", "label": "cancel", "style": "arabizi_short", "source": "w2"}
+{"text": "الله يخليك شوفلي التحويل مال زينب راح لو لا", "label": "history", "style": "baghdadi_friendly", "source": "w1"}
+{"text": "شنو الحد اليومي للتحويل", "label": "chat", "style": "baghdadi_casual", "source": "w1"}
+{"text": "momkin tdiz l ghaith 25?", "label": "transfer", "style": "arabizi", "source": "w4"}
+{"text": "ادفع كل فواتيري", "label": "pay_bill", "style": "amounts", "source": "w2"}
+{"text": "أرسل لأسماء ٣٠ ألف وأخبرها أنها مني", "label": "transfer", "style": "msa", "source": "w3"}
+{"text": "check my balance please", "label": "balance", "style": "en", "source": "w3"}
+{"text": "عبيلو لخط خالد عشرة آسيا", "label": "topup", "style": "mosul", "source": "w2"}
+{"text": "shlon tshtaghel hay el 5edma?", "label": "chat", "style": "arabizi", "source": "w2"}
+{"text": "ابعت لتامر تلاتين الف لو سمحت", "label": "transfer", "style": "egyptian", "source": "w3"}
+{"text": "الدولار صاعد هواي هالايام", "label": "chat", "style": "smalltalk", "source": "w4"}
+{"text": "ضيف اسم جديد: منتظر", "label": "add_contact", "style": "plain", "source": "w4"}
+{"text": "حول لحمزة ٧٥٠٠٠", "label": "transfer", "style": "amount_style", "source": "w4"}
+{"text": "ما اريد احول بعد", "label": "cancel", "style": "takeback", "source": "w4"}
+{"text": "اشحن خطي زيين عشرة", "label": "topup", "style": "baghdadi_typo", "source": "w1"}
+{"text": "شكرا يا باشا تسلم", "label": "chat", "style": "egyptian", "source": "w3"}
+{"text": "خلاص الغيها مش عايز", "label": "cancel", "style": "egyptian", "source": "w3"}
+{"text": "rasidi shgad sar", "label": "balance", "style": "arabizi", "source": "w4"}
+{"text": "battalet, la tdiz", "label": "cancel", "style": "arabizi", "source": "w4"}
+{"text": "حول لبنتي تبارك اربعين الف", "label": "transfer", "style": "baghdadi_casual", "source": "w1"}
+{"text": "ابعثلو خمسة وعشغين لأوس", "label": "transfer", "style": "mosul", "source": "w2"}
+{"text": "e7fath el raqam", "label": "add_contact", "style": "arabizi_short", "source": "w2"}
+{"text": "أرسل إلى قاسم مبلغ الإيجار، أربعمئة ألف دينار", "label": "transfer", "style": "msa", "source": "w3"}
+{"text": "اطلبلي تكسي للمنصور", "label": "unsupported", "style": "baghdadi_casual", "source": "w1"}
+{"text": "انتو ليش تتأخرون، ادفع فاتورة الماي هسه", "label": "pay_bill", "style": "complaint", "source": "w4"}
+{"text": "ادفع الكهرباء حق هالشهر", "label": "pay_bill", "style": "gulf", "source": "w3"}
+{"text": "أود تسديد جميع فواتيري المستحقة", "label": "pay_bill", "style": "msa", "source": "w3"}
+{"text": "دز لأمي مصرف البيت ميتين", "label": "transfer", "style": "relation", "source": "w4"}
+{"text": "هل تقدمون قروضاً؟", "label": "chat", "style": "msa", "source": "w3"}
+{"text": "حبي كارت اسياسيل ابو الخمسة", "label": "topup", "style": "baghdadi_friendly", "source": "w1"}
+{"text": "سدد النت بس، المولدة لا", "label": "pay_bill", "style": "negation", "source": "w4"}
+{"text": "ادفععع المولدة راح يكطعون", "label": "pay_bill", "style": "baghdadi_stretched", "source": "w1"}
+{"text": "اشتريلي شدات ببجي لعد", "label": "unsupported", "style": "south", "source": "w2"}
+{"text": "kart asia", "label": "topup", "style": "arabizi_short", "source": "w2"}
+{"text": "dheef 5aled lel asma2", "label": "add_contact", "style": "arabizi_short", "source": "w2"}
+{"text": "وش رصيدي الحين", "label": "balance", "style": "gulf", "source": "w3"}
+{"text": "وكف وكف لا تحول", "label": "cancel", "style": "baghdadi_casual", "source": "w1"}
+{"text": "دز لسجاد خمسين", "label": "transfer", "style": "baghdadi_casual", "source": "w1"}
+{"text": "ودّي لمشعل مية الف عود", "label": "transfer", "style": "anbar", "source": "w2"}
+{"text": "أريد قرضاً بمليون دينار", "label": "unsupported", "style": "msa", "source": "w3"}
+{"text": "سدد لي فاتورة الماي", "label": "pay_bill", "style": "gulf", "source": "w3"}
+{"text": "أرجو إرسال خمسة وعشرين ألف دينار إلى رقية", "label": "transfer", "style": "msa", "source": "w3"}
+{"text": "ابعثلو ليونس ميي الف", "label": "transfer", "style": "mosul", "source": "w2"}
+{"text": "ared a3ruf ra9eedi", "label": "balance", "style": "arabizi_short", "source": "w2"}
+{"text": "لا متبعتش", "label": "cancel", "style": "egyptian", "source": "w3"}
+{"text": "ادفعلي امبيرات المولدة", "label": "pay_bill", "style": "baghdadi_casual", "source": "w1"}
+{"text": "دفع الفاتورة", "label": "pay_bill", "style": "msa_messy", "source": "w3"}
+{"text": "وكف التحويل قبل لا يروح", "label": "cancel", "style": "takeback", "source": "w4"}
+{"text": "ared qardh 2 malyoon", "label": "unsupported", "style": "arabizi_short", "source": "w2"}
+{"text": "لا تدز ولا تدفع، بس كلي شكد رصيدي", "label": "balance", "style": "negation", "source": "w4"}
+{"text": "اني ابنك غيرت رقمي، دزلي ميتين الف على 07811118181 ضروري لا تخابر", "label": "transfer", "style": "scam", "source": "w4"}
+{"text": "ممكن تلغيها بلا زحمة", "label": "cancel", "style": "baghdadi_polite", "source": "w1"}
+{"text": "حول لصاحب المحل مية وعشرين", "label": "transfer", "style": "baghdadi_casual", "source": "w1"}
+{"text": "الرجاء تسديد فاتورة الكهرباء، رقم الحساب 445566", "label": "pay_bill", "style": "msa", "source": "w3"}
+{"text": "صرفلي ميت دولار بالدينار", "label": "unsupported", "style": "baghdadi_casual", "source": "w1"}
+{"text": "ادفع بيزات المولدة هالشهر", "label": "pay_bill", "style": "south", "source": "w2"}
+{"text": "يعني حبي شكد رصيدي هسه لان ما ادري شكد ضل", "label": "balance", "style": "baghdadi_voice", "source": "w1"}
+{"text": "اه اسمع يعني ابو المولدة دك الباب اليوم فادفعلي الاشتراك عشر امبيرات", "label": "pay_bill", "style": "baghdadi_voice", "source": "w1"}
+{"text": "كتلك ادفع مو دز! ادفع مولدة الفرع", "label": "pay_bill", "style": "correction", "source": "w4"}
+{"text": "كم لدي من المال في المحفظة", "label": "balance", "style": "msa", "source": "w3"}
+{"text": "حول لهدى خمسين بس لا تدفع شي ثاني", "label": "transfer", "style": "negation", "source": "w4"}
+{"text": "ياخوي ضيف رقم فهد 07508889900", "label": "add_contact", "style": "anbar", "source": "w2"}
+{"text": "recharge Asiacell 10k", "label": "topup", "style": "en", "source": "w3"}
+{"text": "ابغى اجدد اشتراك النت", "label": "pay_bill", "style": "gulf", "source": "w3"}
+{"text": "حوّل مئة ألف إلى حساب زينب من فضلك", "label": "transfer", "style": "msa", "source": "w3"}
+{"text": "kansel", "label": "cancel", "style": "arabizi", "source": "w4"}
+{"text": "عايز اشحن خطي اسياسيل", "label": "topup", "style": "egyptian", "source": "w3"}
+{"text": "اشتراك مولدة ابو فلاح مال تشرين ادفعه", "label": "pay_bill", "style": "baghdadi_casual", "source": "w1"}
+{"text": "دز للخياطة ام احمد خمسطعش الف", "label": "transfer", "style": "baghdadi_casual", "source": "w1"}
+{"text": "مليت والله، كم مرة اكولك حول لداود عشرين الف", "label": "transfer", "style": "complaint", "source": "w4"}
+{"text": "before I pay anything today, can you tell me how much money I still have in my wallet?", "label": "balance", "style": "en", "source": "w3"}
+{"text": "ممكن تحجزلي تذكرة لاسطنبول", "label": "unsupported", "style": "baghdadi_polite", "source": "w1"}
+{"text": "no la tdez", "label": "cancel", "style": "arabizi_short", "source": "w2"}
+{"text": "الغي الحوالة وكلي شكد عندي", "label": "cancel", "style": "two_requests", "source": "w4"}
+{"text": "اريد احول", "label": "transfer", "style": "baghdadi_short", "source": "w1"}
+{"text": "انتهى رصيدي مجدداً، اشحن آسياسيل بخمسة عشر ألفاً", "label": "topup", "style": "complaint", "source": "w4"}
+{"text": "اشونك؟", "label": "chat", "style": "mosul", "source": "w2"}
+{"text": "wadi l abu 7sen 200", "label": "transfer", "style": "arabizi", "source": "w2"}
+{"text": "فلوسي تتبخر بروحها لو اكو عمليات ما ادري بيها؟ راويني الكشف", "label": "history", "style": "sarcasm", "source": "w4"}
+{"text": "transfer 18,500 to Zaid", "label": "transfer", "style": "en_names", "source": "w3"}
+{"text": "add credit to my line, 5k", "label": "topup", "style": "en", "source": "w3"}
+{"text": "كل شي عدكم بفلوس حتى السلام", "label": "chat", "style": "sarcasm", "source": "w4"}
+{"text": "enta bot lo ensan?", "label": "chat", "style": "arabizi_short", "source": "w2"}
+{"text": "دزله لعباس مية وخمسين", "label": "transfer", "style": "baghdadi_casual", "source": "w1"}
+{"text": "أريد تسديد فاتورة الماء لهذا الشهر", "label": "pay_bill", "style": "polite", "source": "w4"}
+{"text": "عبيلي كارت ابو العشرة يبه", "label": "topup", "style": "south", "source": "w2"}
+{"text": "Send 5,000 IQD to the number ending 7788", "label": "transfer", "style": "en", "source": "w3"}
+{"text": "ايمتى بعثت ليونس اخر مرة؟", "label": "history", "style": "mosul", "source": "w2"}
+{"text": "شكد فلوس عندي هسه؟", "label": "balance", "style": "slang", "source": "w2"}
+{"text": "مساء الخير", "label": "chat", "style": "short", "source": "w2"}
+{"text": "سددد الكهرباء بسرعة", "label": "pay_bill", "style": "msa_messy", "source": "w3"}
+{"text": "يعني اريد اعرف بس شكد عندي ما اريد ادز شي بس شكد عندي", "label": "balance", "style": "baghdadi_voice", "source": "w1"}
+{"text": "اشحنلي شدات ببجي", "label": "unsupported", "style": "baghdadi_casual", "source": "w1"}
+{"text": "ابعث 15000 لامير", "label": "transfer", "style": "baghdadi_digits", "source": "w1"}
+{"text": "كم دينار عندي", "label": "balance", "style": "baghdadi_casual", "source": "w1"}
+{"text": "حبي حول ٢٥ الف لام علي", "label": "transfer", "style": "baghdadi_digits", "source": "w1"}
+{"text": "Your account is under review, send 90,000 to 07700001212 for verification", "label": "transfer", "style": "scam", "source": "w4"}
+{"text": "ادفع فاتورة الماي ١٢٥٠٠", "label": "pay_bill", "style": "amounts", "source": "w2"}
+{"text": "pay bill", "label": "pay_bill", "style": "en", "source": "w3"}
+{"text": "pay the generator bill for September", "label": "pay_bill", "style": "period", "source": "w4"}
+{"text": "راح الراتب كله عالمولدة والنت، الله كريم", "label": "chat", "style": "past_statement", "source": "w4"}
+{"text": "حوّل ٧٥٠ ألف إلى شريكي ميثم", "label": "transfer", "style": "msa", "source": "w3"}
+{"text": "اه والله شكرا الك حبي ما قصرت يعني خوش شغل", "label": "chat", "style": "baghdadi_voice", "source": "w1"}
+{"text": "اريد سحب نقدي", "label": "unsupported", "style": "baghdadi_short", "source": "w1"}
+{"text": "I want to know my available balance", "label": "balance", "style": "en", "source": "w3"}
+{"text": "please make transfer for Sajjad 45000", "label": "transfer", "style": "en_broken", "source": "w3"}
+{"text": "pay teh internet bil", "label": "pay_bill", "style": "typo", "source": "w4"}
+{"text": "حتى ما ارجع اكتبه مية مرة، سجل رقم يوسف عندك", "label": "add_contact", "style": "sarcasm", "source": "w4"}
+{"text": "dez waraqa l maytham", "label": "transfer", "style": "arabizi_short", "source": "w2"}
+{"text": "كارت زين ابو ال٢٥", "label": "topup", "style": "amount_style", "source": "w4"}
+{"text": "هلو شلونك، شكد عندي بالمحفظة؟", "label": "balance", "style": "greeting_then_request", "source": "w4"}
+{"text": "open a savings account for me", "label": "unsupported", "style": "en", "source": "w3"}
+{"text": "ابعث لشهد مليونين", "label": "transfer", "style": "slang", "source": "w2"}
+{"text": "اريد سلفة خمسة مليون", "label": "unsupported", "style": "baghdadi_casual", "source": "w1"}
+{"text": "حول لرقية ٤٠ الف وشوفلي شكد يبقى", "label": "transfer", "style": "two_requests", "source": "w4"}
+{"text": "حبوبي كنسل التحويل", "label": "cancel", "style": "south", "source": "w2"}
+{"text": "لا أريد التحويل الآن، فقط أضف سلمى إلى جهات الاتصال", "label": "add_contact", "style": "negation", "source": "w4"}
+{"text": "shlonak", "label": "chat", "style": "arabizi_short", "source": "w2"}
+{"text": "المولدة", "label": "pay_bill", "style": "baghdadi_short", "source": "w1"}
+{"text": "ممكن تضيف مريم للأسماء؟", "label": "add_contact", "style": "question_request", "source": "w4"}
+{"text": "kam 3ndi", "label": "balance", "style": "arabizi_short", "source": "w2"}
+{"text": "خزن رقم مهند", "label": "add_contact", "style": "short", "source": "w2"}
+{"text": "عيني ادفع الماي", "label": "pay_bill", "style": "baghdadi_friendly", "source": "w1"}
+{"text": "المولدة مال ابو فلاح ادفعها", "label": "pay_bill", "style": "baghdadi_casual", "source": "w1"}
+{"text": "وش الخدمات اللي عندكم؟", "label": "chat", "style": "gulf", "source": "w3"}
+{"text": "آخر خمس عمليات", "label": "history", "style": "msa_messy", "source": "w3"}
+{"text": "حول لصادق تسعين", "label": "transfer", "style": "baghdadi_casual", "source": "w1"}
+{"text": "اريد سحب نقدي بدون بطاقة", "label": "unsupported", "style": "msa_messy", "source": "w3"}
+{"text": "عملياتي", "label": "history", "style": "baghdadi_short", "source": "w1"}
+{"text": "ابي اعرف كم عندي فلوس", "label": "balance", "style": "gulf", "source": "w3"}
+{"text": "لا تسويها", "label": "cancel", "style": "takeback", "source": "w4"}
+{"text": "جنت اريد ادز لعلي بس بطلت", "label": "cancel", "style": "request_then_takeback", "source": "w4"}
+{"text": "تكدر تحفظلي رقم اخوي؟", "label": "add_contact", "style": "question_request", "source": "w4"}
+{"text": "جمد محفظة ابني، يصرف هواي", "label": "unsupported", "style": "out_of_scope", "source": "w4"}
+{"text": "عيني ضيفلي كرار بالاسماء رقمه 07700009999", "label": "add_contact", "style": "baghdadi_friendly", "source": "w1"}
+{"text": "هسه هسه دز لأختي خمسين واكفة بالصيدلية", "label": "transfer", "style": "urgency", "source": "w4"}
+{"text": "ugh the power is out again but fine, pay the electricity bill", "label": "pay_bill", "style": "sarcasm", "source": "w4"}
+{"text": "شو بتقدر تعمل؟", "label": "chat", "style": "levantine", "source": "w3"}
+{"text": "حوللي على الرقم 07701112233 عشرين الف", "label": "transfer", "style": "baghdadi_digits", "source": "w1"}
+{"text": "عبيلي كرت اسيا", "label": "topup", "style": "baghdadi_typo", "source": "w1"}
+{"text": "ابعث لسيف مية", "label": "transfer", "style": "short", "source": "w2"}
+{"text": "اخر شي دفعته شنو", "label": "history", "style": "baghdadi_casual", "source": "w1"}
+{"text": "لا تدزها", "label": "cancel", "style": "baghdadi_short", "source": "w1"}
+{"text": "لا حبي بطلت", "label": "cancel", "style": "baghdadi_friendly", "source": "w1"}
+{"text": "إلغاء الطلب لو سمحت، لم أعد أريده", "label": "cancel", "style": "msa", "source": "w3"}
+{"text": "حول فلوس النت للشركة، يعني جدد الاشتراك", "label": "pay_bill", "style": "sounds_like_transfer", "source": "w4"}
+{"text": "متى دفعت فاتورة الكهرباء آخر مرة؟", "label": "history", "style": "msa", "source": "w3"}
+{"text": "خوية خطي الزين خلص رصيده وآني بالشارع، عبيلي ابو الخمسة بسرعة الله يحفظك", "label": "topup", "style": "long", "source": "w2"}
+{"text": "منو انت", "label": "chat", "style": "baghdadi_short", "source": "w1"}
+{"text": "ما تعبيلي رصيد؟ خطي صفر", "label": "topup", "style": "question_request", "source": "w4"}
+{"text": "wislat el 7awala l ahmad?", "label": "history", "style": "arabizi", "source": "w4"}
+{"text": "وصل لياسر ستين الف", "label": "transfer", "style": "baghdadi_casual", "source": "w1"}
+{"text": "طلعلي بطاقة مصرفية", "label": "unsupported", "style": "baghdadi_casual", "source": "w1"}
+{"text": "النت يقطع عندي وكل شوية اعيد، دز لسارة ٤٥ الف", "label": "transfer", "style": "complaint", "source": "w4"}
+{"text": "اي هلو اه دز لامي يعني مصرف البيت مية وخمسين الف هي تنتظر", "label": "transfer", "style": "baghdadi_voice", "source": "w1"}
+{"text": "حول لام علي حق الخبز عشرة", "label": "transfer", "style": "baghdadi_casual", "source": "w1"}
+{"text": "امي تكول الكهرباء صارلها شهرين ما مدفوعة، ادفع القديمة اول", "label": "pay_bill", "style": "long", "source": "w4"}
+{"text": "دز خمسين الف على 07700001111", "label": "transfer", "style": "number", "source": "w4"}
+{"text": "حوّل إلى ليلى خمسين ألفاً ثم ادفع فاتورة الماء", "label": "transfer", "style": "two_requests", "source": "w4"}
+{"text": "شكراا", "label": "chat", "style": "baghdadi_typo", "source": "w1"}
+{"text": "حول لأخوي الصغير خمسة وعشرين، مصروف الجامعة", "label": "transfer", "style": "relation", "source": "w4"}
+{"text": "لا تدز لعلي خلص", "label": "cancel", "style": "tricky", "source": "w2"}

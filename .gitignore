@@ -7,6 +7,9 @@
 *.db-shm
 *.db-journal
 
+# the WhatsApp channel's local state (DATA_DIR defaults to data/)
+data/whatsapp/
+
 # Python
 __pycache__/
 .pytest_cache/
@@ -15,3 +18,6 @@ __pycache__/
 # evaluation output
 eval/results*
 results*.json
+
+# raw text-to-speech audio behind data/voice/billpay (the .ogg notes are committed)
+data/voice/billpay/.pcm/

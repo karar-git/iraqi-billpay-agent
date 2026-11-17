@@ -1,0 +1,7 @@
+{
+ "file": "locked.jsonl",
+ "sha256": "1477287743c84d40014c25fae65bc7b56b960bbb29fa62f50be88f00189f07bb",
+ "lines": 360,
+ "frozen": "2026-11-13",
+ "note": "frozen before the first training run; never used for training or tuning"
+}

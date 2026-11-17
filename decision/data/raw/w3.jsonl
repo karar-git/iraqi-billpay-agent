@@ -1,0 +1,602 @@
+{"text": "i need charge my mobile asiacell", "label": "topup", "style": "en_broken"}
+{"text": "pay the generator", "label": "pay_bill", "style": "en"}
+{"text": "لا لا توقف لا ترسل", "label": "cancel", "style": "msa_messy"}
+{"text": "ارسل الى ابي ستين الف دينار لو سمحت", "label": "transfer", "style": "msa_messy"}
+{"text": "حوّل 100$ إلى سيف", "label": "transfer", "style": "msa"}
+{"text": "مرحباً، وصلتني رسالة بأن فاتورة الكهرباء مستحقة منذ أسبوع، أرجو تسديدها الآن من رصيد المحفظة", "label": "pay_bill", "style": "msa"}
+{"text": "كم ديناراً في محفظتي؟", "label": "balance", "style": "msa"}
+{"text": "ابعث ٥ الاف لأنس", "label": "transfer", "style": "msa_messy"}
+{"text": "إلغاء الطلب لو سمحت، لم أعد أريده", "label": "cancel", "style": "msa"}
+{"text": "رصيدي من فضلك", "label": "balance", "style": "msa_messy"}
+{"text": "لا أريد، إلغاء", "label": "cancel", "style": "msa"}
+{"text": "send Ali fifty thousand", "label": "transfer", "style": "en_names"}
+{"text": "اشتر لي بطاقة هدايا للالعاب بخمسين دولارا", "label": "unsupported", "style": "msa_messy"}
+{"text": "اشحن لي زين 📱 خمسة", "label": "topup", "style": "msa_messy"}
+{"text": "أريد أن أدفع لياسر ٣٥ ألف دينار ديناً عليّ", "label": "transfer", "style": "msa"}
+{"text": "yo send ibrahim 5k", "label": "transfer", "style": "en_broken"}
+{"text": "pay all my bills", "label": "pay_bill", "style": "en"}
+{"text": "ماذا لو أرسلت لعلي خمسين ألفاً؟", "label": "chat", "style": "msa"}
+{"text": "pay kahraba bill", "label": "pay_bill", "style": "en_names"}
+{"text": "send 55k to Amna, go ahead", "label": "transfer", "style": "en_names"}
+{"text": "Please transfer 100,000 IQD to my sister", "label": "transfer", "style": "en"}
+{"text": "خلصلي فاتورة النت يا ريس", "label": "pay_bill", "style": "egyptian"}
+{"text": "أضف 07505550101 إلى قائمتي باسم خالد", "label": "add_contact", "style": "msa"}
+{"text": "لا تبعت شي", "label": "cancel", "style": "levantine"}
+{"text": "وش رصيدي الحين", "label": "balance", "style": "gulf"}
+{"text": "add a new contact", "label": "add_contact", "style": "en"}
+{"text": "I need to pay for the internet before it gets cut off", "label": "pay_bill", "style": "en"}
+{"text": "renew Noor Net for one month", "label": "pay_bill", "style": "en_names"}
+{"text": "send quarter million to Mahdi", "label": "transfer", "style": "en_names"}
+{"text": "ما الفرق بين التحويل ودفع الفاتورة؟", "label": "chat", "style": "msa"}
+{"text": "غيّر الرقم السري لحساب أخي", "label": "unsupported", "style": "msa"}
+{"text": "رصيد زين ١٠٠٠٠ من فضلك", "label": "topup", "style": "msa_messy"}
+{"text": "جدد اشتراك النت شهر واحد", "label": "pay_bill", "style": "msa_messy"}
+{"text": "mobile top up for my wife, 10k Korek", "label": "topup", "style": "en"}
+{"text": "show my recent transactions", "label": "history", "style": "en"}
+{"text": "حول لعثمان مئه الف دينار", "label": "transfer", "style": "msa_messy"}
+{"text": "حول حق سلطان ١٠٠ الف الحين", "label": "transfer", "style": "gulf"}
+{"text": "تحويل ٦٥٠٠٠ دينار لحمزة", "label": "transfer", "style": "msa_messy"}
+{"text": "سجل تحويلاتي من فضلك", "label": "history", "style": "msa_messy"}
+{"text": "electricity bill, pay it", "label": "pay_bill", "style": "en"}
+{"text": "lol", "label": "chat", "style": "en_broken"}
+{"text": "pay bill", "label": "pay_bill", "style": "en"}
+{"text": "ابغى اجدد اشتراك النت", "label": "pay_bill", "style": "gulf"}
+{"text": "no dont send", "label": "cancel", "style": "en_broken"}
+{"text": "بدي ادفع فاتورة الكهربا", "label": "pay_bill", "style": "levantine"}
+{"text": "أريد شحن هاتفي", "label": "topup", "style": "msa"}
+{"text": "عندي رقم جديد لاختي دعاء بعد ان غيرت خطها، احفظه عندك باسمها: 07700220033", "label": "add_contact", "style": "msa_messy"}
+{"text": "بدّل دنانيري إلى دولارات", "label": "unsupported", "style": "msa"}
+{"text": "اضافة مستفيد جديد اسمه يوسف", "label": "add_contact", "style": "msa_messy"}
+{"text": "show me history", "label": "history", "style": "en"}
+{"text": "اريد دفع قسط الانترنت لهذا الشهر", "label": "pay_bill", "style": "msa_messy"}
+{"text": "اريد تعبئه خط اسيا سيل ب ٢٠ الف", "label": "topup", "style": "msa_messy"}
+{"text": "عايزة اجدد باقة النت بتاعة البيت", "label": "pay_bill", "style": "egyptian"}
+{"text": "send to Noor 15k plz", "label": "transfer", "style": "en_broken"}
+{"text": "my statment plz", "label": "history", "style": "en_broken"}
+{"text": "thx bye", "label": "chat", "style": "en_broken"}
+{"text": "snd 10k to Maryam", "label": "transfer", "style": "en_broken"}
+{"text": "i want send Waleed 20 thousand, do it please", "label": "transfer", "style": "en_broken"}
+{"text": "أريد إصدار بطاقة ماستر كارد", "label": "unsupported", "style": "msa"}
+{"text": "please top up 07700112200 with 5000", "label": "topup", "style": "en"}
+{"text": "لو سمحت ارسل لتبارك عشرين الف دينار حالا", "label": "transfer", "style": "msa_messy"}
+{"text": "paying the water bill plz do it", "label": "pay_bill", "style": "en_broken"}
+{"text": "buy me bitcoin for 50k", "label": "unsupported", "style": "en"}
+{"text": "من فضلك حوّل ٥٠٠٠٠ إلى طارق", "label": "transfer", "style": "msa"}
+{"text": "اريد استثمار اموالي في الاسهم", "label": "unsupported", "style": "msa_messy"}
+{"text": "وصلت الفلوس حق فهد ولا لا؟", "label": "history", "style": "gulf"}
+{"text": "بدّي ابعت ٢٠٠ ألف عالرقم 07805556677", "label": "transfer", "style": "levantine"}
+{"text": "احجز لي تذكرة طيران إلى أربيل", "label": "unsupported", "style": "msa"}
+{"text": "أرني آخر عملياتي", "label": "history", "style": "msa"}
+{"text": "renew the net pls 🙏", "label": "pay_bill", "style": "en_broken"}
+{"text": "before I pay anything today, can you tell me how much money I still have in my wallet?", "label": "balance", "style": "en"}
+{"text": "cancel that please", "label": "cancel", "style": "en"}
+{"text": "حوّل لجورج ٣٠ ألف إذا بتريد", "label": "transfer", "style": "levantine"}
+{"text": "عايز ابعت لمحمود ٥٠ الف", "label": "transfer", "style": "egyptian"}
+{"text": "سجّل لي ليلى ضمن جهات الاتصال", "label": "add_contact", "style": "msa"}
+{"text": "مرحباً", "label": "chat", "style": "msa"}
+{"text": "No, I don't want to pay anymore", "label": "cancel", "style": "en"}
+{"text": "أرغب في تسديد فاتورة الماء", "label": "pay_bill", "style": "msa"}
+{"text": "انسَ الأمر", "label": "cancel", "style": "msa"}
+{"text": "never mind", "label": "cancel", "style": "en"}
+{"text": "new contact: Huda 07505556600", "label": "add_contact", "style": "en_names"}
+{"text": "هلا والله شخبارك", "label": "chat", "style": "gulf"}
+{"text": "what's the daily limit?", "label": "chat", "style": "en"}
+{"text": "ما المبالغ التي استلمتها هذا الشهر", "label": "history", "style": "msa"}
+{"text": "صباح الخير، قبل ان ادفع اي شيء اليوم اريد ان اعرف كم بقي في محفظتي من رصيد", "label": "balance", "style": "msa_messy"}
+{"text": "ارسل الف دينار فقط لزيد للتجربة", "label": "transfer", "style": "msa_messy"}
+{"text": "اشحنلي رصيد زين بخمسة الاف", "label": "topup", "style": "egyptian"}
+{"text": "send 120k to the number 07811002200", "label": "transfer", "style": "en"}
+{"text": "no, forget it", "label": "cancel", "style": "en"}
+{"text": "أريد تعبئة رصيد آسياسيل", "label": "topup", "style": "msa"}
+{"text": "شرجلي الخط بعشرة", "label": "topup", "style": "levantine"}
+{"text": "هي الفلوس وصلت لهاني ولا لسه؟", "label": "history", "style": "egyptian"}
+{"text": "have I received any money today?", "label": "history", "style": "en"}
+{"text": "pay Khalid back 60k", "label": "transfer", "style": "en_names"}
+{"text": "ابغى اطلع بطاقة ماستر", "label": "unsupported", "style": "gulf"}
+{"text": "الغي كل شيء ❌", "label": "cancel", "style": "msa_messy"}
+{"text": "احفظ الرقم 07700009988 باسم زوجتي", "label": "add_contact", "style": "msa"}
+{"text": "I want to send money to my brother", "label": "transfer", "style": "en"}
+{"text": "تحويل اموال لعباس ٤٠ الف", "label": "transfer", "style": "msa_messy"}
+{"text": "add contact Hassan", "label": "add_contact", "style": "en_names"}
+{"text": "I'd like to transfer 250,000 IQD to my wife", "label": "transfer", "style": "en"}
+{"text": "my phone ran out of credit and I can't call anyone, please recharge my Asiacell line with ten thousand", "label": "topup", "style": "en"}
+{"text": "لا تدفع الفاتورة الآن", "label": "cancel", "style": "msa"}
+{"text": "tell me how much money I've got", "label": "balance", "style": "en"}
+{"text": "حوّل لغسان ٤٥ ألف عمول معروف", "label": "transfer", "style": "levantine"}
+{"text": "كم باقي عندي بالمحفظة", "label": "balance", "style": "gulf"}
+{"text": "معلش يا باشا انا كنت عايز ابعت لاخويا محمود خمسين الف النهارده ضروري عشان عليه فلوس", "label": "transfer", "style": "egyptian"}
+{"text": "hello, the generator guy came by this morning asking for this month's money, so please pay the generator bill now", "label": "pay_bill", "style": "en"}
+{"text": "متى دفعت فاتورة الكهرباء آخر مرة؟", "label": "history", "style": "msa"}
+{"text": "issue me a Mastercard", "label": "unsupported", "style": "en"}
+{"text": "I want to pay the generator subscription for this month", "label": "pay_bill", "style": "en"}
+{"text": "pay the October generator bill", "label": "pay_bill", "style": "en"}
+{"text": "send to my dad 150 thousand", "label": "transfer", "style": "en"}
+{"text": "بدنا نبعت لباسل مية ألف اليوم", "label": "transfer", "style": "levantine"}
+{"text": "ارسللل لجنى ٥٠ الففف", "label": "transfer", "style": "msa_messy"}
+{"text": "what did I pay this month?", "label": "history", "style": "en"}
+{"text": "اريد شراء شدات للعبة ببجي بعشرين الف", "label": "unsupported", "style": "msa_messy"}
+{"text": "اشحن لي رصيدا", "label": "topup", "style": "msa_messy"}
+{"text": "لقد دفعت الفاتورة أمس والحمد لله", "label": "chat", "style": "msa"}
+{"text": "close my friend Ali's account", "label": "unsupported", "style": "en_names"}
+{"text": "هل بإمكانك أن ترسل لدعاء مئة وخمسين ألفاً؟", "label": "transfer", "style": "msa"}
+{"text": "can you tell me my current balance?", "label": "balance", "style": "en"}
+{"text": "هل وصل التحويل إلى أحمد؟", "label": "history", "style": "msa"}
+{"text": "احفظ هذا الرقم عندي", "label": "add_contact", "style": "msa_messy"}
+{"text": "الغاء", "label": "cancel", "style": "msa_messy"}
+{"text": "اريد ان ارد لضياء دينه، ارسل له 120 الف", "label": "transfer", "style": "msa_messy"}
+{"text": "حوّل ٦٠ الف على الرقم 07901234000", "label": "transfer", "style": "gulf"}
+{"text": "حولل لمهدي خمسين", "label": "transfer", "style": "msa_messy"}
+{"text": "top-up my brother Hussein's phone, Korek, 3000", "label": "topup", "style": "en_names"}
+{"text": "هههههه جميل", "label": "chat", "style": "msa_messy"}
+{"text": "ارسل نقودا الى اختي فاطمة", "label": "transfer", "style": "msa_messy"}
+{"text": "send $100 to Layla", "label": "transfer", "style": "en_names"}
+{"text": "احفظ الرقم 07701230045 باسم سارة", "label": "add_contact", "style": "msa"}
+{"text": "مساء الخير، كيف يمكنني البدء؟", "label": "chat", "style": "msa"}
+{"text": "لا، غيرت رأيي", "label": "cancel", "style": "msa"}
+{"text": "hello there", "label": "chat", "style": "en"}
+{"text": "I want to know my available balance", "label": "balance", "style": "en"}
+{"text": "pls send 75,000 dinars to 07700001234", "label": "transfer", "style": "en"}
+{"text": "اريد الاستعلام عن الرصيد", "label": "balance", "style": "msa_messy"}
+{"text": "هل يمكنك إضافة رقم جديد لقائمة جهات الاتصال؟", "label": "add_contact", "style": "msa"}
+{"text": "هل هناك رسوم على التحويل؟", "label": "chat", "style": "msa"}
+{"text": "transfer to Sara", "label": "transfer", "style": "en_names"}
+{"text": "هل حوّل لي علي أي مبلغ؟", "label": "history", "style": "msa"}
+{"text": "لا اريد اتمام الدفع", "label": "cancel", "style": "msa_messy"}
+{"text": "كم أرسلت ليوسف في المرة الماضية؟", "label": "history", "style": "msa"}
+{"text": "فاتورة المولدة لو سمحت", "label": "pay_bill", "style": "msa_messy"}
+{"text": "أرسل لأسماء ٣٠ ألف وأخبرها أنها مني", "label": "transfer", "style": "msa"}
+{"text": "أنت غبي ولا تفهم شيئاً", "label": "chat", "style": "msa"}
+{"text": "أرجو شحن خط زين بمبلغ ٥٠٠٠ دينار", "label": "topup", "style": "msa"}
+{"text": "توقف", "label": "cancel", "style": "msa"}
+{"text": "اشترِ لي بتكوين بخمسين ألف", "label": "unsupported", "style": "msa"}
+{"text": "what if I sent Ali 50?", "label": "chat", "style": "en_names"}
+{"text": "أريد بطاقة تعبئة زين بخمسة آلاف", "label": "topup", "style": "msa"}
+{"text": "قديش معي بالمحفظة؟", "label": "balance", "style": "levantine"}
+{"text": "أدفع فاتورة النت لشهر حزيران", "label": "pay_bill", "style": "msa"}
+{"text": "ادفع الكهرباء حق هالشهر", "label": "pay_bill", "style": "gulf"}
+{"text": "كم المبلغ المتوفر عندي", "label": "balance", "style": "msa_messy"}
+{"text": "pls pay light bill", "label": "pay_bill", "style": "en_broken"}
+{"text": "ادفع فاتورة المولدة لهذا الشهر", "label": "pay_bill", "style": "msa"}
+{"text": "عايز ادفع فاتورة الكهربا", "label": "pay_bill", "style": "egyptian"}
+{"text": "حوّل مليون ونصف إلى حساب السيد جعفر", "label": "transfer", "style": "msa"}
+{"text": "حوّل ٧٥٠ ألف إلى شريكي ميثم", "label": "transfer", "style": "msa"}
+{"text": "ابي احول لفهد خمسين الف", "label": "transfer", "style": "gulf"}
+{"text": "فرجيني آخر التحويلات", "label": "history", "style": "levantine"}
+{"text": "فيك تبعت لتالا عشرين ألف؟", "label": "transfer", "style": "levantine"}
+{"text": "please make transfer for Sajjad 45000", "label": "transfer", "style": "en_broken"}
+{"text": "شكرا يا باشا تسلم", "label": "chat", "style": "egyptian"}
+{"text": "add benficiary Noor 07909990088", "label": "add_contact", "style": "en_broken"}
+{"text": "was my electricity bill paid?", "label": "history", "style": "en"}
+{"text": "convert my dinars to USD", "label": "unsupported", "style": "en"}
+{"text": "can you save Yousif's number for me?", "label": "add_contact", "style": "en_names"}
+{"text": "رصيدي كم صار", "label": "balance", "style": "msa_messy"}
+{"text": "من انت؟ هل انت روبوت؟", "label": "chat", "style": "msa_messy"}
+{"text": "cancel", "label": "cancel", "style": "en"}
+{"text": "ok cool 👍", "label": "chat", "style": "en"}
+{"text": "ابي ادفع فاتورة الكهرب", "label": "pay_bill", "style": "gulf"}
+{"text": "refill my zain balance with 15k", "label": "topup", "style": "en"}
+{"text": "get me a virtual visa card", "label": "unsupported", "style": "en"}
+{"text": "أين ذهبت أموالي؟ اعرض المصاريف", "label": "history", "style": "msa"}
+{"text": "أرسلت مبلغاً إلى أختي فاطمة قبل ساعتين وتقول إنه لم يصلها، هل يمكنك التأكد من أن العملية تمت؟", "label": "history", "style": "msa"}
+{"text": "ابعتلي ميت الف لهاني دلوقتي", "label": "transfer", "style": "egyptian"}
+{"text": "انت انسان ولا بوت؟", "label": "chat", "style": "gulf"}
+{"text": "اريد سلفة على الراتب", "label": "unsupported", "style": "msa_messy"}
+{"text": "حوّل مئة ألف إلى حساب زينب من فضلك", "label": "transfer", "style": "msa"}
+{"text": "pls save number of Zainab", "label": "add_contact", "style": "en_broken"}
+{"text": "ادفع الكهرباء الوطنية", "label": "pay_bill", "style": "msa_messy"}
+{"text": "topup zain 10000", "label": "topup", "style": "en_broken"}
+{"text": "أود تسديد جميع فواتيري المستحقة", "label": "pay_bill", "style": "msa"}
+{"text": "أرغب بدفع فاتورة الكهرباء كاملة", "label": "pay_bill", "style": "msa"}
+{"text": "ارسل لسعود ربع مليون تكفى", "label": "transfer", "style": "gulf"}
+{"text": "ابني يقول ان رصيد هاتفه انتهى وهو خارج البيت، اشحن له خط زين بخمسة الاف دينار رجاء", "label": "topup", "style": "msa_messy"}
+{"text": "buy me a new laptop on installments", "label": "unsupported", "style": "en"}
+{"text": "wait, don't do it. cancel.", "label": "cancel", "style": "en"}
+{"text": "send 50k to Ahmed", "label": "transfer", "style": "en_names"}
+{"text": "عايزة كارت شحن كورك بخمسة وعشرين", "label": "topup", "style": "egyptian"}
+{"text": "ادفع فاتورة كهرباء البيت الثاني", "label": "pay_bill", "style": "msa_messy"}
+{"text": "ادفعلي الانترنت هلأ قبل ما يقطع", "label": "pay_bill", "style": "levantine"}
+{"text": "save 07701112200 as Omar", "label": "add_contact", "style": "en_names"}
+{"text": "when did I last pay the generator?", "label": "history", "style": "en"}
+{"text": "me want transfer 100 alf to Murtadha", "label": "transfer", "style": "en_broken"}
+{"text": "اشحن كورك", "label": "topup", "style": "msa_messy"}
+{"text": "stop, don't send it", "label": "cancel", "style": "en"}
+{"text": "حان موعد فاتورة المولدة، سددها من محفظتي", "label": "pay_bill", "style": "msa"}
+{"text": "pay elec + generator", "label": "pay_bill", "style": "en_broken"}
+{"text": "ابي اطرش فلوس حق جود", "label": "transfer", "style": "gulf"}
+{"text": "ما هي الخدمات التي تقدمها؟", "label": "chat", "style": "msa"}
+{"text": "ارسل مئتي الف لحيدر اليوم ضروري", "label": "transfer", "style": "msa_messy"}
+{"text": "transfer 300k to Saif, it's urgent!!", "label": "transfer", "style": "en_names"}
+{"text": "ابعث لآية خمسمئة الف دينار", "label": "transfer", "style": "msa_messy"}
+{"text": "move 80k to Huda's wallet", "label": "transfer", "style": "en_names"}
+{"text": "اشحن رقم والدتي زين بخمسة آلاف", "label": "topup", "style": "msa"}
+{"text": "وريني اخر العمليات بتاعتي", "label": "history", "style": "egyptian"}
+{"text": "ادفع اشتراك سما نت", "label": "pay_bill", "style": "msa_messy"}
+{"text": "pay Abu Wisam's generator, 10 amps", "label": "pay_bill", "style": "en_names"}
+{"text": "ابعتلي ١٠٠ ألف لفادي هلأ", "label": "transfer", "style": "levantine"}
+{"text": "كم رصيدي؟", "label": "balance", "style": "msa"}
+{"text": "اريد ارسال مصروف الشهر لابني في الجامعة امير", "label": "transfer", "style": "msa_messy"}
+{"text": "لا تحول، كنسل", "label": "cancel", "style": "gulf"}
+{"text": "ابعث إلى مريم مبلغ عشرة آلاف دينار", "label": "transfer", "style": "msa"}
+{"text": "كيف حالك اليوم؟", "label": "chat", "style": "msa"}
+{"text": "عايز اضيف رقم جديد باسم نهى", "label": "add_contact", "style": "egyptian"}
+{"text": "ضيف سلطان عندي بالاسماء", "label": "add_contact", "style": "gulf"}
+{"text": "give Bilal 50 thousand dinar from my wallet", "label": "transfer", "style": "en_names"}
+{"text": "هل يمكنكم إرسال الأموال إلى خارج العراق؟", "label": "chat", "style": "msa"}
+{"text": "buy me Korek credit for 5,000", "label": "topup", "style": "en"}
+{"text": "pay my electricity bill", "label": "pay_bill", "style": "en"}
+{"text": "ما هو رصيد محفظتي الآن", "label": "balance", "style": "msa"}
+{"text": "أضف مريم إلى الأسماء المحفوظة، رقمها 07712340099", "label": "add_contact", "style": "msa"}
+{"text": "send 5k mobile credit to Sara's Asiacell", "label": "topup", "style": "en_names"}
+{"text": "book a hotel in Basra for tonight", "label": "unsupported", "style": "en"}
+{"text": "buy PUBG UC 10k", "label": "unsupported", "style": "en_broken"}
+{"text": "me need pay internet now", "label": "pay_bill", "style": "en_broken"}
+{"text": "ادفع لي فاتورة الانترنت نور نت", "label": "pay_bill", "style": "msa_messy"}
+{"text": "غيرلي ٢٠٠ دولار بدينار", "label": "unsupported", "style": "egyptian"}
+{"text": "pay my wifi bill", "label": "pay_bill", "style": "en"}
+{"text": "ادفع الانترنت ٣٥ الف", "label": "pay_bill", "style": "msa_messy"}
+{"text": "شحن رصيد", "label": "topup", "style": "msa_messy"}
+{"text": "أريد معرفة رصيدي الحالي", "label": "balance", "style": "msa"}
+{"text": "pay electricity for last month", "label": "pay_bill", "style": "en"}
+{"text": "ادفع المولدة والانترنت معا", "label": "pay_bill", "style": "msa_messy"}
+{"text": "اشتر لي هاتفا جديدا من المتجر", "label": "unsupported", "style": "msa_messy"}
+{"text": "i need send 40 thousand for my mother", "label": "transfer", "style": "en_broken"}
+{"text": "you're useless", "label": "chat", "style": "en"}
+{"text": "what's my balance?", "label": "balance", "style": "en"}
+{"text": "بارك الله فيك", "label": "chat", "style": "msa"}
+{"text": "أريد تجديد اشتراك الإنترنت المنزلي", "label": "pay_bill", "style": "msa"}
+{"text": "ماذا يحدث إذا أرسلت إلى رقم خاطئ؟", "label": "chat", "style": "msa"}
+{"text": "settle my water bill now", "label": "pay_bill", "style": "en"}
+{"text": "اوقف العملية فورا", "label": "cancel", "style": "msa_messy"}
+{"text": "فيك تدفع فاتورة المي؟", "label": "pay_bill", "style": "levantine"}
+{"text": "دفعلي اشتراك المولدة هالشهر", "label": "pay_bill", "style": "levantine"}
+{"text": "أرسل ٢٠٠ دولار إلى تركيا", "label": "unsupported", "style": "msa"}
+{"text": "are you a bot?", "label": "chat", "style": "en"}
+{"text": "i need loan urgent 500k", "label": "unsupported", "style": "en_broken"}
+{"text": "كم عندي", "label": "balance", "style": "msa_messy"}
+{"text": "Pay my home internet bill, Dijla Fiber", "label": "pay_bill", "style": "en_names"}
+{"text": "دفع فاتورة الكهرباء ⚡", "label": "pay_bill", "style": "msa_messy"}
+{"text": "just wondering, if I send money to someone who doesn't have an account yet, what happens to it?", "label": "chat", "style": "en"}
+{"text": "cancle it", "label": "cancel", "style": "en_broken"}
+{"text": "change my brother's PIN", "label": "unsupported", "style": "en"}
+{"text": "افتح لي حساباً مصرفياً", "label": "unsupported", "style": "msa"}
+{"text": "renew my internet subscription", "label": "pay_bill", "style": "en"}
+{"text": "بدي اسحب مصاري كاش من الصراف", "label": "unsupported", "style": "levantine"}
+{"text": "ادفع فاتورة الكهربا بتاعة الشهر اللي فات", "label": "pay_bill", "style": "egyptian"}
+{"text": "في عمولة عالتحويل؟", "label": "chat", "style": "levantine"}
+{"text": "top up my Zain 5000", "label": "topup", "style": "en"}
+{"text": "ابغى احول ٣٠٠ الف لاخوي راشد", "label": "transfer", "style": "gulf"}
+{"text": "الجو حار اليوم اليس كذلك", "label": "chat", "style": "msa_messy"}
+{"text": "invest my money in stocks", "label": "unsupported", "style": "en"}
+{"text": "how much money is in my wallet?", "label": "balance", "style": "en"}
+{"text": "ابي اشحن رصيد زين بعشرة", "label": "topup", "style": "gulf"}
+{"text": "ارسال 45 الف الى منى 🙏", "label": "transfer", "style": "msa_messy"}
+{"text": "اريد كشف حساب", "label": "history", "style": "msa_messy"}
+{"text": "اشحن خط آسيا لأخي حسين بخمسة", "label": "topup", "style": "msa_messy"}
+{"text": "اريد ان ارسل مبلغا لابني حسن", "label": "transfer", "style": "msa_messy"}
+{"text": "انا دفعت فاتورة الكهربا الشهر ده ولا لا؟", "label": "history", "style": "egyptian"}
+{"text": "ابعت لتامر تلاتين الف لو سمحت", "label": "transfer", "style": "egyptian"}
+{"text": "balence?", "label": "balance", "style": "en_broken"}
+{"text": "عايز اعرف رصيدي كام", "label": "balance", "style": "egyptian"}
+{"text": "أرسل ورقتين إلى عمي عادل", "label": "transfer", "style": "msa"}
+{"text": "أريد أن أحوّل خمسين ألف دينار إلى أحمد", "label": "transfer", "style": "msa"}
+{"text": "تجديد اشتراك دجلة فايبر", "label": "pay_bill", "style": "msa_messy"}
+{"text": "اشحن خطي كورك بعشرة الاف", "label": "topup", "style": "msa_messy"}
+{"text": "أرسل إلى قاسم مبلغ الإيجار، أربعمئة ألف دينار", "label": "transfer", "style": "msa"}
+{"text": "مع السلامة", "label": "chat", "style": "msa_messy"}
+{"text": "أغلق حساب صديقي علي", "label": "unsupported", "style": "msa"}
+{"text": "I want to top up my phone", "label": "topup", "style": "en"}
+{"text": "خلاص هونت، الغها", "label": "cancel", "style": "gulf"}
+{"text": "اهلا وسهلا", "label": "chat", "style": "msa_messy"}
+{"text": "ابي كشف حساب", "label": "history", "style": "gulf"}
+{"text": "شو دفعت هالشهر", "label": "history", "style": "levantine"}
+{"text": "pay internet 35,000", "label": "pay_bill", "style": "en"}
+{"text": "هل يمكن أن تخبرني كم أملك في حسابي؟", "label": "balance", "style": "msa"}
+{"text": "اشحن جوالي اسياسيل خمسة عشر الف", "label": "topup", "style": "msa_messy"}
+{"text": "أود تحويل ربع مليون دينار لوالدتي", "label": "transfer", "style": "msa"}
+{"text": "how does this work", "label": "chat", "style": "en"}
+{"text": "فاتورة الكهرباء مستحقة، ادفعها الآن", "label": "pay_bill", "style": "msa"}
+{"text": "statement", "label": "history", "style": "en"}
+{"text": "check my balance please", "label": "balance", "style": "en"}
+{"text": "احفظ جهة اتصال: حيدر 07908880022", "label": "add_contact", "style": "msa_messy"}
+{"text": "هل تتكلم الانجليزية؟", "label": "chat", "style": "msa_messy"}
+{"text": "عايزة احول فلوس لماما", "label": "transfer", "style": "egyptian"}
+{"text": "my balance pls", "label": "balance", "style": "en_broken"}
+{"text": "انت بتعمل ايه بالظبط؟", "label": "chat", "style": "egyptian"}
+{"text": "save this number to my contacts", "label": "add_contact", "style": "en"}
+{"text": "I want a loan of 1 million dinars", "label": "unsupported", "style": "en"}
+{"text": "كشف العمليات لهذا الاسبوع", "label": "history", "style": "msa_messy"}
+{"text": "can you recharge my line?", "label": "topup", "style": "en"}
+{"text": "أريد دفع فاتورة الكهرباء", "label": "pay_bill", "style": "msa"}
+{"text": "هل تدعمون الدفع بالدولار؟", "label": "chat", "style": "msa_messy"}
+{"text": "لمن كان آخر تحويل قمت به؟", "label": "history", "style": "msa"}
+{"text": "ارسل نص مليون لمنير غدا صباحا", "label": "transfer", "style": "msa_messy"}
+{"text": "هل تستطيع تحويل خمسة آلاف دينار إلى زهراء؟", "label": "transfer", "style": "msa"}
+{"text": "open a savings account for me", "label": "unsupported", "style": "en"}
+{"text": "Zain recharge card 10,000", "label": "topup", "style": "en"}
+{"text": "recharge Asiacell 10k", "label": "topup", "style": "en"}
+{"text": "سجللي رقم هاني 07711002299", "label": "add_contact", "style": "egyptian"}
+{"text": "hi, sorry to bother you, could you please send 75 thousand dinars to my cousin Mustafa, he needs it for the doctor today", "label": "transfer", "style": "en_names"}
+{"text": "stop stop cancel!!", "label": "cancel", "style": "en_broken"}
+{"text": "اشحن لماما كارت بعشرة", "label": "topup", "style": "egyptian"}
+{"text": "transfer half a million to my uncle today", "label": "transfer", "style": "en"}
+{"text": "تراجعت، لا تدفع", "label": "cancel", "style": "msa"}
+{"text": "تعبئة رصيد كورك ٢٥ الف", "label": "topup", "style": "msa_messy"}
+{"text": "حوّل لزوجتي نصف مليون", "label": "transfer", "style": "msa"}
+{"text": "أريد تحويل مئتين وخمسين ألف دينار إلى حساب أختي حوراء", "label": "transfer", "style": "msa"}
+{"text": "ما مقدار النقود الموجودة في حسابي", "label": "balance", "style": "msa"}
+{"text": "اطلب لي عشاء من المطعم", "label": "unsupported", "style": "msa_messy"}
+{"text": "Send 1.5 million to Jaafar", "label": "transfer", "style": "en_names"}
+{"text": "بدي اشحن لأخي رامي خط كورك", "label": "topup", "style": "levantine"}
+{"text": "how much did I send to Zainab last week", "label": "history", "style": "en_names"}
+{"text": "أرسل إلى ملاك 10k", "label": "transfer", "style": "msa"}
+{"text": "can u transfer 15k to anas rn", "label": "transfer", "style": "en_broken"}
+{"text": "i want see my last payments", "label": "history", "style": "en_broken"}
+{"text": "تسديد اشتراك الأمبيرات، عشرة أمبير", "label": "pay_bill", "style": "msa"}
+{"text": "حول اموالا الى حساب بنكي في الاردن", "label": "unsupported", "style": "msa_messy"}
+{"text": "ارسل لليلى مية الف دينار", "label": "transfer", "style": "msa_messy"}
+{"text": "transfer money to Iman 70,000", "label": "transfer", "style": "en_names"}
+{"text": "who did i send money to yesterday", "label": "history", "style": "en"}
+{"text": "I'm out of credit, top me up 5,000 on Zain", "label": "topup", "style": "en"}
+{"text": "ادفع فاتورة الماء والمجاري", "label": "pay_bill", "style": "msa"}
+{"text": "متى اخر مرة سددت الكهرباء؟", "label": "history", "style": "gulf"}
+{"text": "هل وصلتني حوالة من مصطفى اليوم؟", "label": "history", "style": "msa"}
+{"text": "اريد حفظ رقم والدتي في المحفظة", "label": "add_contact", "style": "msa_messy"}
+{"text": "أرسل ورقة إلى إبراهيم", "label": "transfer", "style": "msa"}
+{"text": "ما ابي خلاص", "label": "cancel", "style": "gulf"}
+{"text": "عايز سلفة ٥٠٠ الف", "label": "unsupported", "style": "egyptian"}
+{"text": "لا متبعتش", "label": "cancel", "style": "egyptian"}
+{"text": "عبيلي رصيد آسيا لو سمحت", "label": "topup", "style": "levantine"}
+{"text": "how much do I have", "label": "balance", "style": "en"}
+{"text": "اريد كارت شحن اسيا فئة عشرة", "label": "topup", "style": "msa_messy"}
+{"text": "هل يمكنك إرسال ثلاثين ألفاً إلى أخي مصطفى الآن؟", "label": "transfer", "style": "msa"}
+{"text": "hey, send Omar 20k for lunch 🍔", "label": "transfer", "style": "en_names"}
+{"text": "send 300 euros to my cousin in Germany", "label": "unsupported", "style": "en"}
+{"text": "pay generator for the shop", "label": "pay_bill", "style": "en"}
+{"text": "أود أن أرسل هدية مالية لابنتي شهد بقيمة خمسين ألف", "label": "transfer", "style": "msa"}
+{"text": "pay the water and sewage bill please", "label": "pay_bill", "style": "en"}
+{"text": "كم بقي في حسابي؟", "label": "balance", "style": "msa"}
+{"text": "I would like to pay my water bill for September.", "label": "pay_bill", "style": "en"}
+{"text": "أريد تسديد فاتورة كهرباء المحل التجاري", "label": "pay_bill", "style": "msa"}
+{"text": "pay my overdue electricity bill", "label": "pay_bill", "style": "en"}
+{"text": "can you send money abroad?", "label": "chat", "style": "en"}
+{"text": "سددلي فاتورة المية", "label": "pay_bill", "style": "egyptian"}
+{"text": "هو في مصاريف على التحويل؟", "label": "chat", "style": "egyptian"}
+{"text": "ألغِ العملية", "label": "cancel", "style": "msa"}
+{"text": "I sent 50k to my brother this morning but he says nothing arrived, can you check if it went through?", "label": "history", "style": "en"}
+{"text": "سدد اشتراك الانترنت من فضلك", "label": "pay_bill", "style": "msa_messy"}
+{"text": "pay the bill for June internet", "label": "pay_bill", "style": "en"}
+{"text": "عاوز ادي كريم ربع مليون من المحفظة", "label": "transfer", "style": "egyptian"}
+{"text": "ضيفلي رقم رامي 07802224466", "label": "add_contact", "style": "levantine"}
+{"text": "ادفعلي النت بتاع الشهر ده", "label": "pay_bill", "style": "egyptian"}
+{"text": "is this safe to use?", "label": "chat", "style": "en"}
+{"text": "what happens if I send to the wrong number?", "label": "chat", "style": "en"}
+{"text": "how much i have in account", "label": "balance", "style": "en_broken"}
+{"text": "ادفع مولدة ابو وسام عن هذا الشهر", "label": "pay_bill", "style": "msa_messy"}
+{"text": "وش الخدمات اللي عندكم؟", "label": "chat", "style": "gulf"}
+{"text": "wire 200k to my landlord for the rent", "label": "transfer", "style": "en"}
+{"text": "كم تبقى معي بعد آخر عملية؟", "label": "balance", "style": "msa"}
+{"text": "صرّف لي ١٠٠ دولار إلى دنانير", "label": "unsupported", "style": "msa"}
+{"text": "transfer 25000 to Yousif now", "label": "transfer", "style": "en_names"}
+{"text": "add credit to my line, 5k", "label": "topup", "style": "en"}
+{"text": "رجاءً حوّل 90 ألف للرقم المنتهي بـ 4455", "label": "transfer", "style": "msa"}
+{"text": "حول لشريف ٢٠ الف يا باشا", "label": "transfer", "style": "egyptian"}
+{"text": "send Hamza 25 alf", "label": "transfer", "style": "en_names"}
+{"text": "انتظر لحظة، أعتقد أنني كتبت المبلغ خطأ، لا ترسل شيئاً الآن وألغِ العملية", "label": "cancel", "style": "msa"}
+{"text": "اشحن رصيد زين بخمسة آلاف", "label": "topup", "style": "msa"}
+{"text": "اريد تقسيط ثلاجة", "label": "unsupported", "style": "msa_messy"}
+{"text": "I owe Nasir 100k, send it to him", "label": "transfer", "style": "en_names"}
+{"text": "خلاص الغيها مش عايز", "label": "cancel", "style": "egyptian"}
+{"text": "did Hussein send me anything?", "label": "history", "style": "en_names"}
+{"text": "ادفع فاتورة الانترنت برق نت خمسة وعشرين الف", "label": "pay_bill", "style": "msa_messy"}
+{"text": "اريد تحويل مالي الى وليد، المبلغ ٨٠ الف", "label": "transfer", "style": "msa_messy"}
+{"text": "send money", "label": "transfer", "style": "en"}
+{"text": "can u pay the amperes for me? 10 amps", "label": "pay_bill", "style": "en_broken"}
+{"text": "Transfer fifty thousand dinars to Ms. Asmaa please.", "label": "transfer", "style": "en_names"}
+{"text": "اعرض سجل المعاملات", "label": "history", "style": "msa_messy"}
+{"text": "add Ali to my contacts, 07801234400", "label": "add_contact", "style": "en_names"}
+{"text": "ادفع فاتورتي", "label": "pay_bill", "style": "msa_messy"}
+{"text": "سجل رقم اخي عمر 07809876000", "label": "add_contact", "style": "msa_messy"}
+{"text": "عندي سؤال قبل أن أبدأ: هل أموالي في المحفظة محمية إذا ضاع هاتفي أو سُرق؟", "label": "chat", "style": "msa"}
+{"text": "اريد تحويل مبلغ الى رقم هاتف غير محفوظ عندي", "label": "transfer", "style": "msa_messy"}
+{"text": "عايز كشف حساب", "label": "history", "style": "egyptian"}
+{"text": "ما هي آخر التحويلات التي قمت بها؟", "label": "history", "style": "msa"}
+{"text": "hi", "label": "chat", "style": "en"}
+{"text": "store 07712345000 as Mom", "label": "add_contact", "style": "en"}
+{"text": "send 1.5 million to my business partner", "label": "transfer", "style": "en"}
+{"text": "مرحبا كيفك", "label": "chat", "style": "levantine"}
+{"text": "i wanna send my sister Ruqaya some money", "label": "transfer", "style": "en_broken"}
+{"text": "is there a fee for transfers?", "label": "chat", "style": "en"}
+{"text": "عيد مبارك وكل عام وانتم بخير", "label": "chat", "style": "msa_messy"}
+{"text": "transfer 18,500 to Zaid", "label": "transfer", "style": "en_names"}
+{"text": "عايز اشحن خطي اسياسيل", "label": "topup", "style": "egyptian"}
+{"text": "ادفع فاتوره الكهربا", "label": "pay_bill", "style": "msa_messy"}
+{"text": "السلام عليكم، ابي اسحب فلوسي كاش من اقرب صراف آلي، سو لي عملية سحب ٣٠٠ الف", "label": "unsupported", "style": "gulf"}
+{"text": "did the top up from this morning work?", "label": "history", "style": "en"}
+{"text": "هل دفعت فاتورة الانترنت ام لا؟", "label": "history", "style": "msa_messy"}
+{"text": "خدمة سيئة جدا 😡", "label": "chat", "style": "msa_messy"}
+{"text": "I have 500 dollars in cash at home and I want you to change them into Iraqi dinars at today's rate", "label": "unsupported", "style": "en"}
+{"text": "abort", "label": "cancel", "style": "en"}
+{"text": "شو بتقدر تعمل؟", "label": "chat", "style": "levantine"}
+{"text": "حوالة الى رغد بمبلغ ٢٥٠ الف", "label": "transfer", "style": "msa_messy"}
+{"text": "ابي استثمر فلوسي بالاسهم", "label": "unsupported", "style": "gulf"}
+{"text": "اسحب لي ٢٠٠ ألف نقداً من الصراف", "label": "unsupported", "style": "msa"}
+{"text": "ادفع مولدة الحي ٤٥ الف", "label": "pay_bill", "style": "msa_messy"}
+{"text": "ادفع فاتورة الكهرباء للشهر الماضي", "label": "pay_bill", "style": "msa"}
+{"text": "عايز اطلع فيزا", "label": "unsupported", "style": "egyptian"}
+{"text": "خزّن رقم مهدي عندك", "label": "add_contact", "style": "msa_messy"}
+{"text": "ألغِ التحويل من فضلك", "label": "cancel", "style": "msa"}
+{"text": "book me a flight to Erbil", "label": "unsupported", "style": "en"}
+{"text": "I need to make a transfer", "label": "transfer", "style": "en"}
+{"text": "بدنا ندفع المولدة ٥٠ ألف", "label": "pay_bill", "style": "levantine"}
+{"text": "تمام، ممتاز 👍", "label": "chat", "style": "msa_messy"}
+{"text": "I already paid the generator yesterday, thanks", "label": "chat", "style": "en"}
+{"text": "معايا كام في المحفظة؟", "label": "balance", "style": "egyptian"}
+{"text": "استعلام عن رصيد المحفظة 💰", "label": "balance", "style": "msa_messy"}
+{"text": "دفع الفاتورة", "label": "pay_bill", "style": "msa_messy"}
+{"text": "عبّئ رصيد هاتفي من فضلك", "label": "topup", "style": "msa"}
+{"text": "save this number under the name Sara", "label": "add_contact", "style": "en_names"}
+{"text": "want to sending money for my son Hasan, 200k", "label": "transfer", "style": "en_broken"}
+{"text": "سدد لي فاتورة الماي", "label": "pay_bill", "style": "gulf"}
+{"text": "أريد قرضاً بمليون دينار", "label": "unsupported", "style": "msa"}
+{"text": "كم دفعت للمولدة الشهر الماضي", "label": "history", "style": "msa_messy"}
+{"text": "do you offer loans?", "label": "chat", "style": "en"}
+{"text": "exchange 100 dollars to dinars for me", "label": "unsupported", "style": "en"}
+{"text": "أرجو إرسال خمسة وعشرين ألف دينار إلى رقية", "label": "transfer", "style": "msa"}
+{"text": "اشحن لابنتي نور خط كورك ٣ الاف", "label": "topup", "style": "msa_messy"}
+{"text": "did my transfer to Ali arrive?", "label": "history", "style": "en_names"}
+{"text": "قم بتسديد فاتورة الماء عن الشهرين الماضيين", "label": "pay_bill", "style": "msa"}
+{"text": "ورني اخر عملياتي", "label": "history", "style": "gulf"}
+{"text": "شو رصيدي هلأ", "label": "balance", "style": "levantine"}
+{"text": "I want to add a new person to my list", "label": "add_contact", "style": "en"}
+{"text": "آخر خمس عمليات", "label": "history", "style": "msa_messy"}
+{"text": "ممكن تدفعلي اشتراك المولد؟", "label": "pay_bill", "style": "egyptian"}
+{"text": "اشحن خطي الثاني بخمسة آلاف دينار", "label": "topup", "style": "msa"}
+{"text": "سددد الكهرباء بسرعة", "label": "pay_bill", "style": "msa_messy"}
+{"text": "show balance", "label": "balance", "style": "en"}
+{"text": "اريد بطاقة فيزا افتراضية", "label": "unsupported", "style": "msa_messy"}
+{"text": "ارجو تحويل مبلغ 75,000 دينار الى الرقم 07701112233", "label": "transfer", "style": "msa_messy"}
+{"text": "ما هو الحد اليومي للتحويل", "label": "chat", "style": "msa_messy"}
+{"text": "how many dinars do I have right now", "label": "balance", "style": "en"}
+{"text": "ما رصيد حسابي", "label": "balance", "style": "msa_messy"}
+{"text": "ابي اعرف كم عندي فلوس", "label": "balance", "style": "gulf"}
+{"text": "متى تعمل الخدمة؟ هل هي متاحة ليلا؟", "label": "chat", "style": "msa_messy"}
+{"text": "أحتاج إلى تحويل ٣٠٠ ألف دينار إلى هدى قبل المساء", "label": "transfer", "style": "msa"}
+{"text": "سدد فاتورة شهر ٩ للكهرباء", "label": "pay_bill", "style": "msa_messy"}
+{"text": "أخبرني برصيدي", "label": "balance", "style": "msa"}
+{"text": "settle the generator bill, 60k", "label": "pay_bill", "style": "en"}
+{"text": "استنى متدفعش، كنسل", "label": "cancel", "style": "egyptian"}
+{"text": "أرغب في إرسال نقود إلى صديقي عمر", "label": "transfer", "style": "msa"}
+{"text": "send 100 dollars to Turkey", "label": "unsupported", "style": "en"}
+{"text": "recharge my mom's Zain number with 10 thousand", "label": "topup", "style": "en"}
+{"text": "stupid bot 😡", "label": "chat", "style": "en_broken"}
+{"text": "احجزلي تذكرة طيارة عبيروت", "label": "unsupported", "style": "levantine"}
+{"text": "هل يمكنك دفع فاتورة الإنترنت الآن؟", "label": "pay_bill", "style": "msa"}
+{"text": "pay generater 45k", "label": "pay_bill", "style": "en_broken"}
+{"text": "كم تستغرق عملية التحويل حتى تصل؟", "label": "chat", "style": "msa"}
+{"text": "هل تقدمون قروضاً؟", "label": "chat", "style": "msa"}
+{"text": "transaction history", "label": "history", "style": "en"}
+{"text": "last 5 transactions please", "label": "history", "style": "en"}
+{"text": "wallet balance 💰", "label": "balance", "style": "en"}
+{"text": "need to pay the mwalda this month", "label": "pay_bill", "style": "en_names"}
+{"text": "الرجاء تسديد فاتورة الكهرباء، رقم الحساب 445566", "label": "pay_bill", "style": "msa"}
+{"text": "بدي عبي خطي زين بخمس آلاف", "label": "topup", "style": "levantine"}
+{"text": "don't pay", "label": "cancel", "style": "en"}
+{"text": "مرحبا، النت عنا رح يقطع بكرا اذا ما دفعنا، بدي ياك تدفعلي فاتورة النت هلأ", "label": "pay_bill", "style": "levantine"}
+{"text": "صباح الخير", "label": "chat", "style": "msa"}
+{"text": "ارسل الى 07501230000 مبلغ خمسة عشر الف دينار", "label": "transfer", "style": "msa_messy"}
+{"text": "ازيك عامل ايه", "label": "chat", "style": "egyptian"}
+{"text": "اريد ان ارى حركات حسابي", "label": "history", "style": "msa_messy"}
+{"text": "كم رصيدي حاليا لو سمحت", "label": "balance", "style": "msa_messy"}
+{"text": "بدي احفظ رقم لانا عندي", "label": "add_contact", "style": "levantine"}
+{"text": "whats left in my wallet", "label": "balance", "style": "en_broken"}
+{"text": "pay water bill", "label": "pay_bill", "style": "en"}
+{"text": "اشحن حق امي رصيد زين خمسة", "label": "topup", "style": "gulf"}
+{"text": "ابي اضيف رقم فهد", "label": "add_contact", "style": "gulf"}
+{"text": "اشحن الرقم 07811223300 بعشرة آلاف", "label": "topup", "style": "msa"}
+{"text": "ودي اسدد فاتورة النت الحين", "label": "pay_bill", "style": "gulf"}
+{"text": "سدد المولد لاهنت", "label": "pay_bill", "style": "gulf"}
+{"text": "احفظ الرقم ده باسم تامر", "label": "add_contact", "style": "egyptian"}
+{"text": "remember this number as Haider's", "label": "add_contact", "style": "en_names"}
+{"text": "بدي ابعت مصاري لأختي لانا", "label": "transfer", "style": "levantine"}
+{"text": "بدي قرض مليونين", "label": "unsupported", "style": "levantine"}
+{"text": "بدي جدد اشتراك النت", "label": "pay_bill", "style": "levantine"}
+{"text": "اريد دفع اجور المولدة الاهلية", "label": "pay_bill", "style": "msa_messy"}
+{"text": "ادفع خط الانترنت الارضي", "label": "pay_bill", "style": "msa_messy"}
+{"text": "سجّللي هالرقم باسم جورج", "label": "add_contact", "style": "levantine"}
+{"text": "withdraw 200k cash from ATM", "label": "unsupported", "style": "en"}
+{"text": "حوّل لإسماعيل ما قيمته ثمانون ألف دينار", "label": "transfer", "style": "msa"}
+{"text": "معاملاتي الاخيره", "label": "history", "style": "msa_messy"}
+{"text": "طرش لريم عشرين الف لاهنت", "label": "transfer", "style": "gulf"}
+{"text": "سدّد فاتورة الماء المتأخرة", "label": "pay_bill", "style": "msa"}
+{"text": "بدي اعرف قديش ضايل بحسابي", "label": "balance", "style": "levantine"}
+{"text": "اعرض رصيد المحفظة", "label": "balance", "style": "msa_messy"}
+{"text": "صباح الفل", "label": "chat", "style": "egyptian"}
+{"text": "pay the national electricity bill pls", "label": "pay_bill", "style": "en"}
+{"text": "تحويل الى سارة", "label": "transfer", "style": "msa_messy"}
+{"text": "Send Yasir his 90k", "label": "transfer", "style": "en_names"}
+{"text": "ودي ارسل فلوس لنوف", "label": "transfer", "style": "gulf"}
+{"text": "أريد إرسال المال إلى هذا الرقم 07809990011", "label": "transfer", "style": "msa"}
+{"text": "balance", "label": "balance", "style": "en"}
+{"text": "good morning", "label": "chat", "style": "en"}
+{"text": "اشحن رصيد الموبايل لزوجتي", "label": "topup", "style": "msa"}
+{"text": "السلام عليكم", "label": "chat", "style": "msa"}
+{"text": "charge korek 25k pls", "label": "topup", "style": "en_broken"}
+{"text": "هل تمت عملية الدفع السابقة؟", "label": "history", "style": "msa"}
+{"text": "لا ترسل المبلغ", "label": "cancel", "style": "msa"}
+{"text": "اريد ان احول لصاحب المحل ابو سمير سبعين الف", "label": "transfer", "style": "msa_messy"}
+{"text": "ارسل ل ماجد ١٢ الف دينار عراقي", "label": "transfer", "style": "msa_messy"}
+{"text": "trasnfer 35000 to Tariq asap", "label": "transfer", "style": "en_broken"}
+{"text": "أضف جهة اتصال جديدة", "label": "add_contact", "style": "msa"}
+{"text": "how are you", "label": "chat", "style": "en"}
+{"text": "الرصيد المتاح", "label": "balance", "style": "msa_messy"}
+{"text": "حوّل خمسين ألفاً لكل من أيمن ولؤي", "label": "transfer", "style": "msa"}
+{"text": "السلام عليكم، لو سمحت اريد ان ارسل الى اخي حسن مبلغ مئة وخمسين الف دينار اليوم قبل الظهر اذا ممكن", "label": "transfer", "style": "msa_messy"}
+{"text": "nvm cancel", "label": "cancel", "style": "en_broken"}
+{"text": "بدي حوّل لرامي خمسين ألف", "label": "transfer", "style": "levantine"}
+{"text": "هل خصم مبلغ شحن الرصيد امس؟", "label": "history", "style": "msa_messy"}
+{"text": "Send 5,000 IQD to the number ending 7788", "label": "transfer", "style": "en"}
+{"text": "ابي اشتري جوال جديد بالتقسيط", "label": "unsupported", "style": "gulf"}
+{"text": "ابي قرض ٣ مليون", "label": "unsupported", "style": "gulf"}
+{"text": "ممكن تبعت لنهى ٧٥ الف؟", "label": "transfer", "style": "egyptian"}
+{"text": "send dua 10 thousand dinars pls", "label": "transfer", "style": "en_broken"}
+{"text": "كم لدي من المال في المحفظة", "label": "balance", "style": "msa"}
+{"text": "top up", "label": "topup", "style": "en"}
+{"text": "can you pay my Sama Net bill?", "label": "pay_bill", "style": "en_names"}
+{"text": "send a waraqa to Abu Hasan", "label": "transfer", "style": "en_names"}
+{"text": "هل استلمت زينب المبلغ الذي أرسلته أمس؟", "label": "history", "style": "msa"}
+{"text": "اريد تسديد الفاتورة الشهرية للانترنت", "label": "pay_bill", "style": "msa_messy"}
+{"text": "recharg my sim 10 alf", "label": "topup", "style": "en_broken"}
+{"text": "ارسل ٢٥ الف الى يوسف", "label": "transfer", "style": "msa_messy"}
+{"text": "ماذا دفعت هذا الشهر", "label": "history", "style": "msa_messy"}
+{"text": "do u speak arabic", "label": "chat", "style": "en_broken"}
+{"text": "i changed my mind, cancel the transfer", "label": "cancel", "style": "en"}
+{"text": "ما اسمك؟", "label": "chat", "style": "msa_messy"}
+{"text": "وصلت المصاري لرامي؟", "label": "history", "style": "levantine"}
+{"text": "الغ الطلب", "label": "cancel", "style": "msa_messy"}
+{"text": "شكراً جزيلاً", "label": "chat", "style": "msa"}
+{"text": "اريد اضافة احمد الى جهات الاتصال", "label": "add_contact", "style": "msa_messy"}
+{"text": "who made you?", "label": "chat", "style": "en"}
+{"text": "احفظ لي رقم نوف 07509090123", "label": "add_contact", "style": "gulf"}
+{"text": "عب لي خط اسيا بخمسة الاف", "label": "topup", "style": "gulf"}
+{"text": "i want pay electric bill", "label": "pay_bill", "style": "en_broken"}
+{"text": "order me a pizza 🍕", "label": "unsupported", "style": "en"}
+{"text": "هل تستطيع تسديد اشتراك المولدة عني اليوم؟", "label": "pay_bill", "style": "msa"}
+{"text": "ارسل 20 الف لنور", "label": "transfer", "style": "msa_messy"}
+{"text": "can you send 30k to Hussein please?", "label": "transfer", "style": "en_names"}
+{"text": "did the 50k go through?", "label": "history", "style": "en"}
+{"text": "أريد أن أدفع ما عليّ من فاتورة الماء", "label": "pay_bill", "style": "msa"}
+{"text": "I want to add my brother Mustafa as a contact", "label": "add_contact", "style": "en_names"}
+{"text": "خلص ما بدي، لغيها", "label": "cancel", "style": "levantine"}
+{"text": "اضف رقم صاحب المولدة ابو كريم 07803330044", "label": "add_contact", "style": "msa_messy"}
+{"text": "لا تكمل", "label": "cancel", "style": "msa_messy"}
+{"text": "اريد سحب نقدي بدون بطاقة", "label": "unsupported", "style": "msa_messy"}
+{"text": "put 5k credit on my Asiacell", "label": "topup", "style": "en"}
+{"text": "حول لخالد 15 الف", "label": "transfer", "style": "msa_messy"}
+{"text": "فاضل كام في حسابي", "label": "balance", "style": "egyptian"}
+{"text": "حول من محفظتي الى محفظة ناصر مبلغ 200000", "label": "transfer", "style": "msa_messy"}
+{"text": "سدد لي الماء رجاء 💧", "label": "pay_bill", "style": "msa_messy"}
+{"text": "حول ٥٠٠ الف على رقم 07711110022 بسرعة", "label": "transfer", "style": "egyptian"}
+{"text": "حوّل لإيمان عشرين ألف دينار عاجل جداً", "label": "transfer", "style": "msa"}
+{"text": "لا تحول شيئا، الغِ", "label": "cancel", "style": "msa_messy"}
+{"text": "هل الخدمة آمنة؟", "label": "chat", "style": "msa_messy"}
+{"text": "ارجو دفع فاتورة الانترنت قبل ان ينقطع الخط", "label": "pay_bill", "style": "msa_messy"}
+{"text": "هل يمكنك شحن رصيد زين لي بألفي دينار؟", "label": "topup", "style": "msa"}
+{"text": "سدد الكهرباء ٧٩ الف دينار", "label": "pay_bill", "style": "msa_messy"}
+{"text": "وقّف، غيرت رأيي", "label": "cancel", "style": "levantine"}
+{"text": "اشتريلي بيتكوين بمية الف", "label": "unsupported", "style": "egyptian"}
+{"text": "thanks a lot!", "label": "chat", "style": "en"}
+{"text": "يسلمو كتير", "label": "chat", "style": "levantine"}
+{"text": "احجز لي فندقا في البصرة", "label": "unsupported", "style": "msa_messy"}
+{"text": "Please pay my internet bill", "label": "pay_bill", "style": "en"}
+{"text": "انتهى رصيدي في الهاتف، اشحن لي عشرة آلاف", "label": "topup", "style": "msa"}
+{"text": "what can you do?", "label": "chat", "style": "en"}
+{"text": "ابغى اشحن جوالي كورك", "label": "topup", "style": "gulf"}
+{"text": "اريد شراء ذهب عن طريق المحفظة", "label": "unsupported", "style": "msa_messy"}
+{"text": "حوّل المبلغ نفسه إلى بلال", "label": "transfer", "style": "msa"}
+{"text": "حوللها ١٥ الف، ياسمين اختي", "label": "transfer", "style": "egyptian"}
+{"text": "hold on, I think I typed the wrong amount, please don't send anything and cancel it", "label": "cancel", "style": "en"}
+{"text": "تداول لي بالعملات الرقمية", "label": "unsupported", "style": "msa_messy"}
+{"text": "did Sara get the money I sent yesterday?", "label": "history", "style": "en_names"}
+{"text": "تسديد فاتورة المولد عن شهر تشرين الأول", "label": "pay_bill", "style": "msa"}
+{"text": "مشكور ما قصرت", "label": "chat", "style": "gulf"}
+{"text": "شحن رصيد الهاتف ١٠ الاف", "label": "topup", "style": "msa_messy"}

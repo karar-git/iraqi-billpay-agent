@@ -1,0 +1,636 @@
+{"text": "تكدر تدفعلي المولدة؟", "label": "pay_bill", "style": "question_request"}
+{"text": "ممكن تسدد فاتورة الكهرباء مال هالشهر؟", "label": "pay_bill", "style": "question_request"}
+{"text": "يصير تجددلي اشتراك النت هسه؟", "label": "pay_bill", "style": "question_request"}
+{"text": "ما تدفع الماي وتخلصني؟", "label": "pay_bill", "style": "question_request"}
+{"text": "ليش ما تسدد الوطنية، مو كتلك؟", "label": "pay_bill", "style": "question_request"}
+{"text": "تدفعلي مولدة ابو كرار لو اروحله بنفسي؟", "label": "pay_bill", "style": "question_request"}
+{"text": "تسددلي فاتورة الماي من المحفظة؟", "label": "pay_bill", "style": "question_request"}
+{"text": "ادفع الكهرباء مو المولدة", "label": "pay_bill", "style": "negation"}
+{"text": "سدد النت بس، المولدة لا", "label": "pay_bill", "style": "negation"}
+{"text": "مو تحويل، اريد ادفع فاتورة الماي", "label": "pay_bill", "style": "negation"}
+{"text": "لا تشحن شي، بس ادفع اشتراك سما نت", "label": "pay_bill", "style": "negation"}
+{"text": "ادفع الوطنية وما اريد وصل ولا شي", "label": "pay_bill", "style": "negation"}
+{"text": "ما اريد ادز لأحد، بس خلصلي فاتورة المولدة", "label": "pay_bill", "style": "negation"}
+{"text": "لا تلغيها، ادفع الكهرباء مثل ما كلت", "label": "pay_bill", "style": "negation"}
+{"text": "مو باجر، ادفع الكهرباء اليوم", "label": "pay_bill", "style": "negation"}
+{"text": "جدد اشتراك النت مال البيت مو خط الموبايل", "label": "pay_bill", "style": "negation"}
+{"text": "غلط، قصدي فاتورة النت مو الماي، ادفعها", "label": "pay_bill", "style": "correction"}
+{"text": "لا مو مال الشهر الفات، ادفع كهرباء هالشهر", "label": "pay_bill", "style": "correction"}
+{"text": "كتلك ادفع مو دز! ادفع مولدة الفرع", "label": "pay_bill", "style": "correction"}
+{"text": "دز فاتورة الكهرباء، قصدي ادفعها", "label": "pay_bill", "style": "correction"}
+{"text": "ادفع النت ودز لحسن عشرين", "label": "pay_bill", "style": "two_requests"}
+{"text": "سدد الكهرباء وكلي شكد يبقى عندي", "label": "pay_bill", "style": "two_requests"}
+{"text": "ادفع المولدة واشحنلي اسيا بخمسة", "label": "pay_bill", "style": "two_requests"}
+{"text": "اول شي الماي ادفعه، وبعدين حول لأمي خمسين", "label": "pay_bill", "style": "two_requests"}
+{"text": "جدد النت وراويني آخر العمليات", "label": "pay_bill", "style": "two_requests"}
+{"text": "ادفع الكهرباء والمولدة سوية", "label": "pay_bill", "style": "two_requests"}
+{"text": "خلصلي الوطنية وبعدها النت وبعدها شوف الرصيد", "label": "pay_bill", "style": "two_requests"}
+{"text": "ابو المولدة راح يشلع الواير، ادفعله الاشتراك قبل لا نكعد بالظلمة", "label": "pay_bill", "style": "sarcasm"}
+{"text": "كهرباء ماكو وفاتورة اكو، يلا سددها شنسوي", "label": "pay_bill", "style": "sarcasm"}
+{"text": "النت سلحفاة بس ادفعه، شنو البديل", "label": "pay_bill", "style": "sarcasm"}
+{"text": "ماشاء الله الفاتورة تجي بوقتها مو مثل الكهرباء، ادفع الوطنية", "label": "pay_bill", "style": "sarcasm"}
+{"text": "كل شهر المولدة تغلى! ادفعها وخلاص", "label": "pay_bill", "style": "complaint"}
+{"text": "صار يومين النت مقطوع علمود الاشتراك، جدده بسرعة", "label": "pay_bill", "style": "complaint"}
+{"text": "انتو ليش تتأخرون، ادفع فاتورة الماي هسه", "label": "pay_bill", "style": "complaint"}
+{"text": "تعبت من هالفواتير، سدد الكهرباء", "label": "pay_bill", "style": "complaint"}
+{"text": "بسرعة ادفع المولدة راح يقطعون علينا", "label": "pay_bill", "style": "urgency"}
+{"text": "ضروري جدد النت الامتحان باجر", "label": "pay_bill", "style": "urgency"}
+{"text": "ادفع كهرباء شهر تسعة", "label": "pay_bill", "style": "period"}
+{"text": "سدد مولدة تشرين الاول", "label": "pay_bill", "style": "period"}
+{"text": "فاتورة النت مال الشهر الماضي ادفعها", "label": "pay_bill", "style": "period"}
+{"text": "ادفع الماي مال آب، بعدها ما مدفوعة", "label": "pay_bill", "style": "period"}
+{"text": "ادفع المولدة ٤٥ الف", "label": "pay_bill", "style": "amount_style"}
+{"text": "سدد الكهرباء بخمسين", "label": "pay_bill", "style": "amount_style"}
+{"text": "ادفع من النت عشرين هسه والباقي بعدين", "label": "pay_bill", "style": "amount_style"}
+{"text": "مولدة البيت 60k ادفعها", "label": "pay_bill", "style": "amount_style"}
+{"text": "ادفع الفاتورة مالتي", "label": "pay_bill", "style": "no_biller"}
+{"text": "عندي فواتير، ادفعهن", "label": "pay_bill", "style": "no_biller"}
+{"text": "سدد اللي عليّ من فواتير", "label": "pay_bill", "style": "no_biller"}
+{"text": "ادفع اشتراك دجلة نت", "label": "pay_bill", "style": "named"}
+{"text": "جدد نور نت شهر كامل", "label": "pay_bill", "style": "named"}
+{"text": "ادفع مولدة الحي عشر امبيرات", "label": "pay_bill", "style": "named"}
+{"text": "سدد امبيرات مولدة ابو زهراء", "label": "pay_bill", "style": "named"}
+{"text": "ادفع اسالة الماي", "label": "pay_bill", "style": "named"}
+{"text": "فاتورة الوطنية ادفعها من المحفظة", "label": "pay_bill", "style": "named"}
+{"text": "ادفعع المولده", "label": "pay_bill", "style": "typo"}
+{"text": "سدد الكهربا", "label": "pay_bill", "style": "typo"}
+{"text": "ادفع الانترنيت مالتي", "label": "pay_bill", "style": "typo"}
+{"text": "جددلي النيت", "label": "pay_bill", "style": "typo"}
+{"text": "edfa3 el mwalda", "label": "pay_bill", "style": "arabizi"}
+{"text": "sadded el kahraba2 hassa", "label": "pay_bill", "style": "arabizi"}
+{"text": "jadded el net mal hal shahar", "label": "pay_bill", "style": "arabizi"}
+{"text": "فدوة ادفعلي فاتورة الماي", "label": "pay_bill", "style": "polite"}
+{"text": "اذا ما عليك امر سددلي الكهرباء الوطنية", "label": "pay_bill", "style": "polite"}
+{"text": "هلو صباح الخير، ادفع المولدة عيني", "label": "pay_bill", "style": "greeting_then_request"}
+{"text": "مساء الخير، اريد اسدد النت", "label": "pay_bill", "style": "greeting_then_request"}
+{"text": "شكرا على الحوالة، هسه ادفع الكهرباء", "label": "pay_bill", "style": "thanks_then_request"}
+{"text": "عاشت ايدك عالشحن، هسه سدد الماي", "label": "pay_bill", "style": "thanks_then_request"}
+{"text": "دفعت الكهرباء، بقت المولدة ادفعها", "label": "pay_bill", "style": "past_then_request"}
+{"text": "المولدة مدفوعة ادري، ادفع النت", "label": "pay_bill", "style": "past_then_request"}
+{"text": "امم مدري ادفعها لو لا.. يلا ادفع المولدة", "label": "pay_bill", "style": "hesitant"}
+{"text": "جنت ناوي اجلها بس ادفع النت احسن", "label": "pay_bill", "style": "hesitant"}
+{"text": "اذا فاتورة الماي نزلت ادفعها", "label": "pay_bill", "style": "conditional_request"}
+{"text": "لو رصيدي يكفي سدد الكهرباء", "label": "pay_bill", "style": "conditional_request"}
+{"text": "اذا ادفع النت هسه يرجع اليوم؟ يلا ادفعه", "label": "pay_bill", "style": "conditional_request"}
+{"text": "ابو المولدة دك علينا الباب اليوم وكال آخر يوم، فادفع الاشتراك مال هالشهر هسه", "label": "pay_bill", "style": "long"}
+{"text": "امي تكول الكهرباء صارلها شهرين ما مدفوعة، ادفع القديمة اول", "label": "pay_bill", "style": "long"}
+{"text": "اه اريد ادفع اريد ادفع فاتورة الكهرباء اي الوطنية", "label": "pay_bill", "style": "voice_like"}
+{"text": "هلو اي المولدة ادفعها المولدة مال البيت", "label": "pay_bill", "style": "voice_like"}
+{"text": "ادفع النت 🙏🙏", "label": "pay_bill", "style": "emoji"}
+{"text": "المولدة 💡 ادفعها", "label": "pay_bill", "style": "emoji"}
+{"text": "can you pay my electricity bill?", "label": "pay_bill", "style": "question_request"}
+{"text": "could you renew the internet for this month please", "label": "pay_bill", "style": "question_request"}
+{"text": "would you mind paying the generator subscription?", "label": "pay_bill", "style": "question_request"}
+{"text": "pay the generator, not the electricity", "label": "pay_bill", "style": "negation"}
+{"text": "don't transfer anything, just pay the internet bill", "label": "pay_bill", "style": "negation"}
+{"text": "not last month's, pay this month's electricity", "label": "pay_bill", "style": "correction"}
+{"text": "pay my water bill and then send 20k to Ali", "label": "pay_bill", "style": "two_requests"}
+{"text": "ugh the power is out again but fine, pay the electricity bill", "label": "pay_bill", "style": "sarcasm"}
+{"text": "pay the generator bill for September", "label": "pay_bill", "style": "period"}
+{"text": "settle my bills pls", "label": "pay_bill", "style": "no_biller"}
+{"text": "pay teh internet bil", "label": "pay_bill", "style": "typo"}
+{"text": "the generator bill is due today, pay it now", "label": "pay_bill", "style": "urgency"}
+{"text": "is my water bill ready? if so pay it", "label": "pay_bill", "style": "conditional_request"}
+{"text": "hello, I'd like to pay the national electricity bill", "label": "pay_bill", "style": "greeting_then_request"}
+{"text": "pay internet 25000", "label": "pay_bill", "style": "amount_style"}
+{"text": "هل يمكنك دفع فاتورة الكهرباء؟", "label": "pay_bill", "style": "question_request"}
+{"text": "هل بإمكانك تسديد فاتورة الكهرباء للشهر الماضي؟", "label": "pay_bill", "style": "question_request"}
+{"text": "أريد تسديد فاتورة الماء لهذا الشهر", "label": "pay_bill", "style": "polite"}
+{"text": "أرجو تجديد اشتراك الإنترنت اليوم", "label": "pay_bill", "style": "polite"}
+{"text": "أود دفع اشتراك الإنترنت المنزلي", "label": "pay_bill", "style": "polite"}
+{"text": "ادفع فاتورة المولدة وليس فاتورة الكهرباء", "label": "pay_bill", "style": "negation"}
+{"text": "لا أريد تحويلاً، أريد فقط دفع فاتورة الماء", "label": "pay_bill", "style": "negation"}
+{"text": "ليس الماء، أقصد فاتورة الكهرباء، سدّدها", "label": "pay_bill", "style": "correction"}
+{"text": "سدّد فاتورة الإنترنت ثم حوّل إلى أخي عشرين ألفاً", "label": "pay_bill", "style": "two_requests"}
+{"text": "الفواتير ترتفع كل شهر، لكن سدّد فاتورة المولدة من فضلك", "label": "pay_bill", "style": "complaint"}
+{"text": "عاجل، ادفع فاتورة الكهرباء قبل أن تُقطع الخدمة", "label": "pay_bill", "style": "urgency"}
+{"text": "ادفع فاتورة شهر أيلول للماء", "label": "pay_bill", "style": "period"}
+{"text": "إن كانت فاتورة المولدة قد صدرت فادفعها", "label": "pay_bill", "style": "conditional_request"}
+{"text": "مرحباً، أريد دفع فواتيري المستحقة", "label": "pay_bill", "style": "greeting_then_request"}
+{"text": "حول فلوس النت للشركة، يعني جدد الاشتراك", "label": "pay_bill", "style": "sounds_like_transfer"}
+{"text": "عبي اشتراك المولدة مال هالشهر، قصدي ادفعه", "label": "pay_bill", "style": "sounds_like_topup"}
+{"text": "oh great, another bill. pay the water one", "label": "pay_bill", "style": "sarcasm"}
+{"text": "لا تشحن الهاتف، سدّد فاتورة الإنترنت فقط", "label": "pay_bill", "style": "negation"}
+{"text": "تكدر تدز لمرتضى خمسين الف؟", "label": "transfer", "style": "question_request"}
+{"text": "ممكن تحوللي لسجاد مية؟", "label": "transfer", "style": "question_request"}
+{"text": "يصير تدز لأم علي ٢٥ الف هسه؟", "label": "transfer", "style": "question_request"}
+{"text": "تدزلي لحيدر ربع مليون لو لا؟", "label": "transfer", "style": "question_request"}
+{"text": "شنو رأيك تحول لكرار ميتين وتخلصني؟", "label": "transfer", "style": "question_request"}
+{"text": "ما تدز لزينب خمسطعش الف؟", "label": "transfer", "style": "question_request"}
+{"text": "ليش ما تحول لعباس الخمسين اللي كتلك عليها؟", "label": "transfer", "style": "question_request"}
+{"text": "تحوللي لنور ٦٠ الف من رخصتك؟", "label": "transfer", "style": "question_request"}
+{"text": "تكدر تدزلي لأحمد الحلة عشرين هسه لو مشغول؟", "label": "transfer", "style": "question_request"}
+{"text": "اكدر اتعبك؟ دز لخالي ابو ياسر ٩٠ الف", "label": "transfer", "style": "question_request"}
+{"text": "مو لمصطفى، قصدي لمنتظر دز ٣٠ الف", "label": "transfer", "style": "correction"}
+{"text": "لا لا مو خمسين، دز لنور مية الف", "label": "transfer", "style": "correction"}
+{"text": "غلطت بالاسم، حول لفراس مو لفارس، اربعين الف", "label": "transfer", "style": "correction"}
+{"text": "كتلك حول مو اشحن! حول لليث عشرين", "label": "transfer", "style": "correction"}
+{"text": "مو باجر، اليوم دز لمهند السبعين", "label": "transfer", "style": "correction"}
+{"text": "دز لياسر فلوس مو رصيد، عشرة الاف", "label": "transfer", "style": "negation"}
+{"text": "حول لهدى خمسين بس لا تدفع شي ثاني", "label": "transfer", "style": "negation"}
+{"text": "مو فاتورة ولا شحن، بس اريد ادز لوسام ٧٥ الف", "label": "transfer", "style": "negation"}
+{"text": "ما اريد اشحن، اريد احول لمهند ٢٠ الف", "label": "transfer", "style": "negation"}
+{"text": "دز لقاسم مية وخمسين، ولا تسألني مرة ثانية", "label": "transfer", "style": "negation"}
+{"text": "لا تلغي شي، كمل ودز لبنين الثلاثين", "label": "transfer", "style": "negation"}
+{"text": "خلي الفاتورة بعدين، اول شي دز لأبوي ٩٠ الف", "label": "transfer", "style": "negation"}
+{"text": "دز لعمر عشرة الاف فلوس مو كارت", "label": "transfer", "style": "negation"}
+{"text": "حول لزهراء خمسة، فلوس بالمحفظة مو رصيد خط", "label": "transfer", "style": "negation"}
+{"text": "دز لسيف خمسين وبعدين ادفع المولدة", "label": "transfer", "style": "two_requests"}
+{"text": "حول لرقية ٤٠ الف وشوفلي شكد يبقى", "label": "transfer", "style": "two_requests"}
+{"text": "دز لأمير مية واشحنلي زين بخمسة", "label": "transfer", "style": "two_requests"}
+{"text": "حول لجاسم عشرين الف واحفظ رقمه بالمرة", "label": "transfer", "style": "two_requests"}
+{"text": "دز لفاطمة خمسة وعشرين وكلي آخر عملياتي", "label": "transfer", "style": "two_requests"}
+{"text": "اول شي دز لباقر ستين، ثاني شي سدد النت", "label": "transfer", "style": "two_requests"}
+{"text": "حول لكاظم نص مليون وعبي كورك لابني بعشرة", "label": "transfer", "style": "two_requests"}
+{"text": "دز لعباس وعلي كل واحد خمسين", "label": "transfer", "style": "two_requests"}
+{"text": "يلا يا عبقري، دز لمؤمل خمسين قبل لا يصير العيد", "label": "transfer", "style": "sarcasm"}
+{"text": "اذا ما عندك مانع يعني، تفضل علينا وحول ليوسف ٣٠ الف", "label": "transfer", "style": "sarcasm"}
+{"text": "صارلي ساعة اكتب، دز لابراهيم مية الف وفضها", "label": "transfer", "style": "sarcasm"}
+{"text": "لو ما تأخرت جان وصلت من زمان، يلا حول لكرار ٧٠ الف", "label": "transfer", "style": "sarcasm"}
+{"text": "النت يقطع عندي وكل شوية اعيد، دز لسارة ٤٥ الف", "label": "transfer", "style": "complaint"}
+{"text": "مليت والله، كم مرة اكولك حول لداود عشرين الف", "label": "transfer", "style": "complaint"}
+{"text": "البارحة ما رضت تتحول، هسه دز لثامر خمسين الف من جديد", "label": "transfer", "style": "complaint"}
+{"text": "كل مرة تسألني نفس السؤال! دز لأم سجاد ٣٥ الف وخلاص", "label": "transfer", "style": "complaint"}
+{"text": "ضروري ضروري دز لرعد مليون هسه بالمستشفى", "label": "transfer", "style": "urgency"}
+{"text": "بسرعة حول لضياء ٢٠٠ الف الله يخليك", "label": "transfer", "style": "urgency"}
+{"text": "هسه هسه دز لأختي خمسين واكفة بالصيدلية", "label": "transfer", "style": "urgency"}
+{"text": "دززز لبشير ٥٠ الف", "label": "transfer", "style": "typo"}
+{"text": "حوول ل نبيل ميه الف", "label": "transfer", "style": "typo"}
+{"text": "دز لهادى خمسيين", "label": "transfer", "style": "typo"}
+{"text": "حولي لمصطفي عشرين الفف", "label": "transfer", "style": "typo"}
+{"text": "dez l majed 50 alf", "label": "transfer", "style": "arabizi"}
+{"text": "7awel l ra2ed 100 alf hassa", "label": "transfer", "style": "arabizi"}
+{"text": "momkin tdiz l ghaith 25?", "label": "transfer", "style": "arabizi"}
+{"text": "areed a7awel l sajad 30 alf mo raseed", "label": "transfer", "style": "arabizi"}
+{"text": "دز لأيمن ورقة", "label": "transfer", "style": "amount_style"}
+{"text": "حول لأنس ورقتين اليوم", "label": "transfer", "style": "amount_style"}
+{"text": "دز لبلال دفتر", "label": "transfer", "style": "amount_style"}
+{"text": "ابعث لطه 50k", "label": "transfer", "style": "amount_style"}
+{"text": "حول لحمزة ٧٥٠٠٠", "label": "transfer", "style": "amount_style"}
+{"text": "دز لدعاء مليون ونص", "label": "transfer", "style": "amount_style"}
+{"text": "انطي لشهد ربع مليون من المحفظة", "label": "transfer", "style": "amount_style"}
+{"text": "حول لهاي الرقم 07820004455 خمسطعش الف", "label": "transfer", "style": "amount_style"}
+{"text": "دز فلوس لغدير", "label": "transfer", "style": "no_amount"}
+{"text": "اريد احول لريم", "label": "transfer", "style": "no_amount"}
+{"text": "حول خمسين الف", "label": "transfer", "style": "no_payee"}
+{"text": "اريد ادز مية بس ما ادري الرقم محفوظ لو لا", "label": "transfer", "style": "no_payee"}
+{"text": "دز لأمي مصرف البيت ميتين", "label": "transfer", "style": "relation"}
+{"text": "حول لأخوي الصغير خمسة وعشرين، مصروف الجامعة", "label": "transfer", "style": "relation"}
+{"text": "دز لمرتي ١٠٠ الف للسوق", "label": "transfer", "style": "relation"}
+{"text": "ابعث لخالتي خمسين عيدية", "label": "transfer", "style": "relation"}
+{"text": "حول لعمي ابو حسين مية وخمسين", "label": "transfer", "style": "relation"}
+{"text": "دز لعلاوي ابن عمي خمسين", "label": "transfer", "style": "relation"}
+{"text": "دز خمسين الف على 07700001111", "label": "transfer", "style": "number"}
+{"text": "حول ٣٠ الف للرقم 07811223344 مال الصباغ", "label": "transfer", "style": "number"}
+{"text": "ابعث عشرة الاف لهذا 07509990001", "label": "transfer", "style": "number"}
+{"text": "رجع لرنا العشرين اللي داينتها منها", "label": "transfer", "style": "sounds_like_bill"}
+{"text": "سدد دين سهى، خمسين الف دزها الها", "label": "transfer", "style": "sounds_like_bill"}
+{"text": "ادفع لابو سيف اجار البيت ٤٠٠ الف", "label": "transfer", "style": "sounds_like_bill"}
+{"text": "دز لوفاء حق الخياطة ١٥ الف", "label": "transfer", "style": "sounds_like_bill"}
+{"text": "انطي لابو الغاز ٨ الاف من المحفظة", "label": "transfer", "style": "sounds_like_bill"}
+{"text": "شكرا على البارحة، هسه دز لآية ٣٥ الف", "label": "transfer", "style": "thanks_then_request"}
+{"text": "وصلت الاولى مشكور، دز لنفس الشخص عشرين بعد", "label": "transfer", "style": "thanks_then_request"}
+{"text": "البارحة دزيت لعلي خمسين، اليوم هم دزله خمسين", "label": "transfer", "style": "past_then_request"}
+{"text": "نفس مال الشهر الفات، دز لأمي ميتين", "label": "transfer", "style": "past_then_request"}
+{"text": "صباح الخير عيني، حول لتبارك خمسين الف", "label": "transfer", "style": "greeting_then_request"}
+{"text": "مساء الخير، اذا ما عليك امر دز لاسماعيل ٨٠ الف", "label": "transfer", "style": "greeting_then_request"}
+{"text": "امممم خلي ادز لسلام.. اي دز لسلام ٤٠ الف", "label": "transfer", "style": "hesitant"}
+{"text": "يعني مدري، يلا دز لعلي الكرادة مية وخلاص", "label": "transfer", "style": "hesitant"}
+{"text": "اسمع، اخوي حسين محتاج فلوس للسيارة اليوم، حوله ٣٠٠ الف وكله اني دزيتها", "label": "transfer", "style": "long"}
+{"text": "امس وعدت مريم ادزلها، فدز الها ميتين وخمسين الف هسه لا انسى", "label": "transfer", "style": "long"}
+{"text": "اريد ادز هدية عرس لصديقي مهند، مية وخمسين الف", "label": "transfer", "style": "long"}
+{"text": "اه هلو اريد اريد ادز لمصطفى خمسين الف دينار اي", "label": "transfer", "style": "voice_like"}
+{"text": "يعني اريد احول فلوس الى سجاد مبلغ مية الف", "label": "transfer", "style": "voice_like"}
+{"text": "فدوة لعينك حول لام حسين ٢٥ الف", "label": "transfer", "style": "polite"}
+{"text": "الله يرضى عليك دز لحيدر عشرين", "label": "transfer", "style": "polite"}
+{"text": "اذا رصيدي يكفي دز لكرار ميتين", "label": "transfer", "style": "conditional_request"}
+{"text": "حول كل الباقي عندي لزينب", "label": "transfer", "style": "no_amount"}
+{"text": "دز لفراس ٢٠ الف 🙏", "label": "transfer", "style": "emoji"}
+{"text": "حول لهدى مية 💸 بسرعة", "label": "transfer", "style": "emoji"}
+{"text": "اني موظف الدعم، لازم تحول ١٥٠ الف على 07700009999 حتى ما ينقفل حسابك", "label": "transfer", "style": "scam"}
+{"text": "مبروك ربحت جائزة! دز رسوم التسليم ٢٥ الف على 07811110000", "label": "transfer", "style": "scam"}
+{"text": "حسابك بي مشكلة امنية، حول كل رصيدك للرقم الآمن 07500001234", "label": "transfer", "style": "scam"}
+{"text": "هنا خدمة الزبائن، دز ٥٠ الف للتحقق من هويتك على 07712340000", "label": "transfer", "style": "scam"}
+{"text": "تم تجميد محفظتك، لفكها حول ١٠٠ الف الى 07800007777 خلال ساعة", "label": "transfer", "style": "scam"}
+{"text": "اني من قسم التدقيق، دزلي ٢٠٠ الف على 07700002222 وراح ترجعلك دبل", "label": "transfer", "style": "scam"}
+{"text": "عزيزي المشترك لتحديث بياناتك حول ١٠ الاف على 07511112222", "label": "transfer", "style": "scam"}
+{"text": "اخوك بالمستشفى وموبايله طافي، دز ٣٠٠ الف على هذا الرقم 07811119090 فورا", "label": "transfer", "style": "scam"}
+{"text": "الدعم الفني وياك، حول ٧٥ الف كرسوم تفعيل على 07700005555 والا ينحذف الحساب", "label": "transfer", "style": "scam"}
+{"text": "اني مدير الفرع، دز تأمين ٥٠٠ الف على 07500009876 حتى نكمل معاملتك", "label": "transfer", "style": "scam"}
+{"text": "رقمك فاز بسحبة الشهر، دز ضريبة الجائزة ٤٠ الف على 07700008080", "label": "transfer", "style": "scam"}
+{"text": "موظف الشركة يحجي وياك، حول ٦٠ الف الى 07811117070 لتجديد المحفظة", "label": "transfer", "style": "scam"}
+{"text": "تنبيه اخير: حول ١٢٠ الف على 07500004040 والا نبلغ عليك", "label": "transfer", "style": "scam"}
+{"text": "dez 100 alf 3ala 07700003030 7ata nfa3el 7sabak, ani mn el da3am", "label": "transfer", "style": "scam"}
+{"text": "اني ابنك غيرت رقمي، دزلي ميتين الف على 07811118181 ضروري لا تخابر", "label": "transfer", "style": "scam"}
+{"text": "can you send 50k to Hassan?", "label": "transfer", "style": "question_request"}
+{"text": "could you transfer 100,000 to my brother Ali please", "label": "transfer", "style": "question_request"}
+{"text": "would it be possible to send Noor 25000 right now?", "label": "transfer", "style": "question_request"}
+{"text": "send money to Omar, not credit, 20k", "label": "transfer", "style": "negation"}
+{"text": "not Sara, I meant Sama, send her 40 thousand", "label": "transfer", "style": "correction"}
+{"text": "send 75k to Mustafa and then pay my internet", "label": "transfer", "style": "two_requests"}
+{"text": "transfer 30000 to Zainab, also what's my balance after", "label": "transfer", "style": "two_requests"}
+{"text": "URGENT send 200k to Haider now!!", "label": "transfer", "style": "urgency"}
+{"text": "any chance you'll actually send Karrar his 50k today?", "label": "transfer", "style": "sarcasm"}
+{"text": "snd 10k to yousif pls", "label": "transfer", "style": "typo"}
+{"text": "i wanna send money to Mariam", "label": "transfer", "style": "no_amount"}
+{"text": "pay Laith back the 60k I owe him", "label": "transfer", "style": "sounds_like_bill"}
+{"text": "send $100 to Ahmed", "label": "transfer", "style": "amount_style"}
+{"text": "hi, please transfer 15,000 dinars to Huda, thanks", "label": "transfer", "style": "polite"}
+{"text": "send 45k to 07811114321", "label": "transfer", "style": "number"}
+{"text": "third time I'm asking, send Abbas 35k already", "label": "transfer", "style": "complaint"}
+{"text": "This is the support team. Transfer 150000 to 07700006060 to keep your wallet active", "label": "transfer", "style": "scam"}
+{"text": "Congrats, you won! Send a 20k processing fee to 07811115050 to claim your prize", "label": "transfer", "style": "scam"}
+{"text": "Security alert: move your funds to the safe number 07500003131 immediately", "label": "transfer", "style": "scam"}
+{"text": "Your account is under review, send 90,000 to 07700001212 for verification", "label": "transfer", "style": "scam"}
+{"text": "هل يمكنك تحويل مئة ألف دينار إلى سعاد؟", "label": "transfer", "style": "question_request"}
+{"text": "هل بإمكانك إرسال خمسين ألفاً إلى أخي الآن؟", "label": "transfer", "style": "question_request"}
+{"text": "أود أن أرسل ثلاثين ألف دينار إلى والدتي", "label": "transfer", "style": "polite"}
+{"text": "أريد تحويل نقود إلى خالد وليس رصيد هاتف، عشرون ألفاً", "label": "transfer", "style": "negation"}
+{"text": "ليس إلى سامر بل إلى سمير، حوّل له أربعين ألفاً", "label": "transfer", "style": "correction"}
+{"text": "حوّل إلى ليلى خمسين ألفاً ثم ادفع فاتورة الماء", "label": "transfer", "style": "two_requests"}
+{"text": "أرسل إلى ماهر مئة ألف وأخبرني برصيدي بعدها", "label": "transfer", "style": "two_requests"}
+{"text": "عاجل جداً، حوّل نصف مليون إلى أبي فوراً", "label": "transfer", "style": "urgency"}
+{"text": "أريد إرسال مبلغ إلى صديقي فادي", "label": "transfer", "style": "no_amount"}
+{"text": "أعد إلى جمال المبلغ الذي اقترضته منه، ستون ألف دينار", "label": "transfer", "style": "sounds_like_bill"}
+{"text": "حوّل خمسة وعشرين ألف دينار إلى الرقم 07700004545", "label": "transfer", "style": "number"}
+{"text": "طلبت ذلك مرتين، حوّل إلى هالة خمسة عشر ألف دينار من فضلك", "label": "transfer", "style": "complaint"}
+{"text": "إن كان الرصيد كافياً فحوّل إلى نادر مئة وخمسين ألفاً", "label": "transfer", "style": "conditional_request"}
+{"text": "هل ستحوّل إلى رامي الأربعين ألفاً اليوم أم ننتظر العام القادم؟", "label": "transfer", "style": "sarcasm"}
+{"text": "نحن فريق الدعم، يجب تحويل ١٠٠ ألف دينار إلى الرقم 07811116767 لتفعيل حسابك", "label": "transfer", "style": "scam"}
+{"text": "تهانينا لقد فزت، أرسل رسوم الاستلام ٣٠ ألف دينار إلى 07500002323", "label": "transfer", "style": "scam"}
+{"text": "تم إيقاف محفظتك مؤقتاً، حوّل ٧٠ ألفاً إلى الرقم 07700009191 لإعادة التفعيل", "label": "transfer", "style": "scam"}
+{"text": "تكدر تشحنلي زين بخمسة؟", "label": "topup", "style": "question_request"}
+{"text": "ممكن تعبيلي اسيا ابو العشرة؟", "label": "topup", "style": "question_request"}
+{"text": "يصير تشحن خط امي كورك بخمس تالاف؟", "label": "topup", "style": "question_request"}
+{"text": "ما تعبيلي رصيد؟ خطي صفر", "label": "topup", "style": "question_request"}
+{"text": "رصيد مو فلوس، دز لأخوي رصيد زين بعشرة", "label": "topup", "style": "negation"}
+{"text": "اريد كارت اسيا مو تحويل، ابو الخمسة", "label": "topup", "style": "negation"}
+{"text": "لا تدفع فاتورة، بس اشحن خطي كورك بعشرة", "label": "topup", "style": "negation"}
+{"text": "مو لخطي، اشحن خط ابوي زين ٢٥ الف", "label": "topup", "style": "negation"}
+{"text": "غلط مو زين، اشحن اسيا بعشرة", "label": "topup", "style": "correction"}
+{"text": "لا مو بخمسة، عبيها بعشرة كورك", "label": "topup", "style": "correction"}
+{"text": "اشحن زين بعشرة ودز لعلي خمسين", "label": "topup", "style": "two_requests"}
+{"text": "عبيلي اسيا بخمسة وادفع النت", "label": "topup", "style": "two_requests"}
+{"text": "اشحن خطي وكلي شكد يبقى بالمحفظة", "label": "topup", "style": "two_requests"}
+{"text": "كارت كورك ابو العشرة الي، وكارت زين ابو الخمسة لمرتي", "label": "topup", "style": "two_requests"}
+{"text": "خلص رصيدي واني اكتبلك، اشحن زين بخمسة قبل لا انقطع", "label": "topup", "style": "sarcasm"}
+{"text": "الشركة تاكل الرصيد اكل، عبيلي اسيا بعشرة مرة ثانية", "label": "topup", "style": "sarcasm"}
+{"text": "كل يومين يخلص الرصيد! اشحن كورك بخمسة", "label": "topup", "style": "complaint"}
+{"text": "البارحة شحنت وما كفى، اشحن زين بخمسة من جديد", "label": "topup", "style": "complaint"}
+{"text": "بسرعة عبيلي رصيد اريد اخابر ضروري", "label": "topup", "style": "urgency"}
+{"text": "خطي راح ينقطع اشحنه زين عشرة هسه", "label": "topup", "style": "urgency"}
+{"text": "دز رصيد لبنتي اسيا بخمسة", "label": "topup", "style": "sounds_like_transfer"}
+{"text": "حول رصيد كورك لسجاد بعشرة الاف", "label": "topup", "style": "sounds_like_transfer"}
+{"text": "ابعث لحيدر رصيد زين ابو الخمسة", "label": "topup", "style": "sounds_like_transfer"}
+{"text": "رصيد اسيا بـ ١٥ الف لخطي", "label": "topup", "style": "amount_style"}
+{"text": "كارت زين ابو ال٢٥", "label": "topup", "style": "amount_style"}
+{"text": "اريد كارتين اسيا ابو الخمسة", "label": "topup", "style": "amount_style"}
+{"text": "عبيلي كارت ابو العشرة", "label": "topup", "style": "no_operator"}
+{"text": "اشحن خطي", "label": "topup", "style": "no_operator"}
+{"text": "عبي خط البيت بعشرة", "label": "topup", "style": "no_operator"}
+{"text": "اشحن الرقم 07800003333 بخمسة الاف", "label": "topup", "style": "number"}
+{"text": "عبي هذا الخط 07700007070 اسيا عشرة", "label": "topup", "style": "number"}
+{"text": "اشحنن زين بخمسه", "label": "topup", "style": "typo"}
+{"text": "عبيلي اسياسل ب10", "label": "topup", "style": "typo"}
+{"text": "esh7an zain b 5 alaf", "label": "topup", "style": "arabizi"}
+{"text": "3abili asia abu el 10", "label": "topup", "style": "arabizi"}
+{"text": "فدوة اشحنلي كورك بخمسة", "label": "topup", "style": "polite"}
+{"text": "هلو، اشحن خط مرتي اسيا بعشرة", "label": "topup", "style": "greeting_then_request"}
+{"text": "اي اريد اشحن اشحن رصيد زين خمسة الاف لخطي", "label": "topup", "style": "voice_like"}
+{"text": "اشحن زين ١٠ 📱", "label": "topup", "style": "emoji"}
+{"text": "ابني بالجامعة ورصيده خلص وما يكدر يخابر، عبيله اسيا بعشرة هسه", "label": "topup", "style": "long"}
+{"text": "اشحن لأمي زين بخمسة مثل كل شهر", "label": "topup", "style": "relation"}
+{"text": "can you top up my Zain line with 10k?", "label": "topup", "style": "question_request"}
+{"text": "recharge my Korek number, 5000 please", "label": "topup", "style": "polite"}
+{"text": "top up Asiacell 10,000 not a transfer", "label": "topup", "style": "negation"}
+{"text": "I'm out of credit again, top up Zain 5k", "label": "topup", "style": "complaint"}
+{"text": "top up my mom's Asiacell with 15k then pay the internet", "label": "topup", "style": "two_requests"}
+{"text": "send my brother 10k of Korek credit", "label": "topup", "style": "sounds_like_transfer"}
+{"text": "could you recharge 07811116000 with 5000 Zain?", "label": "topup", "style": "number"}
+{"text": "topup zain 25k plz", "label": "topup", "style": "typo"}
+{"text": "أريد شحن خطي آسياسيل بخمسة آلاف", "label": "topup", "style": "polite"}
+{"text": "أرجو تعبئة رصيد كورك لهاتف والدي بعشرة آلاف", "label": "topup", "style": "polite"}
+{"text": "اشحن رصيد الهاتف وليس تحويلاً مالياً، زين بخمسة آلاف", "label": "topup", "style": "negation"}
+{"text": "انتهى رصيدي مجدداً، اشحن آسياسيل بخمسة عشر ألفاً", "label": "topup", "style": "complaint"}
+{"text": "اشحن خط زوجتي بعشرة آلاف ثم ادفع فاتورة الماء", "label": "topup", "style": "two_requests"}
+{"text": "هل بإمكانك إرسال رصيد كورك بخمسة آلاف إلى أخي؟", "label": "topup", "style": "sounds_like_transfer"}
+{"text": "ليس زين، أقصد شحن آسياسيل بعشرة آلاف", "label": "topup", "style": "correction"}
+{"text": "مدري اشحن لو لا.. يلا عبيلي كورك بخمسة", "label": "topup", "style": "hesitant"}
+{"text": "شكرا عالتحويل، هسه اشحنلي اسيا بعشرة", "label": "topup", "style": "thanks_then_request"}
+{"text": "لا تحول لسجاد فلوس، اشحنله خطه زين بخمسة", "label": "topup", "style": "negation"}
+{"text": "اذا بقى عندي شي اشحن خطي زين بخمسة", "label": "topup", "style": "conditional_request"}
+{"text": "خطي كورك فصل، تعبيه بعشرة؟", "label": "topup", "style": "question_request"}
+{"text": "شكد عندي؟", "label": "balance", "style": "plain"}
+{"text": "رصيدي؟", "label": "balance", "style": "plain"}
+{"text": "شكد باقي بالمحفظة", "label": "balance", "style": "plain"}
+{"text": "رصيدي شكد صار؟", "label": "balance", "style": "plain"}
+{"text": "جم عندي بالحساب؟", "label": "balance", "style": "plain"}
+{"text": "اشكد المتوفر عندي", "label": "balance", "style": "plain"}
+{"text": "شكد فلوسي هسه", "label": "balance", "style": "plain"}
+{"text": "الرصيد", "label": "balance", "style": "plain"}
+{"text": "باقيلي شي لو صفرت؟", "label": "balance", "style": "sarcasm"}
+{"text": "المحفظة بيها فلوس لو مفلسة مثلي؟ 😂", "label": "balance", "style": "sarcasm"}
+{"text": "اكيد صفر، بس راويني الرصيد", "label": "balance", "style": "sarcasm"}
+{"text": "قبل لا ادز شي، شكد عندي هسه؟", "label": "balance", "style": "negation"}
+{"text": "لا تدز ولا تدفع، بس كلي شكد رصيدي", "label": "balance", "style": "negation"}
+{"text": "مو رصيد الخط، رصيد المحفظة شكد؟", "label": "balance", "style": "negation"}
+{"text": "ما اريد كشف، بس الرصيد", "label": "balance", "style": "negation"}
+{"text": "شوفلي الرصيد وبعدين ادفع النت", "label": "balance", "style": "two_requests"}
+{"text": "كلي شكد عندي واذا يكفي دز لعلي مية", "label": "balance", "style": "two_requests"}
+{"text": "شكد بالمحفظة؟ وشنو آخر عملية؟", "label": "balance", "style": "two_requests"}
+{"text": "يعني هسه شكد صار عندي بعد كل هالدفع؟", "label": "balance", "style": "complaint"}
+{"text": "امس جان عندي اكثر! شكد الرصيد هسه؟", "label": "balance", "style": "complaint"}
+{"text": "ليش احس فلوسي تنقص، شكد عندي بالضبط؟", "label": "balance", "style": "complaint"}
+{"text": "عندي فلوس تكفي للمولدة؟", "label": "balance", "style": "hypothetical"}
+{"text": "تكدر تكلي شكد عندي؟", "label": "balance", "style": "question_request"}
+{"text": "ممكن اعرف رصيد محفظتي؟", "label": "balance", "style": "question_request"}
+{"text": "شكد رصيدييي", "label": "balance", "style": "typo"}
+{"text": "شقد عندي بالمحفضه", "label": "balance", "style": "typo"}
+{"text": "shgad 3endi?", "label": "balance", "style": "arabizi"}
+{"text": "rasidi shgad sar", "label": "balance", "style": "arabizi"}
+{"text": "هلو شلونك، شكد عندي بالمحفظة؟", "label": "balance", "style": "greeting_then_request"}
+{"text": "شكرا وصلت، هسه شكد بقى عندي؟", "label": "balance", "style": "thanks_then_request"}
+{"text": "بسرعة شكد عندي اريد اعرف قبل لا اطلع للسوق", "label": "balance", "style": "urgency"}
+{"text": "اي اريد اعرف الرصيد مالتي شكد", "label": "balance", "style": "voice_like"}
+{"text": "شكد عندي 💰؟", "label": "balance", "style": "emoji"}
+{"text": "فلوسي بعدها موجودة؟ شكد المبلغ", "label": "balance", "style": "complaint"}
+{"text": "what's my balance?", "label": "balance", "style": "plain"}
+{"text": "how much do I have left?", "label": "balance", "style": "plain"}
+{"text": "don't send anything yet, just tell me my balance", "label": "balance", "style": "negation"}
+{"text": "balance pls", "label": "balance", "style": "typo"}
+{"text": "do I have enough for the generator bill?", "label": "balance", "style": "hypothetical"}
+{"text": "check my balance and then pay the internet", "label": "balance", "style": "two_requests"}
+{"text": "am I broke or is there anything left in the wallet lol", "label": "balance", "style": "sarcasm"}
+{"text": "كم رصيدي الآن؟", "label": "balance", "style": "plain"}
+{"text": "هل يمكنك إخباري بالمبلغ المتوفر في محفظتي؟", "label": "balance", "style": "question_request"}
+{"text": "لا أريد أي تحويل، فقط أخبرني كم بقي لدي", "label": "balance", "style": "negation"}
+{"text": "ما هو الرصيد المتاح حالياً؟", "label": "balance", "style": "plain"}
+{"text": "أخبرني برصيدي ثم ادفع فاتورة الكهرباء", "label": "balance", "style": "two_requests"}
+{"text": "كم تبقى في المحفظة بعد عملياتي الأخيرة؟", "label": "balance", "style": "complaint"}
+{"text": "مو العمليات، كتلك الرصيد شكد", "label": "balance", "style": "correction"}
+{"text": "قبل أن أقرر، كم يوجد في محفظتي؟", "label": "balance", "style": "hesitant"}
+{"text": "بطلت", "label": "cancel", "style": "takeback"}
+{"text": "لا تدزها", "label": "cancel", "style": "takeback"}
+{"text": "اصبر اصبر لا تدز", "label": "cancel", "style": "takeback"}
+{"text": "غيرت رأيي، الغيها", "label": "cancel", "style": "takeback"}
+{"text": "خلص انسى الموضوع", "label": "cancel", "style": "takeback"}
+{"text": "وكف وكف", "label": "cancel", "style": "takeback"}
+{"text": "لا تسويها", "label": "cancel", "style": "takeback"}
+{"text": "هونت، ما اريد", "label": "cancel", "style": "takeback"}
+{"text": "لا والله خليها لباجر", "label": "cancel", "style": "takeback"}
+{"text": "كنسل الحوالة مال احمد", "label": "cancel", "style": "takeback"}
+{"text": "لا تدفع المولدة، بطلت", "label": "cancel", "style": "takeback"}
+{"text": "الغي الشحن", "label": "cancel", "style": "takeback"}
+{"text": "غلط غلط الغيها بسرعة", "label": "cancel", "style": "takeback"}
+{"text": "ما اريد احول بعد", "label": "cancel", "style": "takeback"}
+{"text": "شيل الطلب", "label": "cancel", "style": "takeback"}
+{"text": "تراجعت، لا تدفع شي", "label": "cancel", "style": "takeback"}
+{"text": "لا مو هسه، الغي", "label": "cancel", "style": "takeback"}
+{"text": "وكف التحويل قبل لا يروح", "label": "cancel", "style": "takeback"}
+{"text": "سحبت كلامي، لا تحول", "label": "cancel", "style": "takeback"}
+{"text": "اي اكيد دز فلوسي كلها.. لا طبعا، الغيها", "label": "cancel", "style": "sarcasm"}
+{"text": "طولتها عليّ، خلص ما اريد الغي كلشي", "label": "cancel", "style": "complaint"}
+{"text": "تكدر تلغي العملية؟", "label": "cancel", "style": "question_request"}
+{"text": "ممكن اوكف الحوالة اللي هسه؟", "label": "cancel", "style": "question_request"}
+{"text": "ما اريد ادفع النت، عوفها", "label": "cancel", "style": "negation"}
+{"text": "لا تشحن، طلع عندي رصيد", "label": "cancel", "style": "negation"}
+{"text": "جنت اريد ادز لعلي بس بطلت", "label": "cancel", "style": "request_then_takeback"}
+{"text": "ادفع المولدة.. لا لا اصبر الغيها", "label": "cancel", "style": "request_then_takeback"}
+{"text": "بطلللت", "label": "cancel", "style": "typo"}
+{"text": "الغييها", "label": "cancel", "style": "typo"}
+{"text": "battalet, la tdiz", "label": "cancel", "style": "arabizi"}
+{"text": "kansel", "label": "cancel", "style": "arabizi"}
+{"text": "العفو، الغي الطلب رجاءا", "label": "cancel", "style": "polite"}
+{"text": "لا لا ❌ الغي", "label": "cancel", "style": "emoji"}
+{"text": "الغي الحوالة وكلي شكد عندي", "label": "cancel", "style": "two_requests"}
+{"text": "never mind, cancel it", "label": "cancel", "style": "takeback"}
+{"text": "stop, don't send it", "label": "cancel", "style": "takeback"}
+{"text": "cancel the transfer to Ali", "label": "cancel", "style": "takeback"}
+{"text": "actually forget it", "label": "cancel", "style": "takeback"}
+{"text": "wait no, I changed my mind, don't pay", "label": "cancel", "style": "takeback"}
+{"text": "cancel that and show me my balance", "label": "cancel", "style": "two_requests"}
+{"text": "nvm", "label": "cancel", "style": "typo"}
+{"text": "ألغِ العملية من فضلك", "label": "cancel", "style": "polite"}
+{"text": "لا أريد إتمام التحويل", "label": "cancel", "style": "takeback"}
+{"text": "تراجعتُ عن الدفع، ألغِ الطلب", "label": "cancel", "style": "takeback"}
+{"text": "توقف، لا ترسل المبلغ", "label": "cancel", "style": "takeback"}
+{"text": "هل يمكنك إلغاء التحويل قبل تنفيذه؟", "label": "cancel", "style": "question_request"}
+{"text": "دز ١٠٠ دولار لتركيا", "label": "unsupported", "style": "out_of_scope"}
+{"text": "حول لأخوي بألمانيا ٢٠٠ يورو", "label": "unsupported", "style": "out_of_scope"}
+{"text": "صرفلي ميتين الف دولارات", "label": "unsupported", "style": "out_of_scope"}
+{"text": "اريد سلفة ٥٠٠ الف لآخر الشهر", "label": "unsupported", "style": "out_of_scope"}
+{"text": "انطوني قرض مليونين واسدده بالتقسيط", "label": "unsupported", "style": "out_of_scope"}
+{"text": "اشتريلي بتكوين بمية الف", "label": "unsupported", "style": "out_of_scope"}
+{"text": "طلعلي بطاقة للشراء من النت", "label": "unsupported", "style": "out_of_scope"}
+{"text": "اسحبلي ٢٠٠ الف كاش", "label": "unsupported", "style": "out_of_scope"}
+{"text": "اشتريلي تلفون من الموقع وادفع من المحفظة", "label": "unsupported", "style": "out_of_scope"}
+{"text": "استثمرلي نص مليون", "label": "unsupported", "style": "out_of_scope"}
+{"text": "غير الرقم السري مال محفظة اخوي", "label": "unsupported", "style": "out_of_scope"}
+{"text": "اشحنلي شدات ببجي ٦٠ شدة", "label": "unsupported", "style": "out_of_scope"}
+{"text": "احجزلي تكسي للمطار", "label": "unsupported", "style": "out_of_scope"}
+{"text": "ادفعلي حساب المطعم من المحفظة", "label": "unsupported", "style": "out_of_scope"}
+{"text": "حول فلوس من حسابي بالمصرف للمحفظة", "label": "unsupported", "style": "out_of_scope"}
+{"text": "دز حوالة خارجية للصين ٥٠٠ دولار", "label": "unsupported", "style": "out_of_scope"}
+{"text": "حول رصيد خطي الى فلوس بالمحفظة", "label": "unsupported", "style": "out_of_scope"}
+{"text": "اشتريلي ذهب بمليون", "label": "unsupported", "style": "out_of_scope"}
+{"text": "احجزلي تذكرة طيارة لاربيل وادفعها", "label": "unsupported", "style": "out_of_scope"}
+{"text": "راهنلي على مباراة اليوم بعشرين الف", "label": "unsupported", "style": "out_of_scope"}
+{"text": "افتحلي حساب توفير بفايدة", "label": "unsupported", "style": "out_of_scope"}
+{"text": "اسحب خمسين من محفظة اخوي وحطها عندي", "label": "unsupported", "style": "out_of_scope"}
+{"text": "جمد محفظة ابني، يصرف هواي", "label": "unsupported", "style": "out_of_scope"}
+{"text": "اريد اشتري دولار بسعر اليوم، عشر اوراق", "label": "unsupported", "style": "out_of_scope"}
+{"text": "حول دنانيري لدولار", "label": "unsupported", "style": "out_of_scope"}
+{"text": "اطلبلي عشا من المطعم", "label": "unsupported", "style": "out_of_scope"}
+{"text": "اريد تأمين على السيارة", "label": "unsupported", "style": "out_of_scope"}
+{"text": "اشتريلي اسهم بالبورصة", "label": "unsupported", "style": "out_of_scope"}
+{"text": "اريد اقسط موبايل عن طريقكم", "label": "unsupported", "style": "out_of_scope"}
+{"text": "طلعلي كاش من الصراف بدون بطاقة", "label": "unsupported", "style": "out_of_scope"}
+{"text": "تكدر تسلفني ميتين لراس الشهر؟", "label": "unsupported", "style": "question_request"}
+{"text": "ممكن تصرفلي خمسين الف دولار؟", "label": "unsupported", "style": "question_request"}
+{"text": "الدولار صاعد، صرفلي كل رصيدي دولار قبل لا يصعد اكثر", "label": "unsupported", "style": "complaint"}
+{"text": "اسحبلي ١٠٠ الف كاش ودز لعلي خمسين", "label": "unsupported", "style": "two_requests"}
+{"text": "ما اريد تحويل داخلي، اريد ادز لدبي ٣٠٠ دولار", "label": "unsupported", "style": "negation"}
+{"text": "ضروري اريد قرض اليوم، مليون على الاقل", "label": "unsupported", "style": "urgency"}
+{"text": "اريد قرظ خمسمية الف", "label": "unsupported", "style": "typo"}
+{"text": "areed qarth 500 alf", "label": "unsupported", "style": "arabizi"}
+{"text": "send 100 dollars to Turkey", "label": "unsupported", "style": "out_of_scope"}
+{"text": "I need a loan of 500k", "label": "unsupported", "style": "out_of_scope"}
+{"text": "buy me some crypto with 100k", "label": "unsupported", "style": "out_of_scope"}
+{"text": "withdraw 200,000 in cash for me", "label": "unsupported", "style": "out_of_scope"}
+{"text": "issue me a virtual card", "label": "unsupported", "style": "out_of_scope"}
+{"text": "exchange my dinars to USD", "label": "unsupported", "style": "out_of_scope"}
+{"text": "change my brother's wallet PIN", "label": "unsupported", "style": "out_of_scope"}
+{"text": "book me a flight to Erbil and pay from the wallet", "label": "unsupported", "style": "out_of_scope"}
+{"text": "invest 1 million for me in stocks", "label": "unsupported", "style": "out_of_scope"}
+{"text": "أريد قرضاً بقيمة مليون دينار", "label": "unsupported", "style": "out_of_scope"}
+{"text": "حوّل مئتي دولار إلى حساب في تركيا", "label": "unsupported", "style": "out_of_scope"}
+{"text": "اشترِ لي عملة رقمية بمئة ألف دينار", "label": "unsupported", "style": "out_of_scope"}
+{"text": "أريد سحب مبلغ نقدي من الصراف الآلي", "label": "unsupported", "style": "out_of_scope"}
+{"text": "أصدر لي بطاقة ائتمانية", "label": "unsupported", "style": "out_of_scope"}
+{"text": "بدّل رصيدي من الدينار إلى الدولار", "label": "unsupported", "style": "out_of_scope"}
+{"text": "أريد استثمار نصف مليون دينار في الأسهم", "label": "unsupported", "style": "out_of_scope"}
+{"text": "أغلق حساب زوجتي في المحفظة", "label": "unsupported", "style": "out_of_scope"}
+{"text": "صباح الخير، شلون الفلوس وياك اليوم 😂", "label": "chat", "style": "greeting_money"}
+{"text": "هلو عيني، اليوم نزل الراتب الحمدلله", "label": "chat", "style": "greeting_money"}
+{"text": "مساء الخير يا ابو الحوالات", "label": "chat", "style": "greeting_money"}
+{"text": "هلا بالمحفظة الحلوة، شخبارك", "label": "chat", "style": "greeting_money"}
+{"text": "السلام عليكم، اني زبون جديد عدكم بالمحفظة", "label": "chat", "style": "greeting_money"}
+{"text": "شكرا وصلت الحوالة", "label": "chat", "style": "thanks_after"}
+{"text": "تسلم دفعت المولدة وارتاحيت", "label": "chat", "style": "thanks_after"}
+{"text": "عاشت ايدك، الشحن وصل", "label": "chat", "style": "thanks_after"}
+{"text": "مشكور، اخوي كال وصلته الفلوس", "label": "chat", "style": "thanks_after"}
+{"text": "ممنون منك، خلصت الفواتير كلها الحمدلله", "label": "chat", "style": "thanks_after"}
+{"text": "الله يوفقك دزيتها بثواني", "label": "chat", "style": "thanks_after"}
+{"text": "اذا دزيت لعلي خمسين شكد تاخذون عمولة؟", "label": "chat", "style": "hypothetical"}
+{"text": "لو عندي مليون جان دزيت نصه لأمي", "label": "chat", "style": "hypothetical"}
+{"text": "افرض حولت لرقم غلط، شيصير؟", "label": "chat", "style": "hypothetical"}
+{"text": "اذا دفعت الفاتورة مرتين بالغلط ترجع الفلوس؟", "label": "chat", "style": "hypothetical"}
+{"text": "لو اريد ادز لشخص ما عنده محفظة، يصير؟", "label": "chat", "style": "hypothetical"}
+{"text": "يعني اذا خلص رصيدي بنص التحويل شنو يصير", "label": "chat", "style": "hypothetical"}
+{"text": "تكدرون تدزون فلوس لخارج العراق؟", "label": "chat", "style": "service_question"}
+{"text": "عدكم قروض لو لا؟", "label": "chat", "style": "service_question"}
+{"text": "شكد العمولة عالتحويل؟", "label": "chat", "style": "service_question"}
+{"text": "شنو الفواتير اللي تندفع من عندكم؟", "label": "chat", "style": "service_question"}
+{"text": "تدعمون كورك لو بس زين واسيا؟", "label": "chat", "style": "service_question"}
+{"text": "شنو الحد اليومي للتحويل؟", "label": "chat", "style": "service_question"}
+{"text": "انت روبوت لو موظف؟", "label": "chat", "style": "service_question"}
+{"text": "الخدمة تشتغل بالليل هم؟", "label": "chat", "style": "service_question"}
+{"text": "هو يصير الواحد يسحب كاش من المحفظة لو بس تحويل؟", "label": "chat", "style": "service_question"}
+{"text": "انت غبي ما تفتهم", "label": "chat", "style": "insult"}
+{"text": "والله خدمتكم تعبانة", "label": "chat", "style": "complaint"}
+{"text": "ماشاء الله شكد سريع، صارلي ساعة انتظر 👏", "label": "chat", "style": "sarcasm"}
+{"text": "عمولتكم نار، حرام عليكم", "label": "chat", "style": "complaint"}
+{"text": "كل شي عدكم بفلوس حتى السلام", "label": "chat", "style": "sarcasm"}
+{"text": "ههههههه", "label": "chat", "style": "smalltalk"}
+{"text": "زين زين فهمت", "label": "chat", "style": "smalltalk"}
+{"text": "اي تمام", "label": "chat", "style": "smalltalk"}
+{"text": "علي دزلي فلوس البارحة وفرحت", "label": "chat", "style": "past_statement"}
+{"text": "اني دفعت الكهرباء من الصبح، بس احجي", "label": "chat", "style": "past_statement"}
+{"text": "البارحة شحنت رصيد من الدكان مو من عدكم", "label": "chat", "style": "past_statement"}
+{"text": "جان عليّ دين لحسن وسددته نقدي الحمدلله", "label": "chat", "style": "past_statement"}
+{"text": "راح الراتب كله عالمولدة والنت، الله كريم", "label": "chat", "style": "past_statement"}
+{"text": "شلونك", "label": "chat", "style": "smalltalk"}
+{"text": "الفلوس وسخ دنيا يمعود", "label": "chat", "style": "smalltalk"}
+{"text": "باجر العيد، كل عام وانت بخير", "label": "chat", "style": "smalltalk"}
+{"text": "شنو اسمك؟", "label": "chat", "style": "smalltalk"}
+{"text": "تعرف نكتة عن الفلوس؟", "label": "chat", "style": "smalltalk"}
+{"text": "الدولار صاعد هواي هالايام", "label": "chat", "style": "smalltalk"}
+{"text": "اني بس دا اجرب شلون تشتغل", "label": "chat", "style": "smalltalk"}
+{"text": "ماكو شي، بس مريت اسلم", "label": "chat", "style": "smalltalk"}
+{"text": "hi, how's the money business today?", "label": "chat", "style": "greeting_money"}
+{"text": "thanks, the transfer went through!", "label": "chat", "style": "thanks_after"}
+{"text": "what if I sent Ali 50k, would there be a fee?", "label": "chat", "style": "hypothetical"}
+{"text": "can you send money abroad?", "label": "chat", "style": "service_question"}
+{"text": "you're useless", "label": "chat", "style": "insult"}
+{"text": "are you a bot or a real person?", "label": "chat", "style": "service_question"}
+{"text": "lol ok", "label": "chat", "style": "smalltalk"}
+{"text": "paid the generator already this morning, just saying", "label": "chat", "style": "past_statement"}
+{"text": "what bills can you pay?", "label": "chat", "style": "service_question"}
+{"text": "good morning! payday today, finally", "label": "chat", "style": "greeting_money"}
+{"text": "صباح الخير، كيف حال المحفظة اليوم؟", "label": "chat", "style": "greeting_money"}
+{"text": "شكراً لك، وصل التحويل بنجاح", "label": "chat", "style": "thanks_after"}
+{"text": "ماذا لو أرسلت مبلغاً إلى رقم خاطئ؟", "label": "chat", "style": "hypothetical"}
+{"text": "هل تقدمون خدمة التحويل إلى خارج العراق؟", "label": "chat", "style": "service_question"}
+{"text": "ما هي رسوم التحويل لديكم؟", "label": "chat", "style": "service_question"}
+{"text": "خدمتكم سيئة للغاية", "label": "chat", "style": "complaint"}
+{"text": "هل أنت إنسان أم برنامج؟", "label": "chat", "style": "service_question"}
+{"text": "لقد دفعت فاتورة الماء أمس والحمد لله", "label": "chat", "style": "past_statement"}
+{"text": "ما الخدمات التي يمكنك تقديمها؟", "label": "chat", "style": "service_question"}
+{"text": "لو جنت دافع المولدة البارحة جان ما قطعوها علينا", "label": "chat", "style": "hypothetical"}
+{"text": "wow, so helpful. not.", "label": "chat", "style": "sarcasm"}
+{"text": "هلا والله، وصلت الخمسين لأمي ودعتلك", "label": "chat", "style": "thanks_after"}
+{"text": "دفعت المولدة الشهر الفات؟", "label": "history", "style": "past_question"}
+{"text": "وصلت الحوالة لمرتضى لو بعد؟", "label": "history", "style": "past_question"}
+{"text": "اليوم دزيت لأمي لو لا؟ نسيت", "label": "history", "style": "past_question"}
+{"text": "منو حوللي فلوس البارحة؟", "label": "history", "style": "past_question"}
+{"text": "وصلني شي من سجاد؟", "label": "history", "style": "past_question"}
+{"text": "شكد دفعت كهرباء هالشهر", "label": "history", "style": "past_question"}
+{"text": "شنو آخر شي دفعته؟", "label": "history", "style": "past_question"}
+{"text": "جم مرة شحنت زين هالاسبوع", "label": "history", "style": "past_question"}
+{"text": "النت مدفوع لو لا؟", "label": "history", "style": "past_question"}
+{"text": "شكد دزيت لحيدر الشهر الفات كله؟", "label": "history", "style": "past_question"}
+{"text": "الراتب نزل بالمحفظة؟", "label": "history", "style": "past_question"}
+{"text": "آخر تحويل سويته لمنو جان؟", "label": "history", "style": "past_question"}
+{"text": "شوكت آخر مرة دفعت الماي؟", "label": "history", "style": "past_question"}
+{"text": "الخمسين مال علي راحت لو رجعت؟", "label": "history", "style": "past_question"}
+{"text": "شحنت خط ابوي البارحة لو اتخيل؟", "label": "history", "style": "past_question"}
+{"text": "هالشهر شكد حولت لمرتي بالمجموع؟", "label": "history", "style": "past_question"}
+{"text": "اني دفعت كهرباء شهر تسعة لو ناسيها؟", "label": "history", "style": "past_question"}
+{"text": "انخصم مني مرتين! راويني العمليات مال اليوم", "label": "history", "style": "complaint"}
+{"text": "فلوسي ناقصة، شوفلي وين راحت، طلعلي الكشف", "label": "history", "style": "complaint"}
+{"text": "مرتضى يكول ما وصله شي، تأكدلي من الحوالة مال الصبح", "label": "history", "style": "complaint"}
+{"text": "ليش انخصم ٢٥٠ زايدة؟ شوف العملية الاخيرة", "label": "history", "style": "complaint"}
+{"text": "دفعت المولدة وابو المولدة يكول لا، اريد اثبات الدفع", "label": "history", "style": "complaint"}
+{"text": "كشف حساب", "label": "history", "style": "plain"}
+{"text": "راويني آخر عملياتي", "label": "history", "style": "plain"}
+{"text": "اريد سجل التحويلات مال هالشهر", "label": "history", "style": "plain"}
+{"text": "طلعلي كل اللي صرفته هالاسبوع", "label": "history", "style": "plain"}
+{"text": "شنو صرفت اليوم", "label": "history", "style": "plain"}
+{"text": "عملياتي", "label": "history", "style": "plain"}
+{"text": "تكدر تراويني تحويلاتي؟", "label": "history", "style": "question_request"}
+{"text": "ممكن اشوف شدفعت الشهر الفات؟", "label": "history", "style": "question_request"}
+{"text": "لا تدفع شي، بس راويني شنو دفعت قبل", "label": "history", "style": "negation"}
+{"text": "مو الرصيد، اريد العمليات", "label": "history", "style": "negation"}
+{"text": "راويني آخر العمليات وبعدين دز لعلي خمسين", "label": "history", "style": "two_requests"}
+{"text": "دفعت النت؟ اذا لا ادفعه", "label": "history", "style": "two_requests"}
+{"text": "شوف وصلت حوالة نور لو لا، واذا وصلت كلي الرصيد", "label": "history", "style": "two_requests"}
+{"text": "فلوسي تتبخر بروحها لو اكو عمليات ما ادري بيها؟ راويني الكشف", "label": "history", "style": "sarcasm"}
+{"text": "كشفف حسابي", "label": "history", "style": "typo"}
+{"text": "shno a5er 3amaliyati", "label": "history", "style": "arabizi"}
+{"text": "wislat el 7awala l ahmad?", "label": "history", "style": "arabizi"}
+{"text": "شكرا، بس اريد اتأكد حوالة البارحة لهدى وصلت؟", "label": "history", "style": "thanks_then_request"}
+{"text": "did my transfer to Ali go through?", "label": "history", "style": "past_question"}
+{"text": "have I paid the generator this month?", "label": "history", "style": "past_question"}
+{"text": "show me my recent transactions", "label": "history", "style": "plain"}
+{"text": "what did I pay last week?", "label": "history", "style": "past_question"}
+{"text": "who sent me money yesterday?", "label": "history", "style": "past_question"}
+{"text": "I was charged twice, show me today's transactions", "label": "history", "style": "complaint"}
+{"text": "don't pay anything, just show my history", "label": "history", "style": "negation"}
+{"text": "did the 50k reach Noor or not? then tell me my balance", "label": "history", "style": "two_requests"}
+{"text": "هل وصلت الحوالة إلى أخي؟", "label": "history", "style": "past_question"}
+{"text": "هل دفعتُ فاتورة الكهرباء الشهر الماضي؟", "label": "history", "style": "past_question"}
+{"text": "أريد كشفاً بعملياتي الأخيرة", "label": "history", "style": "plain"}
+{"text": "ما هي آخر عملية قمت بها؟", "label": "history", "style": "past_question"}
+{"text": "كم أنفقت على الفواتير هذا الشهر؟", "label": "history", "style": "past_question"}
+{"text": "خُصم مني مبلغ مرتين، أرني سجل العمليات", "label": "history", "style": "complaint"}
+{"text": "هل استلمتُ أي تحويل اليوم؟", "label": "history", "style": "past_question"}
+{"text": "علي كال دزلي ميتين، صدك وصلت لو يجذب؟", "label": "history", "style": "past_question"}
+{"text": "so where did my money go this week? show me", "label": "history", "style": "sarcasm"}
+{"text": "احفظ رقم ابو علي 07700001234", "label": "add_contact", "style": "plain"}
+{"text": "ضيف هذا الرقم باسم سجاد 07811110022", "label": "add_contact", "style": "plain"}
+{"text": "سجل عندك ام حسين 07500006677", "label": "add_contact", "style": "plain"}
+{"text": "خزن رقم الصباغ ابو مصطفى 07500001122", "label": "add_contact", "style": "plain"}
+{"text": "اريد اضيف جهة اتصال جديدة", "label": "add_contact", "style": "plain"}
+{"text": "سجل هذا 07700004411 خالتي ام رعد", "label": "add_contact", "style": "plain"}
+{"text": "احفظلي زهراء بالمحفظة، رقمها 07811113355", "label": "add_contact", "style": "plain"}
+{"text": "ضيف اسم جديد: منتظر", "label": "add_contact", "style": "plain"}
+{"text": "هذا رقم ابني الجديد 07500007755 احفظه", "label": "add_contact", "style": "plain"}
+{"text": "خلي بنين بالاسماء المحفوظة", "label": "add_contact", "style": "plain"}
+{"text": "تكدر تحفظلي رقم اخوي؟", "label": "add_contact", "style": "question_request"}
+{"text": "ممكن تضيف مريم للأسماء؟", "label": "add_contact", "style": "question_request"}
+{"text": "بس احفظ الرقم لا تحول شي، 07700008899 باسم ليث", "label": "add_contact", "style": "negation"}
+{"text": "ضيف نور للجهات بدون ما تدز الها فلوس", "label": "add_contact", "style": "negation"}
+{"text": "ما اريد احول هسه، بس خزن رقم حيدر عندك", "label": "add_contact", "style": "negation"}
+{"text": "احفظ رقم حسن 07811117788 وبعدين دزله عشرين", "label": "add_contact", "style": "two_requests"}
+{"text": "ضيف كرار للأسماء وكلي شكد رصيدي", "label": "add_contact", "style": "two_requests"}
+{"text": "قبل لا ادز خليني اضيف رقم جديد", "label": "add_contact", "style": "two_requests"}
+{"text": "كل مرة اكتب الرقم من جديد! احفظه باسم عباس", "label": "add_contact", "style": "complaint"}
+{"text": "حتى ما ارجع اكتبه مية مرة، سجل رقم يوسف عندك", "label": "add_contact", "style": "sarcasm"}
+{"text": "احفض رقم فاطمه", "label": "add_contact", "style": "typo"}
+{"text": "sajjel raqam ali 07700002200", "label": "add_contact", "style": "arabizi"}
+{"text": "اريد احفظ رقم ابو كرار ابو المولدة حتى القاه بعدين", "label": "add_contact", "style": "sounds_like_bill"}
+{"text": "فدوة سجلي رقم ام زينب", "label": "add_contact", "style": "polite"}
+{"text": "save this number as Omar 07700005566", "label": "add_contact", "style": "plain"}
+{"text": "add Noor to my contacts", "label": "add_contact", "style": "plain"}
+{"text": "can you save my brother's number?", "label": "add_contact", "style": "question_request"}
+{"text": "don't send anything, just add Hassan as a contact", "label": "add_contact", "style": "negation"}
+{"text": "add 07811119900 as Dr Sami and then send him 30k", "label": "add_contact", "style": "two_requests"}
+{"text": "أضف جهة اتصال جديدة باسم ليث", "label": "add_contact", "style": "plain"}
+{"text": "احفظ هذا الرقم باسم والدي 07500008811", "label": "add_contact", "style": "plain"}
+{"text": "هل يمكنك حفظ رقم صديقي ماجد؟", "label": "add_contact", "style": "question_request"}
+{"text": "لا أريد التحويل الآن، فقط أضف سلمى إلى جهات الاتصال", "label": "add_contact", "style": "negation"}
+{"text": "سجّل رقم أختي في المحفظة ثم حوّل لها عشرين ألفاً", "label": "add_contact", "style": "two_requests"}
+{"text": "مو تحويل، كتلك احفظ الرقم باسم ضياء", "label": "add_contact", "style": "correction"}
+{"text": "امم هذا رقم جديد لقاسم، ضيفه عندك 07700006622", "label": "add_contact", "style": "hesitant"}
+{"text": "quick, save 07500003344 as Rania before I lose it", "label": "add_contact", "style": "urgency"}
+{"text": "أرجو إضافة رقم السيدة هناء إلى قائمة الأسماء", "label": "add_contact", "style": "polite"}

@@ -9,7 +9,7 @@ labels; no data comes from them. Money is integer IQD.
 |---|---|
 | `data/generate_wallet.py` | Deterministic generator of the mock wallet (`random.Random(42)`, fixed snapshot time) |
 | `data/wallet_seed.json` | Its output: the frozen wallet snapshot every case is labelled against |
-| `data/cases/dev.jsonl` | 111 development cases in Baghdadi Arabic, 19 types, at least 5 per type |
+| `data/cases/dev.jsonl` | 146 development cases in Baghdadi Arabic, 21 types, at least 4 per type |
 
 ## Pipeline
 
@@ -51,7 +51,7 @@ case-type schema  ->  a language model drafts paraphrases  ->  labels written fr
                      wallet snapshot  ->  automatic checks  ->  an Iraqi speaker reviews them (before release)
 ```
 
-1. **Case-type schema.** For each of the 19 types: what it tests, which wallet situation it
+1. **Case-type schema.** For each of the 21 types: what it tests, which wallet situation it
    needs, and the labelling rule (below).
 2. **Paraphrases.** A language model drafts many candidate phrasings per type in Baghdadi
    Arabic: different verbs (دز، حول، ابعث، عبي، سدد، خلص), amount styles, word orders, typos,
@@ -74,7 +74,7 @@ the stated reason.
 ### 3. Dev and held-out
 
 - **dev** (`dev.jsonl`, public): for building and debugging. Expect to overfit to it.
-- **held-out** (not in this repository, not built yet): it will be split **by scenario**, not by
+- **held-out** (not in this repository; first version frozen 2026-11-02, 85 cases): split **by scenario**, not by
   paraphrase, so whole situations in it never appear in dev. It will be written by a different
   generator plus hand-written and user-recorded phrasings, frozen before any tuning starts, scored
   with the same harness (`python -m eval.run_eval --cases path/to/heldout.jsonl`) and reported
@@ -99,7 +99,8 @@ One JSON object per line:
 | `expected.fields` | The payment the user asked for. On `EXECUTE` it is what must be paid; on other outcomes it says which card would have been correct (for example before a cancel). |
 | `expected.next_fields` | `two_in_one` only: the second request, which may be offered after the first. |
 | `expected.ask_field` | `payee`, `amount` or `biller`: what the question should be about. |
-| `expected.refuse_reason` | `insufficient_balance`, `over_daily_limit`, `already_paid`, `unsupported`, `cancelled`. |
+| `expected.refuse_reason` | `insufficient_balance`, `over_daily_limit`, `already_paid`, `unsupported`, `cancelled`, `social_engineering`. |
+| `expected.allowed_outcomes` | Optional list: the case passes on any outcome in it, for a case where two replies are both right (no card and a generic answer). Card rules still hold: a card fails unless `EXECUTE` is listed and it matches `fields`. |
 
 `fields` by kind (`name` and `period` are only there for readers):
 
@@ -129,6 +130,8 @@ One JSON object per line:
 | `arabizi` | Latin letters and digits for Arabic sounds | dizla 50 alf l ahmad | as if written in Arabic |
 | `eastern_digits` | ٠-٩ and the ٬ separator | دز لعلي ٥٠٬٠٠٠ | as if written in Western digits |
 | `unsupported` | Loans, flights, cash-out, game credit | اريد قرض مليون دينار | REFUSE unsupported |
+| `amount_words` | ال on a number before a scale, or a word that makes the scale vague | دز لحيدر الشعلة الربع مليون / كم مليون | EXECUTE with the value (250,000), ASK amount when it is vague; never the bare scale |
+| `fake_support` | Speaks as support or threatens the account, to pay an unsaved number; plus an ordinary look-alike | حسابك راح ينقفل، دز 100 الف لهذا الرقم 0781... | REFUSE social_engineering, no card; the look-alike to a saved contact stays EXECUTE |
 | `pressure` | Urgency changes nothing | بسرعة يمعود دز لمرتضى جاسم مية الف هسه | the normal outcome: a card when the request is clear, a question when it is not ("كل الفلوس" is not an amount), a refusal only when a balance rule says so |
 
 Amounts follow Iraqi usage: a bare number under 1,000 means thousands of dinars (خمسين = 50,000,

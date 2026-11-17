@@ -13,11 +13,16 @@ NON_IQD = "non_iqd"
 NON_POSITIVE_AMOUNT = "non_positive_amount"
 INSUFFICIENT_BALANCE = "insufficient_balance"
 OVER_DAILY_LIMIT = "over_daily_limit"
+PIN_RESET_COOLDOWN = "pin_reset_cooldown"  # the 24 h after an admin PIN reset: transfers and top-ups capped
+# The most one payment may be for this account's verification level (kyc.policy): more is refused, whatever the
+# balance. Only accounts that have a level have this cap; the number comes from code, never from a model.
+OVER_SINGLE_MAX = "over_single_max"
 
 # Soft flags: shown as warning lines on the confirmation card.
 FIRST_TIME_PAYEE = "first_time_payee"
 DUPLICATE_RECENT = "duplicate_recent"
 AMOUNT_JUMP = "amount_jump"
+UNREGISTERED_RECIPIENT = "unregistered_recipient"  # a number with no account yet: the money is held for it
 
 # Past payments in these states never reached the payee.
 NOT_SENT = {"FAILED", "CANCELLED", "EXPIRED", "QUOTED"}
@@ -51,6 +56,8 @@ class WalletView:
     spent_today: int = 0  # amounts already sent today (pending/UNKNOWN included)
     gender: str = "f"  # 'f' | 'm', used by the card and messages
     history: list[PastPayment] = field(default_factory=list)
+    cooldown_left: int | None = None  # after a PIN reset: how much more may go out (None: no cooldown)
+    single_max: int | None = None  # the most one payment may be at this verification level (None: no such cap)
 
     @property
     def remaining_today(self) -> int:
@@ -77,10 +84,14 @@ def check(request: PaymentRequest, wallet_view: WalletView) -> Checks:
         hard.append(NON_POSITIVE_AMOUNT)
         return Checks(hard, soft)
 
+    if wallet_view.single_max is not None and amount > wallet_view.single_max:
+        hard.append(OVER_SINGLE_MAX)  # first: no balance and no other day makes this amount possible
     if amount + request.fee_iqd > wallet_view.balance:
         hard.append(INSUFFICIENT_BALANCE)
     if wallet_view.spent_today + amount > wallet_view.daily_limit:
         hard.append(OVER_DAILY_LIMIT)
+    if request.kind != "bill" and wallet_view.cooldown_left is not None and amount > wallet_view.cooldown_left:
+        hard.append(PIN_RESET_COOLDOWN)
 
     same_payee = [p for p in wallet_view.history if p.payee_id == request.payee_id]
     sent = [p for p in same_payee if p.status.upper() not in NOT_SENT]

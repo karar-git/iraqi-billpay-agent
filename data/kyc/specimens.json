@@ -1,0 +1,398 @@
+{
+  "about": "Synthetic specimen identity images for tests and demos. Every name, number and date is made up; no image shows a real document or a real person. Written by data/kyc/generate_ids.py.",
+  "seed": 20261113,
+  "reference_date": "2026-11-13",
+  "allow_specimen": true,
+  "specimens": [
+    {
+      "file": "national_01.png",
+      "mime": "image/png",
+      "kind": "national_card",
+      "typed_name": "مريم هادي",
+      "truth": {
+        "is_identity_document": true,
+        "document_type": "national_card",
+        "readable": true,
+        "full_name_ar": "مريم هادي كاظم النخيلي",
+        "full_name_latin": null,
+        "document_number": "000081940470",
+        "birth_date": "1997-03-04",
+        "expiry_date": "2030-07-02",
+        "sex": "f",
+        "looks_like_photo_of_screen_or_copy": false,
+        "marked_as_specimen": true,
+        "notes": ""
+      },
+      "expected": {
+        "status": "verified",
+        "reason": "ok"
+      },
+      "bytes": 115590,
+      "sha256": "65425c1b68d69d824d539189999ad6d1fab1cda74cd99c5c5cf8a9e0770f1123"
+    },
+    {
+      "file": "national_02.png",
+      "mime": "image/png",
+      "kind": "national_card",
+      "typed_name": "abdullah nasir",
+      "truth": {
+        "is_identity_document": true,
+        "document_type": "national_card",
+        "readable": true,
+        "full_name_ar": "عبد الله ناصر خالد الصفار",
+        "full_name_latin": null,
+        "document_number": "000021576465",
+        "birth_date": "1990-06-22",
+        "expiry_date": "2035-05-05",
+        "sex": "m",
+        "looks_like_photo_of_screen_or_copy": false,
+        "marked_as_specimen": true,
+        "notes": ""
+      },
+      "expected": {
+        "status": "verified",
+        "reason": "ok"
+      },
+      "bytes": 114169,
+      "sha256": "7438da5a0ffbd915fd9617e39820e3388643ef3995877e94b8f97d7974b30cb3"
+    },
+    {
+      "file": "national_03.png",
+      "mime": "image/png",
+      "kind": "national_card",
+      "typed_name": "وسام البستاني",
+      "truth": {
+        "is_identity_document": true,
+        "document_type": "national_card",
+        "readable": true,
+        "full_name_ar": "وسام هادي خالد البستاني",
+        "full_name_latin": null,
+        "document_number": "000022217528",
+        "birth_date": "1994-02-10",
+        "expiry_date": "2032-01-01",
+        "sex": "m",
+        "looks_like_photo_of_screen_or_copy": false,
+        "marked_as_specimen": true,
+        "notes": ""
+      },
+      "expected": {
+        "status": "verified",
+        "reason": "ok"
+      },
+      "bytes": 114370,
+      "sha256": "5c7ec4c45318f2d64bb3dd6d82a3edc4d0a96e327d6254e64b0a43c089b8abf5"
+    },
+    {
+      "file": "national_04.jpg",
+      "mime": "image/jpeg",
+      "kind": "national_card",
+      "typed_name": "مريم ماجد جواد الصفار",
+      "truth": {
+        "is_identity_document": true,
+        "document_type": "national_card",
+        "readable": true,
+        "full_name_ar": "مريم ماجد جواد الصفار",
+        "full_name_latin": null,
+        "document_number": "000093869120",
+        "birth_date": "1970-10-25",
+        "expiry_date": "2030-09-06",
+        "sex": "f",
+        "looks_like_photo_of_screen_or_copy": false,
+        "marked_as_specimen": true,
+        "notes": ""
+      },
+      "expected": {
+        "status": "verified",
+        "reason": "ok"
+      },
+      "bytes": 91570,
+      "sha256": "12ccf81e3efb3d0e5b741cfe6e6da0275d09195c84208483c4b4e62cf9f5eb67"
+    },
+    {
+      "file": "national_05.png",
+      "mime": "image/png",
+      "kind": "national_card",
+      "typed_name": "وسام هادي",
+      "truth": {
+        "is_identity_document": true,
+        "document_type": "national_card",
+        "readable": true,
+        "full_name_ar": "كريم رحيم خالد الصفار",
+        "full_name_latin": null,
+        "document_number": "000040840936",
+        "birth_date": "2004-11-05",
+        "expiry_date": "2034-04-16",
+        "sex": "m",
+        "looks_like_photo_of_screen_or_copy": false,
+        "marked_as_specimen": true,
+        "notes": ""
+      },
+      "expected": {
+        "status": "review",
+        "reason": "name_mismatch"
+      },
+      "bytes": 113986,
+      "sha256": "97dfaa8382e7a5b9f041d3596f57a1fc75f840a84aecb8788225fb1d5762ea97"
+    },
+    {
+      "file": "national_06.png",
+      "mime": "image/png",
+      "kind": "national_card",
+      "typed_name": "نور",
+      "truth": {
+        "is_identity_document": true,
+        "document_type": "national_card",
+        "readable": true,
+        "full_name_ar": "نور خالد جواد الرافديني",
+        "full_name_latin": null,
+        "document_number": "000009315382",
+        "birth_date": "1979-03-05",
+        "expiry_date": "2034-06-08",
+        "sex": "f",
+        "looks_like_photo_of_screen_or_copy": false,
+        "marked_as_specimen": true,
+        "notes": ""
+      },
+      "expected": {
+        "status": "review",
+        "reason": "name_mismatch"
+      },
+      "bytes": 115814,
+      "sha256": "dd675d2c4d2e0221ef2c07a453354ecf60a0a745167e6cf7c071cff84368d066"
+    },
+    {
+      "file": "national_07.jpg",
+      "mime": "image/jpeg",
+      "kind": "national_card",
+      "typed_name": "وسام كاظم",
+      "truth": {
+        "is_identity_document": true,
+        "document_type": "national_card",
+        "readable": true,
+        "full_name_ar": "وسام ماجد كاظم الصفار",
+        "full_name_latin": null,
+        "document_number": "000057438829",
+        "birth_date": "2001-04-27",
+        "expiry_date": "2032-11-22",
+        "sex": "m",
+        "looks_like_photo_of_screen_or_copy": false,
+        "marked_as_specimen": true,
+        "notes": ""
+      },
+      "expected": {
+        "status": "verified",
+        "reason": "ok"
+      },
+      "bytes": 91731,
+      "sha256": "70e99d5b15392114084e9ab32071207e58fcd14f1eb94e222352d2d4d5f04f98"
+    },
+    {
+      "file": "passport_01.png",
+      "mime": "image/png",
+      "kind": "passport",
+      "typed_name": "Sara Al-Saffar",
+      "truth": {
+        "is_identity_document": true,
+        "document_type": "passport",
+        "readable": true,
+        "full_name_ar": "سارة ماجد هادي الصفار",
+        "full_name_latin": "SARA MAJID HADI AL-SAFFAR",
+        "document_number": "Z00146512",
+        "birth_date": "2002-03-06",
+        "expiry_date": "2034-02-21",
+        "sex": "f",
+        "looks_like_photo_of_screen_or_copy": false,
+        "marked_as_specimen": true,
+        "notes": ""
+      },
+      "expected": {
+        "status": "verified",
+        "reason": "ok"
+      },
+      "bytes": 117891,
+      "sha256": "1879b7d8384a5277561d5678c2084d417bfa7783697661e0fd65610941c138a7"
+    },
+    {
+      "file": "passport_02.jpg",
+      "mime": "image/jpeg",
+      "kind": "passport",
+      "typed_name": "وسام هادي",
+      "truth": {
+        "is_identity_document": true,
+        "document_type": "passport",
+        "readable": true,
+        "full_name_ar": "وسام هادي نبيل الصفار",
+        "full_name_latin": "WISAM HADI NABEEL AL-SAFFAR",
+        "document_number": "Z00682590",
+        "birth_date": "1974-05-06",
+        "expiry_date": "2035-07-04",
+        "sex": "m",
+        "looks_like_photo_of_screen_or_copy": false,
+        "marked_as_specimen": true,
+        "notes": ""
+      },
+      "expected": {
+        "status": "verified",
+        "reason": "ok"
+      },
+      "bytes": 92373,
+      "sha256": "40590e03c21d934ab7bf18a0f748927e64722f459d51bea72dca29e46d38196a"
+    },
+    {
+      "file": "residence_01.png",
+      "mime": "image/png",
+      "kind": "residence_card",
+      "typed_name": "wisam jasim",
+      "truth": {
+        "is_identity_document": true,
+        "document_type": "residence_card",
+        "readable": true,
+        "full_name_ar": "وسام جاسم رحيم الرافديني",
+        "full_name_latin": "WISAM JASIM RAHEEM AL-RAFIDAINI",
+        "document_number": "RC00926942",
+        "birth_date": "1997-10-08",
+        "expiry_date": "2034-04-24",
+        "sex": "m",
+        "looks_like_photo_of_screen_or_copy": false,
+        "marked_as_specimen": true,
+        "notes": ""
+      },
+      "expected": {
+        "status": "verified",
+        "reason": "ok"
+      },
+      "bytes": 117555,
+      "sha256": "0486cc8865d724d093dde8973739edfb37e1589394b7967afb90eb7bdaba35e0"
+    },
+    {
+      "file": "negative_expired_card.png",
+      "mime": "image/png",
+      "kind": "national_card",
+      "typed_name": "ياسر ناصر",
+      "truth": {
+        "is_identity_document": true,
+        "document_type": "national_card",
+        "readable": true,
+        "full_name_ar": "ياسر ناصر خالد البستاني",
+        "full_name_latin": null,
+        "document_number": "000093420191",
+        "birth_date": "2001-07-19",
+        "expiry_date": "2024-05-03",
+        "sex": "m",
+        "looks_like_photo_of_screen_or_copy": false,
+        "marked_as_specimen": true,
+        "notes": ""
+      },
+      "expected": {
+        "status": "refused",
+        "reason": "expired"
+      },
+      "bytes": 113287,
+      "sha256": "a1a2bacd7635d7bbb5883fbb2d3124f4771e4af712abcdf0251725809a147ba7"
+    },
+    {
+      "file": "negative_underage_card.png",
+      "mime": "image/png",
+      "kind": "national_card",
+      "typed_name": "مريم ماجد",
+      "truth": {
+        "is_identity_document": true,
+        "document_type": "national_card",
+        "readable": true,
+        "full_name_ar": "مريم ماجد هادي الرافديني",
+        "full_name_latin": null,
+        "document_number": "000099842966",
+        "birth_date": "2011-09-12",
+        "expiry_date": "2031-01-12",
+        "sex": "f",
+        "looks_like_photo_of_screen_or_copy": false,
+        "marked_as_specimen": true,
+        "notes": ""
+      },
+      "expected": {
+        "status": "refused",
+        "reason": "under_age"
+      },
+      "bytes": 115292,
+      "sha256": "9b609b542a98037ad64082d3d5ed51af3c5dba01b8ea6c6edf4c64fd2e909c6d"
+    },
+    {
+      "file": "negative_screen_photo.jpg",
+      "mime": "image/jpeg",
+      "kind": "national_card",
+      "typed_name": "ياسر صالح",
+      "truth": {
+        "is_identity_document": true,
+        "document_type": "national_card",
+        "readable": true,
+        "full_name_ar": "ياسر صالح هادي البستاني",
+        "full_name_latin": null,
+        "document_number": "000091103575",
+        "birth_date": "1968-11-11",
+        "expiry_date": "2031-11-07",
+        "sex": "m",
+        "looks_like_photo_of_screen_or_copy": true,
+        "marked_as_specimen": true,
+        "notes": ""
+      },
+      "expected": {
+        "status": "review",
+        "reason": "screen_or_copy"
+      },
+      "bytes": 106209,
+      "sha256": "8dc1bd8ea19c32b9285e4fcd7d226e33215333826e7de7670871c027044e18aa"
+    },
+    {
+      "file": "negative_receipt.png",
+      "mime": "image/png",
+      "kind": "receipt",
+      "typed_name": "مصطفى كاظم",
+      "truth": {
+        "is_identity_document": false,
+        "document_type": "none",
+        "readable": false,
+        "full_name_ar": null,
+        "full_name_latin": null,
+        "document_number": null,
+        "birth_date": null,
+        "expiry_date": null,
+        "sex": null,
+        "looks_like_photo_of_screen_or_copy": false,
+        "marked_as_specimen": false,
+        "notes": ""
+      },
+      "expected": {
+        "status": "retry",
+        "reason": "not_a_document"
+      },
+      "bytes": 46766,
+      "sha256": "526e5b2acce4fc6f51e69450030ff79224662f841b83cf46a2ea9f8b76ab18dd"
+    },
+    {
+      "file": "negative_wall.jpg",
+      "mime": "image/jpeg",
+      "kind": "wall",
+      "typed_name": "حيدر صالح",
+      "truth": {
+        "is_identity_document": false,
+        "document_type": "none",
+        "readable": false,
+        "full_name_ar": null,
+        "full_name_latin": null,
+        "document_number": null,
+        "birth_date": null,
+        "expiry_date": null,
+        "sex": null,
+        "looks_like_photo_of_screen_or_copy": false,
+        "marked_as_specimen": false,
+        "notes": ""
+      },
+      "expected": {
+        "status": "retry",
+        "reason": "not_a_document"
+      },
+      "bytes": 8432,
+      "sha256": "753b671213e6fbe1d50467268a9d0cd15cba15375a43155a12637bd9a8c415d5"
+    }
+  ]
+}

@@ -412,6 +412,20 @@ def test_pin_typed_in_the_chat_never_reaches_the_core(client):
     assert session.handle_button(UID, card.quote_id, PAY, pin=PIN).state == "SUCCEEDED"
 
 
+def test_pin_typed_before_the_tap_or_after_a_typed_yes_never_reaches_the_core(client):
+    core = SpyCore()
+    session = Session(wallet=client, core=core)
+    card = session.handle_text(UID, "دز لهادي خمسين الف")
+    early = session.handle_text(UID, PIN)  # card open, not tapped yet: still never a new amount
+    assert early.kind == "card" and early.quote_id == card.quote_id and "بالدردشة" in early.text
+    session.handle_button(UID, card.quote_id, PAY)
+    session.handle_text(UID, "إي")  # typed yes keeps the card (and the PIN step)
+    late = session.handle_text(UID, PIN)
+    assert late.kind == "card" and late.quote_id == card.quote_id
+    assert core.seen == ["دز لهادي خمسين الف"]
+    assert session.handle_button(UID, card.quote_id, PAY, pin=PIN).state == "SUCCEEDED"
+
+
 def test_pin_in_eastern_digits_pays(session, client):
     card = session.handle_text(UID, "دز لهادي خمسين الف")
     assert session.handle_button(UID, card.quote_id, PAY, pin="١٢٣٤").state == "SUCCEEDED"

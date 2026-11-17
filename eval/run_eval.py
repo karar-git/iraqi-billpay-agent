@@ -3,12 +3,19 @@
 Every case runs against a fresh in-memory mock wallet loaded from data/wallet_seed.json.
 The simulated user sends the case's messages in order. When the reply to the LAST message shows a
 card, the user taps "إي، ادفع" with their PIN, and keeps tapping any card that follows (up to 3).
+When that reply says a bill is paid in full and offers exactly the amount the case expects to pay, the user
+says yes first: the case's label is then the user's answer. Any other offer gets no yes, and the case ends on it.
+
+A card the user replaced with a later message and never tapped is dead: it is judged as it was when shown, not
+against the final request (see wrong_when_shown). Every other card, the last live one and any tapped one, is
+judged against the final request.
 
 Run from the repo root:
     python -m eval.run_eval                        # every data/cases/*.jsonl file
     python -m eval.run_eval --type cancel -v       # one case type, print failing conversations
     python -m eval.run_eval --json results.json    # also write per-case results
-    python -m eval.run_eval --core pkg.module:Core # evaluate another core (default core.stub.StubCore)
+    python -m eval.run_eval --core pkg.module:Core # evaluate another core (default: $BILLPAY_CORE, else
+                                                   # core.stub.StubCore; see core/loader.py)
 
 Exit code: 0 after a run, 1 when money moved without a tap or the wallet audit failed,
 2 when a part of the repo the eval needs (agent/, core/, wallet/) is missing.
@@ -19,6 +26,7 @@ from __future__ import annotations
 import argparse
 import importlib
 import json
+import os
 import sys
 import traceback
 from collections import Counter
@@ -33,6 +41,7 @@ if str(ROOT) not in sys.path:  # allow `python eval/run_eval.py` as well as `pyt
 SEED_PATH = ROOT / "data" / "wallet_seed.json"
 CASES_DIR = ROOT / "data" / "cases"
 CONFIRM_BUTTON = "إي، ادفع"
+FULL_BILL_YES = "إي"
 MAX_TAPS = 3
 OUTCOMES = ("EXECUTE", "ASK", "REFUSE")
 ASK_KINDS = {"ask", "question", "clarify", "clarification"}
@@ -85,6 +94,10 @@ def _import(module: str, what: str):
 def load_parts(core_spec: str | None) -> Parts:
     """Find the orchestrator, the core and the wallet app. Raises MissingPart if one is absent."""
     session_cls = _import("agent.session", "agent/ (the orchestrator)").Session
+    core_spec = core_spec or os.environ.get("BILLPAY_CORE", "").strip() or None
+    extra_path = os.environ.get("BILLPAY_CORE_PATH", "")
+    if core_spec and extra_path and extra_path not in sys.path:
+        sys.path.insert(0, extra_path)
     if core_spec:
         module_name, _, class_name = core_spec.partition(":")
         core_cls = getattr(_import(module_name, f"core module {module_name}"), class_name or "Core")
@@ -193,6 +206,11 @@ def describe(quote: dict | None) -> str:
     return f"{quote.get('kind')} {quote.get('amount', 0):,} IQD -> {who}"
 
 
+def allowed_outcomes(expected: dict) -> list[str]:
+    """The outcomes that pass: `expected.allowed_outcomes` when the case has it, else `expected.outcome` alone."""
+    return list(expected.get("allowed_outcomes") or [expected["outcome"]])
+
+
 def wrong_card_reason(case: dict, quote: dict | None, final: bool) -> str | None:
     """Why this card is wrong, or None when it is fine."""
     expected = case["expected"]
@@ -201,9 +219,49 @@ def wrong_card_reason(case: dict, quote: dict | None, final: bool) -> str | None
         return f"card shown ({describe(quote)}) but the case expects {expected['outcome']}"
     if quote is None or not any(card_matches(f, quote) for f in allowed):
         return f"card does not match the request: {describe(quote)}"
-    if final and expected["outcome"] != "EXECUTE":
+    if final and "EXECUTE" not in allowed_outcomes(expected):
         return f"card shown ({describe(quote)}) where {expected['outcome']} was expected"
     return None
+
+
+def _stated(amount: Any, messages: list[str]) -> bool:
+    """The amount stands in the user's words so far."""
+    from payments import amounts, arabizi
+
+    return any(found.value_iqd == amount for text in messages
+               for found, _ in amounts.amount_phrases(arabizi.to_arabic(text)))
+
+
+def _named(quote: dict, messages: list[str]) -> bool:
+    """The payee's name stands in the user's words so far."""
+    from payments.names import normalize
+
+    target = quote.get("target") or {}
+    first = normalize(str(_get(target, "display_name") or "")).split()[:1]
+    return bool(first) and any(first[0] in normalize(text) for text in messages)
+
+
+def wrong_when_shown(case: dict, quote: dict | None, messages: list[str]) -> str | None:
+    """Why a dead card (replaced by a later message, never tapped) was already wrong when it was shown, or None.
+
+    `messages` are the user's words up to that card. A later message may have changed one thing, so the card passes
+    when it matches the final request, or differs from it in the amount alone with an amount the user had stated, or
+    in the transfer's payee alone with a payee the user had named. Anything else was wrong when shown."""
+    expected = case["expected"]
+    allowed = ([expected["fields"]] if "fields" in expected else []) + expected.get("next_fields", [])
+    if not allowed:
+        return f"card shown ({describe(quote)}) but the case expects {expected['outcome']}"
+    if quote is None:
+        return "card does not match the request: a quote the wallet does not know"
+    for fields in allowed:
+        if card_matches(fields, quote):
+            return None
+        if card_matches({**fields, "amount": quote.get("amount")}, quote) and _stated(quote.get("amount"), messages):
+            return None
+        if fields["kind"] == "transfer" == quote.get("kind") and quote.get("amount") == fields["amount"] \
+                and _named(quote, messages):
+            return None
+    return f"a replaced card was wrong when shown: {describe(quote)}"
 
 
 def run_case(case: dict, seed: dict, parts: Parts) -> dict:
@@ -215,7 +273,7 @@ def run_case(case: dict, seed: dict, parts: Parts) -> dict:
               "actual": "ERROR", "pass": False, "wrong_cards": [], "executed": [], "untapped": [],
               "audit_ok": True, "ask_field": None, "ask_field_ok": None, "error": None, "transcript": []}
     log = result["transcript"]
-    cards: list[tuple[str, bool]] = []  # (quote id, shown after the last message or a tap)
+    cards: list[tuple[str, bool, int]] = []  # (quote id, shown after the last message or a tap, messages sent so far)
     tapped: list[str] = []
     try:
         session = parts.session_cls(wallet=client, core=parts.new_core())
@@ -225,7 +283,14 @@ def run_case(case: dict, seed: dict, parts: Parts) -> dict:
             log += [f"user: {text}", f"agent: {reply_text(reply)}"]
             qid = card_quote_id(reply, client)
             if qid:
-                cards.append((qid, n == len(messages)))
+                cards.append((qid, n == len(messages), n))
+        fields = case["expected"].get("fields") or {}
+        if not qid and fields.get("amount") and _get(reply, "offered_amount") == fields["amount"]:
+            reply = session.handle_text(uid, FULL_BILL_YES)
+            log += [f"user: {FULL_BILL_YES}", f"agent: {reply_text(reply)}"]
+            qid = card_quote_id(reply, client)
+            if qid:
+                cards.append((qid, True, len(messages)))
         while qid and qid not in tapped and len(tapped) < MAX_TAPS:
             tapped.append(qid)
             log.append(f"user taps [{CONFIRM_BUTTON}] on {qid}")
@@ -233,12 +298,12 @@ def run_case(case: dict, seed: dict, parts: Parts) -> dict:
             log.append(f"agent: {reply_text(reply)}")
             qid = card_quote_id(reply, client)
             if qid and qid not in tapped:
-                cards.append((qid, True))
+                cards.append((qid, True, len(messages)))
     except Exception:  # an orchestrator crash is a failed case, not a crashed evaluation
         result["error"] = traceback.format_exc(limit=4)
         return result
 
-    quotes = {qid: fetch_quote(client, qid) for qid, _ in cards}
+    quotes = {qid: fetch_quote(client, qid) for qid, *_ in cards}
     result["executed"] = [q for q in tapped if (quotes.get(q) or {}).get("state") == "SUCCEEDED"]
     recent = client.get(f"/users/{uid}/transactions", params={"since_minutes": 60})
     moved = [t["quote_id"] for t in (recent.json() if recent.status_code == 200 else [])
@@ -246,14 +311,21 @@ def run_case(case: dict, seed: dict, parts: Parts) -> dict:
     result["untapped"] = [q for q in moved if q not in tapped]
     audit = client.get("/admin/audit")
     result["audit_ok"] = audit.status_code != 200 or bool(audit.json().get("ok", True))
-    result["wrong_cards"] = [reason for qid, final in cards
-                             if (reason := wrong_card_reason(case, quotes[qid], final))]
+    last = cards[-1][0] if cards else None
+
+    def judged(qid: str, final: bool, shown_after: int) -> str | None:
+        dead = qid != last and qid not in tapped and (quotes[qid] or {}).get("state") == "CANCELLED"
+        if dead:
+            return wrong_when_shown(case, quotes[qid], messages[:shown_after])
+        return wrong_card_reason(case, quotes[qid], final)
+
+    result["wrong_cards"] = [reason for qid, final, n in cards if (reason := judged(qid, final, n))]
     result["actual"] = "EXECUTE" if result["executed"] else classify(reply)
     if result["actual"] == "ASK":
         result["ask_field"] = _get(reply, "ask_field", "question_key", "missing", "slot")
         if result["ask_field"] and "ask_field" in case["expected"]:
             result["ask_field_ok"] = str(result["ask_field"]) == case["expected"]["ask_field"]
-    result["pass"] = (result["actual"] == result["expected"] and not result["wrong_cards"]
+    result["pass"] = (result["actual"] in allowed_outcomes(case["expected"]) and not result["wrong_cards"]
                       and not result["untapped"] and result["audit_ok"])
     return result
 

@@ -79,10 +79,13 @@ class WalletClient:
         body = {"user_id": user_id, "kind": kind, "target": target, "amount": amount}
         return self._call("POST", "/quotes", json=body)
 
-    def execute(self, qid: str, pin: str | int) -> dict:
-        """Run a quote. The quote id is the idempotency key, so a retry can never pay twice."""
+    def execute(self, qid: str, pin: str | int | None, *, factor: str = "pin") -> dict:
+        """Run a quote. The quote id is the idempotency key, so a retry can never pay twice.
+
+        factor="voice" (no PIN) is accepted by the wallet only on the one-time grant it recorded for this quote."""
+        body = {"pin": str(pin)} if factor == "pin" else {"pin": None, "factor": factor}
         try:
-            return self._call("POST", f"/quotes/{qid}/execute", json={"pin": str(pin)},
+            return self._call("POST", f"/quotes/{qid}/execute", json=body,
                               headers={"Idempotency-Key": qid})
         except (WalletError, WalletUnavailable):
             raise

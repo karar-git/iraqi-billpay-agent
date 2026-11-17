@@ -3,3 +3,4 @@ uvicorn>=0.29
 httpx>=0.27
 pydantic>=2.6
 pytest>=8.0
+sherpa-onnx==2.0.1  # voice approval: the speaker model (accounts/voiceprint.py); without it every payment needs the PIN

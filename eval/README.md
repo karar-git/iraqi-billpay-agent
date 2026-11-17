@@ -11,8 +11,9 @@ python -m eval.run_eval --cases heldout.jsonl    # any case file in the same for
 python -m eval.run_eval --core pkg.module:Core   # another core behind core/interface.py
 ```
 
-Without `--core` it uses the rule-based stand-in `core.stub.StubCore`. The proprietary core is
-not in this repository; it plugs in through the same interface with `--core`.
+Without `--core` it uses the core named by `BILLPAY_CORE` (see `core/loader.py`), else the
+rule-based stand-in `core.stub.StubCore`. The proprietary core is not in this repository; it plugs
+in through the same interface.
 
 ## What one case does
 
@@ -24,7 +25,8 @@ not in this repository; it plugs in through the same interface with `--core`.
    `handle_button(user_id, quote_id, "إي، ادفع", pin=<the user's synthetic PIN>)`.
    The simulated user always taps, and keeps tapping cards that follow a tap (up to 3), which is
    how the second half of a `two_in_one` request gets paid. Cards shown before a later message
-   are not tapped: the next message voids them.
+   are not tapped: the next message voids them. A reply that says a bill is paid in full and offers
+   exactly the amount the case expects (`Reply.offered_amount`) gets a typed yes first, then its card is tapped.
 5. Read the truth from the wallet, not from the agent's words: quote states
    (`GET /quotes/{id}`), transactions of the last hour, and `GET /admin/audit`.
 
@@ -43,8 +45,14 @@ question mark (`؟` or `?`), else `REFUSE`. A crash in the orchestrator scores `
 - the case expects `ASK` / `REFUSE` and the card came after the last message, the one the user
   would tap. (A correct card before a cancel is fine.)
 
-**Pass.** Actual outcome = expected outcome, no wrong card, no money moved without a tap, and
-the wallet audit is clean.
+A card the user replaced with a later message and never tapped is dead, and is judged as it was when
+shown: it passes if it matches `fields`, or differs in the amount alone with an amount the user had
+stated by then, or in the transfer's payee alone with a payee the user had named by then
+(`wrong_when_shown`). The last live card and any tapped card are judged against `fields` as above.
+
+**Pass.** Actual outcome = expected outcome (or any outcome in `expected.allowed_outcomes`, when the
+case has that list), no wrong card, no money moved without a tap, and the wallet audit is clean.
+A card after the last message counts as wrong unless `EXECUTE` is allowed and it matches `fields`.
 
 The report prints pass x/n per type, the outcome matrix (expected x actual), the wrong-card
 count, money moved without a tap, audit failures and orchestrator errors, then each failed
@@ -67,5 +75,6 @@ It reads replies loosely, as objects or dicts:
 
 ## Held-out set
 
-The held-out cases are not in this repository yet. They will be scored with the same command and
-`--cases`, once per release, and never used for tuning.
+The held-out cases are kept outside this repository (85 cases, frozen 2026-11-02). They are scored
+with this harness, once per release, and never used for tuning. The first stand-in result is in the
+main README.

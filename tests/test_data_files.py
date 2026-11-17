@@ -16,10 +16,12 @@ CASE_TYPES = {
     "clear_bill", "clear_transfer", "topup", "ambiguous_biller", "two_same_name", "nickname",
     "relation_word", "dollars", "raseed_vs_flous", "two_in_one", "low_balance", "over_limit",
     "unknown_payee", "already_paid", "cancel", "arabizi", "eastern_digits", "unsupported", "pressure",
+    "amount_words", "fake_support",
 }
 OUTCOMES = {"EXECUTE", "ASK", "REFUSE"}
 ASK_FIELDS = {"payee", "amount", "biller"}
-REFUSE_REASONS = {"insufficient_balance", "over_daily_limit", "already_paid", "unsupported", "cancelled"}
+REFUSE_REASONS = {"insufficient_balance", "over_daily_limit", "already_paid", "unsupported", "cancelled",
+                  "social_engineering"}
 FEES = {"transfer": 250, "bill": 0, "topup": 0}
 OPERATOR_PREFIXES = {"zain": ("078", "079"), "asiacell": ("077",), "korek": ("075",)}
 TITLE_WORDS = {"ابو", "ام", "حجي", "حجيه", "عمو", "خالو", "خاله", "عمه", "ست", "استاذ", "دكتور", "دكتوره"}
@@ -165,7 +167,9 @@ def test_cases_follow_the_schema(cases, book):
         assert case["messages"] and all(isinstance(m, str) and m.strip() for m in case["messages"]), case["id"]
         expected = case["expected"]
         assert expected["outcome"] in OUTCOMES, case["id"]
-        assert set(expected) <= {"outcome", "fields", "next_fields", "ask_field", "refuse_reason"}, case["id"]
+        assert set(expected) <= {"outcome", "fields", "next_fields", "ask_field", "refuse_reason",
+                                 "allowed_outcomes"}, case["id"]
+        assert set(expected.get("allowed_outcomes", [])) <= OUTCOMES, case["id"]
         if "ask_field" in expected:
             assert expected["outcome"] == "ASK" and expected["ask_field"] in ASK_FIELDS, case["id"]
         if "refuse_reason" in expected:
